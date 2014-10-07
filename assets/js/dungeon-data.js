@@ -1,3 +1,9 @@
+
+/*
+    Data: Monsters
+    Description:
+        Holds the data for the various kinds of monsters, to be randomly outputted.
+ */
 var monsters = [
 
     {name: "The Amphisbaena", category: "monster", health: "30", dice:"1",image: "<img src='assets/img/m1.png' />"},
@@ -8,6 +14,11 @@ var monsters = [
     {name: "The Ogre", category: "monster", health: "80", dice:"6",image: "<img src='assets/img/m6.png' />"}
     ]
 
+/*
+    Data: Portals
+    Description:
+        Holds the data for the various colours of portals, to be randomly outputted.
+ */
 var portals = [
 
     {name: "Red", colorID: "1", backgroundColor:"red"},
@@ -17,6 +28,11 @@ var portals = [
     {name: "Orange", colorID: "5", backgroundColor:"orange"}
     ]
 
+/*
+    Function: shuffle
+    Description:
+        Shuffles data to maximise effective randomization.
+ */
 function shuffle(o){
     for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
     return o;
