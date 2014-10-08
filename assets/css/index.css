@@ -1,3 +1,14 @@
+
+
+body
+{
+    margin:0%;
+    padding:0%;
+}
+/*
+    Main matrix, holds the game map.
+*/
+
 #mainmatrix
 {
     width:640px;
@@ -8,15 +19,22 @@
     background-color: #000;
 }
 
+/*
+    Defines styling for each individual grid on the map.
+*/
 #mainmatrix td
 {
     padding:20px;
     width:33%;
     height:33%;
+    border:1px solid darkslategray;
     text-align:center;
     vertical-align:middle;
 }
 
+/*
+    Defines styling for the images on the grid map.
+*/
 #mainmatrix td img
 {
     width:96px;
