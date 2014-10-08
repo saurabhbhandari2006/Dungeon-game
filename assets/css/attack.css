@@ -43,38 +43,41 @@ body {
 
 #diceBox {
     border-radius: 5px;
-    width: 220px;
-    right: 25%;
-    /*position: relative;*/
+    /*width: 20%;*/
+    top: 83%;
+    left: 25%;
+    position: absolute;
     /*display: none;*/
     border: 1px solid black;
 }
 
-.oneShown, .threeShown {
+.shown1, .shown3, .shown5 {
     background-image: url('../img/diceroll.png');
 
-    -webkit-animation: play 1s infinite;
-    -moz-animation: play 1s infinite;
-    -ms-animation: play 1s infinite;
-    -o-animation: play 1s ) infinite;
-    animation: play 1s infinite;
+    -webkit-animation: play 1s steps(40) infinite;
+    -moz-animation: play 1s steps(40) infinite;
+    -ms-animation: play 1s steps(40) infinite;
+    -o-animation: play 1s steps(40) infinite;
+    animation: play 1s steps(40) infinite;
 }
 
-.twoShown, .fourShown {
+.shown2, .shown4 {
     background-image: url('../img/dicerollrev.png');
 
-    -webkit-animation: play 1s infinite;
-    -moz-animation: play 1s infinite;
-    -ms-animation: play 1s infinite;
-    -o-animation: play 1s infinite;
-    animation: play 1s infinite;
+    -webkit-animation: play 1s steps(40) infinite;
+    -moz-animation: play 1s steps(40) infinite;
+    -ms-animation: play 1s steps(40) infinite;
+    -o-animation: play 1s steps(40) infinite;
+    animation: play 1s steps(40) infinite;
 }
 
-#dieOne, #dieTwo, #dieThree, #dieFour {
-    width: 105px;
-    height: 105px;
+#die1, #die2, #die3, #die4, #die5 {
+    width: 64px;
+    height: 65px;
     display: inline-block;
+    
 }
+
 
 #roll {
     padding: 5px;
@@ -89,7 +92,7 @@ body {
         background-position: 0px;
     }
     to {
-        background-position: -1785px;
+        background-position: -785px;
     }
 }
 
@@ -98,7 +101,7 @@ body {
         background-position: 0px;
     }
     to {
-        background-position: -1785px;
+        background-position: -785px;
     }
 }
 
@@ -107,7 +110,7 @@ body {
         background-position: 0px;
     }
     to {
-        background-position: -1785px;
+        background-position: -785px;
     }
 }
 
@@ -116,7 +119,7 @@ body {
         background-position: 0px;
     }
     to {
-        background-position: -1785px;
+        background-position: -785px;
     }
 }
 
@@ -125,8 +128,19 @@ body {
         background-position: 0px;
     }
     to {
-        background-position: -1785px;
+        background-position: -785px;
     }
+}
+
+.btn{
+    width: 80px;
+    height: 40px;
+}
+
+#battleBtn{
+    left: 40%;
+    bottom: 10%;
+    position: absolute;
 }
 
 
