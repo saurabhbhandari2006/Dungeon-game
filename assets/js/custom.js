@@ -2,7 +2,8 @@
 var selPort = [];   //Selected Portals
 var selMons = [];   //Selected Monsters
 var flag = 0;       //Flag value
-var positions = []; //Positions of elements on the map is held here
+var portalPos = []; //Positions of elements on the map is held here
+var map = 0;
 
 /* Function: initEverything
     Description:
@@ -54,6 +55,7 @@ function getPosition(pos)
  */
 function SetPortal()
 {
+    var pos;
 
     flag = Math.floor(Math.random() * (4-1) + 1);
 
@@ -61,10 +63,16 @@ function SetPortal()
 
     for(var i=0; i<flag; i++)
     {
-        var targetDiv = document.getElementById(getPosition().toString());
+        pos = getPosition();
+
+        var targetDiv = document.getElementById(pos);
 
         targetDiv.style.backgroundColor = selPort[i].backgroundColor;
+
+        portalPos.push({mapID:map, colID:portals[i].colorID, getPos:pos})
     }
+
+    console.log(portalPos);
 }
 
 /*
@@ -130,9 +138,6 @@ function SetMonsters()
     flag = Math.floor(Math.random() * (4-1) + 1);
 
     selMons = shuffle(monsters);
-
-    //console.log(portals);
-    console.log(selMons);
 
     for(var i = 1; i<=3; i++)
     {
