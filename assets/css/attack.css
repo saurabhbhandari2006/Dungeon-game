@@ -75,7 +75,7 @@ body {
     width: 64px;
     height: 65px;
     display: inline-block;
-    
+
 }
 
 
@@ -141,6 +141,32 @@ body {
     left: 40%;
     bottom: 10%;
     position: absolute;
+}
+
+#playerMeter{
+    border:1px solid #000;
+    width:500px
+}
+
+#playerHealth{
+    background: none repeat scroll 0 0 red;
+    height: 20px;
+    /*left: 66%;*/
+    position: absolute;
+    top: 10%;
+    width: 100%;
+}
+#aiMeter{
+    border:1px solid #000;
+    width:500px
+}
+
+#aiHealth{
+    background: none repeat scroll 0 0 red;
+    height: 20px;
+    position: absolute;
+    top: 4%;
+    width: 100%;
 }
 
 
