@@ -1,10 +1,15 @@
 var faceOne = 1;
 var faceTwo = 1;
-var done = true;
+var diceValue = 0;
+var faceValue = [];
+
 //----------------------------------dice roll -----------------------------------------
 function hideAngle(){
 	$("#dieOne").removeClass('oneShown');
 	$("#dieTwo").removeClass('twoShown');
+	$("#dieThree").removeClass('threeShown');
+	$("#dieFour").removeClass('fourShown');
+	$("#dieFive").removeClass('fiveShown');
 }
 
 function hideFace(dieOne,dieTwo){
@@ -13,26 +18,37 @@ function hideFace(dieOne,dieTwo){
 }
 
 function showAngle(){
-	$("#dieOne").addClass('oneShown');
-	$("#dieTwo").addClass('twoShown');
+    for(var i=1; i<=diceValue.length; i++)
+    {
+        $("#die"+i).addClass('Shown'+i);
+    }
+
+
+
 }
 
 
-function setFaces(dieOne,dieTwo){
+function setFaces(){
+    for(i=0; i<=diceValue.length; i++)
+
 	$("#dieOne #face"+dieOne+"").show();
 	$("#dieTwo #face"+dieTwo+"").show();
 }
 
-function finalRoll(){
-	faceOne = Math.floor((Math.random()*6)+1);
-	faceTwo = Math.floor((Math.random()*6)+1);
+function finalRoll(dices){
+    for(var i = 0;i<dices; i++){
+        dices[i].push(Math.floor((Math.random()*6)+1));
 
-	setFaces(faceOne,faceTwo);
+//	faceOne = Math.floor((Math.random()*6)+1);
+//	faceTwo = Math.floor((Math.random()*6)+1);
 
-	done = true;
-    return faceOne+faceTwo
+	setFaces();
+
+
+    diceValue = faceOne + faceTwo;
+
 }
-$(document).ready(function(){
+function diceRoll(){
     $("#diceBox").fadeIn();
     for(var i=0; i<6; ++i){
         var die = i+1;
@@ -43,7 +59,7 @@ $(document).ready(function(){
         $("#dieTwo #face"+die+"").hide();
     }
     setFaces(1,1);
-     hideFace(faceOne,faceTwo);
+    hideFace(faceOne,faceTwo);
     showAngle();
     setTimeout(function(){
         hideAngle();
@@ -51,5 +67,6 @@ $(document).ready(function(){
     setTimeout(function(){
         finalRoll();
     },751)
-});
+}
+
 //------------------------------------------------------------dice roll end-------------------------------------

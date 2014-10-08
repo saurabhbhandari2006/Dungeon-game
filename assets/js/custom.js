@@ -2,28 +2,29 @@
 var selPort = [];   //Selected Portals
 var selMons = [];   //Selected Monsters
 var flag = 0;       //Flag value
-var positions = []; //Positions of elements on the map is held here
+var portalPos = []; //Positions of elements on the map is held here
+var map = 0;
 
 /* Function: initEverything
-    Description:
-        Main initialization function, which is called first in the program flow.
-    Status:
-        COMPLETED
+ Description:
+ Main initialization function, which is called first in the program flow.
+ Status:
+ COMPLETED
  */
 
 function initEverything()
 {
-   SetPortal();
+    SetPortal();
     SetMonsters();
 //     SetSeer();
 }
 
 /*
-    Function: getPosition
-    Description:
-        Position getter function. Calculates positions after checking for conditions.
-    Status:
-        COMPLETED
+ Function: getPosition
+ Description:
+ Position getter function. Calculates positions after checking for conditions.
+ Status:
+ COMPLETED
  */
 function getPosition(pos)
 {
@@ -31,29 +32,30 @@ function getPosition(pos)
     var mR = 0;
 
 
+    mL = Math.floor(Math.random() * (4-1) + 1);
+    mR = Math.floor(Math.random() * (4-1) + 1);
+
+    while(mL == 2 && mR == 2)
+    {
         mL = Math.floor(Math.random() * (4-1) + 1);
         mR = Math.floor(Math.random() * (4-1) + 1);
+    }
 
-        while(mL == 2 && mR == 2)
-        {
-            mL = Math.floor(Math.random() * (4-1) + 1);
-            mR = Math.floor(Math.random() * (4-1) + 1);
-        }
+    var pos = mL.toString() + mR.toString();
 
-        var pos = mL.toString() + mR.toString();
-
-        return pos;
+    return pos;
 }
 
 /*
-    Function: SetPortal
-    Description:
-        Function to randomly select and place 3 portals on the map.
-    Status:
-        COMPLETED
+ Function: SetPortal
+ Description:
+ Function to randomly select and place 3 portals on the map.
+ Status:
+ COMPLETED
  */
 function SetPortal()
 {
+    var pos;
 
     flag = Math.floor(Math.random() * (4-1) + 1);
 
@@ -61,18 +63,24 @@ function SetPortal()
 
     for(var i=0; i<flag; i++)
     {
-        var targetDiv = document.getElementById(getPosition().toString());
+        pos = getPosition();
+
+        var targetDiv = document.getElementById(pos);
 
         targetDiv.style.backgroundColor = selPort[i].backgroundColor;
+
+        portalPos.push({mapID:map, colID:portals[i].colorID, getPos:pos});
     }
+
+    console.log(portalPos);
 }
 
 /*
-    Function: SetSeer
-    Description:
-        Function to randomly assign either 1 or no Seers on the map grid
-    Status:
-        Work in progress
+ Function: SetSeer
+ Description:
+ Function to randomly assign either 1 or no Seers on the map grid
+ Status:
+ Work in progress
  */
 function SetSeer()
 {
@@ -83,10 +91,10 @@ function SetSeer()
     mR = Math.floor(Math.random() * (4-1) + 1);
 
     while(mL == 2 && mR == 2)
-      {
+    {
         mL = Math.floor(Math.random() * (4-1) + 1);
         mR = Math.floor(Math.random() * (4-1) + 1);
-      }
+    }
 
     var pos = mL.toString() + mR.toString();
 
@@ -106,7 +114,7 @@ function SetSeer()
         }
     }
 
-     pos = mL.toString() + mR.toString();
+    pos = mL.toString() + mR.toString();
 
     var targetDiv = document.getElementById(pos.toString());
     console.log(targetDiv);
@@ -116,11 +124,11 @@ function SetSeer()
 }
 
 /*
-    Function: SetMonsters
-    Description:
-        Function to randomly assign 3 monsters on the map.
-    Status:
-        COMPLETED
+ Function: SetMonsters
+ Description:
+ Function to randomly assign 3 monsters on the map.
+ Status:
+ COMPLETED
  */
 function SetMonsters()
 {
@@ -131,10 +139,7 @@ function SetMonsters()
 
     selMons = shuffle(monsters);
 
-    //console.log(portals);
-    console.log(selMons);
-
-    for(var i = 1; i<=3; i++)
+    for(var i = 0; i<3; i++)
     {
         var targetDiv = document.getElementById(getPosition().toString());
 

@@ -45,32 +45,34 @@ body {
     border-radius: 5px;
     width: 220px;
     right: 25%;
-    /*position: relative;*/
-    /*display: none;*/
+    position: relative;
+    /* display: none; */
     border: 1px solid black;
+    top: 33%;
+    left: 34%;
 }
 
-.oneShown, .threeShown {
+.oneShown, .threeShown, .fiveShown {
     background-image: url('../img/diceroll.png');
 
-    -webkit-animation: play 1s infinite;
-    -moz-animation: play 1s infinite;
-    -ms-animation: play 1s infinite;
-    -o-animation: play 1s ) infinite;
-    animation: play 1s infinite;
+    -webkit-animation: play 1s steps(17) infinite;
+    -moz-animation: play 1s steps(17) infinite;
+    -ms-animation: play 1s steps(17) infinite;
+    -o-animation: play 1s ) steps(17) infinite;
+    animation: play 1s steps(17) infinite;
 }
 
 .twoShown, .fourShown {
     background-image: url('../img/dicerollrev.png');
 
-    -webkit-animation: play 1s infinite;
-    -moz-animation: play 1s infinite;
-    -ms-animation: play 1s infinite;
-    -o-animation: play 1s infinite;
-    animation: play 1s infinite;
+    -webkit-animation: play 1s steps(17) infinite;
+    -moz-animation: play 1s steps(17) infinite;
+    -ms-animation: play 1s steps(17) infinite;
+    -o-animation: play 1s steps(17) infinite;
+    animation: play 1s steps(17) infinite;
 }
 
-#dieOne, #dieTwo, #dieThree, #dieFour {
+#dieOne, #dieTwo, #dieThree, #dieFour #dieFive {
     width: 105px;
     height: 105px;
     display: inline-block;
