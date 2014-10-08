@@ -1,4 +1,5 @@
 
+
 body
 {
     margin:0%;
@@ -7,6 +8,7 @@ body
 /*
     Main matrix, holds the game map.
 */
+
 #mainmatrix
 {
     width:640px;
@@ -38,3 +40,4 @@ body
     width:96px;
     height:96px;
 }
+

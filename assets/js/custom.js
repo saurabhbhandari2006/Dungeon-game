@@ -10,11 +10,12 @@ var positions = []; //Positions of elements on the map is held here
     Status:
         COMPLETED
  */
+
 function initEverything()
 {
    SetPortal();
     SetMonsters();
-     SetSeer();
+//     SetSeer();
 }
 
 /*
@@ -28,6 +29,7 @@ function getPosition(pos)
 {
     var mL = 0;
     var mR = 0;
+
 
         mL = Math.floor(Math.random() * (4-1) + 1);
         mR = Math.floor(Math.random() * (4-1) + 1);
@@ -56,8 +58,6 @@ function SetPortal()
     flag = Math.floor(Math.random() * (4-1) + 1);
 
     selPort = shuffle(portals);
-
-    document.getElementById("console1").innerHTML = flag;
 
     for(var i=0; i<flag; i++)
     {
