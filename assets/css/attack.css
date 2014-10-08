@@ -1,0 +1,133 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#gameAttack_wrapper {
+    width: 640px;
+    height: 480px;
+    margin: auto;
+    border: 0;
+    /*border-collapse: collapse;*/
+    background-color: #000;
+    position: relative;
+}
+#fightArena{
+    /*border: 1px solid red;*/
+    height: 50%;
+    margin-top: 18%;
+    position: absolute;
+    width: 99%;
+}
+#monster{
+   max-width: 40%;
+    margin: 5%;
+    max-height: 75%;
+    position: absolute;
+    float: left;
+    /*border: 1px solid green;*/
+    font-size: 30px;
+    color: Red;
+}
+
+#player{
+    max-width: 40%;
+    margin: 5%;
+    max-height: 75%;
+    /*position: absolute;*/
+    float: right;
+    /*border: 1px solid green;*/
+    font-size: 30px;
+    color: green;
+}
+
+#diceBox {
+    border-radius: 5px;
+    width: 220px;
+    right: 25%;
+    /*position: relative;*/
+    /*display: none;*/
+    border: 1px solid black;
+}
+
+.oneShown, .threeShown {
+    background-image: url('../img/diceroll.png');
+
+    -webkit-animation: play 1s infinite;
+    -moz-animation: play 1s infinite;
+    -ms-animation: play 1s infinite;
+    -o-animation: play 1s ) infinite;
+    animation: play 1s infinite;
+}
+
+.twoShown, .fourShown {
+    background-image: url('../img/dicerollrev.png');
+
+    -webkit-animation: play 1s infinite;
+    -moz-animation: play 1s infinite;
+    -ms-animation: play 1s infinite;
+    -o-animation: play 1s infinite;
+    animation: play 1s infinite;
+}
+
+#dieOne, #dieTwo, #dieThree, #dieFour {
+    width: 105px;
+    height: 105px;
+    display: inline-block;
+}
+
+#roll {
+    padding: 5px;
+    display: inline-block;
+    background-color: #FFF;
+    border-radius: 5px;
+    margin: 5px 5px 0px 5px;
+}
+
+@-webkit-keyframes play {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -1785px;
+    }
+}
+
+@-moz-keyframes play {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -1785px;
+    }
+}
+
+@-ms-keyframes play {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -1785px;
+    }
+}
+
+@-o-keyframes play {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -1785px;
+    }
+}
+
+@keyframes play {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -1785px;
+    }
+}
+
+
+

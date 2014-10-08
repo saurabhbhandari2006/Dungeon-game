@@ -1,7 +1,7 @@
 var faceOne = 1;
 var faceTwo = 1;
 var done = true;
-
+//----------------------------------dice roll -----------------------------------------
 function hideAngle(){
 	$("#dieOne").removeClass('oneShown');
 	$("#dieTwo").removeClass('twoShown');
@@ -43,17 +43,13 @@ $(document).ready(function(){
         $("#dieTwo #face"+die+"").hide();
     }
     setFaces(1,1);
-
-    $(".btn").click(function(){
-        hideFace(faceOne,faceTwo);
-        showAngle();
-        setTimeout(function () {
-            hideAngle();
-        }, 750);
-        setTimeout(function(){
-            finalRoll();
-        },751);
-    });
-
-
+     hideFace(faceOne,faceTwo);
+    showAngle();
+    setTimeout(function(){
+        hideAngle();
+    },750);
+    setTimeout(function(){
+        finalRoll();
+    },751)
 });
+//------------------------------------------------------------dice roll end-------------------------------------
