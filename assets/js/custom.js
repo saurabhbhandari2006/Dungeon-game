@@ -40,8 +40,6 @@ function getPosition(pos)
 
         var pos = mL.toString() + mR.toString();
 
-        positions.push({ps:pos, posFlags:1});
-
         return pos;
 }
 
@@ -63,8 +61,6 @@ function SetPortal()
 
     for(var i=0; i<flag; i++)
     {
-        getPosition();
-
         var targetDiv = document.getElementById(getPosition().toString());
 
         targetDiv.style.backgroundColor = selPort[i].backgroundColor;
@@ -140,8 +136,6 @@ function SetMonsters()
 
     for(var i = 1; i<=3; i++)
     {
-        getPosition();
-
         var targetDiv = document.getElementById(getPosition().toString());
 
         targetDiv.innerHTML = selMons[i].image;

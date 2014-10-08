@@ -3,16 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="44c33337-d199-4678-950d-a8e0e37a8ac0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/custom.js" afterPath="$PROJECT_DIR$/assets/js/custom.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/dungeon-data.js" afterPath="$PROJECT_DIR$/assets/js/dungeon-data.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/index.css" afterPath="$PROJECT_DIR$/assets/css/index.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dungeon.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="44c33337-d199-4678-950d-a8e0e37a8ac0" time="1412665697397" ignored="false" />
+    <file path="/Dummy.txt" changelist="44c33337-d199-4678-950d-a8e0e37a8ac0" time="1412744501172" ignored="false" />
     <file path="/dungeon-data.js" changelist="44c33337-d199-4678-950d-a8e0e37a8ac0" time="1412678072928" ignored="false" />
     <file path="/custom.js" changelist="44c33337-d199-4678-950d-a8e0e37a8ac0" time="1412680511304" ignored="false" />
-    <file path="/index.css" changelist="44c33337-d199-4678-950d-a8e0e37a8ac0" time="1412681403871" ignored="false" />
+    <file path="/index.css" changelist="44c33337-d199-4678-950d-a8e0e37a8ac0" time="1412745028639" ignored="false" />
     <file path="/index.html" changelist="44c33337-d199-4678-950d-a8e0e37a8ac0" time="1412671387400" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,15 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="dungeon-data.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="dungeon-data.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/js/dungeon-data.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="36" selection-start="1320" selection-end="1320" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#143#829#0" expanded="false" />
-                <element signature="e#972#1277#0" expanded="false" />
-                <element signature="n#!!block;n#shuffle#0" expanded="false" />
-              </folding>
+            <state line="18" column="28" selection-start="868" selection-end="868" vertical-scroll-proportion="0.3627451">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -49,7 +44,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="33" selection-start="236" selection-end="236" vertical-scroll-proportion="-6.875">
+            <state line="11" column="90" selection-start="236" selection-end="236" vertical-scroll-proportion="-6.875">
               <folding />
             </state>
           </provider>
@@ -58,27 +53,19 @@
       <file leaf-file-name="custom.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/custom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="0" selection-start="1746" selection-end="1746" vertical-scroll-proportion="0.0">
+            <state line="40" column="48" selection-start="971" selection-end="971" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="n#!!block;n#getPosition#0" expanded="false" />
-                <element signature="n#!!block;n#SetPortal#0" expanded="false" />
-                <element signature="n#!!block;n#SetSeer#0" expanded="false" />
-                <element signature="n#!!block;n#SetMonsters#0" expanded="false" />
-                <marker date="1412681280000" expanded="true" signature="2692:2703" placeholder="..." />
+                <marker date="1412744834000" expanded="false" signature="2621:2632" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="28" selection-start="185" selection-end="185" vertical-scroll-proportion="0.14705883">
-              <folding>
-                <element signature="e#56#184#0" expanded="false" />
-                <element signature="e#264#402#0" expanded="false" />
-                <element signature="e#481#517#0" expanded="false" />
-              </folding>
+            <state line="3" column="12" selection-start="20" selection-end="20" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -104,17 +91,16 @@
         <option value="$PROJECT_DIR$/dungeon-data.js" />
         <option value="$PROJECT_DIR$/js/custom.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/assets/js/dungeon-data.js" />
         <option value="$PROJECT_DIR$/assets/js/custom.js" />
         <option value="$PROJECT_DIR$/assets/css/index.css" />
-        <option value="$PROJECT_DIR$/assets/js/dungeon-data.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
-    <option name="y" value="-4" />
-    <option name="width" value="1368" />
-    <option name="height" value="773" />
+    <option name="y" value="24" />
+    <option name="width" value="1366" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -142,6 +128,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -216,7 +203,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -227,8 +213,8 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -326,14 +312,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-4" width="1368" height="773" extended-state="6" />
+    <frame x="0" y="24" width="1366" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2575988" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26215807" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -423,66 +409,13 @@
     <entry file="file://$PROJECT_DIR$/assets/js/dungeon-data.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#143#829#0" expanded="false" />
-            <element signature="e#972#1277#0" expanded="false" />
-            <element signature="n#!!block;n#shuffle#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!block;n#getPosition#0" expanded="false" />
-            <element signature="n#!!block;n#SetPortal#0" expanded="false" />
-            <element signature="n#!!block;n#SetSeer#0" expanded="false" />
-            <element signature="n#!!block;n#SetMonsters#0" expanded="false" />
-            <marker date="1412681280000" expanded="true" signature="2692:2703" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/dungeon-data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#143#829#0" expanded="false" />
-            <element signature="e#972#1277#0" expanded="false" />
-            <element signature="n#!!block;n#shuffle#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/jquery.easing.1.3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/dungeon-data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="36" selection-start="1320" selection-end="1320" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#143#829#0" expanded="false" />
-            <element signature="e#972#1277#0" expanded="false" />
-            <element signature="n#!!block;n#shuffle#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="33" selection-start="236" selection-end="236" vertical-scroll-proportion="-6.875">
+        <state line="11" column="33" selection-start="236" selection-end="236" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -491,23 +424,80 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="81" column="0" selection-start="1746" selection-end="1746" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="n#!!block;n#getPosition#0" expanded="false" />
-            <element signature="n#!!block;n#SetPortal#0" expanded="false" />
-            <element signature="n#!!block;n#SetSeer#0" expanded="false" />
-            <element signature="n#!!block;n#SetMonsters#0" expanded="false" />
-            <marker date="1412681280000" expanded="true" signature="2692:2703" placeholder="..." />
+            <marker date="1412744834000" expanded="false" signature="2621:2632" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="28" selection-start="185" selection-end="185" vertical-scroll-proportion="0.14705883">
+        <state line="2" column="13" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/dungeon-data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#56#184#0" expanded="false" />
-            <element signature="e#264#402#0" expanded="false" />
-            <element signature="e#481#517#0" expanded="false" />
+            <marker date="1412744834000" expanded="false" signature="2621:2632" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/dungeon-data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/jquery.easing.1.3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="48" selection-start="971" selection-end="971" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1412744834000" expanded="false" signature="2621:2632" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="90" selection-start="236" selection-end="236" vertical-scroll-proportion="-6.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="12" selection-start="20" selection-end="20" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/dungeon-data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="28" selection-start="868" selection-end="868" vertical-scroll-proportion="0.3627451">
+          <folding />
         </state>
       </provider>
     </entry>
