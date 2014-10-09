@@ -29,53 +29,56 @@ function initEverything()
     Status:
         COMPLETED
  */
-function getPosition()
+function getPosition(flag)
 {
-    var c = 0;
-    var mL = 0;
-    var mR = 0;
+    c = 0;
+    var pos;
+    posArr = [];
 
-        mL = Math.floor(Math.random() * (4-1) + 1);
-        mR = Math.floor(Math.random() * (4-1) + 1);
+    while (c < flag) {
 
-        while(mL == 2 && mR == 2)
-        {
-            mL = Math.floor(Math.random() * (4-1) + 1);
-            mR = Math.floor(Math.random() * (4-1) + 1);
-        }
-
-        var pos = mL.toString() + mR.toString();
-
-        if(c==0)
-        {
+        pos = getRandom();
+        if(c == 0) {
             posArr.push(pos);
             c++;
-        }
-        else
-        {
-            for(var i = 0; i<=posArr.length; i++)
-            {
-                while(pos == posArr[i])
-                {
-                    mL = Math.floor(Math.random() * (4-1) + 1);
-                    mR = Math.floor(Math.random() * (4-1) + 1);
-
-                    while(mL == 2 && mR == 2)
-                    {
-                        mL = Math.floor(Math.random() * (4-1) + 1);
-                        mR = Math.floor(Math.random() * (4-1) + 1);
-                    }
-
-                    pos = mL.toString() + mR.toString();
-                }
-
+        } else {
+            if(validatePos(pos)) {
                 posArr.push(pos);
                 c++;
             }
 
         }
 
+    }
+
+}
+
+function getRandom() {
+    var mL = 0;
+    var mR = 0;
+
+    mL = Math.floor(Math.random() * (4-1) + 1);
+    mR = Math.floor(Math.random() * (4-1) + 1);
+
+    while(mL == 2 && mR == 2)
+    {
+        mL = Math.floor(Math.random() * (4-1) + 1);
+        mR = Math.floor(Math.random() * (4-1) + 1);
+    }
+
+    var pos = mL.toString() + mR.toString();
     return pos;
+}
+
+function validatePos(pos) {
+    var can = true;
+    for (var i = 0; i < posArr.length; i++) {
+        if (pos == posArr[i])
+            can = false;
+    }
+
+    return can;
+
 }
 
 function enterDungeon()
@@ -83,6 +86,7 @@ function enterDungeon()
     mapID++;
 
     selPort = shuffle(portals);
+    selMons = shuffle(monsters);
 
     if(mapID==1)
     {
@@ -120,13 +124,16 @@ function setPortal()
 {
     var pos;
 
-    flag = Math.floor(Math.random() * (4-1) + 1);
+    flag = Math.floor(Math.random() * 3 + 1);
     console.log(flag);
+    getPosition(flag);
+
+
+
     for(var i=0; i<flag; i++)
     {
-        pos = getPosition();
         console.log(i);
-        var targetDiv = document.getElementById(pos);
+        var targetDiv = document.getElementById(posArr[i]);
 
         if(selPort[i].colorID != mapColor)
         {
@@ -155,16 +162,15 @@ function setPortal()
  */
 function setMonsters()
 {
-    selMons = shuffle(monsters);
-    var pos = "";
 
-    flag = Math.floor(Math.random() * (4-1) +1);
+
+    flag = Math.floor(Math.random() * 3 +1);
+    console.log(flag);
+    getPosition(flag);
+
     for(var i = 0; i<flag; i++)
     {
-        pos = getPosition();
-        var targetDiv = document.getElementById(pos);
-
-        console.log(pos);
+        var targetDiv = document.getElementById(posArr[i]);
 
         targetDiv.innerHTML = selMons[i].image;
 
@@ -193,13 +199,13 @@ function SetSeer()
     var mL = 0;
     var mR = 0;
 
-    mL = Math.floor(Math.random() * (4-1) + 1);
-    mR = Math.floor(Math.random() * (4-1) + 1);
+    mL = Math.floor(Math.random() * 3 + 1);
+    mR = Math.floor(Math.random() * 3 + 1);
 
     while(mL == 2 && mR == 2)
       {
-        mL = Math.floor(Math.random() * (4-1) + 1);
-        mR = Math.floor(Math.random() * (4-1) + 1);
+        mL = Math.floor(Math.random() * 3 + 1);
+        mR = Math.floor(Math.random() * 3 + 1);
       }
 
     var pos = mL.toString() + mR.toString();
@@ -209,13 +215,13 @@ function SetSeer()
         console.log(i);
         if (portalPos[i].ps == pos)
         {
-            mL = Math.floor(Math.random() * (4 - 1) + 1);
-            mR = Math.floor(Math.random() * (4 - 1) + 1);
+            mL = Math.floor(Math.random() * 3 + 1);
+            mR = Math.floor(Math.random() * 3 + 1);
 
             while (mL == 2 && mR == 2)
             {
-                mL = Math.floor(Math.random() * (4 - 1) + 1);
-                mR = Math.floor(Math.random() * (4 - 1) + 1);
+                mL = Math.floor(Math.random() * 3 + 1);
+                mR = Math.floor(Math.random() * 3 + 1);
             }
         }
     }
