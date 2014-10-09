@@ -1,6 +1,3 @@
-var faceOne = 1;
-var faceTwo = 1;
-var done = true;
 var diceVal = [];
 var diceNum = 2;
 var player = true;
