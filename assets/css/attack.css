@@ -28,27 +28,30 @@ body {
     /*border: 1px solid green;*/
     font-size: 30px;
     color: Red;
+    bottom: 100%;
 }
 
 #player{
-    max-width: 40%;
+    bottom: 100%;
+    color: green;
+    float: right;
+    font-size: 30px;
+    left: 75%;
     margin: 5%;
     max-height: 75%;
-    /*position: absolute;*/
-    float: right;
-    /*border: 1px solid green;*/
-    font-size: 30px;
-    color: green;
+    max-width: 40%;
+    position: absolute;
 }
 
 #diceBox {
+    border: 1px solid whitesmoke;
     border-radius: 5px;
-    /*width: 20%;*/
-    top: 83%;
     left: 25%;
     position: absolute;
+    bottom: -10%;
+    z-index: 0;
+    /*width: 20%;*/
     /*display: none;*/
-    border: 1px solid black;
 }
 
 .shown1, .shown3, .shown5 {
@@ -143,31 +146,43 @@ body {
     position: absolute;
 }
 
-#playerMeter{
-    border:1px solid #000;
-    width:500px
+#player-Meter{
+    border: 1px solid #000;
+    bottom: 75%;
+    left: 70%;
+    position: absolute;
+    width: 30%;
 }
 
-#playerHealth{
+#player-Health{
     background: none repeat scroll 0 0 red;
     height: 20px;
     /*left: 66%;*/
     position: absolute;
     top: 10%;
     width: 100%;
+    height: 10%;
 }
-#aiMeter{
-    border:1px solid #000;
-    width:500px
+#monster-Meter{
+    border: 1px solid #000;
+    bottom: 75%;
+    position: absolute;
+    width: 30%;
 }
 
-#aiHealth{
+#monster-Health{
     background: none repeat scroll 0 0 red;
     height: 20px;
     position: absolute;
     top: 4%;
     width: 100%;
+    height: 10%;
 }
+.value-display{
+    height: 100px;
+    border: 1px solid #000000
+}
+
 
 
 

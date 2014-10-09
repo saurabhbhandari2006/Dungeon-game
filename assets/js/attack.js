@@ -2,6 +2,8 @@ var diceVal = [];
 var diceNum = 2;
 var player = true;
 var healthReduce;
+var value1 = 100;//to get this value as player health
+var value2 = 100;//monster health
 
 $(function () {
     initBattleWindow();
@@ -135,7 +137,7 @@ function playerTurn() {
                     case "btnAttack":
                         console.log("attack selected");
                         diceRoll(function(){
-                            updateResources("ai",function()
+                            updateResources("monster",function()
                             {
                                     emptyDiceDiv();
                                     switchTurn("player")
@@ -154,19 +156,17 @@ function playerTurn() {
 
 }
 //
-function aiTurn() {
+function monster() {
 
-            $("#message").text("Opponent's Turn").css("color","white").fadeIn(1000).fadeOut(2000);
+//            $("#message").text("Opponent's Turn").css("color","white").fadeIn(1000).fadeOut(2000);
     setTimeout(function()
     {
         if(player == false)
         {
             diceRoll(function(){
                 updateResources("player",function(){
-
                         emptyDiceDiv();
-                        switchTurn("ai")
-
+                        switchTurn("monster")
                 });
             });
        }
@@ -178,7 +178,7 @@ function switchTurn(from) {
     setTimeout(function() {
         if (from == "player") {
                 player = false;
-                aiTurn();
+                monster();
             }
          else {
                 player = true;
@@ -188,12 +188,9 @@ function switchTurn(from) {
     }, 4000);
 }
 
-var value1 = 100;
-var value2 = 100;
-playerHealth = document.getElementById("playerHealth");
-aiHealth = document.getElementById("aiHealth");
 function updateResources(to,callback) {
-
+    playerHealth = document.getElementById("player-Health");
+    monsterHealth = document.getElementById("monster-Health");
     console.log(healthReduce);
 //    value = value - healthReduce;
 //    console.log(value);
@@ -202,15 +199,20 @@ function updateResources(to,callback) {
 //    $('.value_display').text(value  + '% health left');
     if(to == "player")
     {
-        value1 = value1 - healthReduce;
+        var marginShift =100;
+        value1 -= healthReduce;
+        value1 -= healthReduce;
+        marginShift -= value1;
         console.log("player health left" +value1);
         playerHealth.style.width = value1 + "%";
+        playerHealth.style.left = marginShift;
     }
     else
     {
         value2 = value2 - healthReduce;
-        console.log("ai health left" +value2);
-        aiHealth.style.width = value2 + "%";
+        console.log("monster health left" +value2);
+        monsterHealth.style.width = value2 + "%";
+
     }
     setTimeout(function()
     {
