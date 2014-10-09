@@ -1,9 +1,13 @@
 
-var selPort = [];   //Selected Portals
-var selMons = [];   //Selected Monsters
-var flag = 0;       //Flag value
-var portalPos = []; //Positions of elements on the map is held here
-var map = 0;
+var selPort = [];       //Selected Portals
+var selMons = [];       //Selected Monsters
+var flag = 0;           //Flag value
+var portalPos = [];     //Positions of portals
+var monsterPos = [];    //Positions of monsters
+var posArr = [];        //Array of filled positions
+var mapID = 0;          //map ID
+var mapColor = 0;       //map color
+var c = 0;
 
 /* Function: initEverything
     Description:
@@ -11,11 +15,10 @@ var map = 0;
     Status:
         COMPLETED
  */
-
 function initEverything()
 {
-   SetPortal();
-    SetMonsters();
+   enterDungeon();
+ //   setMonsters();
 //     SetSeer();
 }
 
@@ -26,11 +29,11 @@ function initEverything()
     Status:
         COMPLETED
  */
-function getPosition(pos)
+function getPosition()
 {
+    var c = 0;
     var mL = 0;
     var mR = 0;
-
 
         mL = Math.floor(Math.random() * (4-1) + 1);
         mR = Math.floor(Math.random() * (4-1) + 1);
@@ -43,9 +46,69 @@ function getPosition(pos)
 
         var pos = mL.toString() + mR.toString();
 
-        return pos;
+        if(c==0)
+        {
+            posArr.push(pos);
+            c++;
+        }
+        else
+        {
+            for(var i = 0; i<=posArr.length; i++)
+            {
+                while(pos == posArr[i])
+                {
+                    mL = Math.floor(Math.random() * (4-1) + 1);
+                    mR = Math.floor(Math.random() * (4-1) + 1);
+
+                    while(mL == 2 && mR == 2)
+                    {
+                        mL = Math.floor(Math.random() * (4-1) + 1);
+                        mR = Math.floor(Math.random() * (4-1) + 1);
+                    }
+
+                    pos = mL.toString() + mR.toString();
+                }
+
+                posArr.push(pos);
+                c++;
+            }
+
+        }
+
+    return pos;
 }
 
+function enterDungeon()
+{
+    mapID++;
+
+    selPort = shuffle(portals);
+
+    if(mapID==1)
+    {
+        document.getElementById("mainmatrix").style.backgroundColor = selPort[0].backgroundColor;
+        mapColor=selPort[0].colorID;
+            setPortal();
+    }
+    else
+    {
+        mapColor=portals[x].colorID;
+            setPortal();
+    }
+
+    setMonsters();
+    setPlayer();
+}
+
+
+function setPlayer()
+{
+    var pos = "22";
+
+    var targetDiv = document.getElementById(pos);
+
+    targetDiv.innerHTML = "<img src='assets/img/player.png' />";
+}
 /*
     Function: SetPortal
     Description:
@@ -53,26 +116,69 @@ function getPosition(pos)
     Status:
         COMPLETED
  */
-function SetPortal()
+function setPortal()
 {
     var pos;
 
     flag = Math.floor(Math.random() * (4-1) + 1);
-
-    selPort = shuffle(portals);
-
+    console.log(flag);
     for(var i=0; i<flag; i++)
     {
         pos = getPosition();
-
+        console.log(i);
         var targetDiv = document.getElementById(pos);
 
-        targetDiv.style.backgroundColor = selPort[i].backgroundColor;
+        if(selPort[i].colorID != mapColor)
+        {
+            targetDiv.style.backgroundColor = selPort[i].backgroundColor;
+            console.log(selPort[i]);
+        }
+        else
+        {
+            targetDiv.style.backgroundColor = selPort[i+3].backgroundColor;
+            console.log(selPort);
+        }
 
-        portalPos.push({mapID:map, colID:portals[i].colorID, getPos:pos})
+        console.log(targetDiv);
+        portalPos.push({mapID:mapID, colID:selPort[i].colorID, getPos:pos});
     }
 
     console.log(portalPos);
+}
+
+/*
+    Function: SetMonsters
+    Description:
+        Function to randomly assign 3 monsters on the map.
+    Status:
+        COMPLETED
+ */
+function setMonsters()
+{
+    selMons = shuffle(monsters);
+    var pos = "";
+
+    flag = Math.floor(Math.random() * (4-1) +1);
+    for(var i = 0; i<flag; i++)
+    {
+        pos = getPosition();
+        var targetDiv = document.getElementById(pos);
+
+        console.log(pos);
+
+        targetDiv.innerHTML = selMons[i].image;
+
+        console.log(targetDiv);
+
+        //monsterPos.push()
+    }
+
+    console.log(posArr);
+}
+
+function drawMonsters()
+{
+
 }
 
 /*
@@ -101,7 +207,7 @@ function SetSeer()
     for(var i=0; i<=positions.length; i++)
     {
         console.log(i);
-        if (positions[i].ps == pos)
+        if (portalPos[i].ps == pos)
         {
             mL = Math.floor(Math.random() * (4 - 1) + 1);
             mR = Math.floor(Math.random() * (4 - 1) + 1);
@@ -121,28 +227,4 @@ function SetSeer()
 
     targetDiv.innerHTML = "<span style='color:#fff;'>SEER!</span>";
     positions.push({ps:pos, posFlags:1});
-}
-
-/*
-    Function: SetMonsters
-    Description:
-        Function to randomly assign 3 monsters on the map.
-    Status:
-        COMPLETED
- */
-function SetMonsters()
-{
-    var mL = 0;
-    var mR = 0;
-
-    flag = Math.floor(Math.random() * (4-1) + 1);
-
-    selMons = shuffle(monsters);
-
-    for(var i = 1; i<=3; i++)
-    {
-        var targetDiv = document.getElementById(getPosition().toString());
-
-        targetDiv.innerHTML = selMons[i].image;
-    }
 }
