@@ -12,6 +12,10 @@ $(function() {
 
 function initializeTheme() {
 
+    for(var i=0; i<mapHash.length; i++) {
+
+        mapHash[i].backgroundImage = "assets/img/backgrounds/" + mapHash[i].name + ".png";
+    }
 }
 
 function createMap() {
@@ -28,6 +32,11 @@ function createMap() {
     //console.log(mapHash);
 }
 
+function createRewards() {
+
+
+}
+
 function createEntity() {
 
     for(var i=0; i < monsters.length; i++)
@@ -42,7 +51,7 @@ function createEntity() {
 
         entityHash.push(
             {
-                id:entityHash.length,
+                id:entityHash.length+1,
                 portal:imgName,
                 portalImage:"assets/img/portals/" + imgName + ".png",
                 class: "portal"
@@ -65,7 +74,7 @@ function addEntities() {
     {
         dungeonSelect = getDungeon(i+1);
 
-        for(var i=0; i<dungeonSelect.definition.length; i++)
+        for(var j=0; j<dungeonSelect.definition.length; j++)
         {
             for(var a= 1, b= 1; a<=3, b<=3; a++, b++)
             {
@@ -89,6 +98,8 @@ function addEntities() {
                 }
             }
         }
+
+        console.log(dungeonSelect);
 
 
 //            var n = Math.random() < 0.5 ? 0 : 1;
@@ -132,10 +143,10 @@ function getDefinition(dungeon, lx, ly){
             return definition[i];
     }
 }
-function getRandom() {
+function getRandom(min, max) {
 
 //    var m = Math.floor(Math.random() *3 + 1);
-    var n = Math.floor(Math.random() *3 + 1);
+    var n = Math.floor(Math.random() * (max-min) + min);
 //
 //    while(m==2 && n==2)
 //        var temp = getRandom();
@@ -143,23 +154,24 @@ function getRandom() {
     return n;
 }
 
-function checkBlocks(dungeonID) {
+//function checkBlocks(dungeonID) {
+//
+//    var dungeonSelect = getDungeon(dungeonID);
+//    var x = getRandom();
+//    var y = getRandom();
+//
+//    var defGrep = $.grep(mapHash, function(element){
+//        for(var i=0; i<dungeonSelect.definition.length; i++)
+//        {
+//            if(x == dungeonSelect.definition[i].lx && y == dungeonSelect.definition.ly && dungeonSelect.definition.entity!=0)
+//            {
+//                return dungeonSelect.definition[i];
+//            }
+//        }
+//    });
+//
+//}
 
-    var dungeonSelect = getDungeon(dungeonID);
-    var x = getRandom();
-    var y = getRandom();
-
-    var defGrep = $.grep(mapHash, function(element){
-        for(var i=0; i<dungeonSelect.definition.length; i++)
-        {
-            if(x == dungeonSelect.definition[i].lx && y == dungeonSelect.definition.ly && dungeonSelect.definition.entity!=0)
-            {
-                return dungeonSelect.definition[i];
-            }
-        }
-    });
-
-}
 function getDungeon(dungeonID)
 {
     var dungeonSelect;

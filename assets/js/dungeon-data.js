@@ -21,7 +21,8 @@ var map = [
             {lx: 3, ly: 1, choiceSet: ["monster"]},
             {lx: 3, ly: 2, choiceSet: [""]},
             {lx: 3, ly: 3, choiceSet: ["portal"]}
-        ]
+        ],
+        backgroundImage:""
     },
 
     {name: "Blue",  type: "definition", generation: {},
@@ -38,7 +39,8 @@ var map = [
             {lx: 3, ly: 1, choiceSet: [""]},
             {lx: 3, ly: 2, choiceSet: [""]},
             {lx: 3, ly: 3, choiceSet: [""]}
-        ]
+        ],
+        backgroundImage:""
     },
 
     {name: "Green",  type: "definition", generation: {},
@@ -55,7 +57,8 @@ var map = [
             {lx: 3, ly: 1, choiceSet: [""]},
             {lx: 3, ly: 2, choiceSet: [""]},
             {lx: 3, ly: 3, choiceSet: [""]}
-        ]
+        ],
+        backgroundImage:""
     },
 
     {name: "Yellow",  type: "definition", generation: {},
@@ -72,7 +75,8 @@ var map = [
             {lx: 3, ly: 1, choiceSet: [""]},
             {lx: 3, ly: 2, choiceSet: [""]},
             {lx: 3, ly: 3, choiceSet: [""]}
-        ]
+        ],
+        backgroundImage:""
     },
 
     {name: "Orange",  type: "definition", generation: {},
@@ -89,7 +93,8 @@ var map = [
             {lx: 3, ly: 1, choiceSet: [""]},
             {lx: 3, ly: 2, choiceSet: [""]},
             {lx: 3, ly: 3, choiceSet: [""]}
-        ]
+        ],
+        backgroundImage:""
     },
 
     {name: "Red",  type: "definition", generation: {},
@@ -106,7 +111,8 @@ var map = [
             {lx: 3, ly: 1, choiceSet: [""]},
             {lx: 3, ly: 2, choiceSet: [""]},
             {lx: 3, ly: 3, choiceSet: [""]}
-        ]
+        ],
+        backgroundImage:""
     }
 ]
 /*
