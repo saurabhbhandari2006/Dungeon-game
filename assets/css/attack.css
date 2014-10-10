@@ -14,10 +14,10 @@ body {
 }
 #fightArena{
     /*border: 1px solid red;*/
-    height: 50%;
+    height: 76%;
     margin-top: 18%;
     position: absolute;
-    width: 99%;
+    width: 100%;
 }
 #monster{
    max-width: 40%;
@@ -44,11 +44,11 @@ body {
 }
 
 #diceBox {
-    border: 1px solid whitesmoke;
+    border: 5px solid whitesmoke;
     border-radius: 5px;
+    bottom: 30%;
     left: 25%;
     position: absolute;
-    bottom: -10%;
     z-index: 0;
     /*width: 20%;*/
     /*display: none;*/
@@ -142,13 +142,14 @@ body {
 
 #battleBtn{
     left: 40%;
-    bottom: 10%;
     position: absolute;
+    top: 78%;
 }
 
 #player-Meter{
-    border: 1px solid #000;
+    /*border: 1px solid #000;*/
     bottom: 75%;
+    height: 32%;
     left: 70%;
     position: absolute;
     width: 30%;
@@ -166,6 +167,7 @@ body {
 #monster-Meter{
     border: 1px solid #000;
     bottom: 75%;
+    height: 32%;
     position: absolute;
     width: 30%;
 }
@@ -180,9 +182,23 @@ body {
 }
 .value-display{
     height: 100px;
-    border: 1px solid #000000
+    border: 1px solid #ffffff
 }
 
+#monster-Health-border{
+    border: 1px solid #ffffff;
+    bottom: 10%;
+    height: 87%;
+    position: absolute;
+    width: 95%;
+}
 
+#player-Health-border{
+    border: 1px solid #ffffff;
+    bottom: 10%;
+    height: 87%;
+    position: absolute;
+    width: 95%;
+}
 
 

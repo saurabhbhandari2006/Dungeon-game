@@ -1,21 +1,101 @@
-var diceVal = [];
+//var diceVal = [];
 var diceNum = 2;
-var player = true;
 // var healthReduce;
 var playerHealth = 100;//to get this value as player health
-var value2 = 100;//monster health
+var monsterHealth = 100;//monster health
 entityId = 1;
 
+///*-------------------------------------------samrith-----------------------------------------*/
+//
+//var mapHash;
+//var entityHash = [];
+//
+//$(function() {
+//    createMap();
+//    createEntity();
+//    addEntities("Purple");
+//
+//});
+//
+//function initializeTheme() {
+//}
+//
+//function createMap() {
+//
+//    mapHash = map;
+//
+//    for(var i=0; i<mapHash.length; i++)
+//    {
+//        var imgName = mapHash[i].name;
+//        mapHash[i].id = i+1;
+//        mapHash[i].backgroundImage = "assets/img/backgrounds/" + imgName + ".png";
+//    }
+//
+//    //console.log(mapHash);
+//}
+//
+//function createEntity() {
+//
+//    for(var i=0; i < monsters.length; i++)
+//    {
+//        entityHash.push(monsters[i]);
+//        entityHash[i].id = i+1;
+//    }
+//
+//    for(var i = 0; i < mapHash.length; i++) {
+//        var imgName = mapHash[i].name;
+//
+//        entityHash.push(
+//            {
+//                id:entityHash.length,
+//                portal:imgName,
+//                portalImage:"assets/img/portals/" + imgName + ".png"
+//            }
+//        );
+//    }
+//
+//    console.log(entityHash);
+//}
+//
+//function addEntities(dungeon) {
+//
+//    var x = 0;
+//    var y = 0;
+//
+//    x = Math.floor(Math.random() * 3 + 1);
+//    y = Math.floor(Math.random() * 3 + 1);
+//
+//    if(dungeon=="Purple")
+//    {
+//        var dungeonSelect = $.grep(mapHash, function(element) {
+//            return element.id == 1;
+//        });
+//
+//        dungeonSelect.lx = x;
+//        dungeonSelect.ly = y;
+//
+//        if(dungeonSelect.entity!=0)
+//        {
+//            x = Math.floor(Math.random() * 3 + 1);
+//            y = Math.floor(Math.random() * 3 + 1);
+//        }
+//        else
+//        {
+//            var monsterAdd = $.grep(entityHash)
+//        }
+//        console.log(dungeonSelect);
+//    }
+//}
+//
+//
+//
+///*-----------------------------------------------end of samrith code-------------------------------------------*/
 $(function () {
     initBattleWindow();
 });
-function initBattleWindow() {
+function initBattleWindow(entityId) {
     player = true;
-    playerTurn();
-}
-function scoreData() {
-    var health = 100;
-    var dice = 1;
+    playerTurn(entityId);
 }
 //----------------------------------dice roll -----------------------------------------
 function hideAngle(diceNum) {
@@ -48,7 +128,7 @@ function finalRoll(diceNum,diceVal) {
     setFaces(diceNum,diceVal);
     return healthReduce;
 }
-function rollDice(diceNum,callback,callback1,callback2) {
+function rollDice(entityId,diceNum,callback,callback1,callback2) {
     emptyDiceDiv();
     var diceVal = [];
     $("#diceBox").fadeIn();
@@ -103,7 +183,7 @@ function playerTurn() {
                     case "btnAttack":
                         console.log("attack selected");
                         //simply passing the function name in string format and then the variables are passed in callbacks as and what needed
-                        rollDice(diceNum,checkDefendPowers,doDamage,checkIfDead);
+                        rollDice(entityId,diceNum,checkDefendPowers,doDamage,checkIfDead);
 
                         // console.log("entering doDamage");
                         // doDamage("player",damage);
@@ -125,16 +205,13 @@ function playerTurn() {
         })
     }, 500);
 }
-function monster(call) {
+function monster(entityId,call) {
     setTimeout(function()
     {
-        var monsterDice;
-        console.log("in ai");
-        monsterDice = monsters.level;
-        console.log(monsterDice);
+//        console.log(monsterDice);
         if(player == false)
         {
-            rollDice(2,checkAttackPowers,doDamage,checkSurvival);
+            rollDice(entityId,2,checkAttackPowers,doDamage,checkSurvival);
             // function(){
             //          updateResources("player",function(){
             //                  emptyDiceDiv();
@@ -144,47 +221,20 @@ function monster(call) {
         }
     },3000);
 }
-function switchTurn(from) {
+function switchTurn(entityId,from) {
     console.log("switching turn from "+from);
     console.log("checking player: "+player);
     setTimeout(function() {
         if (from == "player") {
             player = false;
-            monster();
+            monster(entityId);
         }
         else {
             player = true;
-            playerTurn();
+            playerTurn(entityId);
         }
 
     }, 4000);
-}
-function updateResources(to,callback) {
-    playerHealth = document.getElementById("player-Health");
-    monsterHealth = document.getElementById("monster-Health");
-    console.log(healthReduce);
-
-    if(to == "player")
-    {
-        var marginShift =100;
-        value1 -= healthReduce;
-        value1 -= healthReduce;
-        marginShift -= value1;
-        console.log("player health left" +value1);
-        playerHealth.style.width = value1 + "%";
-        playerHealth.style.left = marginShift;
-    }
-    else
-    {
-        value2 = value2 - healthReduce;
-        console.log("monster health left" +value2);
-        monsterHealth.style.width = value2 + "%";
-
-    }
-    setTimeout(function()
-    {
-        callback();
-    },2000);
 }
 function emptyDiceDiv() {
     // diceVal = [];
@@ -194,7 +244,7 @@ function emptyDiceDiv() {
     $("#die4").empty();
     $("#die5").empty();
 }
-function doDamage(team, damage,callback){
+function doDamage(entityId,team, damage,callback){
     console.log("doDamage "+team);
     console.log("doDamage "+damage);
 
@@ -205,55 +255,66 @@ function doDamage(team, damage,callback){
     {
         playerHealth -= damage;
         console.log("player health left" +playerHealth);
+        $('.value_display').text(playerHealth  + '% health left');
         playerHealthDiv.style.width = playerHealth + "%"
+        if (typeof callback === "function")
+        {
+            callback(entityId);
+        }
+
     }
     else
     {
-        value2 = value2 - damage;
-        console.log("monster health left" +value2);
-        monsterHealthDiv.style.width = value2 + "%";
-        // checkDefendPowers();
-    }
-    setTimeout(function()
-    {
+        monsterHealth = monsterHealth - damage;
+        console.log("monster health left" +monsterHealth);
+        $('.value_display').text(monsterHealth  + '% health left');
+        monsterHealthDiv.style.width = monsterHealth + "%";
         if (typeof callback === "function")
         {
-            callback(value2);
+            callback(entityId,monsterHealth);
         }
-    },2000);
+        // checkDefendPowers();
+    }
+//    setTimeout(function()
+//    {
+//        if (typeof callback === "function")
+//        {
+//            callback(entityId,monsterHealth);
+//        }
+//    },2000);
 }
 function checkDefendPowers(entityId, damage,callback,callback1){
     console.log("in checkDefendPowers");
     if (typeof callback === "function")
     {
-        callback("player",damage,callback1);
+        callback(entityId,"player",damage,callback1);
     }
 }
-function checkIfDead(health){
+function checkIfDead(entityId,health){
     console.log("in checkIfDead function "+health)
     if (health<=0)
     {
-        victory();
+        victory(entityId);
     }
     else
     {
-        checkRecoveryPowers("monster",10,switchTurn);
+        checkRecoveryPowers(entityId,"monster",switchTurn);
     }
 }
-function checkRecoveryPowers(team,entityId,callback){
+function checkRecoveryPowers(entityId,team,callback){
     console.log("in recovery function");
     if (team == "player")
     {
         if (typeof callback === "function")
         {
-            callback("monster");
+            callback(entityId,"monster");
         }
     }
     else
     {
         if (typeof callback === "function")
         {
-            callback("player");
+            callback(entityId,"player");
         }
     }
 }
@@ -261,20 +322,11 @@ function checkAttackPowers(entityId, damage,callback,callback1){
     console.log("in checkAttackPowers");
     if (typeof callback === "function")
     {
-        callback("monster",damage,callback1);
+        callback(entityId,"monster",damage,callback1);
     }
 
 }
-
-// function checkDefendPowers(entityId, damage){
-// 	console.log("in checkDefendPowers");
-// if (typeof callback === "function")
-//        {
-//          	callback("player",damage,callback1);
-//        }
-
-// }
-function checkSurvival(){
+function checkSurvival(entityId){
     console.log("in checkSurvival");
     if (playerHealth<=0)
     {
@@ -282,12 +334,21 @@ function checkSurvival(){
     }
     else
     {
-        checkRecoveryPowers("player",10,switchTurn);
+        checkRecoveryPowers(entityId,"player",10,switchTurn);
     }
 }
+function victory(callback){
+var lvl = entityHash[entityId].monsters.level;
 
+    callback();
+}
 
+function getRewards(callback){
 
+}
+function closeBattle(){
+
+}
 
 
 
@@ -339,7 +400,7 @@ function checkSurvival(){
 //var monsterHealth = 100;//monster health
 //var monsterCallFlag=true;
 //var value1 = 100;//to get this value as player health
-//var value2 = 100;//monster health
+//var monsterHealth = 100;//monster health
 //$(function () {
 //    initBattleWindow();
 //});
