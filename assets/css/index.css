@@ -41,3 +41,7 @@ body
     height:96px;
 }
 
+#dungeons {
+    display: none;
+    position: absolute;
+}
