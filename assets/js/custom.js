@@ -76,25 +76,28 @@ function addEntities() {
 
         for(var j=0; j<dungeonSelect.definition.length; j++)
         {
-            for(var a= 1, b= 1; a<=3, b<=3; a++, b++)
+            for(var a=1; a<=3; a++)
             {
-                var getDef = getDefinition(dungeonSelect, a, b)
+                for(var b=1; b<=3; b++)
                 {
-                    var m = Math.floor(Math.random() * getDef.choiceSet.length);
-
-                    var type = getDef.choiceSet[m];
-
-                    var targetDiv;
-
-                    if(type=="monster")
+                    var getDef = getDefinition(dungeonSelect, a, b)
                     {
-                        targetDiv = document.getElementById(a.toString() + b.toString());
-                        targetDiv.innerHTML = "Monster";
-                    }
-                    else if(type=="portal")
-                    {
-                        targetDiv = document.getElementById(a.toString() + b.toString());
-                        targetDiv.innerHTML = "Portal";
+                        var m = Math.floor(Math.random() * getDef.choiceSet.length);
+
+                        var type = getDef.choiceSet[m];
+
+                        var targetDiv;
+
+                        if(type=="monster")
+                        {
+                            targetDiv = document.getElementById(a.toString() + b.toString());
+                            targetDiv.innerHTML = "Monster";
+                        }
+                        else if(type=="portal")
+                        {
+                            targetDiv = document.getElementById(a.toString() + b.toString());
+                            targetDiv.innerHTML = "Portal";
+                        }
                     }
                 }
             }
