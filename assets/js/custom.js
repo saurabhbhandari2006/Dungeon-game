@@ -120,32 +120,10 @@ function getDefinition(dungeon, lx, ly){
 }
 function getRandom(min, max) {
 
-//    var m = Math.floor(Math.random() *3 + 1);
     var n = Math.floor(Math.random() * (max-min) + min);
-//
-//    while(m==2 && n==2)
-//        var temp = getRandom();
 
     return n;
 }
-
-//function checkBlocks(dungeonID) {
-//
-//    var dungeonSelect = getDungeon(dungeonID);
-//    var x = getRandom();
-//    var y = getRandom();
-//
-//    var defGrep = $.grep(mapHash, function(element){
-//        for(var i=0; i<dungeonSelect.definition.length; i++)
-//        {
-//            if(x == dungeonSelect.definition[i].lx && y == dungeonSelect.definition.ly && dungeonSelect.definition.entity!=0)
-//            {
-//                return dungeonSelect.definition[i];
-//            }
-//        }
-//    });
-//
-//}
 
 function getDungeon(dungeonID)
 {
