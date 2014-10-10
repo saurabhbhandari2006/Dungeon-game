@@ -4,13 +4,12 @@
     <list default="true" id="44c33337-d199-4678-950d-a8e0e37a8ac0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/custom.js" afterPath="$PROJECT_DIR$/assets/js/custom.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/dungeon-data.js" afterPath="$PROJECT_DIR$/assets/js/dungeon-data.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="dungeon.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="44c33337-d199-4678-950d-a8e0e37a8ac0" time="1412747191399" ignored="false" />
-    <file path="/dungeon-data.js" changelist="44c33337-d199-4678-950d-a8e0e37a8ac0" time="1412918886328" ignored="false" />
-    <file path="/custom.js" changelist="44c33337-d199-4678-950d-a8e0e37a8ac0" time="1412918429622" ignored="false" />
+    <file path="/dungeon-data.js" changelist="44c33337-d199-4678-950d-a8e0e37a8ac0" time="1412943203645" ignored="false" />
+    <file path="/custom.js" changelist="44c33337-d199-4678-950d-a8e0e37a8ac0" time="1412944228520" ignored="false" />
     <file path="/index.css" changelist="44c33337-d199-4678-950d-a8e0e37a8ac0" time="1412745028639" ignored="false" />
     <file path="/index.html" changelist="44c33337-d199-4678-950d-a8e0e37a8ac0" time="1412671387400" ignored="false" />
     <file path="/attack.html" changelist="44c33337-d199-4678-950d-a8e0e37a8ac0" time="1412756387574" ignored="false" />
@@ -34,22 +33,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="dungeon-data.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="dungeon-data.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/dungeon-data.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="214" column="22" selection-start="5225" selection-end="5225" vertical-scroll-proportion="0.53431374">
+            <state line="15" column="47" selection-start="328" selection-end="328" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="custom.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="custom.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/js/custom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="48" selection-start="1498" selection-end="1498" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!block;n#initializeTheme#0" expanded="false" />
-              </folding>
+            <state line="73" column="58" selection-start="1491" selection-end="1491" vertical-scroll-proportion="0.29883137">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -114,8 +111,8 @@
         <option value="$PROJECT_DIR$/attack.html" />
         <option value="$PROJECT_DIR$/assets/js/attack.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/assets/js/custom.js" />
         <option value="$PROJECT_DIR$/assets/js/dungeon-data.js" />
+        <option value="$PROJECT_DIR$/assets/js/custom.js" />
       </list>
     </option>
   </component>
@@ -399,9 +396,7 @@
     <entry file="file://$PROJECT_DIR$/assets/js/custom.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="81" column="0" selection-start="1746" selection-end="1746" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!block;n#initializeTheme#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -429,9 +424,7 @@
     <entry file="file://$PROJECT_DIR$/assets/js/custom.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!block;n#initializeTheme#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -492,18 +485,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/custom.js">
+    <entry file="file://$PROJECT_DIR$/assets/js/dungeon-data.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="48" selection-start="1498" selection-end="1498" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!block;n#initializeTheme#0" expanded="false" />
-          </folding>
+        <state line="15" column="47" selection-start="328" selection-end="328" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/dungeon-data.js">
+    <entry file="file://$PROJECT_DIR$/assets/js/custom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="214" column="22" selection-start="5225" selection-end="5225" vertical-scroll-proportion="0.53431374">
+        <state line="73" column="58" selection-start="1491" selection-end="1491" vertical-scroll-proportion="0.29883137">
           <folding />
         </state>
       </provider>

@@ -5,7 +5,8 @@ var entityHash = [];
 $(function() {
     createMap();
     createEntity();
-    addEntities("Purple");
+    //getDungeon(2);
+    addEntities();
 
 });
 
@@ -31,8 +32,9 @@ function createEntity() {
 
     for(var i=0; i < monsters.length; i++)
     {
-       entityHash.push(monsters[i]);
-       entityHash[i].id = i+1;
+        entityHash.push(monsters[i]);
+        entityHash[i].id = i+1;
+        entityHash.class = "monster";
     }
 
     for(var i = 0; i < mapHash.length; i++) {
@@ -42,43 +44,132 @@ function createEntity() {
             {
                 id:entityHash.length,
                 portal:imgName,
-                portalImage:"assets/img/portals/" + imgName + ".png"
+                portalImage:"assets/img/portals/" + imgName + ".png",
+                class: "portal"
             }
         );
     }
 
-    console.log(entityHash);
+    //console.log(entityHash);
 }
 
-function addEntities(dungeon) {
+function addEntities() {
 
     var x = 0;
     var y = 0;
+    var dungeonSelect;
+    var monsterSelect;
+    var defGrep;
 
-    x = Math.floor(Math.random() * 3 + 1);
-    y = Math.floor(Math.random() * 3 + 1);
-
-    if(dungeon=="Purple")
+    for(var i=0; i<mapHash.length - 1; i++)
     {
-        var dungeonSelect = $.grep(mapHash, function(element) {
-            return element.id == 1;
-        });
+        dungeonSelect = getDungeon(i+1);
 
-        dungeonSelect.lx = x;
-        dungeonSelect.ly = y;
-
-        if(dungeonSelect.entity!=0)
+        for(var i=0; i<dungeonSelect.definition.length; i++)
         {
-            x = Math.floor(Math.random() * 3 + 1);
-            y = Math.floor(Math.random() * 3 + 1);
-        }
-        else
-        {
-            var monsterAdd = $.grep(entityHash, )
+            for(var a= 1, b= 1; a<=3, b<=3; a++, b++)
+            {
+                var getDef = getDefinition(dungeonSelect, a, b)
+                {
+                    var m = Math.floor(Math.random() * getDef.choiceSet.length);
+
+                    var type = getDef.choiceSet[m];
+
+                    var targetDiv;
+
+                    if(type=="monster")
+                    {
+                        targetDiv = document.getElementById(a.toString() + b.toString());
+                        targetDiv.innerHTML = "Monster"
+                    }
+                    else if(type=="portal")
+                    {
+
+                    }
+                }
+            }
         }
 
-        console.log(dungeonSelect);
+
+//            var n = Math.random() < 0.5 ? 0 : 1;
+//            var m = Math.random() < 0.5 ? 0 : dungeonSelect.choiceSet.length;
+//
+//            var selClass = dungeonSelect.choiceSet[m];
+//
+//            console.log(selClass);
+//
+//            defGrep = getDefinition(dungeonSelect, x, y);
+//            console.log(x + " " + y);
+//            if(defGrep.entity==0)
+//            {
+//
+//                for(var k=0; k<mapHash[i].definition.length; k++)
+//                {
+//                    if(mapHash[i].definition[k].lx == x && mapHash[i].definition[k].ly == y)
+//                    {
+//                        mapHash[i].definition[k].entity = monsterSelect[n].id;
+//                        defGrep.entity = monsterSelect[n].id;
+//                    }
+//                }
+//
+//            } else {
+//                 j--;
+//            }
+
+//            console.log(mapHash[i]);
+            //console.log(assignEntityId);
+
+       }
+
+}
+
+function getDefinition(dungeon, lx, ly){
+
+    var definition = dungeon.definition;
+
+    for(var i=0; i<definition.length; i++) {
+        if(definition[i].lx == lx && definition[i].ly == ly)
+            return definition[i];
     }
+}
+function getRandom() {
+
+//    var m = Math.floor(Math.random() *3 + 1);
+    var n = Math.floor(Math.random() *3 + 1);
+//
+//    while(m==2 && n==2)
+//        var temp = getRandom();
+
+    return n;
+}
+
+function checkBlocks(dungeonID) {
+
+    var dungeonSelect = getDungeon(dungeonID);
+    var x = getRandom();
+    var y = getRandom();
+
+    var defGrep = $.grep(mapHash, function(element){
+        for(var i=0; i<dungeonSelect.definition.length; i++)
+        {
+            if(x == dungeonSelect.definition[i].lx && y == dungeonSelect.definition.ly && dungeonSelect.definition.entity!=0)
+            {
+                return dungeonSelect.definition[i];
+            }
+        }
+    });
+
+}
+function getDungeon(dungeonID)
+{
+    var dungeonSelect;
+
+    dungeonSelect = $.grep(mapHash, function(element) {
+            return element.id == dungeonID;
+    });
+
+    return dungeonSelect[0];
+    //console.log(dungeonSelect);
 }
 
 
