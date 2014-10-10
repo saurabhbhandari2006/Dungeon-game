@@ -89,11 +89,12 @@ function addEntities() {
                     if(type=="monster")
                     {
                         targetDiv = document.getElementById(a.toString() + b.toString());
-                        targetDiv.innerHTML = "Monster"
+                        targetDiv.innerHTML = "Monster";
                     }
                     else if(type=="portal")
                     {
-
+                        targetDiv = document.getElementById(a.toString() + b.toString());
+                        targetDiv.innerHTML = "Portal";
                     }
                 }
             }
