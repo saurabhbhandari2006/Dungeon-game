@@ -2,29 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44c33337-d199-4678-950d-a8e0e37a8ac0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/diceroll.png" afterPath="$PROJECT_DIR$/assets/img/diceroll.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/dicerollrev.png" afterPath="$PROJECT_DIR$/assets/img/dicerollrev.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/dice/face1.png" afterPath="$PROJECT_DIR$/assets/img/dice/face1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/dice/face2.png" afterPath="$PROJECT_DIR$/assets/img/dice/face2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/dice/face3.png" afterPath="$PROJECT_DIR$/assets/img/dice/face3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/dice/face4.png" afterPath="$PROJECT_DIR$/assets/img/dice/face4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/dice/face5.png" afterPath="$PROJECT_DIR$/assets/img/dice/face5.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/dice/face6.png" afterPath="$PROJECT_DIR$/assets/img/dice/face6.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/attack.css" afterPath="$PROJECT_DIR$/assets/css/attack.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/attack.html" afterPath="$PROJECT_DIR$/attack.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/attack.js" afterPath="$PROJECT_DIR$/assets/js/attack.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/custom.js" afterPath="$PROJECT_DIR$/assets/js/custom.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/dungeon-data.js" afterPath="$PROJECT_DIR$/assets/js/dungeon-data.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dungeon.iml" afterPath="$PROJECT_DIR$/.idea/dungeon.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/index.css" afterPath="$PROJECT_DIR$/assets/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dungeon.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="44c33337-d199-4678-950d-a8e0e37a8ac0" time="1413191939277" ignored="false" />
     <file path="/dungeon-data.js" changelist="44c33337-d199-4678-950d-a8e0e37a8ac0" time="1413190721588" ignored="false" />
-    <file path="/custom.js" changelist="44c33337-d199-4678-950d-a8e0e37a8ac0" time="1413203670664" ignored="false" />
+    <file path="/custom.js" changelist="44c33337-d199-4678-950d-a8e0e37a8ac0" time="1413207350963" ignored="false" />
     <file path="/index.css" changelist="44c33337-d199-4678-950d-a8e0e37a8ac0" time="1412745028639" ignored="false" />
     <file path="/index.html" changelist="44c33337-d199-4678-950d-a8e0e37a8ac0" time="1412671387400" ignored="false" />
     <file path="/attack.html" changelist="44c33337-d199-4678-950d-a8e0e37a8ac0" time="1412756387574" ignored="false" />
@@ -48,19 +33,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="dungeon-data.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="dungeon-data.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/js/dungeon-data.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="24" selection-start="743" selection-end="743" vertical-scroll-proportion="0.0">
+            <state line="19" column="40" selection-start="547" selection-end="547" vertical-scroll-proportion="-1.887255">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="custom.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="custom.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/custom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="42" selection-start="1540" selection-end="1540" vertical-scroll-proportion="0.38037866">
+            <state line="122" column="49" selection-start="2846" selection-end="2846" vertical-scroll-proportion="-9.612904">
               <folding />
             </state>
           </provider>
@@ -499,16 +484,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/dungeon-data.js">
+    <entry file="file://$PROJECT_DIR$/assets/js/custom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="24" selection-start="743" selection-end="743" vertical-scroll-proportion="0.0">
+        <state line="122" column="49" selection-start="2846" selection-end="2846" vertical-scroll-proportion="-9.612904">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/custom.js">
+    <entry file="file://$PROJECT_DIR$/assets/js/dungeon-data.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="42" selection-start="1540" selection-end="1540" vertical-scroll-proportion="0.38037866">
+        <state line="19" column="40" selection-start="547" selection-end="547" vertical-scroll-proportion="-1.887255">
           <folding />
         </state>
       </provider>
