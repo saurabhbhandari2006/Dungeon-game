@@ -1,14 +1,24 @@
 var diceNum = 2;
-var playerHealth = 100; //to get this value as player health
+var playerHealth = 1; //to get this value as player health
 var selected = false;
 
 var mapHash;
 var entityHash = [];
+var blinkit;
 
+function background() {
+    $('body').css('background-image', "url(" + theme.background + ")");
+    blinkit = setInterval(blinker, 2000);
+    $('#startClicker').on('click', function () {
+        $('.gameTitle').fadeOut();
+        $('.How').fadeIn();
+        clearInterval(blinkit);
+        howTo();
+        initGame();
 
-$(function () {
-    initGame();
-})
+    });
+};
+
 
 function initializeTheme() {
 
@@ -18,9 +28,28 @@ function initializeTheme() {
     }
 }
 
+function blinker() {
+    $('#startClicker').fadeOut(500, function () {
+        $('#startClicker').fadeIn(500);
+    });
+}
+function blinker2() {
+    $('#start').fadeOut(500, function () {
+        $('#start').fadeIn(500);
+    });
+}
+function howTo() {
+    blinkit = setInterval(blinker2, 2000);
+    $('#start').on('click', function () {
+        $('.How').fadeOut();
+        $('#gameAttack_wrapper').fadeIn();
+        clearInterval(blinkit);
 
+    });
+}
 function initGame() {
     $("#dungeons").fadeIn();
+    $(".defeat").fadeOut();
     createMap();
     createEntity();
     addEntities();
@@ -30,7 +59,8 @@ function initGame() {
 
 function startGame(dungeonId) {
     console.log("start startGame");
-    selected == false;
+    selected = false;
+console.log("selected value : " +selected);
     $(".matrix").unbind('click').click(function () {
         if (selected == false) {
             selected = true;
@@ -52,11 +82,7 @@ function startGame(dungeonId) {
 }
 
 
-function initializeTheme() {
-    for (var i = 0; i < mapHash.length; i++) {
-        mapHash[i].backgroundImage = "assets/img/backgrounds/" + mapHash[i].name + ".png";
-    }
-}
+
 
 function createMap() {
     mapHash = map;
@@ -396,7 +422,7 @@ function switchTurn(from) {
             playerTurn();
         }
 
-    }, 4000);
+    }, 1000);
 }
 
 function emptyDiceDiv() {
@@ -486,199 +512,21 @@ function checkSurvival() {
         checkRecoveryPowers("player", switchTurn);
     }
 }
+function defeat(){
+    console.log("in defeat");
+    $("#fightArena").fadeOut();
+    $('#gameAttack_wrapper').fadeOut();
+    $('.How').fadeOut();
+    $(".defeat").fadeIn();
+    blinkit = setInterval(blinker, 2000);
+    $('#startAgainClicker').on('click', function () {
+        $(".defeat").fadeIn();
+       clearInterval(blinkit);
+        $(".gameTitle").fadeIn();
+        background();
+    });
 
 
-//**********************************************************************************************************************
-//var selPort = [];       //Selected Portals
-//var selMons = [];       //Selected Monsters
-//var flag = 0;           //Flag value
-//var portalPos = [];     //Positions of portals
-//var bossPos;    //Positions of monsters
-//var posArr = [];        //Array of filled positions
-//var bossMap = 0;          //map ID
-//var mapColor;       //map color
-//var mapId = 0;
-//var c = 0;
-//
-///* Function: initEverything
-// Description:
-// Main initialization function, which is called first in the program flow.
-// Status:
-// COMPLETED
-// */
-//function initEverything()
-//{
-//    setBoss();
-//    enterDungeon();
-//    //   setMonsters();
-////     SetSeer();
-//}
-//
-//function setBoss() {
-//    bossPos = getRandom();
-//    var random = Math.floor(Math.random() * 5) + 1;
-//    bossMap = portals[random].backgroundColor;
-//}
-//
-//function getPosition(flag) {
-//    var pos;
-//    posArr = [];
-//    console.log("flag: " + flag);
-//    console.log("bossMap: "+bossMap);
-//    console.log("bossPos: "+bossPos);
-//
-//    while (posArr.length <= flag) {
-//        pos = getRandom();
-//        console.log("posArr")
-//        console.log(posArr);
-//        console.log("pos: "+pos);
-//        console.log("mapColor: " + mapColor);
-//
-//        if(validatePos(pos)) {
-//            posArr.push(pos);
-//            c++;
-//        }
-//    }
-//}
-//
-//function getRandom() {
-//    var mL = 0;
-//    var mR = 0;
-//    mL = Math.floor(Math.random() * (4-1) + 1);
-//    mR = Math.floor(Math.random() * (4-1) + 1);
-//    while(mL == 2 && mR == 2)
-//    {
-//        mL = Math.floor(Math.random() * (4-1) + 1);
-//        mR = Math.floor(Math.random() * (4-1) + 1);
-//    }
-//    var pos = mL.toString() + mR.toString();
-//    return pos;
-//}
-//
-//function validatePos(pos) {
-//    var can = true;
-//    console.log("posArr.length: "+posArr.length);
-//    for (var i = 0; i < posArr.length; i++) {
-//        if (pos == posArr[i])
-//            can = false;
-//
-//        if((mapColor == bossMap) && (pos == bossPos))
-//            can = false;
-//    }
-//    return can;
-//}
-//
-//
-//
-//
-//function enterDungeon()
-//{
-//    mapId++;
-//    selPort = shuffle(portals);
-//    selMons = shuffle(monsters);
-//    if(mapId == 1)
-//    {
-//        document.getElementById("mainmatrix").style.backgroundColor = selPort[0].backgroundColor;
-//        mapId=selPort[0].backgroundColor;
-//        setPortal();
-//    }
-//    else
-//    {
-//        mapId=portals[x].colorID;
-//        setPortal();
-//    }
-//    setMonsters();
-//    setPlayer();
-//}
-//
-//
-//function setPlayer()
-//{
-//    var pos = "22";
-//
-//    var targetDiv = document.getElementById(pos);
-//
-//    targetDiv.innerHTML = "<img src='assets/img/player.png' />";
-//}
-//
-//function setPortal()
-//{
-//    var pos;
-//    flag = Math.floor(Math.random() * 3 + 1);
-//    getPosition(flag);
-//    for(var i=0; i<flag; i++)
-//    {
-//        var targetDiv = document.getElementById(posArr[i]);
-//        if(selPort[i].colorID != mapColor)
-//        {
-//            targetDiv.style.backgroundColor = selPort[i].backgroundColor;
-//        }
-//        else
-//        {
-//            targetDiv.style.backgroundColor = selPort[i+3].backgroundColor;
-//        }
-//        portalPos.push({mapID:mapID, colID:selPort[i].colorID, getPos:pos});
-//    }
-//}
-//
-//function setMonsters()
-//{
-//    flag = Math.floor(Math.random() * 3 +1);
-//    console.log(flag);
-//    getPosition(flag);
-//    for(var i = 0; i<flag; i++)
-//    {
-//        var targetDiv = document.getElementById(posArr[i]);
-//        targetDiv.innerHTML = selMons[i].image;
-//        console.log(targetDiv);
-////monsterPos.push()
-//    }
-//    console.log(posArr);
-//}
-//
-//function drawMonsters()
-//{
-//
-//}
-//
-//
-//function SetSeer()
-//{
-//    var mL = 0;
-//    var mR = 0;
-//
-//    mL = Math.floor(Math.random() * (4-1) + 1);
-//    mR = Math.floor(Math.random() * (4-1) + 1);
-//
-//    while(mL == 2 && mR == 2)
-//    {
-//        mL = Math.floor(Math.random() * (4-1) + 1);
-//        mR = Math.floor(Math.random() * (4-1) + 1);
-//    }
-//
-//    var pos = mL.toString() + mR.toString();
-//
-//    for(var i=0; i<=positions.length; i++)
-//    {
-//        console.log(i);
-//        if (portalPos[i].ps == pos)
-//        {
-//            mL = Math.floor(Math.random() * (4 - 1) + 1);
-//            mR = Math.floor(Math.random() * (4 - 1) + 1);
-//
-//            while (mL == 2 && mR == 2)
-//            {
-//                mL = Math.floor(Math.random() * (4 - 1) + 1);
-//                mR = Math.floor(Math.random() * (4 - 1) + 1);
-//            }
-//        }
-//    }
-//
-//    pos = mL.toString() + mR.toString();
-//
-//    var targetDiv = document.getElementById(pos.toString());
-//    console.log(targetDiv);
-//
-//    targetDiv.innerHTML = "<span style='color:#fff;'>SEER!</span>";
-//    positions.push({ps:pos, posFlags:1});
-//}
+}
+
+

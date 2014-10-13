@@ -2,9 +2,8 @@ var initHealth = 100;
 var initDice = 2;
 var teleportCost = 5;
 
-/*
-
- */
+window.theme = {};
+theme.background = "assets/img/background.jpg";
 var map = [
 
     {name: "Purple", type: "definition", generation: {},

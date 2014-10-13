@@ -240,7 +240,7 @@ float: left;
         background-position: 0px;
     }
     to {
-        background-position: -1160px;
+        background-position: -1100px;
     }
 }
 
@@ -249,7 +249,7 @@ float: left;
         background-position: 0px;
     }
     to {
-        background-position: -1160px;
+        background-position: -1100px;
     }
 }
 
@@ -258,7 +258,7 @@ float: left;
         background-position: 0px;
     }
     to {
-        background-position: -1160px;
+        background-position: -1100px;
     }
 }
 
@@ -267,7 +267,7 @@ float: left;
         background-position: 0px;
     }
     to {
-        background-position: -1160px;
+        background-position: -1100px;
     }
 }
 
@@ -276,7 +276,7 @@ float: left;
         background-position: 0px;
     }
     to {
-        background-position: -1160px;
+        background-position: -1100px;
     }
 }
 
@@ -289,6 +289,22 @@ float: left;
     bottom: 4%;
     left: 38%;
     position: absolute;
+}
+#startAgainClicker{
+    text-decoration: none;
+    font-size:48%;
+    color:cornflowerblue;
+
+}
+.defeat{
+    height: 480px;
+    /*margin-top: 18%;*/
+    /*position: absolute;*/
+    width: 640px;
+    display: none;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 25%;
 }
 
 
