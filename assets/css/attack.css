@@ -18,9 +18,10 @@ body {
     margin-top: 18%;
     position: absolute;
     width: 100%;
+    display: none;
 }
 #monster{
-   max-width: 40%;
+    max-width: 40%;
     margin: 5%;
     max-height: 75%;
     position: absolute;

@@ -338,12 +338,26 @@ function checkSurvival(entityId){
     }
 }
 function victory(callback){
-var lvl = entityHash[entityId].monsters.level;
-
+console.log("'In Victory function");
     callback();
 }
 
 function getRewards(callback){
+
+    var random = getRandom(1,12);
+    var reward = rewards[random];
+    switch (reward.type){
+        case "health":
+            playerHealth += reward.value;
+            break;
+        case "Dice":
+            diceNum += reward.value;
+            break;
+
+    }
+
+    callback();
+
 
 }
 function closeBattle(){

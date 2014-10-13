@@ -12,16 +12,17 @@ var map = [
         portals:2,
         seer: 0,
         definition: [
-            {lx: 1, ly: 1, entity: 0},
-            {lx: 1, ly: 2, entity: 0},
-            {lx: 1, ly: 3, entity: 0},
-            {lx: 2, ly: 1, entity: 0},
-            {lx: 2, ly: 2, entity: 0},
-            {lx: 2, ly: 3, entity: 0},
-            {lx: 3, ly: 1, entity: 0},
-            {lx: 3, ly: 2, entity: 0},
-            {lx: 3, ly: 3, entity: 0}
-        ]
+            {lx: 1, ly: 1, choiceSet: ["monster", "portal"]},
+            {lx: 1, ly: 2, choiceSet: ["portal"]},
+            {lx: 1, ly: 3, choiceSet: []},
+            {lx: 2, ly: 1, choiceSet: []},
+            {lx: 2, ly: 2, choiceSet: ["player"]},
+            {lx: 2, ly: 3, choiceSet: ["portal"]},
+            {lx: 3, ly: 1, choiceSet: ["monster"]},
+            {lx: 3, ly: 2, choiceSet: []},
+            {lx: 3, ly: 3, choiceSet: ["portal"]}
+        ],
+        backgroundImage:""
     },
 
     {name: "Blue",  type: "definition", generation: {},
@@ -29,16 +30,17 @@ var map = [
         portals:2,
         seer: 0,
         definition: [
-            {lx: 1, ly: 1, entity: 0},
-            {lx: 1, ly: 2, entity: 0},
-            {lx: 1, ly: 3, entity: 0},
-            {lx: 2, ly: 1, entity: 0},
-            {lx: 2, ly: 2, entity: 0},
-            {lx: 2, ly: 3, entity: 0},
-            {lx: 3, ly: 1, entity: 0},
-            {lx: 3, ly: 2, entity: 0},
-            {lx: 3, ly: 3, entity: 0}
-        ]
+            {lx: 1, ly: 1, choiceSet: [""]},
+            {lx: 1, ly: 2, choiceSet: [""]},
+            {lx: 1, ly: 3, choiceSet: [""]},
+            {lx: 2, ly: 1, choiceSet: [""]},
+            {lx: 2, ly: 2, choiceSet: [""]},
+            {lx: 2, ly: 3, choiceSet: [""]},
+            {lx: 3, ly: 1, choiceSet: [""]},
+            {lx: 3, ly: 2, choiceSet: [""]},
+            {lx: 3, ly: 3, choiceSet: [""]}
+        ],
+        backgroundImage:""
     },
 
     {name: "Green",  type: "definition", generation: {},
@@ -46,16 +48,17 @@ var map = [
         portals:2,
         seer: 1,
         definition: [
-            {lx: 1, ly: 1, entity: 0},
-            {lx: 1, ly: 2, entity: 0},
-            {lx: 1, ly: 3, entity: 0},
-            {lx: 2, ly: 1, entity: 0},
-            {lx: 2, ly: 2, entity: 0},
-            {lx: 2, ly: 3, entity: 0},
-            {lx: 3, ly: 1, entity: 0},
-            {lx: 3, ly: 2, entity: 0},
-            {lx: 3, ly: 3, entity: 0}
-        ]
+            {lx: 1, ly: 1, choiceSet: [""]},
+            {lx: 1, ly: 2, choiceSet: [""]},
+            {lx: 1, ly: 3, choiceSet: [""]},
+            {lx: 2, ly: 1, choiceSet: [""]},
+            {lx: 2, ly: 2, choiceSet: [""]},
+            {lx: 2, ly: 3, choiceSet: [""]},
+            {lx: 3, ly: 1, choiceSet: [""]},
+            {lx: 3, ly: 2, choiceSet: [""]},
+            {lx: 3, ly: 3, choiceSet: [""]}
+        ],
+        backgroundImage:""
     },
 
     {name: "Yellow",  type: "definition", generation: {},
@@ -63,16 +66,17 @@ var map = [
         portals:2,
         seer: 1,
         definition: [
-            {lx: 1, ly: 1, entity: 0},
-            {lx: 1, ly: 2, entity: 0},
-            {lx: 1, ly: 3, entity: 0},
-            {lx: 2, ly: 1, entity: 0},
-            {lx: 2, ly: 2, entity: 0},
-            {lx: 2, ly: 3, entity: 0},
-            {lx: 3, ly: 1, entity: 0},
-            {lx: 3, ly: 2, entity: 0},
-            {lx: 3, ly: 3, entity: 0}
-        ]
+            {lx: 1, ly: 1, choiceSet: [""]},
+            {lx: 1, ly: 2, choiceSet: [""]},
+            {lx: 1, ly: 3, choiceSet: [""]},
+            {lx: 2, ly: 1, choiceSet: [""]},
+            {lx: 2, ly: 2, choiceSet: [""]},
+            {lx: 2, ly: 3, choiceSet: [""]},
+            {lx: 3, ly: 1, choiceSet: [""]},
+            {lx: 3, ly: 2, choiceSet: [""]},
+            {lx: 3, ly: 3, choiceSet: [""]}
+        ],
+        backgroundImage:""
     },
 
     {name: "Orange",  type: "definition", generation: {},
@@ -80,16 +84,17 @@ var map = [
         portals:2,
         seer: 1,
         definition: [
-            {lx: 1, ly: 1, entity: 0},
-            {lx: 1, ly: 2, entity: 0},
-            {lx: 1, ly: 3, entity: 0},
-            {lx: 2, ly: 1, entity: 0},
-            {lx: 2, ly: 2, entity: 0},
-            {lx: 2, ly: 3, entity: 0},
-            {lx: 3, ly: 1, entity: 0},
-            {lx: 3, ly: 2, entity: 0},
-            {lx: 3, ly: 3, entity: 0}
-        ]
+            {lx: 1, ly: 1, choiceSet: [""]},
+            {lx: 1, ly: 2, choiceSet: [""]},
+            {lx: 1, ly: 3, choiceSet: [""]},
+            {lx: 2, ly: 1, choiceSet: [""]},
+            {lx: 2, ly: 2, choiceSet: [""]},
+            {lx: 2, ly: 3, choiceSet: [""]},
+            {lx: 3, ly: 1, choiceSet: [""]},
+            {lx: 3, ly: 2, choiceSet: [""]},
+            {lx: 3, ly: 3, choiceSet: [""]}
+        ],
+        backgroundImage:""
     },
 
     {name: "Red",  type: "definition", generation: {},
@@ -97,16 +102,17 @@ var map = [
         portals:2,
         seer: 1,
         definition: [
-            {lx: 1, ly: 1, entity: 0},
-            {lx: 1, ly: 2, entity: 0},
-            {lx: 1, ly: 3, entity: 0},
-            {lx: 2, ly: 1, entity: 0},
-            {lx: 2, ly: 2, entity: 0},
-            {lx: 2, ly: 3, entity: 0},
-            {lx: 3, ly: 1, entity: 0},
-            {lx: 3, ly: 2, entity: 0},
-            {lx: 3, ly: 3, entity: 0}
-        ]
+            {lx: 1, ly: 1, choiceSet: [""]},
+            {lx: 1, ly: 2, choiceSet: [""]},
+            {lx: 1, ly: 3, choiceSet: [""]},
+            {lx: 2, ly: 1, choiceSet: [""]},
+            {lx: 2, ly: 2, choiceSet: [""]},
+            {lx: 2, ly: 3, choiceSet: [""]},
+            {lx: 3, ly: 1, choiceSet: [""]},
+            {lx: 3, ly: 2, choiceSet: [""]},
+            {lx: 3, ly: 3, choiceSet: [""]}
+        ],
+        backgroundImage:""
     }
 ]
 /*
@@ -133,6 +139,7 @@ var monsters = [
         dice: 1,
         probability:0,
         level: 1,
+        power:"",
         image: "<img src='assets/img/m1.png' />"
     },
     {
@@ -189,7 +196,7 @@ var monsters = [
         name: "Raxtax",
         type: "Spirit" ,
         health: 50,
-        dice: 4,
+        dice: 3,
         probability:0,
         level: 4,
         power:"",
@@ -226,8 +233,6 @@ var monsters = [
         image:""
     }
 ]
-
-
 var rewards = [
     {
         name: "Healing Potion",
@@ -279,17 +284,7 @@ var rewards = [
         value: 25
     },
     {
-        name: "Super Healing Potion",
-        type: "Dice",
-        value: 1
-    },
-    {
-        name: "Super Healing Potion",
-        type: "Dice",
-        value: 1
-    },
-    {
-        name: "Super Healing Potion",
+        name: "Dice",
         type: "Dice",
         value: 1
     }
