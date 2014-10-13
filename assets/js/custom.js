@@ -1,10 +1,11 @@
 
-var diceNum = 2;
-var playerHealth = 1; //to get this value as player health
-var selected = false;
+var diceNum;
+var playerHealth;
+var gridSelected = false;
 
 var mapHash;
 var entityHash = [];
+var rewardsHash;
 
 
 $(function () {
@@ -21,37 +22,16 @@ function initializeTheme() {
 
 
 function initGame() {
+    diceNum = initDice;
+    playerHealth = initHealth;
     $("#dungeons").fadeIn();
     createMap();
     createEntity();
     addEntities();
+    createRewards();
     drawDungeon(1);
     startGame(1);
 }
-
-function startGame(dungeonId) {
-    console.log("start startGame");
-    selected == false;
-    $(".matrix").unbind('click').click(function() {
-        if(selected == false) {
-            selected = true;
-            var p = $(this).attr("id");
-
-            var lx = parseInt(p.charAt(0));
-            var ly = parseInt(p.charAt(1));
-
-            if(lx==2 && ly==2){
-                startGame(dungeonId);
-            } else {
-                var content = getContent(dungeonId, lx, ly);
-                console.log(content);
-                var entityId = content.entity;
-                movePlayer(lx, ly, entityId, checkReaction);
-            }
-        }
-    });
-}
-
 
 
 function initializeTheme() {
@@ -71,80 +51,84 @@ function createMap() {
 //console.log(mapHash);
 }
 
+function createRewards() {
+    rewardsHash = rewards;
+    for(var i=0; i<rewardsHash.length; i++)
+    {
+        rewardsHash[i].id = i+1;
+    }
+    console.log("rewards");
+    console.log(rewardsHash);
+}
 
 function createEntity() {
-    for(var i=0; i < monsters.length; i++)
+    console.log(entityHash);
+    var i;
+    for(i = 0; i < monsters.length; i++)
     {
         entityHash.push(monsters[i]);
         entityHash[i].id = i+1;
-        entityHash[i].class = "monster";
+        entityHash[i].class = "Monster";
     }
-    for(var i = 0; i < mapHash.length; i++) {
+
+    entityHash[i-1].class = "Boss";
+
+    for(i = 0; i < mapHash.length; i++) {
         var imgName = mapHash[i].name;
         entityHash.push(
             {
                 id:entityHash.length+1,
                 portal:imgName,
-                portalImage:"assets/img/portals/" + imgName + ".png",
-                class: "portal"
+                image:"<img src='assets/img/portals/" + imgName + ".png' />",
+                class: "Portal"
             }
         );
     }
+
+    console.log("entityhash:");
+    console.log(entityHash);
 }
 
 function addEntities() {
-    var x = 0;
-    var y = 0;
+    console.log("in addEntities");
     var dungeonSelect;
-    var monsterSelect;
-    var defGrep;
+    var entities;
     for(var i=0; i<mapHash.length - 1; i++)
     {
         dungeonSelect = getDungeon(i+1);
-        for(var j=0; j<dungeonSelect.definition.length; j++)
-        {
-            for(var a=1; a<=3; a++)
-            {
-                for(var b=1; b<=3; b++)
-                {
+        for(var j=0; j<dungeonSelect.definition.length; j++) {
+            for(var a=1; a<=3; a++) {
+                for(var b=1; b<=3; b++) {
                     var getDef = getDefinition(dungeonSelect, a, b);
-                    {
-                        var m = Math.floor(Math.random() * getDef.choiceSet.length);
-                        var type = getDef.choiceSet[m];
-                        if(type=="monster")
-                        {
-                            for(var n = 0; n < 9; n++) {
-                                if(mapHash[i].definition[n].lx == a && mapHash[i].definition[n].ly == b) {
-                                    mapHash[i].definition[n].content = "Monster";
-                                    mapHash[i].definition[n].entity = 1;
-                                }
+
+                    var m = Math.floor(Math.random() * getDef.choiceSet.length);
+                    var type = getDef.choiceSet[m];
+                    entities = getEntityByClass(type);
+                    if(type=="Monster") {
+                        for(var n = 0; n < 9; n++) {
+                            if(mapHash[i].definition[n].lx == a && mapHash[i].definition[n].ly == b) {
+                                var random = getRandom(0,entities.length-1);
+                                var entity = entities[random];
+                                mapHash[i].definition[n].entity = entity.id;
+                                mapHash[i].definition[n].content = entity.image;
                             }
                         }
-                        else if(type=="portal")
-                        {
-                            for(var n = 0; n < 9; n++) {
-                                if(mapHash[i].definition[n].lx == a && mapHash[i].definition[n].ly == b) {
-                                    mapHash[i].definition[n].content = "Portal";
-                                    mapHash[i].definition[n].entity = 1;
-                                }
+                    } else if(type=="Portal") {
+                        for(var n = 0; n < 9; n++) {
+                            if(mapHash[i].definition[n].lx == a && mapHash[i].definition[n].ly == b) {
+                                var random = getRandom(0,entities.length-1);
+                                var entity = entities[random];
+                                mapHash[i].definition[n].entity = entity.id;
+                                mapHash[i].definition[n].content = entity.image;
                             }
                         }
                     }
+
                 }
             }
         }
-        console.log(dungeonSelect);
     }
-    console.log(mapHash);
 
-}
-
-function getDefinition(dungeon, lx, ly) {
-    var definition = dungeon.definition;
-    for(var i=0; i<definition.length; i++) {
-        if(definition[i].lx == lx && definition[i].ly == ly)
-            return definition[i];
-    }
 }
 
 function getRandom(min, max) {
@@ -163,31 +147,6 @@ function getDungeon(dungeonID) {
     });
     return dungeonSelect[0];
 //console.log(dungeonSelect);
-}
-
-
-
-
-
-
-
-
-
-function drawDungeon(dungeonId) {
-    console.log("start drawDungeon");
-    var dungeon = getDungeon(dungeonId);
-//    document.getElementById("dungeonBackground").src = dungeon.backgroundImage;
-
-    for (var i = 1; i <= 3; i++) {
-        for (var j = 1; j <= 3; j++) {
-            var content = getContent(dungeonId, i, j);
-            if(content.choiceSet.length != 0) {
-                drawEntity(content.lx, content.ly, content.content);
-                document.getElementById("22").innerHTML = "<img src='assets/img/player.png' />";
-            }
-        }
-    }
-    console.log("end drawDungeon");
 }
 
 function getDungeonId(dungeonName) {
@@ -219,13 +178,6 @@ function getContent(dungeonId, lx, ly) {
     return content;
 }
 
-function drawEntity(lx, ly, content) {
-    console.log("start drawEntity");
-    var pos = lx+""+ly;
-    document.getElementById(pos).innerHTML = content;
-    console.log("end drawEntity");
-}
-
 function getEntity(entityId) {
     var entity = $.grep(entityHash, function (entityHash) {
         return entityHash.id == entityId;
@@ -234,9 +186,111 @@ function getEntity(entityId) {
     return entity[0];
 }
 
+function getEntityByClass(cls) {
+    var entities = $.grep(entityHash, function(entityHash) {
+        return entityHash.class == cls;
+    });
+
+    return entities;
+}
+
+
+
+function startGame(dungeonId) {
+    console.log("start startGame");
+    gridSelected == false;
+    $(".matrix").unbind('click').click(function() {
+        if(gridSelected == false) {
+            gridSelected = true;
+            var p = $(this).attr("id");
+
+            var lx = parseInt(p.charAt(0));
+            var ly = parseInt(p.charAt(1));
+            console.log(lx + " " + ly);
+
+            if(lx==2 && ly==2){
+                gridSelected = false;
+                startGame(dungeonId);
+            } else {
+                var content = getContent(dungeonId, lx, ly);
+                console.log(content);
+                var entityId = content.entity;
+                console.log(entityId);
+                movePlayer(lx, ly, entityId, checkReaction);
+            }
+        }
+    });
+}
+
+
+function drawDungeon(dungeonId) {
+    console.log("start drawDungeon");
+    var dungeon = getDungeon(dungeonId);
+//    document.getElementById("dungeonBackground").src = dungeon.backgroundImage;
+
+    for (var i = 1; i <= 3; i++) {
+        for (var j = 1; j <= 3; j++) {
+            var content = getContent(dungeonId, i, j);
+            console.log(content);
+            if(content.choiceSet.length != 0) {
+                drawEntity(content.lx, content.ly, content.content);
+                document.getElementById("22").innerHTML = "<div id='player-div' style=' left: 42%;position: absolute;top: 40%;'><img src='assets/img/player.png' /></div>";
+            }
+        }
+    }
+    console.log("end drawDungeon");
+}
+
+function drawEntity(lx, ly, content) {
+    console.log("start drawEntity");
+    var pos = lx+""+ly;
+    document.getElementById(pos).innerHTML = content;
+    console.log("end drawEntity");
+}
+
 function movePlayer(lx, ly, entityId, callback) {
     console.log("in movePlayer");
-    callback(entityId);
+    var pos = lx+""+ly;
+    var case1 = $("#player-div").clone();
+    $("#22").append(case1);
+    $("#player-div").css({opacity:0});
+    console.log(pos);
+    switch(pos){
+        case "11":
+//            console.log("in case");
+            case1.animate({left:"-=33%",top:"-=34%"},1000);
+//            $("#player-div").animate({left:"+=10.47%",top:"-=51.2%"},0);
+            break;
+        case "12":
+            case1.animate({top:"-=34%"},1000);
+            break;
+        case "13":
+            case1.animate({left:"+=33%",top:"-=34%"},1000);
+            break;
+        case "21":
+            case1.animate({left:"+=33%"},1000);
+            break;
+        case "22":
+//            case1.animate({left:"+=33%",top:"-=34%"},1000);
+            break;
+        case "23":
+            case1.animate({left:"+=33%"},1000);
+            break;
+        case "31":
+            case1.animate({left:"-=33%",top:"+=34%"},1000);
+            break;
+        case "32":
+            case1.animate({top:"+=34%"},1000);
+            break;
+        case "33":
+            case1.animate({left:"+=33%",top:"+=34%"},1000);
+            break;
+
+
+    }
+    case1.fadeOut(2000);
+    setTimeout(function(){case1.remove();},2500);
+   setTimeout(function(){callback(entityId);},1200);
 }
 
 
@@ -244,36 +298,62 @@ function movePlayer(lx, ly, entityId, callback) {
 function checkReaction(entityId) {
     console.log("in checkReaction");
     var entity = getEntity(entityId);
-    console.log(entity.class);
+    console.log(entity);
+//    console.log(entity.class);
     switch(entity.class) {
-        case "monster":
+        case "Monster":
             console.log("its monster");
             initBattleWindow(entityId);
             break;
 
-        case "portal":
+        case "Portal":
+            console.log("its portal");
             teleport(entityId);
+            break;
+
+        case "Seer":
+            console.log("its Seer");
+            seer();
             break;
     }
 }
 
 function teleport(entityId) {
     var entity = getEntity(entityId);
+    console.log(entity);
     var dungeonId = getDungeonId(entity.portal);
+    console.log(dungeonId);
+    playerHealth -= teleportCost;
+    gridSelected = false;
     drawDungeon(dungeonId);
     startGame(dungeonId);
 }
 
 
 function initBattleWindow(entityId) {
-    $("#dungeons").fadeOut();
-    $("#fightArena").fadeIn();
+    $("#dungeons").fadeOut(1500);
+    $("#fightArena").fadeIn(1500);
+
+    playerHealthDiv = document.getElementById("player-Health");
+    monsterHealthDiv = document.getElementById("monster-Health");
+
+    player = true;
+    playerHealthDiv.style.width = playerHealth + "%";
+    $("#player-hp").text(playerHealth);
+    $("#player-health-val").text("Health Left: "+playerHealth+"%");
+
+    var entity = getEntity(entityId);
+    monsterHealthDiv.style.width = 100 + "%";
+    $("#monster-hp").text(entity.health);
+    $("#monster-max-hp").text(entity.health);
+    $("#monster-health-val").text("Health Left: 100%");
+    $("#monster-name").text(entity.name);
+    $("#monster").html(entity.image);
+    $("#monster-lvl").text("Lvl" + " " + entity.level);
+    $("#monster-dice-num").text(entity.dice);
     var dice = $("#monster-dice-num").text();
     showDice(dice,diceNum);
 
-    player = true;
-    var entity = getEntity(entityId);
-    $("#monster-hp").text(entity.health);
     playerTurn(entityId);
 }
 
@@ -349,15 +429,19 @@ function rollDice(diceNum,callback,callback1,callback2) {
         }
     }, 751)
 }
+function showDice(dice1,dice2){
+    for(var i=1;i<=dice1;i++){
+        $("#monster-dice-img").append("<img src='assets/img/dice/face1.png' style='height: 100%'/>");
+    }
+    for(var i=1;i<=dice2;i++){
+        $("#player-dice-img").append("<img src='assets/img/dice/face1.png' style='height: 100%'/>");
+    }
+}
 //------------------------------------------------------------dice roll end-------------------------------------
 function playerTurn() {
     setTimeout(function () {
         console.log("Player:");
 
-showDice();
-        setTimeout(function(){
-
-        },1000);
         $(".btn").unbind('click').click(function () {
             if (player) {
                 player = false;
@@ -367,43 +451,28 @@ showDice();
                         console.log("attack selected");
                         //simply passing the function name in string format and then the variables are passed in callbacks as and what needed
                         rollDice(diceNum,checkDefendPowers,doDamage,checkIfDead);
-
-                        // console.log("entering doDamage");
-                        // doDamage("player",damage);
-                        // function(){
-                        //    updateResources("monster",function()
-                        //    {
-                        //            // emptyDiceDiv();
-                        //            // switchTurn("player")
-                        //    });
-
-
-                        // });
                         break;
                     case "btnRetreat":
-                        //drawMap();
+                        closeBattle();
                         break;
                 }
             }
         })
     }, 500);
 }
+
 function monster(call) {
     setTimeout(function()
     {
         console.log("in ai");
         if(player == false)
         {
-            rollDice(3,checkAttackPowers,doDamage,checkSurvival);
-            // function(){
-            //          updateResources("player",function(){
-            //                  emptyDiceDiv();
-            //                  switchTurn("monster")
-            //          });
-            //      });
+            var dice = $("#monster-dice-num").text();
+            rollDice(dice,checkAttackPowers,doDamage,checkSurvival);
         }
-    },2000);
+    },1000);
 }
+
 function switchTurn(from) {
     console.log("switching turn from "+from);
     console.log("checking player: "+player);
@@ -419,14 +488,7 @@ function switchTurn(from) {
 
     }, 2000);
 }
-function showDice(dice1,dice2){
-    for(var i=1;i<=dice1;i++){
-        $("#monster-dice-img").append("<img src='assets/img/dice/face1.png'/>");
-    }
-    for(var i=1;i<=dice2;i++){
-        $("#player-dice-img").append("<img src='assets/img/dice/face1.png'/>");
-    }
-}
+
 function emptyDiceDiv() {
     // diceVal = [];
     $("#die1").empty();
@@ -446,15 +508,22 @@ function doDamage(team, damage,callback){
     if(team == "monster")
     {
         playerHealth -= damage;
-        console.log("player health left" +playerHealth);
+        if(playerHealth < 0)
+            playerHealth = 0;
+        $("#player-health-val").text("Health Left: "+playerHealth+"%");
+        $("#player-hp").text(playerHealth);
         playerHealthDiv.style.width = playerHealth + "%";
     }
     else
     {
         monsterHealth = monsterHealth - damage;
-        console.log("monster health left" +monsterHealth);
+        if(monsterHealth < 0)
+            monsterHealth = 0;
         $("#monster-hp").text(monsterHealth);
-        monsterHealthDiv.style.width = monsterHealth + "%";
+        var max = $("#monster-max-hp").text();
+        var hp = Math.floor((monsterHealth*100)/max);
+        $("#monster-health-val").text("Health Left: "+hp+"%");
+        monsterHealthDiv.style.width = hp + "%";
         // checkDefendPowers();
     }
     setTimeout(function()
@@ -472,6 +541,7 @@ function checkDefendPowers(damage,callback,callback1){
         callback("player",damage,callback1);
     }
 }
+
 function checkIfDead(health){
     console.log("in checkIfDead function "+health)
     if (health<=0)
@@ -500,6 +570,7 @@ function checkRecoveryPowers(team,callback){
         }
     }
 }
+
 function checkAttackPowers(damage,callback,callback1){
     console.log("in checkAttackPowers");
     if (typeof callback === "function")
@@ -508,6 +579,15 @@ function checkAttackPowers(damage,callback,callback1){
     }
 
 }
+
+// function checkDefendPowers(entityId, damage){
+// 	console.log("in checkDefendPowers");
+// if (typeof callback === "function")
+//        {
+//          	callback("player",damage,callback1);
+//        }
+
+// }
 function checkSurvival(){
     console.log("in checkSurvival");
     if (playerHealth<=0)
@@ -519,12 +599,14 @@ function checkSurvival(){
         checkRecoveryPowers("player",switchTurn);
     }
 }
+
 function seer(){
     $("#dungeons").fadeOut();
     $("#qcard").fadeIn();
     getQuestion();
 
 }
+
 function getQuestion() {
     var list = quiz.questions[Math.floor(Math.random() * 3)];
     var elemlength = list.length;
@@ -545,11 +627,13 @@ function getQuestion() {
         bindAnswers();
     }, 250);
 }
+
 function bindAnswers() {
     $('.answer').unbind('click').on('click', function () {
-            processAnswers($(this).attr("id").split("x")[0]);
+        processAnswers($(this).attr("id").split("x")[0]);
     });
 }
+
 function processAnswers(answer) {
     data = getAnswer($('#qid').html(), answer);
     var resultMsg = data.split('||')[1];
@@ -572,7 +656,7 @@ function processAnswers(answer) {
         if (answerPayoff > 0) {
             getRewards();
         } else {
-           console.log("wrong ans");
+            console.log("wrong ans");
         }
         gridSelected = false;
         $("#qcard").fadeOut();
@@ -580,14 +664,16 @@ function processAnswers(answer) {
     }, 2000);
 
 }
+
 function getRewards(){
-console.log("In getRewards")
+    console.log("In getRewards")
     var random = getRandom(1,12);
-    var reward = rewards[random];
+    var reward = rewardsHash[random];
+    console.log(reward);
     switch (reward.type){
-        case "health":
+        case "Health":
             if(playerHealth<100)
-            var maxHealthGain;
+                var maxHealthGain;
             maxHealthGain = 100 - playerHealth;
             if(reward.value<maxHealthGain){
                 playerHealth += reward.value;
@@ -616,25 +702,32 @@ console.log("In getRewards")
 
 
 }
+
 function closeBattle(){
     gridSelected = false;
+    $("#player-div").css({opacity:1});
     $("#fightArena").fadeOut();
     $("#dungeons").fadeIn();
-console.log("close battle");
+    console.log("close battle");
+    $("#player-dice-img").empty();
+    $("#monster-dice-img").empty();
 }
+
 function victory(){
     console.log("'In Victory function");
     getRewards();
 }
+
 function defeat(){
     console.log("in defeat");
     $("#fightArena").fadeOut();
-    $(".defeat").fadeIn()
+    $(".defeat").fadeIn();
     var blinkit = setInterval(blinker, 2000);
     $('#startAgainClicker').on('click', function () {
         clearInterval(blinkit);
+        $(".defeat").fadeOut();
+        $(".defeat").fadeOut();
         initGame();
-
     });
 
 }
@@ -643,245 +736,3 @@ function blinker() {
         $('#startAgainClicker').fadeIn(500);
     });
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//**********************************************************************************************************************
-//var selPort = [];       //Selected Portals
-//var selMons = [];       //Selected Monsters
-//var flag = 0;           //Flag value
-//var portalPos = [];     //Positions of portals
-//var bossPos;    //Positions of monsters
-//var posArr = [];        //Array of filled positions
-//var bossMap = 0;          //map ID
-//var mapColor;       //map color
-//var mapId = 0;
-//var c = 0;
-//
-///* Function: initEverything
-// Description:
-// Main initialization function, which is called first in the program flow.
-// Status:
-// COMPLETED
-// */
-//function initEverything()
-//{
-//    setBoss();
-//    enterDungeon();
-//    //   setMonsters();
-////     SetSeer();
-//}
-//
-//function setBoss() {
-//    bossPos = getRandom();
-//    var random = Math.floor(Math.random() * 5) + 1;
-//    bossMap = portals[random].backgroundColor;
-//}
-//
-//function getPosition(flag) {
-//    var pos;
-//    posArr = [];
-//    console.log("flag: " + flag);
-//    console.log("bossMap: "+bossMap);
-//    console.log("bossPos: "+bossPos);
-//
-//    while (posArr.length <= flag) {
-//        pos = getRandom();
-//        console.log("posArr")
-//        console.log(posArr);
-//        console.log("pos: "+pos);
-//        console.log("mapColor: " + mapColor);
-//
-//        if(validatePos(pos)) {
-//            posArr.push(pos);
-//            c++;
-//        }
-//    }
-//}
-//
-//function getRandom() {
-//    var mL = 0;
-//    var mR = 0;
-//    mL = Math.floor(Math.random() * (4-1) + 1);
-//    mR = Math.floor(Math.random() * (4-1) + 1);
-//    while(mL == 2 && mR == 2)
-//    {
-//        mL = Math.floor(Math.random() * (4-1) + 1);
-//        mR = Math.floor(Math.random() * (4-1) + 1);
-//    }
-//    var pos = mL.toString() + mR.toString();
-//    return pos;
-//}
-//
-//function validatePos(pos) {
-//    var can = true;
-//    console.log("posArr.length: "+posArr.length);
-//    for (var i = 0; i < posArr.length; i++) {
-//        if (pos == posArr[i])
-//            can = false;
-//
-//        if((mapColor == bossMap) && (pos == bossPos))
-//            can = false;
-//    }
-//    return can;
-//}
-//
-//
-//
-//
-//function enterDungeon()
-//{
-//    mapId++;
-//    selPort = shuffle(portals);
-//    selMons = shuffle(monsters);
-//    if(mapId == 1)
-//    {
-//        document.getElementById("mainmatrix").style.backgroundColor = selPort[0].backgroundColor;
-//        mapId=selPort[0].backgroundColor;
-//        setPortal();
-//    }
-//    else
-//    {
-//        mapId=portals[x].colorID;
-//        setPortal();
-//    }
-//    setMonsters();
-//    setPlayer();
-//}
-//
-//
-//function setPlayer()
-//{
-//    var pos = "22";
-//
-//    var targetDiv = document.getElementById(pos);
-//
-//    targetDiv.innerHTML = "<img src='assets/img/player.png' />";
-//}
-//
-//function setPortal()
-//{
-//    var pos;
-//    flag = Math.floor(Math.random() * 3 + 1);
-//    getPosition(flag);
-//    for(var i=0; i<flag; i++)
-//    {
-//        var targetDiv = document.getElementById(posArr[i]);
-//        if(selPort[i].colorID != mapColor)
-//        {
-//            targetDiv.style.backgroundColor = selPort[i].backgroundColor;
-//        }
-//        else
-//        {
-//            targetDiv.style.backgroundColor = selPort[i+3].backgroundColor;
-//        }
-//        portalPos.push({mapID:mapID, colID:selPort[i].colorID, getPos:pos});
-//    }
-//}
-//
-//function setMonsters()
-//{
-//    flag = Math.floor(Math.random() * 3 +1);
-//    console.log(flag);
-//    getPosition(flag);
-//    for(var i = 0; i<flag; i++)
-//    {
-//        var targetDiv = document.getElementById(posArr[i]);
-//        targetDiv.innerHTML = selMons[i].image;
-//        console.log(targetDiv);
-////monsterPos.push()
-//    }
-//    console.log(posArr);
-//}
-//
-//function drawMonsters()
-//{
-//
-//}
-//
-//
-//function SetSeer()
-//{
-//    var mL = 0;
-//    var mR = 0;
-//
-//    mL = Math.floor(Math.random() * (4-1) + 1);
-//    mR = Math.floor(Math.random() * (4-1) + 1);
-//
-//    while(mL == 2 && mR == 2)
-//    {
-//        mL = Math.floor(Math.random() * (4-1) + 1);
-//        mR = Math.floor(Math.random() * (4-1) + 1);
-//    }
-//
-//    var pos = mL.toString() + mR.toString();
-//
-//    for(var i=0; i<=positions.length; i++)
-//    {
-//        console.log(i);
-//        if (portalPos[i].ps == pos)
-//        {
-//            mL = Math.floor(Math.random() * (4 - 1) + 1);
-//            mR = Math.floor(Math.random() * (4 - 1) + 1);
-//
-//            while (mL == 2 && mR == 2)
-//            {
-//                mL = Math.floor(Math.random() * (4 - 1) + 1);
-//                mR = Math.floor(Math.random() * (4 - 1) + 1);
-//            }
-//        }
-//    }
-//
-//    pos = mL.toString() + mR.toString();
-//
-//    var targetDiv = document.getElementById(pos.toString());
-//    console.log(targetDiv);
-//
-//    targetDiv.innerHTML = "<span style='color:#fff;'>SEER!</span>";
-//    positions.push({ps:pos, posFlags:1});
-//}
