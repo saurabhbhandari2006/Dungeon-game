@@ -495,7 +495,6 @@ function checkAttackPowers(damage,callback,callback1){
     }
 
 }
-
 function checkSurvival(){
     console.log("in checkSurvival");
     if (playerHealth<=0)
@@ -507,7 +506,6 @@ function checkSurvival(){
         checkRecoveryPowers("player",switchTurn);
     }
 }
-
 function seer(){
     $("#dungeons").fadeOut();
     $("#qcard").fadeIn();
