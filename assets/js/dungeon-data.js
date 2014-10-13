@@ -1,5 +1,5 @@
-var initHealth = 100;
-var initDice = 2;
+var initHealth = 5;
+var initDice = 1;
 var teleportCost = 5;
 
 /*
@@ -237,7 +237,58 @@ var monsters = [
 
 var rewards = [
     {
+        name: "Healing Potion",
+        type: "Health",
+        value: 10
+    },
+    {
+        name: "Healing Potion",
+        type: "Health",
+        value: 10
+    },
+    {
+        name: "Healing Potion",
+        type: "Health",
+        value: 10
+    },
+    {
+        name: "Super Healing Potion",
+        type: "Health",
+        value: 25
+    },
 
+    {
+        name: "Super Healing Potion",
+        type: "Health",
+        value: 20
+    },
+    {
+        name: "Master Healing Potion",
+        type: "Health",
+        value: 40
+    },
+
+
+
+    {
+        name: "Master Healing Potion",
+        type: "Health",
+        value: 40
+    },
+    {
+        name: "Master Healing Potion",
+        type: "Health",
+        value: 40
+    },
+    {
+        name: "Super Healing Potion",
+        type: "Health",
+        value: 25
+    },
+    {
+        name: "Dice",
+        type: "Dice",
+        value: 1
     }
 ]
 
