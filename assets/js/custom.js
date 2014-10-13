@@ -1,6 +1,6 @@
 
 var diceNum = 2;
-var playerHealth = 100; //to get this value as player health
+var playerHealth = 1; //to get this value as player health
 var selected = false;
 
 var mapHash;
@@ -626,8 +626,23 @@ function victory(){
     console.log("'In Victory function");
     getRewards();
 }
+function defeat(){
+    console.log("in defeat");
+    $("#fightArena").fadeOut();
+    $(".defeat").fadeIn()
+    var blinkit = setInterval(blinker, 2000);
+    $('#startAgainClicker').on('click', function () {
+        clearInterval(blinkit);
+        initGame();
 
+    });
 
+}
+function blinker() {
+    $('#startAgainClicker').fadeOut(500, function () {
+        $('#startAgainClicker').fadeIn(500);
+    });
+}
 
 
 

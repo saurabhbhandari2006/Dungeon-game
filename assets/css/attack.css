@@ -202,4 +202,16 @@ body {
     width: 95%;
 }
 
+#startAgainClicker{
+    text-decoration: none;
+    font-size:48%;
+    color:cornflowerblue;
 
+}
+.defeat{
+    height: 76%;
+    margin-top: 18%;
+    position: absolute;
+    width: 100%;
+    display: none;
+}

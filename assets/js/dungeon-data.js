@@ -1,4 +1,4 @@
-var initHealth = 100;
+var initHealth = 1;
 var initDice = 2;
 var teleportCost = 5;
 
