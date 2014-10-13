@@ -117,11 +117,7 @@ function addEntities() {
                     {
                         var m = Math.floor(Math.random() * getDef.choiceSet.length);
                         var type = getDef.choiceSet[m];
-                        console.log("Type: "+type);
-                        if(type.indexOf(' ') > 0) {
-                            console.log(type.indexOf(' '));
-                            type = type.split(' ');
-                        }
+
                         if(type=="Monster") {
                             for(var n = 0; n < 9; n++) {
                                 if(mapHash[i].definition[n].lx == a && mapHash[i].definition[n].ly == b) {
@@ -149,35 +145,17 @@ function addEntities() {
                             //console.log("selMons:");
                             //console.log(selMonsters);
                         }
-                        else if(type[0]=="Portal") {
+                        else if(type=="Portal") {
                             for(var n = 0; n < 9; n++) {
                                 if(mapHash[i].definition[n].lx == a && mapHash[i].definition[n].ly == b) {
-                                    var name = type[1];
-                                    var id=0;
-                                    if(type[1] == "Any") {
-                                        selPortals = getEntityByClass(type[0]);
-                                        var random = getRandom(0,selPortals.length);
-                                        while(selPortals[random].name == dungeonSelect.name)
-                                            random = getRandom(0, selPortals.length);
-                                        var entity = selPortals[random];
-                                        name = entity.name;
-                                        id = entity.id;
-                                    }
-                                    else
-                                    {
-                                        selPortals = getEntityByClass(type[0]);
 
-                                        var portal = $.grep(selPortals, function(element){
-                                            return element.name = type[1];
-                                        });
-
-                                        name = portal.name;
-                                        id = portal.id;
-                                    }
-
-
-                                    mapHash[i].definition[n].content = name;
-                                    mapHash[i].definition[n].entity = id;
+                                    selPortals = getEntityByClass(type);
+                                    var random = getRandom(0,selPortals.length);
+                                    while(selPortals[random].name == dungeonSelect.name)
+                                        random = getRandom(0, selPortals.length);
+                                    var entity = selPortals[random];
+                                    mapHash[i].definition[n].content = entity.image;
+                                    mapHash[i].definition[n].entity = entity.id;
                                 }
                             }
                         }

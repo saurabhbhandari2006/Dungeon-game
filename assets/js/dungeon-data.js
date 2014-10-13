@@ -13,14 +13,14 @@ var map = [
         seer: 0,
         definition: [
             {lx: 1, ly: 1, choiceSet: ["Seer"]},
-            {lx: 1, ly: 2, choiceSet: ["Portal Blue"]},
-            {lx: 1, ly: 3, choiceSet: ["Monster", "Portal Any"]},
-            {lx: 2, ly: 1, choiceSet: ["Monster", "Portal Any"]},
+            {lx: 1, ly: 2, choiceSet: ["Portal"]},
+            {lx: 1, ly: 3, choiceSet: ["Monster", "Portal"]},
+            {lx: 2, ly: 1, choiceSet: ["Monster", "Portal"]},
             {lx: 2, ly: 2, choiceSet: ["Player"]},
-            {lx: 2, ly: 3, choiceSet: [""]},
-            {lx: 3, ly: 1, choiceSet: ["Monster", "Portal Green"]},
-            {lx: 3, ly: 2, choiceSet: ["Monster", "Portal Red"]},
-            {lx: 3, ly: 3, choiceSet: ["Monster", "Portal Any"]}
+            {lx: 2, ly: 3, choiceSet: []},
+            {lx: 3, ly: 1, choiceSet: ["Monster", "Portal"]},
+            {lx: 3, ly: 2, choiceSet: ["Monster", "Portal"]},
+            {lx: 3, ly: 3, choiceSet: ["Monster", "Portal"]}
         ],
         backgroundImage:""
     },
