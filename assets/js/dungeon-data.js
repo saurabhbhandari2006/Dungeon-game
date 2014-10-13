@@ -1,6 +1,8 @@
-var initHealth = 5;
+var initHealth = 10;
 var initDice = 1;
 var teleportCost = 5;
+window.theme = {};
+theme.background = "assets/img/background.jpg";
 
 /*
 
@@ -8,34 +10,28 @@ var teleportCost = 5;
 var map = [
 
     {name: "Purple", type: "definition", generation: {},
-        monsters:3,
-        portals:2,
-        seer: 0,
         definition: [
-            {lx: 1, ly: 1, choiceSet: ["Monster", "Portal"]},
-            {lx: 1, ly: 2, choiceSet: ["Portal"]},
-            {lx: 1, ly: 3, choiceSet: []},
-            {lx: 2, ly: 1, choiceSet: []},
+            {lx: 1, ly: 1, choiceSet: ["Portal Red"]},
+            {lx: 1, ly: 2, choiceSet: ["Seer"]},
+            {lx: 1, ly: 3, choiceSet: ["Portal Blue"]},
+            {lx: 2, ly: 1, choiceSet: ["Monster"]},
             {lx: 2, ly: 2, choiceSet: ["Player"]},
-            {lx: 2, ly: 3, choiceSet: ["Portal"]},
-            {lx: 3, ly: 1, choiceSet: ["Monster"]},
-            {lx: 3, ly: 2, choiceSet: []},
-            {lx: 3, ly: 3, choiceSet: ["Portal"]}
+            {lx: 2, ly: 3, choiceSet: ["Portal Green"]},
+            {lx: 3, ly: 1, choiceSet: ["Portal Yellow"]},
+            {lx: 3, ly: 2, choiceSet: ["Portal Orange"]},
+            {lx: 3, ly: 3, choiceSet: []}
         ],
         backgroundImage:""
     },
 
     {name: "Blue",  type: "definition", generation: {},
-        monsters:3,
-        portals:2,
-        seer: 0,
         definition: [
-            {lx: 1, ly: 1, choiceSet: []},
-            {lx: 1, ly: 2, choiceSet: []},
-            {lx: 1, ly: 3, choiceSet: []},
-            {lx: 2, ly: 1, choiceSet: []},
+            {lx: 1, ly: 1, choiceSet: ["Monster", "Portal Any"]},
+            {lx: 1, ly: 2, choiceSet: ["Monster", "Portal Any"]},
+            {lx: 1, ly: 3, choiceSet: ["Monster", "Portal Any"]},
+            {lx: 2, ly: 1, choiceSet: ["Monster", "Portal Any"]},
             {lx: 2, ly: 2, choiceSet: ["Player"]},
-            {lx: 2, ly: 3, choiceSet: []},
+            {lx: 2, ly: 3, choiceSet: ["Monster", "Portal Any"]},
             {lx: 3, ly: 1, choiceSet: []},
             {lx: 3, ly: 2, choiceSet: []},
             {lx: 3, ly: 3, choiceSet: []}
@@ -44,9 +40,6 @@ var map = [
     },
 
     {name: "Green",  type: "definition", generation: {},
-        monsters:3,
-        portals:2,
-        seer: 1,
         definition: [
             {lx: 1, ly: 1, choiceSet: []},
             {lx: 1, ly: 2, choiceSet: []},
@@ -62,9 +55,6 @@ var map = [
     },
 
     {name: "Yellow",  type: "definition", generation: {},
-        monsters:3,
-        portals:2,
-        seer: 1,
         definition: [
             {lx: 1, ly: 1, choiceSet: []},
             {lx: 1, ly: 2, choiceSet: []},
@@ -80,9 +70,6 @@ var map = [
     },
 
     {name: "Orange",  type: "definition", generation: {},
-        monsters:3,
-        portals:2,
-        seer: 1,
         definition: [
             {lx: 1, ly: 1, choiceSet: []},
             {lx: 1, ly: 2, choiceSet: []},
@@ -98,19 +85,15 @@ var map = [
     },
 
     {name: "Red",  type: "definition", generation: {},
-        monsters:2,
-        portals:2,
-        seer: 1,
-        boss: 1,
         definition: [
             {lx: 1, ly: 1, choiceSet: []},
-            {lx: 1, ly: 2, choiceSet: []},
+            {lx: 1, ly: 2, choiceSet: ["Boss"]},
             {lx: 1, ly: 3, choiceSet: []},
             {lx: 2, ly: 1, choiceSet: []},
-            {lx: 2, ly: 2, choiceSet: ["Player"]},
+            {lx: 2, ly: 2, choiceSet: []},
             {lx: 2, ly: 3, choiceSet: []},
             {lx: 3, ly: 1, choiceSet: []},
-            {lx: 3, ly: 2, choiceSet: []},
+            {lx: 3, ly: 2, choiceSet: ["Player"]},
             {lx: 3, ly: 3, choiceSet: []}
         ],
         backgroundImage:""
@@ -231,7 +214,7 @@ var monsters = [
         probability: 0,
         level: 10,
         power:"",
-        image:""
+        image:"<img src='assets/img/boss.png' />"
     }
 ]
 
