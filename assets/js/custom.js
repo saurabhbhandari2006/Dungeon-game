@@ -1,7 +1,7 @@
 
 var diceNum = 2;
 var playerHealth = 100; //to get this value as player health
-var selected = false;
+var gridSelected = false;
 
 var mapHash;
 var entityHash = [];
@@ -52,14 +52,17 @@ function createRewards() {
 
 function createEntity() {
     console.log(entityHash);
-    for(var i=0; i < monsters.length; i++)
+    var i;
+    for(i = 0; i < monsters.length; i++)
     {
         entityHash.push(monsters[i]);
         entityHash[i].id = i+1;
         entityHash[i].class = "Monster";
-
     }
-    for(var i = 0; i < mapHash.length; i++) {
+
+    entityHash[i-1].class = "Boss";
+
+    for(i = 0; i < mapHash.length; i++) {
         var imgName = mapHash[i].name;
         entityHash.push(
             {
@@ -77,11 +80,7 @@ function createEntity() {
 
 function addEntities() {
     console.log("in addEntities");
-    var x = 0;
-    var y = 0;
     var dungeonSelect;
-    var monsterSelect;
-    var defGrep;
     var entities;
     for(var i=0; i<mapHash.length - 1; i++)
     {
@@ -90,31 +89,30 @@ function addEntities() {
             for(var a=1; a<=3; a++) {
                 for(var b=1; b<=3; b++) {
                     var getDef = getDefinition(dungeonSelect, a, b);
-                    {
-                        var m = Math.floor(Math.random() * getDef.choiceSet.length);
-                        var type = getDef.choiceSet[m];
-                        entities = getEntityByClass(type);
-                        if(type=="Monster") {
-                            for(var n = 0; n < 9; n++) {
-                                if(mapHash[i].definition[n].lx == a && mapHash[i].definition[n].ly == b) {
-                                    mapHash[i].definition[n].content = "Monster";
-                                    var random = getRandom(0,entities.length-1);
-                                    var entity = entities[random];
-                                    mapHash[i].definition[n].entity = entity.id;
-                                }
+
+                    var m = Math.floor(Math.random() * getDef.choiceSet.length);
+                    var type = getDef.choiceSet[m];
+                    entities = getEntityByClass(type);
+                    if(type=="Monster") {
+                        for(var n = 0; n < 9; n++) {
+                            if(mapHash[i].definition[n].lx == a && mapHash[i].definition[n].ly == b) {
+                                mapHash[i].definition[n].content = "Monster";
+                                var random = getRandom(0,entities.length-1);
+                                var entity = entities[random];
+                                mapHash[i].definition[n].entity = entity.id;
                             }
                         }
-                        else if(type=="Portal") {
-                            for(var n = 0; n < 9; n++) {
-                                if(mapHash[i].definition[n].lx == a && mapHash[i].definition[n].ly == b) {
-                                    mapHash[i].definition[n].content = "Portal";
-                                    var random = getRandom(0,entities.length-1);
-                                    var entity = entities[random];
-                                    mapHash[i].definition[n].entity = entity.id;
-                                }
+                    } else if(type=="Portal") {
+                        for(var n = 0; n < 9; n++) {
+                            if(mapHash[i].definition[n].lx == a && mapHash[i].definition[n].ly == b) {
+                                mapHash[i].definition[n].content = "Portal";
+                                var random = getRandom(0,entities.length-1);
+                                var entity = entities[random];
+                                mapHash[i].definition[n].entity = entity.id;
                             }
                         }
                     }
+
                 }
             }
         }
@@ -197,10 +195,10 @@ function getEntityByClass(cls) {
 
 function startGame(dungeonId) {
     console.log("start startGame");
-    selected == false;
+    gridSelected == false;
     $(".matrix").unbind('click').click(function() {
-        if(selected == false) {
-            selected = true;
+        if(gridSelected == false) {
+            gridSelected = true;
             var p = $(this).attr("id");
 
             var lx = parseInt(p.charAt(0));
