@@ -2,21 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44c33337-d199-4678-950d-a8e0e37a8ac0" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/img/backgrounds/blue.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/img/backgrounds/green.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/img/backgrounds/orange.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/img/backgrounds/purple.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/img/backgrounds/red.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/img/backgrounds/yellow.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/diceroll.png" afterPath="$PROJECT_DIR$/assets/img/diceroll.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/dicerollrev.png" afterPath="$PROJECT_DIR$/assets/img/dicerollrev.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/dice/face1.png" afterPath="$PROJECT_DIR$/assets/img/dice/face1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/dice/face2.png" afterPath="$PROJECT_DIR$/assets/img/dice/face2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/dice/face3.png" afterPath="$PROJECT_DIR$/assets/img/dice/face3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/dice/face4.png" afterPath="$PROJECT_DIR$/assets/img/dice/face4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/dice/face5.png" afterPath="$PROJECT_DIR$/assets/img/dice/face5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/dice/face6.png" afterPath="$PROJECT_DIR$/assets/img/dice/face6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/attack.css" afterPath="$PROJECT_DIR$/assets/css/attack.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/attack.html" afterPath="$PROJECT_DIR$/attack.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/attack.js" afterPath="$PROJECT_DIR$/assets/js/attack.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/custom.js" afterPath="$PROJECT_DIR$/assets/js/custom.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/dungeon-data.js" afterPath="$PROJECT_DIR$/assets/js/dungeon-data.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dungeon.iml" afterPath="$PROJECT_DIR$/.idea/dungeon.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/index.css" afterPath="$PROJECT_DIR$/assets/css/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dungeon.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="44c33337-d199-4678-950d-a8e0e37a8ac0" time="1413186339337" ignored="false" />
-    <file path="/dungeon-data.js" changelist="44c33337-d199-4678-950d-a8e0e37a8ac0" time="1412946360692" ignored="false" />
-    <file path="/custom.js" changelist="44c33337-d199-4678-950d-a8e0e37a8ac0" time="1413186582195" ignored="false" />
+    <file path="/Dummy.txt" changelist="44c33337-d199-4678-950d-a8e0e37a8ac0" time="1413191939277" ignored="false" />
+    <file path="/dungeon-data.js" changelist="44c33337-d199-4678-950d-a8e0e37a8ac0" time="1413190721588" ignored="false" />
+    <file path="/custom.js" changelist="44c33337-d199-4678-950d-a8e0e37a8ac0" time="1413203670664" ignored="false" />
     <file path="/index.css" changelist="44c33337-d199-4678-950d-a8e0e37a8ac0" time="1412745028639" ignored="false" />
     <file path="/index.html" changelist="44c33337-d199-4678-950d-a8e0e37a8ac0" time="1412671387400" ignored="false" />
     <file path="/attack.html" changelist="44c33337-d199-4678-950d-a8e0e37a8ac0" time="1412756387574" ignored="false" />
@@ -43,7 +51,7 @@
       <file leaf-file-name="dungeon-data.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/dungeon-data.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="10" selection-start="81" selection-end="81" vertical-scroll-proportion="0.0">
+            <state line="23" column="24" selection-start="743" selection-end="743" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -52,7 +60,7 @@
       <file leaf-file-name="custom.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/js/custom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="37" selection-start="2253" selection-end="2253" vertical-scroll-proportion="0.5392157">
+            <state line="76" column="42" selection-start="1540" selection-end="1540" vertical-scroll-proportion="0.38037866">
               <folding />
             </state>
           </provider>
@@ -61,7 +69,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="22" selection-start="375" selection-end="375" vertical-scroll-proportion="-11.25">
+            <state line="63" column="44" selection-start="2149" selection-end="2149" vertical-scroll-proportion="-10.75">
               <folding />
             </state>
           </provider>
@@ -70,7 +78,7 @@
       <file leaf-file-name="attack.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/attack.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="44" selection-start="356" selection-end="356" vertical-scroll-proportion="0.0">
+            <state line="56" column="7" selection-start="1799" selection-end="1799" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -79,7 +87,7 @@
       <file leaf-file-name="attack.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/attack.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="42" selection-start="540" selection-end="540" vertical-scroll-proportion="0.0">
+            <state line="257" column="1" selection-start="7500" selection-end="7500" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -88,7 +96,7 @@
       <file leaf-file-name="index.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="4" column="0" selection-start="9" selection-end="9" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -115,11 +123,11 @@
         <option value="$PROJECT_DIR$/dungeon-data.js" />
         <option value="$PROJECT_DIR$/js/custom.js" />
         <option value="$PROJECT_DIR$/assets/css/index.css" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/attack.html" />
         <option value="$PROJECT_DIR$/assets/js/attack.js" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/assets/js/dungeon-data.js" />
         <option value="$PROJECT_DIR$/assets/js/custom.js" />
+        <option value="$PROJECT_DIR$/assets/js/dungeon-data.js" />
       </list>
     </option>
   </component>
@@ -155,7 +163,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -223,31 +230,10 @@
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backgrounds" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dungeon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Dungeon-game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -258,8 +244,8 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="RSpecRunConfigurationType" factoryName="RSpec">
@@ -344,7 +330,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2712766" sideWeight="0.6713396" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27583587" sideWeight="0.6713396" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32866043" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -425,6 +411,13 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/assets/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="9" selection-end="9" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="13" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0">
           <folding />
         </state>
@@ -463,20 +456,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/attack.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="44" selection-start="356" selection-end="356" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/attack.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="42" selection-start="540" selection-end="540" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/img/dicerollrev.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -492,30 +471,44 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/dungeon-data.js">
+    <entry file="file://$PROJECT_DIR$/assets/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="10" selection-start="81" selection-end="81" vertical-scroll-proportion="0.0">
+        <state line="4" column="0" selection-start="9" selection-end="9" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/index.css">
+    <entry file="file://$PROJECT_DIR$/attack.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="56" column="7" selection-start="1799" selection-end="1799" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/attack.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="257" column="1" selection-start="7500" selection-end="7500" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="22" selection-start="375" selection-end="375" vertical-scroll-proportion="-11.25">
+        <state line="63" column="44" selection-start="2149" selection-end="2149" vertical-scroll-proportion="-10.75">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/dungeon-data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="24" selection-start="743" selection-end="743" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/custom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="37" selection-start="2253" selection-end="2253" vertical-scroll-proportion="0.5392157">
+        <state line="76" column="42" selection-start="1540" selection-end="1540" vertical-scroll-proportion="0.38037866">
           <folding />
         </state>
       </provider>

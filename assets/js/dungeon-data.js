@@ -12,15 +12,15 @@ var map = [
         portals:2,
         seer: 0,
         definition: [
-            {lx: 1, ly: 1, choiceSet: ["monster", "portal"]},
-            {lx: 1, ly: 2, choiceSet: ["portal"]},
-            {lx: 1, ly: 3, choiceSet: []},
-            {lx: 2, ly: 1, choiceSet: []},
-            {lx: 2, ly: 2, choiceSet: ["player"]},
-            {lx: 2, ly: 3, choiceSet: ["portal"]},
-            {lx: 3, ly: 1, choiceSet: ["monster"]},
-            {lx: 3, ly: 2, choiceSet: []},
-            {lx: 3, ly: 3, choiceSet: ["portal"]}
+            {lx: 1, ly: 1, choiceSet: ["Seer"]},
+            {lx: 1, ly: 2, choiceSet: ["Monster", "Portal"]},
+            {lx: 1, ly: 3, choiceSet: ["Monster", "Portal"]},
+            {lx: 2, ly: 1, choiceSet: ["Monster", "Portal"]},
+            {lx: 2, ly: 2, choiceSet: []},
+            {lx: 2, ly: 3, choiceSet: ["Player"]},
+            {lx: 3, ly: 1, choiceSet: ["Monster", "Portal"]},
+            {lx: 3, ly: 2, choiceSet: ["Monster", "Portal"]},
+            {lx: 3, ly: 3, choiceSet: ["Monster", "Portal"]}
         ],
         backgroundImage:""
     },
@@ -30,15 +30,15 @@ var map = [
         portals:2,
         seer: 0,
         definition: [
-            {lx: 1, ly: 1, choiceSet: [""]},
-            {lx: 1, ly: 2, choiceSet: [""]},
-            {lx: 1, ly: 3, choiceSet: [""]},
-            {lx: 2, ly: 1, choiceSet: [""]},
-            {lx: 2, ly: 2, choiceSet: [""]},
-            {lx: 2, ly: 3, choiceSet: [""]},
-            {lx: 3, ly: 1, choiceSet: [""]},
-            {lx: 3, ly: 2, choiceSet: [""]},
-            {lx: 3, ly: 3, choiceSet: [""]}
+            {lx: 1, ly: 1, choiceSet: ["Monster", "Portal"]},
+            {lx: 1, ly: 2, choiceSet: ["Monster", "Portal"]},
+            {lx: 1, ly: 3, choiceSet: ["Monster", "Portal"]},
+            {lx: 2, ly: 1, choiceSet: ["Monster", "Portal"]},
+            {lx: 2, ly: 2, choiceSet: ["Player"]},
+            {lx: 2, ly: 3, choiceSet: ["Monster", "Portal"]},
+            {lx: 3, ly: 1, choiceSet: []},
+            {lx: 3, ly: 2, choiceSet: []},
+            {lx: 3, ly: 3, choiceSet: []}
         ],
         backgroundImage:""
     },
@@ -48,15 +48,15 @@ var map = [
         portals:2,
         seer: 1,
         definition: [
-            {lx: 1, ly: 1, choiceSet: [""]},
-            {lx: 1, ly: 2, choiceSet: [""]},
-            {lx: 1, ly: 3, choiceSet: [""]},
-            {lx: 2, ly: 1, choiceSet: [""]},
-            {lx: 2, ly: 2, choiceSet: [""]},
-            {lx: 2, ly: 3, choiceSet: [""]},
-            {lx: 3, ly: 1, choiceSet: [""]},
-            {lx: 3, ly: 2, choiceSet: [""]},
-            {lx: 3, ly: 3, choiceSet: [""]}
+            {lx: 1, ly: 1, choiceSet: []},
+            {lx: 1, ly: 2, choiceSet: []},
+            {lx: 1, ly: 3, choiceSet: []},
+            {lx: 2, ly: 1, choiceSet: []},
+            {lx: 2, ly: 2, choiceSet: ["Player"]},
+            {lx: 2, ly: 3, choiceSet: []},
+            {lx: 3, ly: 1, choiceSet: []},
+            {lx: 3, ly: 2, choiceSet: []},
+            {lx: 3, ly: 3, choiceSet: []}
         ],
         backgroundImage:""
     },
@@ -66,15 +66,15 @@ var map = [
         portals:2,
         seer: 1,
         definition: [
-            {lx: 1, ly: 1, choiceSet: [""]},
-            {lx: 1, ly: 2, choiceSet: [""]},
-            {lx: 1, ly: 3, choiceSet: [""]},
-            {lx: 2, ly: 1, choiceSet: [""]},
-            {lx: 2, ly: 2, choiceSet: [""]},
-            {lx: 2, ly: 3, choiceSet: [""]},
-            {lx: 3, ly: 1, choiceSet: [""]},
-            {lx: 3, ly: 2, choiceSet: [""]},
-            {lx: 3, ly: 3, choiceSet: [""]}
+            {lx: 1, ly: 1, choiceSet: []},
+            {lx: 1, ly: 2, choiceSet: []},
+            {lx: 1, ly: 3, choiceSet: []},
+            {lx: 2, ly: 1, choiceSet: []},
+            {lx: 2, ly: 2, choiceSet: ["Player"]},
+            {lx: 2, ly: 3, choiceSet: []},
+            {lx: 3, ly: 1, choiceSet: []},
+            {lx: 3, ly: 2, choiceSet: []},
+            {lx: 3, ly: 3, choiceSet: []}
         ],
         backgroundImage:""
     },
@@ -84,33 +84,34 @@ var map = [
         portals:2,
         seer: 1,
         definition: [
-            {lx: 1, ly: 1, choiceSet: [""]},
-            {lx: 1, ly: 2, choiceSet: [""]},
-            {lx: 1, ly: 3, choiceSet: [""]},
-            {lx: 2, ly: 1, choiceSet: [""]},
-            {lx: 2, ly: 2, choiceSet: [""]},
-            {lx: 2, ly: 3, choiceSet: [""]},
-            {lx: 3, ly: 1, choiceSet: [""]},
-            {lx: 3, ly: 2, choiceSet: [""]},
-            {lx: 3, ly: 3, choiceSet: [""]}
+            {lx: 1, ly: 1, choiceSet: []},
+            {lx: 1, ly: 2, choiceSet: []},
+            {lx: 1, ly: 3, choiceSet: []},
+            {lx: 2, ly: 1, choiceSet: []},
+            {lx: 2, ly: 2, choiceSet: ["Player"]},
+            {lx: 2, ly: 3, choiceSet: []},
+            {lx: 3, ly: 1, choiceSet: []},
+            {lx: 3, ly: 2, choiceSet: []},
+            {lx: 3, ly: 3, choiceSet: []}
         ],
         backgroundImage:""
     },
 
     {name: "Red",  type: "definition", generation: {},
-        monsters:3,
+        monsters:2,
         portals:2,
         seer: 1,
+        boss: 1,
         definition: [
-            {lx: 1, ly: 1, choiceSet: [""]},
-            {lx: 1, ly: 2, choiceSet: [""]},
-            {lx: 1, ly: 3, choiceSet: [""]},
-            {lx: 2, ly: 1, choiceSet: [""]},
-            {lx: 2, ly: 2, choiceSet: [""]},
-            {lx: 2, ly: 3, choiceSet: [""]},
-            {lx: 3, ly: 1, choiceSet: [""]},
-            {lx: 3, ly: 2, choiceSet: [""]},
-            {lx: 3, ly: 3, choiceSet: [""]}
+            {lx: 1, ly: 1, choiceSet: []},
+            {lx: 1, ly: 2, choiceSet: ["Boss"]},
+            {lx: 1, ly: 3, choiceSet: []},
+            {lx: 2, ly: 1, choiceSet: []},
+            {lx: 2, ly: 2, choiceSet: []},
+            {lx: 2, ly: 3, choiceSet: []},
+            {lx: 3, ly: 1, choiceSet: []},
+            {lx: 3, ly: 2, choiceSet: ["Player"]},
+            {lx: 3, ly: 3, choiceSet: []}
         ],
         backgroundImage:""
     }
