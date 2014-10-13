@@ -2,19 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44c33337-d199-4678-950d-a8e0e37a8ac0" name="Default" comment="">
+<<<<<<< HEAD
       <change type="DELETED" beforePath="$PROJECT_DIR$/../TowerDefense-game/towerfile.tar.gz" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../TowerDefense-game/img/towerdefense/compglow.png" afterPath="$PROJECT_DIR$/../TowerDefense-game/img/towerdefense/compglow.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../TowerDefense-game/img/towerdefense/playerglow.png" afterPath="$PROJECT_DIR$/../TowerDefense-game/img/towerdefense/playerglow.png" />
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/diceroll.png" afterPath="$PROJECT_DIR$/assets/img/diceroll.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/dicerollrev.png" afterPath="$PROJECT_DIR$/assets/img/dicerollrev.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/dice/face1.png" afterPath="$PROJECT_DIR$/assets/img/dice/face1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/dice/face2.png" afterPath="$PROJECT_DIR$/assets/img/dice/face2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/dice/face3.png" afterPath="$PROJECT_DIR$/assets/img/dice/face3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/dice/face4.png" afterPath="$PROJECT_DIR$/assets/img/dice/face4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/dice/face5.png" afterPath="$PROJECT_DIR$/assets/img/dice/face5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/dice/face6.png" afterPath="$PROJECT_DIR$/assets/img/dice/face6.png" />
+>>>>>>> 33fd12f6b8ec2e4a9e4c40176315d71cfd8ecc6e
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/attack.css" afterPath="$PROJECT_DIR$/assets/css/attack.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/attack.html" afterPath="$PROJECT_DIR$/attack.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/attack.js" afterPath="$PROJECT_DIR$/assets/js/attack.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/custom.js" afterPath="$PROJECT_DIR$/assets/js/custom.js" />
+<<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../TowerDefense-game/js/quizination/dice.js" afterPath="$PROJECT_DIR$/../TowerDefense-game/js/quizination/dice.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../TowerDefense-game/js/vendor/modernizr-2.6.2.min.js" afterPath="$PROJECT_DIR$/../TowerDefense-game/js/vendor/modernizr-2.6.2.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../TowerDefense-game/js/quizination/quizination.js" afterPath="$PROJECT_DIR$/../TowerDefense-game/js/quizination/quizination.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../TowerDefense-game/js/towerdefense/towerdefense-data.js" afterPath="$PROJECT_DIR$/../TowerDefense-game/js/towerdefense/towerdefense-data.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../TowerDefense-game/towerdefense.html" afterPath="$PROJECT_DIR$/../TowerDefense-game/towerdefense.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../TowerDefense-game/js/towerdefense/towerdefense.js" afterPath="$PROJECT_DIR$/../TowerDefense-game/js/towerdefense/towerdefense.js" />
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dungeon.iml" afterPath="$PROJECT_DIR$/.idea/dungeon.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+>>>>>>> 33fd12f6b8ec2e4a9e4c40176315d71cfd8ecc6e
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dungeon.iws" />
@@ -38,16 +54,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="dungeon-data.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/dungeon-data.js">
+      <file leaf-file-name="custom.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/custom.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state vertical-scroll-proportion="0.0" vertical-offset="28" max-vertical-offset="792">
               <caret line="23" column="55" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
               <folding />
+=======
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+              <folding>
+                <element signature="e#181#340#0" expanded="false" />
+                <element signature="n#!!block;n#initEverything#0" expanded="false" />
+                <element signature="e#424#589#0" expanded="false" />
+                <element signature="n#!!block;n#getPosition#0" expanded="false" />
+                <element signature="e#996#1141#0" expanded="false" />
+                <element signature="n#!!block;n#SetPortal#0" expanded="false" />
+                <element signature="e#1440#1595#0" expanded="false" />
+                <element signature="n#!!block;n#SetSeer#0" expanded="false" />
+                <element signature="e#2633#2771#0" expanded="false" />
+                <element signature="n#!!block;n#SetMonsters#0" expanded="false" />
+                <marker date="1412752810741" expanded="true" signature="2560:2571" placeholder="..." />
+              </folding>
+>>>>>>> 33fd12f6b8ec2e4a9e4c40176315d71cfd8ecc6e
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="custom.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/custom.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -66,6 +100,15 @@
             <state vertical-scroll-proportion="0.6949807" vertical-offset="54" max-vertical-offset="1386">
               <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
               <folding />
+=======
+      <file leaf-file-name="attack.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/attack.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="104" column="38" selection-start="2570" selection-end="2570" vertical-scroll-proportion="0.0" vertical-offset="877" max-vertical-offset="3375">
+              <folding>
+                <element signature="n#!!block;n#finalRoll#0" expanded="false" />
+              </folding>
+>>>>>>> 33fd12f6b8ec2e4a9e4c40176315d71cfd8ecc6e
             </state>
           </provider>
         </entry>
@@ -73,18 +116,29 @@
       <file leaf-file-name="attack.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/attack.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state vertical-scroll-proportion="-14.666667" vertical-offset="0" max-vertical-offset="846">
               <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+=======
+            <state line="23" column="14" selection-start="624" selection-end="624" vertical-scroll-proportion="-13.75" vertical-offset="15" max-vertical-offset="870">
+>>>>>>> 33fd12f6b8ec2e4a9e4c40176315d71cfd8ecc6e
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="attack.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/attack.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-11.9" vertical-offset="615" max-vertical-offset="2538">
               <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+=======
+      <file leaf-file-name="attack.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/css/attack.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="77" column="4" selection-start="1606" selection-end="1606" vertical-scroll-proportion="0.7386364" vertical-offset="765" max-vertical-offset="2295">
+>>>>>>> 33fd12f6b8ec2e4a9e4c40176315d71cfd8ecc6e
               <folding />
             </state>
           </provider>
@@ -115,15 +169,26 @@
         <option value="$PROJECT_DIR$/assets/css/index.css" />
         <option value="$PROJECT_DIR$/assets/js/custom.js" />
         <option value="$PROJECT_DIR$/attack.html" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/assets/css/attack.css" />
         <option value="$PROJECT_DIR$/assets/js/attack.js" />
+=======
+        <option value="$PROJECT_DIR$/assets/js/attack.js" />
+        <option value="$PROJECT_DIR$/assets/css/attack.css" />
+>>>>>>> 33fd12f6b8ec2e4a9e4c40176315d71cfd8ecc6e
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< HEAD
     <option name="y" value="24" />
     <option name="width" value="1440" />
     <option name="height" value="876" />
+=======
+    <option name="y" value="792" />
+    <option name="width" value="1366" />
+    <option name="height" value="744" />
+>>>>>>> 33fd12f6b8ec2e4a9e4c40176315d71cfd8ecc6e
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -197,7 +262,51 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< HEAD
               <option name="myItemId" value="js" />
+=======
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dungeon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dungeon-game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dungeon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dungeon-game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+>>>>>>> 33fd12f6b8ec2e4a9e4c40176315d71cfd8ecc6e
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -246,8 +355,14 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+<<<<<<< HEAD
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+=======
+>>>>>>> 33fd12f6b8ec2e4a9e4c40176315d71cfd8ecc6e
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
     <configuration default="true" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest">
@@ -274,7 +389,10 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+<<<<<<< HEAD
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+=======
+>>>>>>> 33fd12f6b8ec2e4a9e4c40176315d71cfd8ecc6e
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
       <method />
     </configuration>
@@ -290,6 +408,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="0" y="24" width="1440" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
@@ -299,11 +418,22 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2661406" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+=======
+    <frame x="0" y="792" width="1366" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26666668" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> 33fd12f6b8ec2e4a9e4c40176315d71cfd8ecc6e
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -317,9 +447,12 @@
     <option name="RECENTLY_FILTERED_USER_GROUPS">
       <collection />
     </option>
+<<<<<<< HEAD
     <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
       <collection />
     </option>
+=======
+>>>>>>> 33fd12f6b8ec2e4a9e4c40176315d71cfd8ecc6e
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -337,81 +470,142 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/assets/js/dungeon-data.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="792">
           <caret line="23" column="55" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
+=======
+        <state line="23" column="55" selection-start="1030" selection-end="1030" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="660">
+>>>>>>> 33fd12f6b8ec2e4a9e4c40176315d71cfd8ecc6e
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="828">
           <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+=======
+        <state line="3" column="29" selection-start="59" selection-end="59" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="690">
+>>>>>>> 33fd12f6b8ec2e4a9e4c40176315d71cfd8ecc6e
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/custom.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="2664">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
             <marker date="1412751459955" expanded="true" signature="2577:2588" placeholder="..." />
+=======
+        <state line="12" column="0" selection-start="342" selection-end="342" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="2220">
+          <folding>
+            <element signature="e#181#340#0" expanded="false" />
+            <element signature="n#!!block;n#initEverything#0" expanded="false" />
+            <element signature="e#424#589#0" expanded="false" />
+            <element signature="n#!!block;n#getPosition#0" expanded="false" />
+            <element signature="e#996#1141#0" expanded="false" />
+            <element signature="n#!!block;n#SetPortal#0" expanded="false" />
+            <element signature="e#1440#1595#0" expanded="false" />
+            <element signature="n#!!block;n#SetSeer#0" expanded="false" />
+            <element signature="e#2633#2771#0" expanded="false" />
+            <element signature="n#!!block;n#SetMonsters#0" expanded="false" />
+            <marker date="1412752810741" expanded="true" signature="2560:2571" placeholder="..." />
+>>>>>>> 33fd12f6b8ec2e4a9e4c40176315d71cfd8ecc6e
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="882">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="735">
+>>>>>>> 33fd12f6b8ec2e4a9e4c40176315d71cfd8ecc6e
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/dungeon-data.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+>>>>>>> 33fd12f6b8ec2e4a9e4c40176315d71cfd8ecc6e
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="11" column="33" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+        <state line="11" column="33" selection-start="236" selection-end="236" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+>>>>>>> 33fd12f6b8ec2e4a9e4c40176315d71cfd8ecc6e
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/custom.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="81" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <marker date="1412751459955" expanded="true" signature="2577:2588" placeholder="..." />
+=======
+        <state line="81" column="0" selection-start="1746" selection-end="1746" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <folding>
+            <element signature="e#181#340#0" expanded="false" />
+            <element signature="n#!!block;n#initEverything#0" expanded="false" />
+            <element signature="e#424#589#0" expanded="false" />
+            <element signature="n#!!block;n#getPosition#0" expanded="false" />
+            <element signature="e#996#1141#0" expanded="false" />
+            <element signature="n#!!block;n#SetPortal#0" expanded="false" />
+            <element signature="e#1440#1595#0" expanded="false" />
+            <element signature="n#!!block;n#SetSeer#0" expanded="false" />
+            <element signature="e#2633#2771#0" expanded="false" />
+            <element signature="n#!!block;n#SetMonsters#0" expanded="false" />
+            <marker date="1412752810741" expanded="true" signature="2560:2571" placeholder="..." />
+>>>>>>> 33fd12f6b8ec2e4a9e4c40176315d71cfd8ecc6e
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="2" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+        <state line="2" column="13" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+>>>>>>> 33fd12f6b8ec2e4a9e4c40176315d71cfd8ecc6e
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/dungeon-data.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+>>>>>>> 33fd12f6b8ec2e4a9e4c40176315d71cfd8ecc6e
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
+<<<<<<< HEAD
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -425,27 +619,66 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <marker date="1412751459955" expanded="true" signature="2577:2588" placeholder="..." />
+=======
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <folding>
+            <element signature="e#181#340#0" expanded="false" />
+            <element signature="n#!!block;n#initEverything#0" expanded="false" />
+            <element signature="e#424#589#0" expanded="false" />
+            <element signature="n#!!block;n#getPosition#0" expanded="false" />
+            <element signature="e#996#1141#0" expanded="false" />
+            <element signature="n#!!block;n#SetPortal#0" expanded="false" />
+            <element signature="e#1440#1595#0" expanded="false" />
+            <element signature="n#!!block;n#SetSeer#0" expanded="false" />
+            <element signature="e#2633#2771#0" expanded="false" />
+            <element signature="n#!!block;n#SetMonsters#0" expanded="false" />
+            <marker date="1412752810741" expanded="true" signature="2560:2571" placeholder="..." />
+>>>>>>> 33fd12f6b8ec2e4a9e4c40176315d71cfd8ecc6e
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/dungeon-data.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+>>>>>>> 33fd12f6b8ec2e4a9e4c40176315d71cfd8ecc6e
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/jquery.easing.1.3.js">
+<<<<<<< HEAD
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <folding />
+>>>>>>> 33fd12f6b8ec2e4a9e4c40176315d71cfd8ecc6e
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="828">
           <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
           <folding />
@@ -480,28 +713,64 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.13513513" vertical-offset="105" max-vertical-offset="882">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+        <state line="3" column="29" selection-start="59" selection-end="59" vertical-scroll-proportion="-0.0" vertical-offset="45" max-vertical-offset="690">
+>>>>>>> 33fd12f6b8ec2e4a9e4c40176315d71cfd8ecc6e
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/dungeon-data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="55" selection-start="1030" selection-end="1030" vertical-scroll-proportion="0.4688027" vertical-offset="67" max-vertical-offset="660">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/img/dicerollrev.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/custom.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.0" vertical-offset="897" max-vertical-offset="2754">
           <caret line="71" column="74" selection-start-line="71" selection-start-column="74" selection-end-line="71" selection-end-column="74" />
           <folding>
             <marker date="1412751459955" expanded="true" signature="2577:2588" placeholder="..." />
+=======
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+          <folding>
+            <element signature="e#181#340#0" expanded="false" />
+            <element signature="n#!!block;n#initEverything#0" expanded="false" />
+            <element signature="e#424#589#0" expanded="false" />
+            <element signature="n#!!block;n#getPosition#0" expanded="false" />
+            <element signature="e#996#1141#0" expanded="false" />
+            <element signature="n#!!block;n#SetPortal#0" expanded="false" />
+            <element signature="e#1440#1595#0" expanded="false" />
+            <element signature="n#!!block;n#SetSeer#0" expanded="false" />
+            <element signature="e#2633#2771#0" expanded="false" />
+            <element signature="n#!!block;n#SetMonsters#0" expanded="false" />
+            <marker date="1412752810741" expanded="true" signature="2560:2571" placeholder="..." />
+>>>>>>> 33fd12f6b8ec2e4a9e4c40176315d71cfd8ecc6e
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/attack.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="-14.666667" vertical-offset="0" max-vertical-offset="846">
           <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+=======
+        <state line="23" column="14" selection-start="624" selection-end="624" vertical-scroll-proportion="-13.75" vertical-offset="15" max-vertical-offset="870">
+>>>>>>> 33fd12f6b8ec2e4a9e4c40176315d71cfd8ecc6e
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/assets/css/attack.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.9" vertical-offset="615" max-vertical-offset="2538">
@@ -514,6 +783,50 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6949807" vertical-offset="54" max-vertical-offset="1386">
           <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
+=======
+    <entry file="file://$PROJECT_DIR$/assets/img/diceroll.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/img/dice/face5.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/img/dice/face4.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/img/dice/face3.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/img/dice/face2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/img/dice/face1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/attack.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="104" column="38" selection-start="2570" selection-end="2570" vertical-scroll-proportion="0.0" vertical-offset="877" max-vertical-offset="3375">
+          <folding>
+            <element signature="n#!!block;n#finalRoll#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/attack.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="4" selection-start="1606" selection-end="1606" vertical-scroll-proportion="0.7386364" vertical-offset="765" max-vertical-offset="2295">
+>>>>>>> 33fd12f6b8ec2e4a9e4c40176315d71cfd8ecc6e
           <folding />
         </state>
       </provider>

@@ -1,4 +1,3 @@
-
 var selPort = [];   //Selected Portals
 var selMons = [];   //Selected Monsters
 var flag = 0;       //Flag value
@@ -11,6 +10,7 @@ var map = 0;
  Status:
  COMPLETED
  */
+
 
 function initEverything()
 {
@@ -26,8 +26,7 @@ function initEverything()
  Status:
  COMPLETED
  */
-function getPosition(pos)
-{
+function getPosition(pos){
     var mL = 0;
     var mR = 0;
 
@@ -53,9 +52,12 @@ function getPosition(pos)
  Status:
  COMPLETED
  */
-function SetPortal()
-{
+
+
     var pos;
+
+function SetPortal(){
+
 
     flag = Math.floor(Math.random() * (4-1) + 1);
 
@@ -82,8 +84,7 @@ function SetPortal()
  Status:
  Work in progress
  */
-function SetSeer()
-{
+function SetSeer(){
     var mL = 0;
     var mR = 0;
 
@@ -130,8 +131,7 @@ function SetSeer()
  Status:
  COMPLETED
  */
-function SetMonsters()
-{
+function SetMonsters(){
     var mL = 0;
     var mR = 0;
 
@@ -146,3 +146,4 @@ function SetMonsters()
         targetDiv.innerHTML = selMons[i].image;
     }
 }
+

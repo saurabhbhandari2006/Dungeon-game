@@ -3,34 +3,39 @@ body {
     margin: 0;
 }
 
+
+
 #gameAttack_wrapper {
     width: 640px;
     height: 480px;
     margin: auto;
-    border: 0;
-    /*border-collapse: collapse;*/
-    background-color: #000;
-    position: relative;
+    background-color: black;
+    position: absolute;
+    /* display: none; */
+    top: 0%;
+
 }
-#fightArena{
+
+#fightArena {
     /*border: 1px solid red;*/
     height: 50%;
     margin-top: 18%;
     position: absolute;
     width: 99%;
 }
-#monster{
-   max-width: 40%;
+
+#monster {
+    max-width: 40%;
     margin: 5%;
     max-height: 75%;
     position: absolute;
     float: left;
     /*border: 1px solid green;*/
     font-size: 30px;
-    color: Red;
+    color: red;
 }
 
-#player{
+#player {
     max-width: 40%;
     margin: 5%;
     max-height: 75%;
@@ -43,26 +48,26 @@ body {
 
 #diceBox {
     border-radius: 5px;
-    width: 220px;
-    right: 25%;
-    position: relative;
-    /* display: none; */
+    /*width: 20%;*/
+    /*top: 83%;*/
+    margin-top: 50%;
+    margin-left: 25%;
+    /*position: absolute;*/
+    display: table;
     border: 1px solid black;
-    top: 33%;
-    left: 34%;
 }
 
-.oneShown, .threeShown, .fiveShown {
+.shown1, .shown3, .shown5 {
     background-image: url('../img/diceroll.png');
 
     -webkit-animation: play 1s steps(17) infinite;
     -moz-animation: play 1s steps(17) infinite;
     -ms-animation: play 1s steps(17) infinite;
-    -o-animation: play 1s ) steps(17) infinite;
+    -o-animation: play 1s steps(17) infinite;
     animation: play 1s steps(17) infinite;
 }
 
-.twoShown, .fourShown {
+.shown2, .shown4 {
     background-image: url('../img/dicerollrev.png');
 
     -webkit-animation: play 1s steps(17) infinite;
@@ -72,26 +77,21 @@ body {
     animation: play 1s steps(17) infinite;
 }
 
-#dieOne, #dieTwo, #dieThree, #dieFour #dieFive {
-    width: 105px;
-    height: 105px;
-    display: inline-block;
+#die1, #die2, #die3, #die4, #die5 {
+    display: table-cell;
+    height: 65px;
+    margin: 0 auto;
+    width: 64px;
 }
 
-#roll {
-    padding: 5px;
-    display: inline-block;
-    background-color: #FFF;
-    border-radius: 5px;
-    margin: 5px 5px 0px 5px;
-}
+
 
 @-webkit-keyframes play {
     from {
         background-position: 0px;
     }
     to {
-        background-position: -1785px;
+        background-position: -1100px;
     }
 }
 
@@ -100,7 +100,7 @@ body {
         background-position: 0px;
     }
     to {
-        background-position: -1785px;
+        background-position: -1100px;
     }
 }
 
@@ -109,7 +109,7 @@ body {
         background-position: 0px;
     }
     to {
-        background-position: -1785px;
+        background-position: -1100px;
     }
 }
 
@@ -118,7 +118,7 @@ body {
         background-position: 0px;
     }
     to {
-        background-position: -1785px;
+        background-position: -1100px;
     }
 }
 
@@ -127,9 +127,60 @@ body {
         background-position: 0px;
     }
     to {
-        background-position: -1785px;
+        background-position:-1100px;
     }
 }
 
+.btn {
+    width: 80px;
+    height: 40px;
+}
 
+#battleBtn {
+    left: 40%;
+    bottom: 10%;
+    position: absolute;
+}
+#health-bar{
+width: 100%;
 
+}
+.health-box{
+    border: 1px solid yellow;
+    height: 12px;
+    width: 100%;
+    border-radius: 5px;
+}
+#player-Meter{
+    border: 1px solid #000;
+    bottom: 75%;
+    left: 70%;
+    position: absolute;
+    width: 30%;
+}
+#player-Health{
+    background: none repeat scroll 0 0 red;
+    height: 10%;
+    position: absolute;
+    width: 100%;
+    right: 0;
+    border-radius: 5px;
+}
+#monster-Meter{
+    border: 1px solid #000;
+    bottom: 75%;
+    position: absolute;
+    width: 30%;
+}
+#monster-Health{
+    background: none repeat scroll 0 0 red;
+    border-radius: 5px;
+    position: absolute;
+    /*top: 4%;*/
+    width: 100%;
+    height: 10%;
+}
+.value-display{
+    height: 100px;
+    border: 1px solid #000000
+}

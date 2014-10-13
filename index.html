@@ -3,31 +3,75 @@
 <head>
     <title>Dungeon Game</title>
     <link rel="stylesheet" href="assets/css/index.css">
-    </head>
+    <link rel="stylesheet" href="assets/css/attack.css">
+</head>
 
 <body onload="initEverything();">
-<table id="mainmatrix" border="1">
+<div id="game-wrapper">
+    <table id="mainmatrix" border="1">
 
-    <tr>
-        <td id="11"> </td>
-        <td id="12"> </td>
-        <td id="13"> </td>
-    </tr>
+        <tr>
+            <td id="11"></td>
+            <td id="12"></td>
+            <td id="13"></td>
+        </tr>
 
-    <tr>
-        <td id="21"> </td>
-        <td id="22"> </td>
-        <td id="23"> </td>
-    </tr>
+        <tr>
+            <td id="21"></td>
+            <td id="22"></td>
+            <td id="23"></td>
+        </tr>
 
-    <tr>
-        <td id="31"> </td>
-        <td id="32"> </td>
-        <td id="33"> </td>
-    </tr>
-</table>
+        <tr>
+            <td id="31"></td>
+            <td id="32"></td>
+            <td id="33"></td>
+        </tr>
+    </table>
+    <div id="gameAttack_wrapper">
+        <div id="health-bar">
+            <div id='player-Meter'>
+                <div class="health-box">
+                    <div id='player-Health'></div>
+                </div>
+                <div id="player-health-val" class="value-display"></div>
+            </div>
+            <div id='monster-Meter'>
+                <div class="health-box">
+                    <div id='monster-Health'></div>
+                </div>
+                <div id="monster-health-val" class="value-display"></div>
+            </div>
+        </div>
+        <div id="fightArena">
+
+            <div id="monster">
+                <p>Monster</p>
+            </div>
 
 
+            <div id="player">
+                <p>Player</p>
+
+            </div>
+
+        </div>
+        <div id='diceBox'>
+            <div id='die1' class='oneHidden'></div>
+            <div id='die2' class='oneHidden'></div>
+            <div id='die3' class='oneHidden'></div>
+            <div id='die4' class='oneHidden'></div>
+            <div id='die5' class='oneHidden'></div>
+
+        </div>
+        <div id="battleBtn">
+            <button id="btnAttack" class="btn">Attack</button>
+            <button id="btnRetreat" class="btn">Retreat</button>
+        </div>
+
+
+    </div>
+</div>
 
 
 <script src="assets/js/jquery-1.10.2.min.js"></script>
@@ -35,7 +79,7 @@
 <script src="assets/js/modernizr-2.6.2.min.js"></script>
 <script src="assets/js/dungeon-data.js"></script>
 <script src="assets/js/custom.js"></script>
-<script src="assets/js/dice.js"></script>
+<script src="assets/js/attack.js"></script>
 
 </body>
 </html>

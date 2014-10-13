@@ -1,72 +1,230 @@
-var faceOne = 1;
-var faceTwo = 1;
-var diceValue = 0;
-var faceValue = [];
+var diceVal = [];
+var diceNum = 2;
+var player = true;
+var healthReduce;
+var value1 = 100;//to get this value as player health
+var value2 = 100;//monster health
+
+$(function () {
+    initBattleWindow();
+});
+
+function initBattleWindow() {
+//    gameOn = true;
+    player = true;
+    playerTurn();
+
+}
+
+function scoreData() {
+    var health = 100;
+    var dice = 1;
+}
 
 //----------------------------------dice roll -----------------------------------------
-function hideAngle(){
-	$("#dieOne").removeClass('oneShown');
-	$("#dieTwo").removeClass('twoShown');
-	$("#dieThree").removeClass('threeShown');
-	$("#dieFour").removeClass('fourShown');
-	$("#dieFive").removeClass('fiveShown');
+function hideAngle() {
+//	$("#dieOne").removeClass('oneShown');
+//	$("#dieTwo").removeClass('twoShown');
+
+    for (var i = 1; i <= diceNum; i++) {
+//        console.log("hide angle i " + i);
+        $("#die" + i).removeClass('shown' + i);
+    }
+
 }
 
-function hideFace(dieOne,dieTwo){
-	$("#dieOne #face"+dieOne+"").hide();
-	$("#dieTwo #face"+dieTwo+"").hide();
-}
+function hideFace() {
+//	$("#dieOne #face"+dieOne+"").hide();
+//	$("#dieTwo #face"+dieTwo+"").hide();
 
-function showAngle(){
-    for(var i=1; i<=diceValue.length; i++)
-    {
-        $("#die"+i).addClass('Shown'+i);
+    for (var i = 1; i <= diceNum; i++) {
+//        console.log("hide face i " + i);
+        $("#die" + i + " #face" + diceVal[i] + "").hide();
     }
 
 
+}
+
+function showAngle() {
+//	$("#dieOne").addClass('oneShown');
+//	$("#dieTwo").addClass('twoShown');
+
+    for (var i = 0; i <= diceNum; i++) {
+//        console.log("show angle i " + i);
+        $("#die" + (i)).addClass('shown' + (i));
+    }
 
 }
 
+function setFaces() {
+//	$("#dieOne #face"+dieOne+"").show();
+//	$("#dieTwo #face"+dieTwo+"").show();
 
-function setFaces(){
-    for(i=0; i<=diceValue.length; i++)
+    for (var i = 0; i <= diceNum; i++) {
+//        console.log("set face i " + i);
+        $("#die" + (i + 1) + " #face" + diceVal[i] + "").show();
+    }
 
-	$("#dieOne #face"+dieOne+"").show();
-	$("#dieTwo #face"+dieTwo+"").show();
 }
 
-function finalRoll(dices){
-    for(var i = 0;i<dices; i++){
-        dices[i].push(Math.floor((Math.random()*6)+1));
+function finalRoll() {
+    diceVal = [];
+    healthReduce =0;
+    for (var i = 0; i < diceNum; i++) {
+        diceVal.push(Math.floor((Math.random() * 6) + 1));
+        healthReduce += diceVal[i];
+//        console.log(diceVal[i]);
+//        console.log(healthReduce);
+
+    }
 
 //	faceOne = Math.floor((Math.random()*6)+1);
 //	faceTwo = Math.floor((Math.random()*6)+1);
-
-	setFaces();
-
-
-    diceValue = faceOne + faceTwo;
-
+    setFaces();
+//	done = true;
+//    return faceOne+faceTwo
 }
-function diceRoll(){
+
+function diceRoll(callback) {
     $("#diceBox").fadeIn();
-    for(var i=0; i<6; ++i){
-        var die = i+1;
-        $("#dieOne").append("<img src='assets/img/dice/face"+die+".png' id='face"+die+"' />");
-        $("#dieTwo").append("<img src='assets/img/dice/face"+die+".png' id='face"+die+"' />");
-
-        $("#dieOne #face"+die+"").hide();
-        $("#dieTwo #face"+die+"").hide();
+    for (var i = 0; i < 6; ++i) {
+        var die = i + 1;
+//        for(var i=1;i<=diceNum;i++)
+//        {
+//            $("#die"+i).append("<img src='assets/img/dice/face"+die+".png' id='face"+die+"' />");
+//              $("#die"+i+" #face"+die+"").hide();
+//        }
+        $("#die1").append("<img src='assets/img/dice/face" + die + ".png' id='face" + die + "' />");
+        $("#die2").append("<img src='assets/img/dice/face" + die + ".png' id='face" + die + "' />");
+        $("#die3").append("<img src='assets/img/dice/face" + die + ".png' id='face" + die + "' />");
+        $("#die4").append("<img src='assets/img/dice/face" + die + ".png' id='face" + die + "' />");
+        $("#die5").append("<img src='assets/img/dice/face" + die + ".png' id='face" + die + "' />");
+//        for(var i=1;i<=diceNum;i++)
+//        {
+//            $("#die"+i+" #face"+die+"").hide();
+//        }
+        $("#die1 #face" + die + "").hide();
+        $("#die2 #face" + die + "").hide();
+        $("#die3 #face" + die + "").hide();
+        $("#die4 #face" + die + "").hide();
+        $("#die5 #face" + die + "").hide();
     }
-    setFaces(1,1);
-    hideFace(faceOne,faceTwo);
+    setFaces();
+    hideFace();
     showAngle();
-    setTimeout(function(){
+    setTimeout(function () {
         hideAngle();
-    },750);
-    setTimeout(function(){
+    }, 750);
+    setTimeout(function () {
         finalRoll();
-    },751)
+        callback();
+    }, 751)
+}
+//------------------------------------------------------------dice roll end-------------------------------------
+
+function playerTurn() {
+//        setTimeout(function() {
+//            $("#message").text("Player's Turn").css("color","white").fadeIn(1000).fadeOut(2000)});
+
+    setTimeout(function () {
+        console.log("Player:");
+
+        $(".btn").unbind('click').click(function () {
+            if (player) {
+                player = false;
+                btnId = $(this).attr("id");
+                switch (btnId) {
+                    case "btnAttack":
+                        console.log("attack selected");
+                        diceRoll(function(){
+                            updateResources("monster",function()
+                            {
+                                emptyDiceDiv();
+                                switchTurn("player")
+                            });
+
+
+                        });
+                        break;
+                    case "btnRetreat":
+                        //drawMap();
+                        break;
+                }
+            }
+        })
+    }, 500);
+
+}
+//
+function monster() {
+
+//            $("#message").text("Opponent's Turn").css("color","white").fadeIn(1000).fadeOut(2000);
+    setTimeout(function()
+    {
+        if(player == false)
+        {
+            diceRoll(function(){
+                updateResources("player",function(){
+                    emptyDiceDiv();
+                    switchTurn("monster")
+                });
+            });
+        }
+    },3000);
+}
+function switchTurn(from) {
+    console.log("switching turn from "+from);
+    console.log("checking player: "+player);
+    setTimeout(function() {
+        if (from == "player") {
+            player = false;
+            monster();
+        }
+        else {
+            player = true;
+            playerTurn();
+        }
+
+    }, 4000);
 }
 
-//------------------------------------------------------------dice roll end-------------------------------------
+function updateResources(to,callback) {
+    playerHealth = document.getElementById("player-Health");
+    monsterHealth = document.getElementById("monster-Health");
+    console.log(healthReduce);
+//    value = value - healthReduce;
+//    console.log(value);
+
+//    if (value <= 0);
+//    $('.value_display').text(value  + '% health left');
+    if(to == "player")
+    {
+        var marginShift =100;
+        value1 -= healthReduce;
+        value1 -= healthReduce;
+        marginShift -= value1;
+        console.log("player health left" +value1);
+        playerHealth.style.width = value1 + "%";
+        playerHealth.style.left = marginShift;
+    }
+    else
+    {
+        value2 = value2 - healthReduce;
+        console.log("monster health left" +value2);
+        monsterHealth.style.width = value2 + "%";
+
+    }
+    setTimeout(function()
+    {
+        callback();
+    },2000);
+}
+
+function emptyDiceDiv() {
+    diceVal = [];
+    $("#die1").empty();
+    $("#die2").empty();
+    $("#die3").empty();
+    $("#die4").empty();
+    $("#die5").empty();
+}
