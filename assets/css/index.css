@@ -9,16 +9,19 @@ body
     Main matrix, holds the game map.
 */
 
-#game-wrapper{
-    width:640px;
+#gameAttack_wrapper {
+    width: 640px;
     height: 480px;
-    margin:auto;
-
+    margin: auto;
+    border: 0;
+    /*border-collapse: collapse;*/
+    background-color: #000;
+    position: relative;
 }
 #mainmatrix
 {
-    width:100%;
-    height: 100%;
+    width:640px;
+    height: 480px;
     border:0;
     border-collapse:collapse;
     background-color: #000;
@@ -46,3 +49,10 @@ body
     height:96px;
 }
 
+#dungeons {
+    display: none;
+    position: absolute;
+}
+.matrix{
+    color: red;
+}

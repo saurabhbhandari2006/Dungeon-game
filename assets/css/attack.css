@@ -1,60 +1,179 @@
-body {
-    padding: 0;
-    margin: 0;
-}
-
-
-
-#gameAttack_wrapper {
-    width: 640px;
-    height: 480px;
-    margin: auto;
-    background-color: black;
-    position: absolute;
-    /* display: none; */
-    top: 0%;
-
-}
 
 #fightArena {
     /*border: 1px solid red;*/
-    height: 50%;
-    margin-top: 18%;
+    height: 100%;
     position: absolute;
-    width: 99%;
+    width: 100%;
+    display: none;
 }
 
-#monster {
-    max-width: 40%;
-    margin: 5%;
-    max-height: 75%;
+#name-div {
+    width: 100%;
+    height: 5%;
+    /*border: 1px solid yellow;*/
+    top: 2%;
     position: absolute;
-    float: left;
+}
+
+.names {
+    height: 100%;
+    width: 35%;
+    text-align: center;
     /*border: 1px solid green;*/
-    font-size: 30px;
+
+}
+
+#monster-name {
+    float: left;
     color: red;
 }
 
-#player {
-    max-width: 40%;
-    margin: 5%;
-    max-height: 75%;
-    /*position: absolute;*/
+#player-name {
     float: right;
+    color: blue;
+}
+
+#health-bar-box {
+    width: 100%;
+    height: 8%;
     /*border: 1px solid green;*/
-    font-size: 30px;
-    color: green;
+    top: 8%;
+    position: absolute;
+}
+
+.meter-box-wrapper {
+    /*border: 1px solid red;*/
+    height: 50%;
+    width: 100%;
+    position: absolute;
+}
+
+.health-border {
+    border: 1px solid #ffffff; /*border column*/
+    height: 100%;
+    width: 35%;
+    border-radius: 10px;
+}
+
+#monster-Health-border {
+    float: left;
+    margin-left: 1%;
+}
+
+#monster-hp {
+    /*border: 1px solid green;*/
+    text-align: center;
+}
+
+
+
+#player-Health-border {
+    float: right;
+    margin-right: 1%;
+}
+#player-hp {
+    /*border: 1px solid green;*/
+    text-align: center;
+}
+
+#monster-Health {
+    background: none repeat scroll 0 0 red;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+#player-Health {
+    background: none repeat scroll 0 0 blue;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    float: right;
+}
+
+#meter-box-health {
+    /*border: 1px solid blue;*/
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+
+.health-val-box {
+    height: 100%;
+    width: 35%;
+    /*border: 1px solid deeppink;*/
+}
+
+#monster-health-val-box {
+    float: left;
+}
+
+#player-health-val-box {
+    float: right;
+}
+
+.value-display {
+    height: 100%;
+    width: 70%;
+    /*border: 1px solid #ffffff;*/
+    float: left;
+    color: #ffffff;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 2%;
+
+}
+
+.lvl-display {
+    color: red;
+    float: right;
+    height: 100%;
+    /*position: absolute;*/
+    text-align: center;
+    width: 26%;
+    font-size: 12px;
+    margin-top: 2%;
+}
+
+#battle-box-wrapper {
+    /*border: 1px solid green;*/
+    height: 45%;
+    position: absolute;
+    top: 17%;
+    width: 100%;
+}
+
+.image-box {
+    width: 20%;
+    margin: 5%;
+    height: 75%;
+    /*border: 1px solid green;*/
+}
+
+#monster {
+    float: left;
+    /*background-image: url('../img/m3.png');*/
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+#player {
+    float: right;
+    background-image: url('../img/player.png');
+    background-repeat: no-repeat;
 }
 
 #diceBox {
+    border: 5px solid whitesmoke;
     border-radius: 5px;
+    bottom: 20%;
+    left: 25%;
+    position: absolute;
+    z-index: 0;
     /*width: 20%;*/
-    /*top: 83%;*/
-    margin-top: 50%;
-    margin-left: 25%;
-    /*position: absolute;*/
-    display: table;
-    border: 1px solid black;
+    /*display: none;*/
 }
 
 .shown1, .shown3, .shown5 {
@@ -78,20 +197,26 @@ body {
 }
 
 #die1, #die2, #die3, #die4, #die5 {
-    display: table-cell;
-    height: 65px;
-    margin: 0 auto;
     width: 64px;
+    height: 65px;
+    display: inline-block;
+
 }
 
-
+#roll {
+    padding: 5px;
+    display: inline-block;
+    background-color: #FFF;
+    border-radius: 5px;
+    margin: 5px 5px 0px 5px;
+}
 
 @-webkit-keyframes play {
     from {
         background-position: 0px;
     }
     to {
-        background-position: -1100px;
+        background-position: -1160px;
     }
 }
 
@@ -100,7 +225,7 @@ body {
         background-position: 0px;
     }
     to {
-        background-position: -1100px;
+        background-position: -1160px;
     }
 }
 
@@ -109,7 +234,7 @@ body {
         background-position: 0px;
     }
     to {
-        background-position: -1100px;
+        background-position: -1160px;
     }
 }
 
@@ -118,7 +243,7 @@ body {
         background-position: 0px;
     }
     to {
-        background-position: -1100px;
+        background-position: -1160px;
     }
 }
 
@@ -127,7 +252,7 @@ body {
         background-position: 0px;
     }
     to {
-        background-position:-1100px;
+        background-position: -1160px;
     }
 }
 
@@ -137,50 +262,19 @@ body {
 }
 
 #battleBtn {
-    left: 40%;
-    bottom: 10%;
+    bottom: 8%;
+    left: 38%;
     position: absolute;
 }
-#health-bar{
-width: 100%;
 
-}
-.health-box{
-    border: 1px solid yellow;
-    height: 12px;
-    width: 100%;
-    border-radius: 5px;
-}
-#player-Meter{
-    border: 1px solid #000;
-    bottom: 75%;
-    left: 70%;
-    position: absolute;
-    width: 30%;
-}
-#player-Health{
-    background: none repeat scroll 0 0 red;
-    height: 10%;
-    position: absolute;
-    width: 100%;
-    right: 0;
-    border-radius: 5px;
-}
-#monster-Meter{
-    border: 1px solid #000;
-    bottom: 75%;
-    position: absolute;
-    width: 30%;
-}
-#monster-Health{
-    background: none repeat scroll 0 0 red;
-    border-radius: 5px;
-    position: absolute;
-    /*top: 4%;*/
-    width: 100%;
-    height: 10%;
-}
-.value-display{
-    height: 100px;
-    border: 1px solid #000000
-}
+
+
+
+
+
+
+
+
+
+
+
