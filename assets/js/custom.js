@@ -268,6 +268,8 @@ function teleport(entityId) {
 function initBattleWindow(entityId) {
     $("#dungeons").fadeOut();
     $("#fightArena").fadeIn();
+    var dice = $("#monster-dice-num").text();
+    showDice(dice,diceNum);
 
     player = true;
     var entity = getEntity(entityId);
@@ -352,6 +354,10 @@ function playerTurn() {
     setTimeout(function () {
         console.log("Player:");
 
+showDice();
+        setTimeout(function(){
+
+        },1000);
         $(".btn").unbind('click').click(function () {
             if (player) {
                 player = false;
@@ -413,7 +419,14 @@ function switchTurn(from) {
 
     }, 2000);
 }
-
+function showDice(dice1,dice2){
+    for(var i=1;i<=dice1;i++){
+        $("#monster-dice-img").append("<img src='assets/img/dice/face1.png'/>");
+    }
+    for(var i=1;i<=dice2;i++){
+        $("#player-dice-img").append("<img src='assets/img/dice/face1.png'/>");
+    }
+}
 function emptyDiceDiv() {
     // diceVal = [];
     $("#die1").empty();
