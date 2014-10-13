@@ -139,7 +139,7 @@
 
 #battle-box-wrapper {
     /*border: 1px solid green;*/
-    height: 45%;
+    height: 50%;
     position: absolute;
     top: 17%;
     width: 100%;
@@ -148,7 +148,7 @@
 .image-box {
     width: 20%;
     margin: 5%;
-    height: 75%;
+    height: 50%;
     /*border: 1px solid green;*/
 }
 
@@ -164,11 +164,35 @@
     background-image: url('../img/player.png');
     background-repeat: no-repeat;
 }
+#dice-container{
+    border: 1px solid blue;
+    width: 100%;
+    height: 40px;
+    bottom: 1%;
+    position: absolute;
+}
+.total-dice{
+    border: 1px solid green;
+    height: 100%;
+    width: 35%;
 
+}
+#monster-dice{
+float: left;
+}
+
+#player-dice{
+    float: right;
+}
+.total-dice-img{
+    width: 100%;
+    height: 100%;
+    /*background-color: yellow;*/
+}
 #diceBox {
     border: 5px solid whitesmoke;
     border-radius: 5px;
-    bottom: 20%;
+    bottom: 14%;
     left: 25%;
     position: absolute;
     z-index: 0;
@@ -262,7 +286,7 @@
 }
 
 #battleBtn {
-    bottom: 8%;
+    bottom: 4%;
     left: 38%;
     position: absolute;
 }
