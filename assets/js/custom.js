@@ -57,9 +57,17 @@ function createEntity() {
                 class: "portal"
             }
         );
+
+        entityHash.push(
+            {
+                id:entityHash.length+1,
+                class: "seer",
+                seerImage: ""
+            }
+        );
     }
 
-    //console.log(entityHash);
+    console.log(entityHash);
 }
 
 function addEntities() {
@@ -80,7 +88,7 @@ function addEntities() {
             {
                 for(var b=1; b<=3; b++)
                 {
-                    var getDef = getDefinition(dungeonSelect, a, b)
+                    var getDef = getDefinition(dungeonSelect, a, b);
                     {
                         var m = Math.floor(Math.random() * getDef.choiceSet.length);
 
@@ -99,6 +107,8 @@ function addEntities() {
                             targetDiv.innerHTML = "Portal";
                         }
                     }
+
+                    console.log(getDef);
                 }
             }
         }
