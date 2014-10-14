@@ -12,15 +12,40 @@
     <br/>
     <a href="#" id="startClicker" style="text-decoration: none;font-size:48px;color:blue;">Click to Start</a>
 </div>
+
 <div class="How">
-    <div><img id="inst" src="assets/img/how_to.png" /></div>
+    <div><img id="inst" src="assets/img/how_to.png"/></div>
     <div style="left: 74%;bottom: 6%; position: absolute">
         <a id="start" href="#" style="text-decoration: none;font-size:48px;color:blue;">Start</a>
     </div>
 </div>
+
 <div id="gameAttack_wrapper">
+
     <div id="splasher"></div>
+
     <div id="dungeons">
+        <div id="player-hud">
+            <div id="player-data">
+                <div id="player-img-hud"><img style="width: 100%;height: 100%" src="assets/img/player.png"></div>
+                <div id="player-name-hud">Player name</div>
+            </div>
+
+
+            <div id="player-health-box-hud">
+                <div id="player-Health-border-hud">
+                    <div id='player-Health-hud'>
+                        <div id="player-hp-hud"></div>
+                    </div>
+
+                </div>
+                <div id="meter-box-health-hud">
+                        <div id="player-health-val-hud">30% left</div>
+                </div>
+            </div>
+            <div id="player-dice-hud"></div>
+        </div>
+
         <table id="mainmatrix" border="1">
             <img id="dungeonBackground"/>
 
@@ -85,12 +110,12 @@
             </div>
             <div id="meter-box-health">
                 <div id="monster-health-val-box" class="health-val-box">
-                    <div id="monster-health-val" class="value-display">Health 30% left</div>
-                    <div id="monster-lvl" class="lvl-display">Lvl 2</div>
+                    <div id="monster-health-val" class="value-display"></div>
+                    <div id="monster-lvl" class="lvl-display"></div>
                 </div>
                 <div id="player-health-val-box" class="health-val-box">
-                    <div id="player-health-val" class="value-display">Health 30% left</div>
-                    <div id="player-lvl" class="lvl-display">Lvl 2</div>
+                    <div id="player-health-val"></div>
+
                 </div>
 
             </div>
@@ -126,18 +151,35 @@
             <button id="btnRetreat" class="btn">Retreat</button>
         </div>
     </div>
+    <div id="qcard">
+        <div id="quiz-content" class="questioned">
+            <div id="qquestion"></div>
+            <div id="qid"></div>
+            <ul id="answerBlock">
+                <li class="answer" id="optax"></li>
+                <li class="answer" id="optbx"></li>
+                <li class="answer" id="optcx"></li>
+                <li class="answer" id="optdx"></li>
+            </ul>
+            <div id="answerMsg"></div>
+        </div>
+    </div>
 </div>
 <div class="defeat">
-    <span >Defeated</span>
+    <span>Defeated</span>
     <br/>
     <a href="#" id="startAgainClicker">Click to Start Again</a>
 </div>
+
 <script src="assets/js/jquery-1.10.2.min.js"></script>
 
 <script src="assets/js/modernizr-2.6.2.min.js"></script>
 <script src="assets/js/dungeon-data.js"></script>
 <script src="assets/js/custom.js"></script>
+
 <script src="assets/js/jquery.easing.1.3.js"></script>
+
+<script src="assets/js/questionbank.js"></script>
 
 
 </body>

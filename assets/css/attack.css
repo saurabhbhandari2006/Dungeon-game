@@ -39,6 +39,7 @@
     /*border: 1px solid green;*/
     top: 8%;
     position: absolute;
+
 }
 
 .meter-box-wrapper {
@@ -54,6 +55,9 @@
     width: 35%;
     border-radius: 10px;
 }
+
+
+
 
 #monster-Health-border {
     float: left;
@@ -126,6 +130,19 @@
 
 }
 
+
+#player-health-val {
+    height: 100%;
+    width: 100%;
+    /*border: 1px solid #ffffff;*/
+    float: left;
+    color: #ffffff;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 2%;
+}
+
+
 .lvl-display {
     color: red;
     float: right;
@@ -150,6 +167,9 @@
     margin: 5%;
     height: 50%;
     /*border: 1px solid green;*/
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(255,0,0,1);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(255,0,0,1);
+    box-shadow: 0px 0px 0px 0px rgba(255,0,0,1);
 }
 
 #monster {
@@ -159,17 +179,36 @@
     color: #ffffff;
 }
 
+#monster-img {
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(255,0,0,1);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(255,0,0,1);
+    box-shadow: 0px 0px 0px 0px rgba(255,0,0,1);
+}
+
 #player {
     float: right;
-    background-image: url('../img/stand.png');
+    background-image: url('../img/player.png');
     background-repeat: no-repeat;
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,255,1);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,255,1);
+    box-shadow: 0px 0px 0px 0px rgba(0,0,255,1);
 }
 #dice-container{
-    border: 1px solid blue;
     width: 100%;
     height: 40px;
     bottom: 1%;
     position: absolute;
+}
+.total-dice{
+    border: 1px solid #0066FF;
+    height: 100%;
+    width: 35%;
+    position: absolute;
+
+}
+#monster-dice{
+    float: left;
+    left: 1%;
 }
 .total-dice{
     border: 1px solid green;
@@ -178,11 +217,13 @@
 
 }
 #monster-dice{
-float: left;
+    float: left;
+    left: 1%;
 }
 
 #player-dice{
     float: right;
+    right: 1%;
 }
 .total-dice-img{
     width: 100%;
@@ -294,7 +335,6 @@ float: left;
     text-decoration: none;
     font-size:48%;
     color:cornflowerblue;
-
 }
 .defeat{
     height: 480px;
@@ -306,6 +346,8 @@ float: left;
     font-size: 30px;
     margin-top: 25%;
 }
+
+
 
 
 
