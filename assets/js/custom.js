@@ -7,10 +7,40 @@ var mapHash;
 var entityHash = [];
 var rewardsHash;
 
+function background() {
+    $('body').css('background-image', "url(" + theme.background + ")");
+    $('#gameAttack_wrapper').fadeOut();
+    $('.How').fadeOut();
+    blinkit = setInterval(blinker, 2000);
+    $('#startClicker').on('click', function () {
+        $('.gameTitle').fadeOut();
+        $('.How').fadeIn();
+        clearInterval(blinkit);
+        howTo();
+//        initGame();
+    });
+};
 
-$(function () {
-    initGame();
-})
+function blinker() {
+    $('#startClicker').fadeOut(500, function () {
+        $('#startClicker').fadeIn(500);
+    });
+}
+function blinker2() {
+    $('#start').fadeOut(500, function () {
+        $('#start').fadeIn(500);
+    });
+}
+function howTo() {
+    blinkit = setInterval(blinker2, 2000);
+    $('#start').on('click', function () {
+        $('.How').fadeOut();
+        $('#gameAttack_wrapper').fadeIn();
+        clearInterval(blinkit);
+        initGame();
+    });
+}
+
 
 function initializeTheme() {
 
@@ -24,11 +54,15 @@ function initializeTheme() {
 function initGame() {
     diceNum = initDice;
     playerHealth = initHealth;
+//    $("#gameAttack_wrapper").fadeIn();
+    $("#fightArena").fadeOut();
+    $("#qcard").fadeOut();
     $("#dungeons").fadeIn();
     createMap();
     createEntity();
     addEntities();
     createRewards();
+    console.log(mapHash);
     drawDungeon(1);
     startGame(1);
 }
@@ -57,18 +91,18 @@ function createRewards() {
     {
         rewardsHash[i].id = i+1;
     }
-    console.log("rewards");
-    console.log(rewardsHash);
 }
 
 function createEntity() {
-    console.log(entityHash);
+
     var i;
-    for(i = 0; i < monsters.length; i++)
+
+    for(i=0; i < monsters.length; i++)
     {
         entityHash.push(monsters[i]);
         entityHash[i].id = i+1;
         entityHash[i].class = "Monster";
+
     }
 
     entityHash[i-1].class = "Boss";
@@ -78,57 +112,149 @@ function createEntity() {
         entityHash.push(
             {
                 id:entityHash.length+1,
-                portal:imgName,
-                image:"<img src='assets/img/portals/" + imgName + ".png' />",
+                name:imgName,
+                image:"<img src='assets/img/portals/" + imgName + ".gif' />",
                 class: "Portal"
             }
         );
     }
 
-    console.log("entityhash:");
-    console.log(entityHash);
+    entityHash.push(
+        {
+            id:entityHash.length+1,
+            class: "Seer",
+            image: "<img src='assets/img/seer.png' />"
+        }
+    );
+
+    entityHash.push(
+        {
+            id:entityHash.length+1,
+            class: "Player",
+            image: "<div id='player-div' style='padding-left: 6%; margin-top: -7%; position: absolute'> <img src='assets/img/player.png' /> </div>"
+        }
+    );
 }
 
 function addEntities() {
     console.log("in addEntities");
+    var x = 0;
+    var y = 0;
     var dungeonSelect;
-    var entities;
-    for(var i=0; i<mapHash.length - 1; i++)
-    {
+    var getDef;
+    for(var i=0; i<mapHash.length; i++) {
         dungeonSelect = getDungeon(i+1);
+        var selMonsters;
+        var selPortals;
+        var selSeer;
+        var selPlayer;
+        var selBoss;
+        var portal = [" "];
         for(var j=0; j<dungeonSelect.definition.length; j++) {
             for(var a=1; a<=3; a++) {
                 for(var b=1; b<=3; b++) {
-                    var getDef = getDefinition(dungeonSelect, a, b);
-
+                    getDef = getDefinition(dungeonSelect, a, b);
                     var m = Math.floor(Math.random() * getDef.choiceSet.length);
                     var type = getDef.choiceSet[m];
-                    entities = getEntityByClass(type);
-                    if(type=="Monster") {
-                        for(var n = 0; n < 9; n++) {
-                            if(mapHash[i].definition[n].lx == a && mapHash[i].definition[n].ly == b) {
-                                var random = getRandom(0,entities.length-1);
-                                var entity = entities[random];
-                                mapHash[i].definition[n].entity = entity.id;
-                                mapHash[i].definition[n].content = entity.image;
-                            }
-                        }
-                    } else if(type=="Portal") {
-                        for(var n = 0; n < 9; n++) {
-                            if(mapHash[i].definition[n].lx == a && mapHash[i].definition[n].ly == b) {
-                                var random = getRandom(0,entities.length-1);
-                                var entity = entities[random];
-                                mapHash[i].definition[n].entity = entity.id;
-                                mapHash[i].definition[n].content = entity.image;
-                            }
-                        }
-                    }
 
+                    if(getDef.choiceSet.length != 0) {
+                        if(type.indexOf(' ') > 0)
+                            portal = type.split(' ');
+                    }
+//                    console.log("dungeon name: " + dungeonSelect.name);
+//                    console.log(getDef);
+//                    console.log(type);
+
+                    if(getDef.choiceSet.length == 0){
+
+                    } else if(type=="Monster") {
+                        for(var n = 0; n < 9; n++) {
+                            if(mapHash[i].definition[n].lx == a && mapHash[i].definition[n].ly == b) {
+                                selMonsters = $.grep(entityHash, function(element){
+                                    if(dungeonSelect.id == 1) {
+                                        return element.level == 1;
+                                    } else if(dungeonSelect.id == 6) {
+                                        return element.level == 5;
+                                    } else {
+                                        var temp = $.grep(entityHash, function(element){
+                                            return (element.level >= dungeonSelect.id-1);
+                                        });
+                                        var temp2 = $.grep(temp, function(element){
+                                            return (element.level <= dungeonSelect.id);
+                                        });
+                                        return temp2;
+                                    }
+                                });
+
+                                var random = getRandom(0,selMonsters.length);
+                                var entity = selMonsters[random];
+                                mapHash[i].definition[n].content = entity.image;
+                                mapHash[i].definition[n].entity = entity.id;
+                            }
+                        }
+                    } else if(type=="Seer") {
+                        for(var n = 0; n < 9; n++) {
+                            if(mapHash[i].definition[n].lx == a && mapHash[i].definition[n].ly == b) {
+                                var probability = Math.random();
+                                if(probability>0.9) {
+                                    selSeer = getEntityByClass(type);
+                                    mapHash[i].definition[n].content = selSeer[0].image;
+                                    mapHash[i].definition[n].entity = selSeer[0].id;
+                                } else {
+                                    mapHash[i].definition[n].choiceSet = [];
+                                }
+                            }
+                        }
+                    } else if(type=="Player") {
+                        for(var n = 0; n < 9; n++) {
+                            if(mapHash[i].definition[n].lx == a && mapHash[i].definition[n].ly == b) {
+                                selPlayer = getEntityByClass(type);
+                                mapHash[i].definition[n].content = selPlayer[0].image;
+                                mapHash[i].definition[n].entity = selPlayer[0].id;
+                            }
+                        }
+                    } else if(type == "Boss") {
+                        for(var n = 0; n < 9; n++) {
+                            if(mapHash[i].definition[n].lx == a && mapHash[i].definition[n].ly == b) {
+                                selBoss = getEntityByClass(type);
+                                mapHash[i].definition[n].content = selBoss[0].image;
+                                mapHash[i].definition[n].entity = selBoss[0].id;
+                            }
+                        }
+
+                    } else if(portal[0]=="Portal") {
+                        for(var n = 0; n < 9; n++) {
+                            if(mapHash[i].definition[n].lx == a && mapHash[i].definition[n].ly == b) {
+                                var name = portal[1];
+                                var id=0;
+                                if(portal[1] == "Any") {
+                                    selPortals = getEntityByClass(portal[0]);
+                                    var random = getRandom(0,selPortals.length);
+                                    while(selPortals[random].name == dungeonSelect.name)
+                                        random = getRandom(0, selPortals.length);
+                                    var entity = selPortals[random];
+                                    name = entity.image;
+                                    id = entity.id;
+                                } else {
+                                    selPortals = getEntityByClass(portal[0]);
+                                    var port = $.grep(selPortals, function(element){
+                                        return element.name == portal[1];
+                                    });
+                                    name = port[0].image;
+                                    id = port[0].id;
+
+                                }
+                                mapHash[i].definition[n].content = name;
+                                mapHash[i].definition[n].entity = id;
+                            }
+                        }
+                        portal = [];
+                    }
                 }
             }
         }
     }
-
+    console.log(mapHash);
 }
 
 function getRandom(min, max) {
@@ -226,15 +352,15 @@ function startGame(dungeonId) {
 function drawDungeon(dungeonId) {
     console.log("start drawDungeon");
     var dungeon = getDungeon(dungeonId);
-//    document.getElementById("dungeonBackground").src = dungeon.backgroundImage;
+    var setMatrixColor = document.getElementById("mainmatrix");
+    setMatrixColor.style.backgroundColor = dungeon.name;
+    console.log(dungeon);
 
     for (var i = 1; i <= 3; i++) {
         for (var j = 1; j <= 3; j++) {
             var content = getContent(dungeonId, i, j);
-            console.log(content);
             if(content.choiceSet.length != 0) {
                 drawEntity(content.lx, content.ly, content.content);
-                document.getElementById("22").innerHTML = "<div id='player-div' style=' left: 42%;position: absolute;top: 40%;'><img src='assets/img/player.png' /></div>";
             }
         }
     }
@@ -268,7 +394,7 @@ function movePlayer(lx, ly, entityId, callback) {
             case1.animate({left:"+=33%",top:"-=34%"},1000);
             break;
         case "21":
-            case1.animate({left:"+=33%"},1000);
+            case1.animate({left:"-=33%"},1000);
             break;
         case "22":
 //            case1.animate({left:"+=33%",top:"-=34%"},1000);
@@ -290,7 +416,7 @@ function movePlayer(lx, ly, entityId, callback) {
     }
     case1.fadeOut(2000);
     setTimeout(function(){case1.remove();},2500);
-   setTimeout(function(){callback(entityId);},1200);
+    setTimeout(function(){callback(entityId);},1200);
 }
 
 
@@ -299,15 +425,21 @@ function checkReaction(entityId) {
     console.log("in checkReaction");
     var entity = getEntity(entityId);
     console.log(entity);
-//    console.log(entity.class);
+    console.log(entity.class);
     switch(entity.class) {
         case "Monster":
             console.log("its monster");
             initBattleWindow(entityId);
             break;
 
+        case "Boss":
+            console.log("its Boss");
+            initBattleWindow(entityId);
+            break;
+
         case "Portal":
             console.log("its portal");
+            console.log(mapHash);
             teleport(entityId);
             break;
 
@@ -319,20 +451,25 @@ function checkReaction(entityId) {
 }
 
 function teleport(entityId) {
+    console.log(entityId);
     var entity = getEntity(entityId);
     console.log(entity);
-    var dungeonId = getDungeonId(entity.portal);
+    var dungeonId = getDungeonId(entity.name);
     console.log(dungeonId);
     playerHealth -= teleportCost;
     gridSelected = false;
-    drawDungeon(dungeonId);
-    startGame(dungeonId);
+
+    checkSurvival(function() {
+        $(".matrix").empty();
+        drawDungeon(dungeonId);
+        startGame(dungeonId);
+    });
 }
 
 
 function initBattleWindow(entityId) {
-    $("#dungeons").fadeOut(1500);
-    $("#fightArena").fadeIn(1500);
+    $("#dungeons").fadeOut();
+    $("#fightArena").fadeIn();
 
     playerHealthDiv = document.getElementById("player-Health");
     monsterHealthDiv = document.getElementById("monster-Health");
@@ -353,6 +490,9 @@ function initBattleWindow(entityId) {
     $("#monster-dice-num").text(entity.dice);
     var dice = $("#monster-dice-num").text();
     showDice(dice,diceNum);
+
+    $("#monster").css({'opacity': '0.5'});
+    $("#monster-dice").css({'opacity': '0.5'});
 
     playerTurn(entityId);
 }
@@ -479,14 +619,53 @@ function switchTurn(from) {
     setTimeout(function() {
         if (from == "player") {
             player = false;
-            monster();
-        }
-        else {
+            switchAnim(from, monster);
+        } else {
             player = true;
-            playerTurn();
+            switchAnim(from, playerTurn);
         }
 
     }, 2000);
+}
+
+function switchAnim(from, callback) {
+    if(from == "player") {
+        $("#player").css({
+            'opacity': '0.5'
+//            '-webkit-box-shadow': '0px 0px 0px 0px rgba(0,0,255,1)',
+//            '-moz-box-shadow': '0px 0px 0px 0px rgba(0,0,255,1)',
+//            'box-shadow': '0px 0px 0px 0x rgba(0,0,255,1)'
+        });
+        $("#player-dice").css({'opacity': '0.5'});
+
+        $("#monster").css({
+            'opacity': '1'
+//            '-webkit-box-shadow': '0px 0px 20px 5px rgba(255,0,0,1)',
+//            '-moz-box-shadow': '0px 0px 20px 5px rgba(255,0,0,1)',
+//            'box-shadow': '0px 0px 20px 5px rgba(255,0,0,1)'
+        });
+        $("#monster-dice").css({'opacity': '1'});
+
+    } else {
+        $("#player").css({
+            'opacity': '1'
+//            '-webkit-box-shadow': '0px 0px 20px 5px rgba(0,0,255,1)',
+//            '-moz-box-shadow': '0px 0px 20px 5px rgba(0,0,255,1)',
+//            'box-shadow': '0px 0px 20px 5px rgba(0,0,255,1)'
+        });
+        $("#player-dice").css({'opacity': '1'});
+
+        $("#monster").css({
+            'opacity': '0.5'
+//            '-webkit-box-shadow': '0px 0px 0px 0px rgba(255,0,0,1)',
+//            '-moz-box-shadow': '0px 0px 0px 0px rgba(255,0,0,1)',
+//            'box-shadow': '0px 0px 0px 0x rgba(255,0,0,1)'
+        });
+        $("#monster-dice").css({'opacity': '0.5'});
+
+    }
+
+    callback();
 }
 
 function emptyDiceDiv() {
@@ -574,9 +753,7 @@ function checkRecoveryPowers(team,callback){
 function checkAttackPowers(damage,callback,callback1){
     console.log("in checkAttackPowers");
     if (typeof callback === "function")
-    {
         callback("monster",damage,callback1);
-    }
 
 }
 
@@ -588,16 +765,22 @@ function checkAttackPowers(damage,callback,callback1){
 //        }
 
 // }
-function checkSurvival(){
+function checkSurvival(callback){
     console.log("in checkSurvival");
+    console.log(callback.toString().length);
     if (playerHealth<=0)
-    {
         defeat();
+    else {
+        console.log("in else");
+        if(callback.toString().length > 0){
+            callback();
+        }
+
+        else
+            checkRecoveryPowers("player",switchTurn);
     }
-    else
-    {
-        checkRecoveryPowers("player",switchTurn);
-    }
+
+
 }
 
 function seer(){
@@ -659,13 +842,14 @@ function processAnswers(answer) {
             console.log("wrong ans");
         }
         gridSelected = false;
+        $("#player-div").css({opacity:1});
         $("#qcard").fadeOut();
         $("#dungeons").fadeIn();
     }, 2000);
 
 }
 
-function getRewards(){
+function getRewards(callback){
     console.log("In getRewards")
     var random = getRandom(1,12);
     var reward = rewardsHash[random];
@@ -698,8 +882,8 @@ function getRewards(){
 
     }
 
-    closeBattle();
-
+    if(typeof callback === "function")
+        callback();
 
 }
 
@@ -715,22 +899,24 @@ function closeBattle(){
 
 function victory(){
     console.log("'In Victory function");
-    getRewards();
+    getRewards(closeBattle);
 }
 
 function defeat(){
     console.log("in defeat");
+    $('#gameAttack_wrapper').fadeOut();
     $("#fightArena").fadeOut();
+    $('.How').fadeOut();
     $(".defeat").fadeIn();
     var blinkit = setInterval(blinker, 2000);
     $('#startAgainClicker').on('click', function () {
         clearInterval(blinkit);
         $(".defeat").fadeOut();
-        $(".defeat").fadeOut();
-        initGame();
+        $(".gameTitle").fadeIn();
+        background();
     });
-
 }
+
 function blinker() {
     $('#startAgainClicker').fadeOut(500, function () {
         $('#startAgainClicker').fadeIn(500);

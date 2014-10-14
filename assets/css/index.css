@@ -119,6 +119,57 @@ body
 #answerBlock li:hover {
     font-weight: bold;
 }
-#11,#12,#13,#21,#22,#23,#31,#32,#33{
+
+.gameTitle {
+    color: blue;
+    font-family: "Impact", sans-serif;
+    font-size: 85px;
+    height: 640px;
+    line-height: 64px;
+    margin: 18% auto 0;
+    text-align: center;
+    text-shadow: 0 0 20px black;
+    width: 960px;
+}
+
+#startClicker {
+    text-decoration: none;
+    font-size: 48px;
+    color: blue;
+
+}
+.How{
+    display: none;
     position: absolute;
+    font-family: "Impact",sans-serif;
+    text-align: center;
+    text-shadow: 0 0 20px white;
+}
+
+@media screen and (max-width: 650px)and (max-height: 500px) {
+    .gameTitle {
+        color: blue;
+        font-family: "Impact", sans-serif;
+        font-size: 50px;
+        height: 480px;
+        line-height: 62px;
+        margin: 24% auto 0;
+        text-align: center;
+        text-shadow: 0 0 20px white;
+        width: 640px;
+    }
+
+    #startClicker {
+        text-decoration: none;
+        font-size: 30px !important;
+        color: #ffffff;
+
+    }
+    .How{
+        display: none;
+        position: absolute;
+        font-family: "Impact",sans-serif;
+        text-align: center;
+        text-shadow: 0 0 20px white;
+    }
 }
