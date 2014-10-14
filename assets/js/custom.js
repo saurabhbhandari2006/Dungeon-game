@@ -9,13 +9,15 @@ var rewardsHash;
 
 function background() {
     $('body').css('background-image', "url(" + theme.background + ")");
+    $('#gameAttack_wrapper').fadeOut();
+    $('.How').fadeOut();
     blinkit = setInterval(blinker, 2000);
     $('#startClicker').on('click', function () {
         $('.gameTitle').fadeOut();
         $('.How').fadeIn();
         clearInterval(blinkit);
-//        howTo();
-        initGame();
+        howTo();
+//        initGame();
     });
 };
 
@@ -52,6 +54,9 @@ function initializeTheme() {
 function initGame() {
     diceNum = initDice;
     playerHealth = initHealth;
+//    $("#gameAttack_wrapper").fadeIn();
+    $("#fightArena").fadeOut();
+    $("#qcard").fadeOut();
     $("#dungeons").fadeIn();
     createMap();
     createEntity();
@@ -181,7 +186,7 @@ function addEntities() {
                             for(var n = 0; n < 9; n++) {
                                 if(mapHash[i].definition[n].lx == a && mapHash[i].definition[n].ly == b) {
                                     var probability = Math.random();
-                                    if(probability>0.5) {
+                                    if(probability>0.9) {
                                         selSeer = getEntityByClass(type);
                                         mapHash[i].definition[n].content = selSeer[0].image;
                                         mapHash[i].definition[n].entity = selSeer[0].id;

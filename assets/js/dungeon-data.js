@@ -1,4 +1,4 @@
-var initHealth = 10;
+var initHealth = 5;
 var initDice = 1;
 var teleportCost = 5;
 window.theme = {};
@@ -11,29 +11,29 @@ var map = [
 
     {name: "Purple", type: "definition", generation: {},
         definition: [
-            {lx: 1, ly: 1, choiceSet: ["Portal Red"]},
-            {lx: 1, ly: 2, choiceSet: ["Seer"]},
-            {lx: 1, ly: 3, choiceSet: ["Portal Blue"]},
-            {lx: 2, ly: 1, choiceSet: ["Monster"]},
+            {lx: 1, ly: 1, choiceSet: ["Portal Any", "Monster"]},
+            {lx: 1, ly: 2, choiceSet: []},
+            {lx: 1, ly: 3, choiceSet: ["Monster"]},
+            {lx: 2, ly: 1, choiceSet: ["Portal Blue"]},
             {lx: 2, ly: 2, choiceSet: ["Player"]},
-            {lx: 2, ly: 3, choiceSet: ["Portal Green"]},
-            {lx: 3, ly: 1, choiceSet: ["Portal Yellow"]},
-            {lx: 3, ly: 2, choiceSet: ["Portal Orange"]},
-            {lx: 3, ly: 3, choiceSet: []}
+            {lx: 2, ly: 3, choiceSet: []},
+            {lx: 3, ly: 1, choiceSet: ["Seer"]},
+            {lx: 3, ly: 2, choiceSet: ["Monster"]},
+            {lx: 3, ly: 3, choiceSet: ["Portal Green"]}
         ],
         backgroundImage:""
     },
 
     {name: "Blue",  type: "definition", generation: {},
         definition: [
-            {lx: 1, ly: 1, choiceSet: ["Monster", "Portal Any"]},
-            {lx: 1, ly: 2, choiceSet: ["Monster", "Portal Any"]},
-            {lx: 1, ly: 3, choiceSet: ["Monster", "Portal Any"]},
-            {lx: 2, ly: 1, choiceSet: ["Monster", "Portal Any"]},
+            {lx: 1, ly: 1, choiceSet: ["Portal Purple"]},
+            {lx: 1, ly: 2, choiceSet: []},
+            {lx: 1, ly: 3, choiceSet: ["Monster"]},
+            {lx: 2, ly: 1, choiceSet: ["Monster"]},
             {lx: 2, ly: 2, choiceSet: ["Player"]},
-            {lx: 2, ly: 3, choiceSet: ["Monster", "Portal Any"]},
+            {lx: 2, ly: 3, choiceSet: ["Portal Green"]},
             {lx: 3, ly: 1, choiceSet: []},
-            {lx: 3, ly: 2, choiceSet: []},
+            {lx: 3, ly: 2, choiceSet: ["Portal Any", "Monster"]},
             {lx: 3, ly: 3, choiceSet: []}
         ],
         backgroundImage:""
@@ -41,60 +41,60 @@ var map = [
 
     {name: "Green",  type: "definition", generation: {},
         definition: [
-            {lx: 1, ly: 1, choiceSet: []},
-            {lx: 1, ly: 2, choiceSet: []},
+            {lx: 1, ly: 1, choiceSet: ["Portal Any", "Monster"]},
+            {lx: 1, ly: 2, choiceSet: ["Portal Blue"]},
             {lx: 1, ly: 3, choiceSet: []},
-            {lx: 2, ly: 1, choiceSet: []},
+            {lx: 2, ly: 1, choiceSet: ["Portal Yellow"]},
             {lx: 2, ly: 2, choiceSet: ["Player"]},
-            {lx: 2, ly: 3, choiceSet: []},
-            {lx: 3, ly: 1, choiceSet: []},
+            {lx: 2, ly: 3, choiceSet: ["Monster"]},
+            {lx: 3, ly: 1, choiceSet: ["Seer"]},
             {lx: 3, ly: 2, choiceSet: []},
-            {lx: 3, ly: 3, choiceSet: []}
+            {lx: 3, ly: 3, choiceSet: ["Monster"]}
         ],
         backgroundImage:""
     },
 
     {name: "Yellow",  type: "definition", generation: {},
         definition: [
-            {lx: 1, ly: 1, choiceSet: []},
-            {lx: 1, ly: 2, choiceSet: []},
+            {lx: 1, ly: 1, choiceSet: ["Portal Orange"]},
+            {lx: 1, ly: 2, choiceSet: ["Monster"]},
             {lx: 1, ly: 3, choiceSet: []},
-            {lx: 2, ly: 1, choiceSet: []},
+            {lx: 2, ly: 1, choiceSet: ["Portal Any", "Monster"]},
             {lx: 2, ly: 2, choiceSet: ["Player"]},
-            {lx: 2, ly: 3, choiceSet: []},
-            {lx: 3, ly: 1, choiceSet: []},
+            {lx: 2, ly: 3, choiceSet: ["Monster"]},
+            {lx: 3, ly: 1, choiceSet: ["Seer"]},
             {lx: 3, ly: 2, choiceSet: []},
-            {lx: 3, ly: 3, choiceSet: []}
+            {lx: 3, ly: 3, choiceSet: ["Portal Green"]}
         ],
         backgroundImage:""
     },
 
     {name: "Orange",  type: "definition", generation: {},
         definition: [
-            {lx: 1, ly: 1, choiceSet: []},
-            {lx: 1, ly: 2, choiceSet: []},
+            {lx: 1, ly: 1, choiceSet: ["Monster"]},
+            {lx: 1, ly: 2, choiceSet: ["Portal Red"]},
             {lx: 1, ly: 3, choiceSet: []},
             {lx: 2, ly: 1, choiceSet: []},
             {lx: 2, ly: 2, choiceSet: ["Player"]},
-            {lx: 2, ly: 3, choiceSet: []},
-            {lx: 3, ly: 1, choiceSet: []},
+            {lx: 2, ly: 3, choiceSet: ["Seer"]},
+            {lx: 3, ly: 1, choiceSet: ["Monster"]},
             {lx: 3, ly: 2, choiceSet: []},
-            {lx: 3, ly: 3, choiceSet: []}
+            {lx: 3, ly: 3, choiceSet: ["Portal Yellow"]}
         ],
         backgroundImage:""
     },
 
     {name: "Red",  type: "definition", generation: {},
         definition: [
-            {lx: 1, ly: 1, choiceSet: []},
+            {lx: 1, ly: 1, choiceSet: ["Seer"]},
             {lx: 1, ly: 2, choiceSet: ["Boss"]},
             {lx: 1, ly: 3, choiceSet: []},
-            {lx: 2, ly: 1, choiceSet: []},
-            {lx: 2, ly: 2, choiceSet: []},
+            {lx: 2, ly: 1, choiceSet: ["Portal Orange"]},
+            {lx: 2, ly: 2, choiceSet: ["Player"]},
             {lx: 2, ly: 3, choiceSet: []},
-            {lx: 3, ly: 1, choiceSet: []},
-            {lx: 3, ly: 2, choiceSet: ["Player"]},
-            {lx: 3, ly: 3, choiceSet: []}
+            {lx: 3, ly: 1, choiceSet: ["Portal Yellow"]},
+            {lx: 3, ly: 2, choiceSet: []},
+            {lx: 3, ly: 3, choiceSet: ["Seer"]}
         ],
         backgroundImage:""
     }
