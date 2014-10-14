@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44c33337-d199-4678-950d-a8e0e37a8ac0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/custom.js" afterPath="$PROJECT_DIR$/assets/js/custom.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/dungeon-data.js" afterPath="$PROJECT_DIR$/assets/js/dungeon-data.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/index.css" afterPath="$PROJECT_DIR$/assets/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="dungeon.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="custom.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="custom.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/custom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="916" column="48" selection-start="28225" selection-end="28225" vertical-scroll-proportion="0.47069597" vertical-offset="13483" max-vertical-offset="14760">
+            <state line="410" column="36" selection-start="13312" selection-end="13314" vertical-scroll-proportion="-122.64706" vertical-offset="1980" max-vertical-offset="14760">
               <folding>
                 <marker date="1413286494307" expanded="true" signature="3026:3079" placeholder="..." />
                 <marker date="1413286494307" expanded="true" signature="18318:18330" placeholder="..." />
@@ -61,10 +58,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dungeon-data.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="dungeon-data.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/js/dungeon-data.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="16" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4350">
+            <state line="285" column="1" selection-start="7225" selection-end="7225" vertical-scroll-proportion="7.2091064" vertical-offset="0" max-vertical-offset="4365">
               <folding />
             </state>
           </provider>
@@ -105,8 +102,8 @@
         <option value="$PROJECT_DIR$/assets/css/attack.css" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/assets/css/index.css" />
-        <option value="$PROJECT_DIR$/assets/js/dungeon-data.js" />
         <option value="$PROJECT_DIR$/assets/js/custom.js" />
+        <option value="$PROJECT_DIR$/assets/js/dungeon-data.js" />
       </list>
     </option>
   </component>
@@ -739,16 +736,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/dungeon-data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="16" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4350">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/custom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="916" column="48" selection-start="28225" selection-end="28225" vertical-scroll-proportion="0.47069597" vertical-offset="13483" max-vertical-offset="14760">
+        <state line="410" column="36" selection-start="13312" selection-end="13314" vertical-scroll-proportion="-122.64706" vertical-offset="1980" max-vertical-offset="14760">
           <folding>
             <marker date="1413286494307" expanded="true" signature="3026:3079" placeholder="..." />
             <marker date="1413286494307" expanded="true" signature="18318:18330" placeholder="..." />
@@ -757,6 +747,13 @@
             <marker date="1413286494307" expanded="true" signature="25986:26021" placeholder="..." />
             <marker date="1413286494307" expanded="true" signature="29880:29892" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/dungeon-data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="285" column="1" selection-start="7225" selection-end="7225" vertical-scroll-proportion="7.2091064" vertical-offset="0" max-vertical-offset="4365">
+          <folding />
         </state>
       </provider>
     </entry>
