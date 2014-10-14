@@ -267,15 +267,16 @@ body {
 }
 
 #splasher {
-    font-size: 3em;
+    /*border: 1px solid red;*/
+    font-size: 2em;
     text-align: center;
     font-family: "Impact", sans-serif;
     position: absolute;
     z-index: 99;
     top: 25%;
-    left: 17.5%;
+    left: 25%;
     width: 50%;
     text-shadow: black 0 0 20px;
     color: white;
-    /*display: none;*/
+    display: none;
 }
