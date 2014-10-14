@@ -40,7 +40,20 @@ body {
     /*border-collapse: collapse;*/
     background-color: #000;
     position: relative;
-    display: none;
+    /*display: none;*/
+}
+#splasher {
+    font-size: 3em;
+    text-align: center;
+    font-family: "Impact", sans-serif;
+    position: absolute;
+    z-index: 99;
+    top: 25%;
+    left: 17.5%;
+    width:50%;
+    text-shadow: black 0 0 20px;
+    color: white;
+    /*display: none;*/
 }
 
 #mainmatrix {

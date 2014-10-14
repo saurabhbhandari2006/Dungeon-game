@@ -359,6 +359,9 @@ function rollDice(diceNum, callback, callback1, callback2) {
             callback(healthReduce, callback1, callback2);
         }
     }, 751)
+    setTimeout(function(){
+       manAnimation();
+    },1000);
 }
 //------------------------------------------------------------dice roll end-------------------------------------
 function playerTurn() {
@@ -415,7 +418,7 @@ function switchTurn(from) {
     setTimeout(function () {
         if (from == "player") {
             player = false;
-            monster();
+//            monster();
         }
         else {
             player = true;
@@ -447,10 +450,18 @@ function doDamage(team, damage, callback) {
         playerHealthDiv.style.width = playerHealth + "%";
     }
     else {
+        var anim = monsterHealth;
         monsterHealth = monsterHealth - damage;
+        var diff = anim-monsterHealth;
         console.log("monster health left" + monsterHealth);
         $("#monster-hp").text(monsterHealth);
-        monsterHealthDiv.style.width = monsterHealth + "%";
+        for(var i=0;i<diff;i++){
+            anim--;
+           setTimeout(function(){
+               monsterHealthDiv.style.width = (anim) + "%";
+           },100);
+        }
+
         // checkDefendPowers();
     }
     setTimeout(function () {
@@ -528,5 +539,35 @@ function defeat(){
 
 
 }
+function manAnimation() {
+    $("#player img").hide();
+    $("#player").css("background-image", "url(assets/img/throw.gif)");
+    $("#player").append('<div id="fireball" style="left: 71%;position: absolute"><img src="assets/img/fireball.gif" /></div>')
+    setTimeout(function () {
+        $("#fireball").animate({left: "15%"}, 1000);
+        $("#player").css("background-image", "url(assets/img/stand.png)")
+    }, 500);
 
+    setTimeout(function () {
+        $("#fireball").hide();
+$("#monster").append('<div id="fire" style="top: 33%;position: absolute;left: 7%"><img src="assets/img/url.gif"/></div>').fadeIn(2000);
+$("#fire").fadeOut(4000);
+    }, 1000);
 
+}
+
+function showSplash(msg) {
+    $('#splasher').html(msg).show().delay(500).animate({
+        fontSize: "6em",
+        opacity: 0,
+        marginLeft: "-1em",
+        marginTop: "-0.5em"
+    }, 1000, function () {
+        $('#splasher').hide().css({
+            fontSize: "3em",
+            opacity: 1,
+            marginLeft: 0,
+            marginTop: 0
+        });
+    });
+}

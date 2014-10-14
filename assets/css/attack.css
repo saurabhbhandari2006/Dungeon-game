@@ -161,7 +161,7 @@
 
 #player {
     float: right;
-    background-image: url('../img/player.png');
+    background-image: url('../img/stand.png');
     background-repeat: no-repeat;
 }
 #dice-container{
