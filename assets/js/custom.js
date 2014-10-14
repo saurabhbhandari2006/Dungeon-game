@@ -154,96 +154,107 @@ function addEntities() {
             for(var a=1; a<=3; a++) {
                 for(var b=1; b<=3; b++) {
                     getDef = getDefinition(dungeonSelect, a, b);
-                        var m = Math.floor(Math.random() * getDef.choiceSet.length);
-                        var type = getDef.choiceSet[m];
-                        if(getDef.choiceSet.length != 0) {
-                            if(type.indexOf(' ') > 0)
-                                portal = type.split(' ');
-                        }
+                    var m = Math.floor(Math.random() * getDef.choiceSet.length);
+                    var type = getDef.choiceSet[m];
 
-                        if(type=="Monster") {
-                            for(var n = 0; n < 9; n++) {
-                                if(mapHash[i].definition[n].lx == a && mapHash[i].definition[n].ly == b) {
-                                    selMonsters = $.grep(entityHash, function(element){
-                                        if(dungeonSelect.id == 1)
-                                        {
-                                            return element.level == 1;
-                                        }
-                                        else
-                                        {
-                                            if(element.level <= dungeonSelect.id && element.level >= dungeonSelect.id-1)
-                                                return element;
-                                        }
-                                    });
-                                    var random = getRandom(0,selMonsters.length);
-                                    var entity = selMonsters[random];
-                                    mapHash[i].definition[n].content = entity.image;
-                                    mapHash[i].definition[n].entity = entity.id;
-                                }
-                            }
-                        }
-                        else if(type=="Seer") {
-                            for(var n = 0; n < 9; n++) {
-                                if(mapHash[i].definition[n].lx == a && mapHash[i].definition[n].ly == b) {
-                                    var probability = Math.random();
-                                    if(probability>0.9) {
-                                        selSeer = getEntityByClass(type);
-                                        mapHash[i].definition[n].content = selSeer[0].image;
-                                        mapHash[i].definition[n].entity = selSeer[0].id;
-                                    }
-                                }
-                            }
-                        } else if(type=="Player") {
-                            for(var n = 0; n < 9; n++) {
-                                if(mapHash[i].definition[n].lx == a && mapHash[i].definition[n].ly == b) {
-                                    selPlayer = getEntityByClass(type);
-                                    mapHash[i].definition[n].content = selPlayer[0].image;
-                                    mapHash[i].definition[n].entity = selPlayer[0].id;
-                                }
-                            }
-                        } else if(type == "Boss") {
-                            for(var n = 0; n < 9; n++) {
-                                if(mapHash[i].definition[n].lx == a && mapHash[i].definition[n].ly == b) {
-                                    selBoss = getEntityByClass(type);
-                                    mapHash[i].definition[n].content = selBoss[0].image;
-                                    mapHash[i].definition[n].entity = selBoss[0].id;
-                                }
-                            }
+                    if(getDef.choiceSet.length != 0) {
+                        if(type.indexOf(' ') > 0)
+                            portal = type.split(' ');
+                    }
+//                    console.log("dungeon name: " + dungeonSelect.name);
+//                    console.log(getDef);
+//                    console.log(type);
 
-                        } else if(portal[0]=="Portal") {
-                            if(getDef.choiceSet.length == 0)
-                                break;
+                    if(getDef.choiceSet.length == 0){
 
-                            for(var n = 0; n < 9; n++) {
-                                if(mapHash[i].definition[n].lx == a && mapHash[i].definition[n].ly == b) {
-                                    var name = portal[1];
-                                    var id=0;
-                                    if(portal[1] == "Any") {
-                                        selPortals = getEntityByClass(portal[0]);
-                                        var random = getRandom(0,selPortals.length);
-                                        while(selPortals[random].name == dungeonSelect.name)
-                                            random = getRandom(0, selPortals.length);
-                                        var entity = selPortals[random];
-                                        name = entity.image;
-                                        id = entity.id;
+                    } else if(type=="Monster") {
+                        for(var n = 0; n < 9; n++) {
+                            if(mapHash[i].definition[n].lx == a && mapHash[i].definition[n].ly == b) {
+                                selMonsters = $.grep(entityHash, function(element){
+                                    if(dungeonSelect.id == 1) {
+                                        return element.level == 1;
+                                    } else if(dungeonSelect.id == 6) {
+                                        return element.level == 5;
                                     } else {
-                                        selPortals = getEntityByClass(portal[0]);
-                                        var port = $.grep(selPortals, function(element){
-                                            return element.name == portal[1];
+                                        var temp = $.grep(entityHash, function(element){
+                                            return (element.level >= dungeonSelect.id-1);
                                         });
-                                        name = port[0].image;
-                                        id = port[0].id;
-
+                                        var temp2 = $.grep(temp, function(element){
+                                            return (element.level <= dungeonSelect.id);
+                                        });
+                                        return temp2;
                                     }
-                                    mapHash[i].definition[n].content = name;
-                                    mapHash[i].definition[n].entity = id;
+                                });
+
+                                var random = getRandom(0,selMonsters.length);
+                                var entity = selMonsters[random];
+                                mapHash[i].definition[n].content = entity.image;
+                                mapHash[i].definition[n].entity = entity.id;
+                            }
+                        }
+                    } else if(type=="Seer") {
+                        for(var n = 0; n < 9; n++) {
+                            if(mapHash[i].definition[n].lx == a && mapHash[i].definition[n].ly == b) {
+                                var probability = Math.random();
+                                if(probability>0.9) {
+                                    selSeer = getEntityByClass(type);
+                                    mapHash[i].definition[n].content = selSeer[0].image;
+                                    mapHash[i].definition[n].entity = selSeer[0].id;
+                                } else {
+                                    mapHash[i].definition[n].choiceSet = [];
                                 }
                             }
                         }
+                    } else if(type=="Player") {
+                        for(var n = 0; n < 9; n++) {
+                            if(mapHash[i].definition[n].lx == a && mapHash[i].definition[n].ly == b) {
+                                selPlayer = getEntityByClass(type);
+                                mapHash[i].definition[n].content = selPlayer[0].image;
+                                mapHash[i].definition[n].entity = selPlayer[0].id;
+                            }
+                        }
+                    } else if(type == "Boss") {
+                        for(var n = 0; n < 9; n++) {
+                            if(mapHash[i].definition[n].lx == a && mapHash[i].definition[n].ly == b) {
+                                selBoss = getEntityByClass(type);
+                                mapHash[i].definition[n].content = selBoss[0].image;
+                                mapHash[i].definition[n].entity = selBoss[0].id;
+                            }
+                        }
+
+                    } else if(portal[0]=="Portal") {
+                        for(var n = 0; n < 9; n++) {
+                            if(mapHash[i].definition[n].lx == a && mapHash[i].definition[n].ly == b) {
+                                var name = portal[1];
+                                var id=0;
+                                if(portal[1] == "Any") {
+                                    selPortals = getEntityByClass(portal[0]);
+                                    var random = getRandom(0,selPortals.length);
+                                    while(selPortals[random].name == dungeonSelect.name)
+                                        random = getRandom(0, selPortals.length);
+                                    var entity = selPortals[random];
+                                    name = entity.image;
+                                    id = entity.id;
+                                } else {
+                                    selPortals = getEntityByClass(portal[0]);
+                                    var port = $.grep(selPortals, function(element){
+                                        return element.name == portal[1];
+                                    });
+                                    name = port[0].image;
+                                    id = port[0].id;
+
+                                }
+                                mapHash[i].definition[n].content = name;
+                                mapHash[i].definition[n].entity = id;
+                            }
+                        }
+                        portal = [];
+                    }
                 }
             }
         }
     }
+    console.log(mapHash);
 }
 
 function getRandom(min, max) {
@@ -756,17 +767,20 @@ function checkAttackPowers(damage,callback,callback1){
 // }
 function checkSurvival(callback){
     console.log("in checkSurvival");
+    console.log(callback.toString().length);
     if (playerHealth<=0)
-    {
         defeat();
-    }
-    else
-    {
-        checkRecoveryPowers("player",switchTurn);
+    else {
+        console.log("in else");
+        if(callback.toString().length > 0){
+            callback();
+        }
+
+        else
+            checkRecoveryPowers("player",switchTurn);
     }
 
-    if(typeof callback === "function")
-        callback;
+
 }
 
 function seer(){
