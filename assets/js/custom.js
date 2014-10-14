@@ -58,6 +58,8 @@ function initGame() {
     $("#fightArena").fadeOut();
     $("#qcard").fadeOut();
     $("#dungeons").fadeIn();
+    playerHealthHud();
+    playerDiceHud(diceNum);
     createMap();
     createEntity();
     addEntities();
@@ -579,6 +581,9 @@ function showDice(dice1,dice2){
 }
 //------------------------------------------------------------dice roll end-------------------------------------
 function playerTurn() {
+    setTimeout(function(){
+        showSplash("Player Turn",2000);
+    },400);
     setTimeout(function () {
         console.log("Player:");
 
@@ -602,6 +607,7 @@ function playerTurn() {
 }
 
 function monster(call) {
+    showSplash("Monster Turn",2000);
     setTimeout(function()
     {
         console.log("in ai");
@@ -610,7 +616,7 @@ function monster(call) {
             var dice = $("#monster-dice-num").text();
             rollDice(dice,checkAttackPowers,doDamage,checkSurvival);
         }
-    },1000);
+    },1500);
 }
 
 function switchTurn(from) {
@@ -772,8 +778,12 @@ function checkSurvival(callback){
         defeat();
     else {
         console.log("in else");
-        if(callback.toString().length > 0){
-            callback();
+        if (typeof callback === "function")
+        {
+            if(callback.toString().length > 0){
+                callback();
+            }
+
         }
 
         else
@@ -849,44 +859,45 @@ function processAnswers(answer) {
 
 }
 
-function getRewards(callback){
+function getRewards(callback) {
     console.log("In getRewards")
-    var random = getRandom(1,12);
+    var random = getRandom(1,10);
     var reward = rewardsHash[random];
     console.log(reward);
-    switch (reward.type){
+    switch (reward.type) {
         case "Health":
-            if(playerHealth<100)
+            if (playerHealth < 100)
                 var maxHealthGain;
             maxHealthGain = 100 - playerHealth;
-            if(reward.value<maxHealthGain){
+            if (reward.value < maxHealthGain) {
                 playerHealth += reward.value;
                 console.log("health gained normally");
+                showSplash(reward.value+" Health gain",2000);
             }
-            else
-            {
+            else {
                 playerHealth += maxHealthGain;
+                showSplash(maxHealthGain+" Health gain",2000);
             }
             break;
         case "Dice":
-            if(diceNum<5)
-            {
+            if (diceNum < 5) {
                 diceNum += reward.value;
                 console.log("dice gained");
+                showSplash(reward.value+" Dice gain",2000);
             }
-            else
-            {
+            else {
                 console.log("dice limit reached");
+
+                showSplash("Dice Limit Reached",2000);
             }
             break;
 
     }
 
-    if(typeof callback === "function")
+    if (typeof callback === "function")
         callback();
 
 }
-
 function closeBattle(){
     gridSelected = false;
     $("#player-div").css({opacity:1});
@@ -895,30 +906,74 @@ function closeBattle(){
     console.log("close battle");
     $("#player-dice-img").empty();
     $("#monster-dice-img").empty();
+    playerHealthHud();
 }
 
-function victory(){
+function victory() {
+    showSplash("You Won");
     console.log("'In Victory function");
-    getRewards(closeBattle);
+    setTimeout(function(){
+        getRewards(function(){
+            setTimeout(function(){closeBattle();},4000);
+        });
+        playerHealthHud();
+        playerDiceHud(diceNum);
+    },2000);
 }
 
-function defeat(){
+function defeat() {
+    showSplash("You are Defeated",5000);
     console.log("in defeat");
-    $('#gameAttack_wrapper').fadeOut();
-    $("#fightArena").fadeOut();
-    $('.How').fadeOut();
-    $(".defeat").fadeIn();
-    var blinkit = setInterval(blinker, 2000);
-    $('#startAgainClicker').on('click', function () {
-        clearInterval(blinkit);
-        $(".defeat").fadeOut();
-        $(".gameTitle").fadeIn();
-        background();
-    });
+    setTimeout(function(){
+        $('#gameAttack_wrapper').fadeOut();
+        $("#fightArena").fadeOut();
+        $('.How').fadeOut();
+        $(".defeat").fadeIn();
+        var blinkit = setInterval(blinker, 2000);
+        $('#startAgainClicker').on('click', function () {
+            clearInterval(blinkit);
+            $(".defeat").fadeOut();
+            $(".gameTitle").fadeIn();
+            background();
+        });
+    },2000);
+
 }
+
+//function defeat(){
+//    console.log("in defeat");
+//    $('#gameAttack_wrapper').fadeOut();
+//    $("#fightArena").fadeOut();
+//    $('.How').fadeOut();
+//    $(".defeat").fadeIn();
+//    var blinkit = setInterval(blinker, 2000);
+//    $('#startAgainClicker').on('click', function () {
+//        clearInterval(blinkit);
+//        $(".defeat").fadeOut();
+//        $(".gameTitle").fadeIn();
+//        background();
+//    });
+//}
 
 function blinker() {
     $('#startAgainClicker').fadeOut(500, function () {
         $('#startAgainClicker').fadeIn(500);
     });
+}
+function playerHealthHud(){
+    playerHealthDivHud = document.getElementById("player-Health-hud");
+    $("#player-hp-hud").text(playerHealth);
+    $("#player-health-val-hud").text("Health Left: " + playerHealth + "%");
+    playerHealthDivHud.style.width = playerHealth + "%";
+}
+function playerDiceHud(dicep){
+    $("#player-dice-hud").empty();
+    for (var i = 1; i <= dicep; i++) {
+        $("#player-dice-hud").append("<img src='assets/img/dice/face1.png' style='height: 100%'/>");
+    }
+}
+function showSplash(msg,delay) {
+    console.log("show");
+    $('#splasher').html(msg).show().delay(500).fadeIn(1000);
+    $('#splasher').hide().fadeOut(delay);
 }

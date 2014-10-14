@@ -1,4 +1,4 @@
-var initHealth = 100;
+var initHealth = 60;
 var initDice = 5;
 var teleportCost = 5;
 window.theme = {};
