@@ -189,8 +189,6 @@ function addEntities() {
                             var entity = selMonsters[random];
                             mapHash[i].definition[n].content = entity.image;
                             mapHash[i].definition[n].entity = entity.id;
-
-                            console.log(dungeonSelect.name+"["+a+" "+b+"]"+", Type: "+type+", EntityId: "+entity.id);
                         }
                     }
                 } else if(type=="Seer") {
