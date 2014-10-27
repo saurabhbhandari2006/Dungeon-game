@@ -10,17 +10,17 @@ body {
     margin: auto;
     border: 0;
     /*border-collapse: collapse;*/
-    background-color: #000;
+    /*background-color: #000;*/
     position: relative;
 }
 
 #mainmatrix {
     width: 640px;
-    height: 429px;
-    margin: 8% 0 0 0;
+    height: 480px;
+    margin: 0 0 0 0;
     border: 0;
     border-collapse: collapse;
-    background-color: #000;
+    /*background-color: #000;*/
 }
 
 /*
@@ -46,6 +46,7 @@ body {
 #dungeons {
     display: none;
     position: absolute;
+    /*border: 1px solid red;*/
 }
 
 #qcard, #qid {
@@ -184,7 +185,7 @@ body {
 
 #player-hud {
     width: 100%;
-    height: 10%;
+    height: 8%;
     position: absolute;
     /*border: 1px solid green;*/
 }
@@ -219,23 +220,24 @@ body {
 
 #player-dice-hud {
     float: left;
-    border: 1px solid #ffffff;
-    height: 100%;
-    width: 37%;
+    /*border: 1px solid #ffffff;*/
+    height: 50%;
+    width: 100%;
 }
 
 #player-health-box-hud {
-    width: 32%;
+    width: 16%;
     height: 100%;
     /*border: 1px solid pink;*/
     float: left;
+    margin: 1%;
 }
 
 #player-Health-border-hud {
     width: 99%;
-    height: 40%;
-    background-color: #ffffff;
-    /*border: 1px solid yellow;*/
+    height: 30%;
+    background-color: lightblue;
+    border: 1px solid #ffffff;
     /*position: absolute;*/
     border-radius: 10px;
 }
@@ -244,13 +246,17 @@ body {
     background: none repeat scroll 0 0 blue;
     border-radius: 10px;
     width: 99%;
-    height: 100%;
-    right: 0;
-    float: right;
+    height: 92%;
+    /*right: 0;*/
+    /*float: right;*/
+    box-shadow: inset 2px 2px 2px 2px #ffffff;
 }
 
 #player-hp-hud {
     text-align: center;
+    color: black;
+    font-size: 11px;
+
 }
 
 #meter-box-health-hud {
@@ -264,6 +270,35 @@ body {
     text-align: center;
     color: #ffffff;
     margin-top: 1%;
+}
+#right-hud-btn{
+    float: right;
+    height: 80%;
+    margin: 1%;
+    width: 10%;
+    /*border: 1px solid red;*/
+}
+#mini-map{
+    width: 46%;
+    height: 100%;
+    /*border: 1px solid yellow;*/
+    float: left;
+}
+#mini-map-icon{
+    width: 100%;
+    height: 100%;
+    /*border: 1px solid yellow;*/
+    float: left;
+}
+#help-btn{
+    width: 46%;
+    height: 100%;
+    /*border: 1px solid yellow;*/
+    float: left;
+}
+#help-icon{
+    width: 100%;
+    height: 100%;
 }
 
 #splasher {
