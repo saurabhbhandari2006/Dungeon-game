@@ -1,5 +1,3 @@
-
-
 body
 {
     margin:0%;
@@ -24,7 +22,6 @@ body
     border-collapse: collapse;
     background-color: #000;
 }
-
 /*
     Defines styling for each individual grid on the map.
 */
@@ -37,7 +34,6 @@ body
     text-align:center;
     vertical-align:middle;
 }
-
 /*
     Defines styling for the images on the grid map.
 */
@@ -256,5 +252,92 @@ body
     width: 50%;
     text-shadow: black 0 0 20px;
     color: white;
+    /*display: none;*/
+}
+
+
+
+#monster-card{
+    border: 1px solid white;
+    height: 400px;
+    left: 12%;
+    position: absolute;
+    top: 49px;
+    width: 500px;
     display: none;
+}
+#monster-card-btn{
+    left: 34%;
+    position: absolute;
+    top: 86%;
+}
+#monster-detail-box{
+    width: 100%;
+    height: 50%;
+    /*border: 1px solid red;*/
+}
+
+#monster-card-img{
+    border: 1px solid whitesmoke;
+    height: 90%;
+    width: 29%;
+    margin: 4%;
+}
+#monster-details{
+    /*border: 1px solid green;*/
+    float: right;
+    height: 45%;
+    left: 34%;
+    margin: 4%;
+    position: absolute;
+    top: 0;
+    width: 57%;
+}
+#monster-card-desc{
+    border: 1px solid white;
+    height: 25%;
+    left: 4%;
+    position: absolute;
+    top: 56%;
+    width: 91%;
+}
+
+#monster-card-hp {
+    font-size: 10px;
+    height: 50%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+}
+#monster-card-Health-val {
+    background: none repeat scroll 0 0 red;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    float: right;
+}
+#monster-detail-table {
+    color: whitesmoke;
+    width: 100%;
+}
+
+.monster-card-scale{
+    width: 30%;
+}
+
+#monster-card-Health-border{
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    height: 6%;
+    position: absolute;
+    top: 66%;
+    width: 55%;
+}
+#monster-card-Health {
+    background: none repeat scroll 0 0 red;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    float: left;
 }

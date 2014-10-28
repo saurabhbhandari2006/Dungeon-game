@@ -21,28 +21,42 @@
 </div>
 
 <div id="gameAttack_wrapper">
-    <div id="splasher">hello</div>
+    <div id="splasher"></div>
 
     <div id="dungeons">
 
         <div id="player-hud">
+
             <div id="player-data">
+
                 <div id="player-img-hud"><img style="width: 100%;height: 100%" src="assets/img/player.png"></div>
                 <div id="player-name-hud">Player</div>
-            </div>
-            <div id="player-health-box-hud">
-                <div id="player-Health-border-hud">
-                    <div id='player-Health-hud'>
-                        <div id="player-hp-hud"></div>
-                    </div>
-                </div>
-                <div id="meter-box-health-hud">
-                    <div id="player-health-val-hud">30% left</div>
-                </div>
-            </div>
-            <div id="player-dice-hud"></div>
-        </div>
 
+            </div>
+
+            <div id="player-health-box-hud">
+
+                <div id="player-Health-border-hud">
+
+                    <div id='player-Health-hud'>
+
+                        <div id="player-hp-hud"></div>
+
+                    </div>
+
+                </div>
+
+                <div id="meter-box-health-hud">
+
+                    <div id="player-health-val-hud">30% left</div>
+
+                </div>
+
+            </div>
+
+            <div id="player-dice-hud"></div>
+
+        </div>
 
         <table id="mainmatrix" border="1">
             <img id="dungeonBackground" />
@@ -65,13 +79,62 @@
                 <td id="9"> <div id="33" class="matrix"></div> </td>
             </tr>
         </table>
+
+        <div id="monster-card">
+            <div id="monster-detail-box">
+                <div id="monster-card-img"></div>
+                <div id="monster-details">
+                    <table id="monster-detail-table" cellspacing="13%" >
+                        <tr>
+                            <td class="monster-card-scale">Name:</td>
+                            <td><div id="monster-card-name"></div></td>
+                        </tr>
+                        <tr>
+                            <td class="monster-card-scale">Type:</td>
+                            <td><div id="monster-card-type"></div></td>
+                        </tr>
+                        <tr>
+                            <td class="monster-card-scale">Level:</td>
+                            <td><div id="monster-card-level"></div></td>
+                        </tr>
+                        <tr>
+                            <td class="monster-card-scale">Health:</td>
+                            <td><div id="monster-card-health-box">
+                                <div id="monster-card-Health-border" class="health-border">
+                                    <div id='monster-card-Health'><div id="monster-card-hp"></div></div>
+                                </div>
+                            </div></td>
+                        </tr>
+                        <tr>
+                            <td class="monster-card-scale">Dice:</td>
+                            <td><div id="monster-card-dice-container">
+                                <div id="monster-card-dice-num" style="display: none"></div>
+                                <div id="monster-card-dice-img" class="total-dice-img"></div>
+                            </div>
+
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="monster-card-desc">
+                <span style="color: whitesmoke;margin: 1%;position: absolute;">Description:</span><br />
+            </div>
+            <div id="monster-card-btn">
+                <button id="btn-continue" class="btn">Continue</button>
+                <button id="btn-cancel" class="btn">Cancel</button>
+            </div>
+        </div>
+
     </div>
 
     <div id="fightArena">
+
         <div id="name-div">
             <div id="monster-name" class="names"></div>
             <div id="player-name" class="names">Player</div>
         </div>
+
         <div id="health-bar-box">
             <div class="meter-box-wrapper">
                 <div id="monster-Health-border" class="health-border">
@@ -96,8 +159,8 @@
         </div>
 
         <div id="battle-box-wrapper">
-            <div id="monster" class="image-box"></div>
-            <div id="player" class="image-box"></div>
+            <div id="monster" class="image-box scaling"></div>
+            <div id="player" class="image-box scaling"><div id="player-box" style="height: 100%;width: 100%"><img id="player-img" src="assets/img/player.png"></div></div>
             <div id="dice-container">
                 <div id="monster-dice" class="total-dice">
                     <div id="monster-dice-num" style="display: none"></div>
@@ -109,7 +172,6 @@
                 </div>
             </div>
         </div>
-
 
         <div id='diceBox'>
             <div id='die1' class='oneHidden'></div>
@@ -123,7 +185,9 @@
             <button id="btnAttack" class="btn">Attack</button>
             <button id="btnRetreat" class="btn">Retreat</button>
         </div>
+
     </div>
+
     <div id="qcard">
         <div id="quiz-content" class="questioned">
             <div id="qquestion"></div>
@@ -137,12 +201,17 @@
             <div id="answerMsg"></div>
         </div>
     </div>
+
 </div>
 
 <div class="defeat">
+
     <div>Defeated</div>
+
     <br/>
+
     <a href="#" id="startAgainClicker">Click to Start Again</a>
+
 </div>
 
 <script src="assets/js/jquery-1.10.2.min.js"></script>
@@ -151,6 +220,8 @@
 <script src="assets/js/dungeon-data.js"></script>
 <script src="assets/js/custom.js"></script>
 <script src="assets/js/questionbank.js"></script>
+<script src="assets/js/jquery.flip.js"></script>
+<script src="assets/js/jquery.flip.min.js"></script>
 <!--<script src="assets/js/dice.js"></script>-->
 
 

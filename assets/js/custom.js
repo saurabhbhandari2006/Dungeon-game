@@ -1,8 +1,6 @@
-
 var diceNum;
 var playerHealth;
 var gridSelected = false;
-
 var mapHash;
 var entityHash = [];
 var rewardsHash;
@@ -26,11 +24,13 @@ function blinker() {
         $('#startClicker').fadeIn(500);
     });
 }
+
 function blinker2() {
     $('#start').fadeOut(500, function () {
         $('#start').fadeIn(500);
     });
 }
+
 function howTo() {
     blinkit = setInterval(blinker2, 2000);
     $('#start').on('click', function () {
@@ -40,16 +40,6 @@ function howTo() {
         initGame();
     });
 }
-
-
-function initializeTheme() {
-
-    for(var i=0; i<mapHash.length; i++) {
-
-        mapHash[i].backgroundImage = "assets/img/backgrounds/" + mapHash[i].name + ".png";
-    }
-}
-
 
 function initGame() {
     diceNum = initDice;
@@ -68,7 +58,6 @@ function initGame() {
     drawDungeon(1);
     startGame(1);
 }
-
 
 function initializeTheme() {
     for(var i=0; i<mapHash.length; i++) {
@@ -316,8 +305,6 @@ function getEntityByClass(cls) {
     return entities;
 }
 
-
-
 function startGame(dungeonId) {
     console.log("start startGame");
     gridSelected == false;
@@ -343,7 +330,6 @@ function startGame(dungeonId) {
         }
     });
 }
-
 
 function drawDungeon(dungeonId) {
     console.log("start drawDungeon");
@@ -415,8 +401,6 @@ function movePlayer(lx, ly, entityId, callback) {
     setTimeout(function(){callback(entityId);},1200);
 }
 
-
-
 function checkReaction(entityId) {
     console.log("in checkReaction");
     var entity = getEntity(entityId);
@@ -425,12 +409,14 @@ function checkReaction(entityId) {
     switch(entity.class) {
         case "Monster":
             console.log("its monster");
-            initBattleWindow(entityId);
+//            initBattleWindow(entityId);
+            monsterCard(entityId);
             break;
 
         case "Boss":
             console.log("its Boss");
-            initBattleWindow(entityId);
+//            initBattleWindow(entityId);
+            monsterCard(entityId);
             break;
 
         case "Portal":
@@ -455,6 +441,8 @@ function teleport(entityId) {
     playerHealth -= teleportCost;
     gridSelected = false;
 
+    playerHealthHud();
+
     checkSurvival(function() {
         $(".matrix").empty();
         drawDungeon(dungeonId);
@@ -462,71 +450,124 @@ function teleport(entityId) {
     });
 }
 
-
-function initBattleWindow(entityId) {
-    $("#dungeons").fadeOut();
-    $("#fightArena").fadeIn();
-
-    playerHealthDiv = document.getElementById("player-Health");
-    monsterHealthDiv = document.getElementById("monster-Health");
-
-    player = true;
-    playerHealthDiv.style.width = playerHealth + "%";
-    $("#player-hp").text(playerHealth);
-    $("#player-health-val").text("Health Left: "+playerHealth+"%");
-
+function monsterCard(entityId){
     var entity = getEntity(entityId);
-    monsterHealthDiv.style.width = 100 + "%";
-    $("#monster-hp").text(entity.health);
-    $("#monster-max-hp").text(entity.health);
-    $("#monster-health-val").text("Health Left: 100%");
-    $("#monster-name").text(entity.name);
-    $("#monster").html(entity.image);
-    $("#monster-lvl").text("Lvl" + " " + entity.level);
-    $("#monster-dice-num").text(entity.dice);
-    var dice = $("#monster-dice-num").text();
-    showDice(dice,diceNum);
+    var hp= entity.health;
+    $("#monster-card-hp").text(hp);
+//    monsterHealthDiv = document.getElementById("monster-card-Health");
+//    monsterHealthDiv.style.width = hp + "%";
+    $("#monster-card-img").html(entity.image);
 
-    $("#monster").css({'opacity': '0.5'});
-    $("#monster-dice").css({'opacity': '0.5'});
+    $("#monster-card-name").text(entity.name);
+    $("#monster-card-type").text(entity.type);
+    $("#monster-card-level").text(entity.level);
+    $("#monster-card-dice-num").text(entity.dice);
+    var dice = $("#monster-card-dice-num").text();
+    showDice(1,dice,0);
 
-    playerTurn(entityId);
+    console.log("Battle Window Getting initialised");
+    $("#player-hud").css("opacity", "0.3");
+    $("#mainmatrix").css({'opacity':'0.3'});
+    $("#monster-card").css({'opacity':'1'});
+    $("#monster-card").fadeIn();
+    $("#btn-continue").on('click',function(){
+        $("#player-hud").css("opacity", "1");
+        $("#mainmatrix").css({'opacity':'1'});
+        $("#monster-card").css({'opacity':'0'});
+        $("#monster-card").fadeOut();
+        initBattleWindow(entityId);
+    });
+
+    $("#btn-cancel").on('click', function(){
+        $("#player-hud").css("opacity", "1");
+        $("#mainmatrix").css({'opacity':'1'});
+        $("#monster-card").css({'opacity':'0'});
+        $("#monster-card").fadeOut();
+        $("#player-div").css({opacity:1});
+        gridSelected = false;
+
+    });
 }
 
+function initBattleWindow(entityId) {
+        $("#splasher").empty();
+        $("#dungeons").fadeOut();
+        $("#fightArena").fadeIn();
+
+        playerHealthDiv = document.getElementById("player-Health");
+        monsterHealthDiv = document.getElementById("monster-Health");
+
+        player = true;
+        playerHealthDiv.style.width = playerHealth + "%";
+        $("#player-hp").text(playerHealth);
+        $("#player-health-val").text("Health Left: "+playerHealth+"%");
+
+        var entity = getEntity(entityId);
+        monsterHealthDiv.style.width = 100 + "%";
+        $("#monster-hp").text(entity.health);
+        $("#monster-max-hp").text(entity.health);
+        $("#monster-health-val").text("Health Left: 100%");
+        $("#monster-name").text(entity.name);
+        $("#monster").html(entity.image);
+        $("#monster-lvl").text("Lvl" + " " + entity.level);
+        $("#monster-dice-num").text(entity.dice);
+        var dice = $("#monster-dice-num").text();
+        showDice(2,dice,diceNum);
+
+        $("#monster").css({'opacity': '0.5'});
+        $("#monster-dice").css({'opacity': '0.5'});
+        $("#monster").removeClass("scaling");
+
+        console.log("Battle window init done....starting battle by player Turn");
+        playerTurn(entityId);
+
+
+
+}
+//--------------------------------------------------------dice functions start-----------------------------------------------
 function hideAngle(diceNum) {
     for (var i = 1; i <= diceNum; i++) {
         $("#die" + i).removeClass('shown' + i);
     }
 }
+
 function hideFace(diceNum,diceVal) {
     for (var i = 1; i <= diceNum; i++) {
         $("#die" + i + " #face" + diceVal[i] + "").hide();
     }
 }
+
 function showAngle(diceNum) {
     for (var i = 0; i <= diceNum; i++) {
         $("#die" + (i)).addClass('shown' + (i));
     }
 }
+
 function setFaces(diceNum,diceVal) {
     for (var i = 0; i <= diceNum; i++) {
         $("#die" + (i + 1) + " #face" + diceVal[i] + "").show();
     }
 }
+
 function finalRoll(diceNum,diceVal) {
     // diceVal = [];
+    console.log("In final roll:returns the value fo dice to Dodamage function");
     var healthReduce =0;
     for (var i = 0; i < diceNum; i++) {
         diceVal.push(Math.floor((Math.random() * 6) + 1));
         healthReduce += diceVal[i];
     }
     setFaces(diceNum,diceVal);
+    console.log("Dice value: "+healthReduce);
     return healthReduce;
 }
+
 function rollDice(diceNum,callback,callback1,callback2) {
+    console.log("In roll Dice");
     emptyDiceDiv();
     var diceVal = [];
     $("#diceBox").fadeIn();
+    console.log("Animation Of Dice Roll");
     for (var i = 0; i < 6; ++i) {
         var die = i + 1;
         $("#die1").append("<img src='assets/img/dice/face" + die + ".png' id='face" + die + "' />");
@@ -549,38 +590,67 @@ function rollDice(diceNum,callback,callback1,callback2) {
     }, 750);
     setTimeout(function () {
         var healthReduce = finalRoll(diceNum,diceVal);
-
-
-
         // return healthReduce;
         // doDamage(team,healthReduce);
-        console.log(healthReduce);
+//        console.log(healthReduce);
         // Make sure the callback is a function​
         if (typeof callback === "function")
         {
             console.log("checked whether callback is a function");
             // Call it, since we have confirmed it is callable​
             //this way we can pass local variables in callback function
+            console.log("roll dice animation ends");
             callback(healthReduce,callback1,callback2);
         }
     }, 751)
 }
-function showDice(dice1,dice2){
-    for(var i=1;i<=dice1;i++){
-        $("#monster-dice-img").append("<img src='assets/img/dice/face1.png' style='height: 100%'/>");
+
+function showDice(tp,dice1,dice2){
+    console.log("******************************************************------------------------------------showdice");
+    if(tp==1)
+    {
+        var j=36;
+        $("#monster-card-dice-img").empty();
+        for(var i=1;i<=dice1;i++){
+            $("#monster-card-dice-img").append("<img src='assets/img/dice/face1.png' style=' bottom: 4%;height: 15%;position: absolute;left: "+j+"%'/>");
+            j +=8;
+        }
+    }else if(tp==2)
+    {
+        $("#player-dice-img").empty();
+        $("#monster-dice-img").empty();
+        for(var i=1;i<=dice1;i++){
+            $("#monster-dice-img").append("<img src='assets/img/dice/face1.png' style='height: 80%'/>");
+        }
+        for(var i=1;i<=dice2;i++){
+            $("#player-dice-img").append("<img src='assets/img/dice/face1.png' style='height: 80%'/>");
+        }
+    }else if(tp==3){
+        console.log("*****************************************-----------------------------------in append");
+        for(var i=1;i<=5;i++){
+            $("#die"+i).empty();
+        }
+            for(var i=1;i<=dice2;i++){
+                $("#die"+i).append("<img src='assets/img/dice/face1.png' style='height: 100%'/>");
+            }
+
+            for(var i=1;i<=dice1;i++){
+                $("#die"+i).append("<img src='assets/img/dice/face1.png' style='height: 100%'/>");
+            }
+
+
+
     }
-    for(var i=1;i<=dice2;i++){
-        $("#player-dice-img").append("<img src='assets/img/dice/face1.png' style='height: 100%'/>");
-    }
+
 }
 //------------------------------------------------------------dice roll end-------------------------------------
 function playerTurn() {
+    console.log("In Player Turn");
     setTimeout(function(){
         showSplash("Player Turn",2000);
     },400);
     setTimeout(function () {
-        console.log("Player:");
-
+        console.log("Player: Click to Roll The Dice OR Retreat");
         $(".btn").unbind('click').click(function () {
             if (player) {
                 player = false;
@@ -592,6 +662,7 @@ function playerTurn() {
                         rollDice(diceNum,checkDefendPowers,doDamage,checkIfDead);
                         break;
                     case "btnRetreat":
+                        console.log("Retreat selected");
                         closeBattle();
                         break;
                 }
@@ -600,11 +671,12 @@ function playerTurn() {
     }, 500);
 }
 
-function monster(call) {
+function monster() {
+    console.log("In Monster Turn");
     showSplash("Monster Turn",2000);
     setTimeout(function()
     {
-        console.log("in ai");
+//        console.log("in ai");
         if(player == false)
         {
             var dice = $("#monster-dice-num").text();
@@ -614,6 +686,7 @@ function monster(call) {
 }
 
 function switchTurn(from) {
+    console.log("in switch turn");
     console.log("switching turn from "+from);
     console.log("checking player: "+player);
     setTimeout(function() {
@@ -637,6 +710,8 @@ function switchAnim(from, callback) {
 //            'box-shadow': '0px 0px 0px 0x rgba(0,0,255,1)'
         });
         $("#player-dice").css({'opacity': '0.5'});
+        $("#player").removeClass("scaling");
+        $("#monster").addClass("scaling");
 
         $("#monster").css({
             'opacity': '1'
@@ -644,7 +719,11 @@ function switchAnim(from, callback) {
 //            '-moz-box-shadow': '0px 0px 20px 5px rgba(255,0,0,1)',
 //            'box-shadow': '0px 0px 20px 5px rgba(255,0,0,1)'
         });
+
         $("#monster-dice").css({'opacity': '1'});
+        var dice = $("#monster-dice-num").text();
+        showDice(3,dice,0);
+
 
     } else {
         $("#player").css({
@@ -654,6 +733,9 @@ function switchAnim(from, callback) {
 //            'box-shadow': '0px 0px 20px 5px rgba(0,0,255,1)'
         });
         $("#player-dice").css({'opacity': '1'});
+        $("#monster").removeClass("scaling");
+        $("#player").addClass("scaling");
+
 
         $("#monster").css({
             'opacity': '0.5'
@@ -662,6 +744,7 @@ function switchAnim(from, callback) {
 //            'box-shadow': '0px 0px 0px 0x rgba(255,0,0,1)'
         });
         $("#monster-dice").css({'opacity': '0.5'});
+        showDice(3,0,diceNum);
 
     }
 
@@ -676,9 +759,11 @@ function emptyDiceDiv() {
     $("#die4").empty();
     $("#die5").empty();
 }
+
 function doDamage(team, damage,callback){
-    console.log("doDamage "+team);
-    console.log("doDamage "+damage);
+    console.log("In doDamage");
+    console.log("Team Making Damage= "+team);
+    console.log("Damage Amount "+damage);
 
     playerHealthDiv = document.getElementById("player-Health");
     monsterHealthDiv = document.getElementById("monster-Health");
@@ -713,16 +798,18 @@ function doDamage(team, damage,callback){
         }
     },2000);
 }
+
 function checkDefendPowers(damage,callback,callback1){
-    console.log("in checkDefendPowers");
+    console.log("In checkDefendPowers");
     if (typeof callback === "function")
     {
         callback("player",damage,callback1);
     }
+
 }
 
 function checkIfDead(health){
-    console.log("in checkIfDead function "+health)
+    console.log("in checkIfDead function: monster health = "+health)
     if (health<=0)
     {
         victory();
@@ -731,7 +818,9 @@ function checkIfDead(health){
     {
         checkRecoveryPowers("monster",switchTurn);
     }
+
 }
+
 function checkRecoveryPowers(team,callback){
     console.log("in recovery function");
     if (team == "player")
@@ -757,17 +846,10 @@ function checkAttackPowers(damage,callback,callback1){
 
 }
 
-// function checkDefendPowers(entityId, damage){
-// 	console.log("in checkDefendPowers");
-// if (typeof callback === "function")
-//        {
-//          	callback("player",damage,callback1);
-//        }
-
-// }
 function checkSurvival(callback){
     console.log("in checkSurvival");
-    console.log(callback.toString().length);
+//    console.log(callback.toString().length);
+    console.log("playerhealth: "+playerHealth);
     if (playerHealth<=0)
         defeat();
     else {
@@ -857,7 +939,8 @@ function getRewards(callback) {
     console.log("In getRewards")
     var random = getRandom(1,10);
     var reward = rewardsHash[random];
-    console.log(reward);
+    console.log("Reward: "+reward.type);
+    console.log("checking for limits");
     switch (reward.type) {
         case "Health":
             if (playerHealth < 100)
@@ -865,18 +948,19 @@ function getRewards(callback) {
             maxHealthGain = 100 - playerHealth;
             if (reward.value < maxHealthGain) {
                 playerHealth += reward.value;
-                console.log("health gained normally");
+                console.log("health gained: "+reward.value);
                 showSplash(reward.value+" Health gain",2000);
             }
             else {
                 playerHealth += maxHealthGain;
+                console.log("health gained: "+maxHealthGain);
                 showSplash(maxHealthGain+" Health gain",2000);
             }
             break;
         case "Dice":
             if (diceNum < 5) {
                 diceNum += reward.value;
-                console.log("dice gained");
+                console.log("No. of Dice Gained: "+reward.value);
                 showSplash(reward.value+" Dice gain",2000);
             }
             else {
@@ -892,6 +976,7 @@ function getRewards(callback) {
         callback();
 
 }
+
 function closeBattle(){
     gridSelected = false;
     $("#player-div").css({opacity:1});
@@ -904,8 +989,8 @@ function closeBattle(){
 }
 
 function victory() {
-    showSplash("You Won");
     console.log("'In Victory function");
+    showSplash("You Won");
     setTimeout(function(){
         getRewards(function(){
             setTimeout(function(){closeBattle();},4000);
@@ -918,12 +1003,13 @@ function victory() {
 function defeat() {
     showSplash("You are Defeated",5000);
     console.log("in defeat");
+    console.log("click play again to start game ")
     setTimeout(function(){
         $('#gameAttack_wrapper').fadeOut();
         $("#fightArena").fadeOut();
         $('.How').fadeOut();
         $(".defeat").fadeIn();
-        var blinkit = setInterval(blinker, 2000);
+        var blinkit = setInterval(blinker3, 2000);
         $('#startAgainClicker').on('click', function () {
             clearInterval(blinkit);
             $(".defeat").fadeOut();
@@ -934,40 +1020,29 @@ function defeat() {
 
 }
 
-//function defeat(){
-//    console.log("in defeat");
-//    $('#gameAttack_wrapper').fadeOut();
-//    $("#fightArena").fadeOut();
-//    $('.How').fadeOut();
-//    $(".defeat").fadeIn();
-//    var blinkit = setInterval(blinker, 2000);
-//    $('#startAgainClicker').on('click', function () {
-//        clearInterval(blinkit);
-//        $(".defeat").fadeOut();
-//        $(".gameTitle").fadeIn();
-//        background();
-//    });
-//}
-
-function blinker() {
+function blinker3() {
     $('#startAgainClicker').fadeOut(500, function () {
         $('#startAgainClicker').fadeIn(500);
     });
 }
+
 function playerHealthHud(){
     playerHealthDivHud = document.getElementById("player-Health-hud");
     $("#player-hp-hud").text(playerHealth);
     $("#player-health-val-hud").text("Health Left: " + playerHealth + "%");
     playerHealthDivHud.style.width = playerHealth + "%";
 }
+
 function playerDiceHud(dicep){
     $("#player-dice-hud").empty();
     for (var i = 1; i <= dicep; i++) {
         $("#player-dice-hud").append("<img src='assets/img/dice/face1.png' style='height: 100%'/>");
     }
 }
+
 function showSplash(msg,delay) {
-    console.log("show");
+    console.log("In display messages");
     $('#splasher').html(msg).show().delay(500).fadeIn(1000);
     $('#splasher').hide().fadeOut(delay);
+//    $('#splasher').append(msg+"<br/>");
 }

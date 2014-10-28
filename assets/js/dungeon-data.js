@@ -114,7 +114,7 @@ var monsters = [
         probability:0,
         level: 1,
         power:"",
-        image: "<img src='assets/img/m1.png' />"
+        image: "<img class='image-scale' src='assets/img/monsters/m11.png' />"
     },
     {
         name: "Phinos",
@@ -124,7 +124,7 @@ var monsters = [
         probability:0,
         level: 1,
         power:"",
-        image: "<img src='assets/img/m1.png' />"
+        image: "<img class='image-scale' src='assets/img/monsters/m12.png' />"
     },
     {
         name: "Magina",
@@ -134,7 +134,7 @@ var monsters = [
         probability:0,
         level: 2,
         power:"",
-        image: "<img src='assets/img/m2.png' />"
+        image: "<img class='image-scale' src='assets/img/monsters/m21.png' />"
     },
     {
         name: "Karo",
@@ -144,7 +144,7 @@ var monsters = [
         probability:0,
         level: 2,
         power:"",
-        image: "<img src='assets/img/m2.png' />"
+        image: "<img class='image-scale' src='assets/img/monsters/m22.png' />"
     },
     {
         name: "Echenist",
@@ -154,7 +154,7 @@ var monsters = [
         probability:0,
         level: 3,
         power:"",
-        image: "<img src='assets/img/m3.png' />"
+        image: "<img class='image-scale' src='assets/img/monsters/m31.png' />"
     },
     {
         name: "Krobelus",
@@ -164,7 +164,7 @@ var monsters = [
         probability:0,
         level: 3,
         power:"",
-        image: "<img src='assets/img/m3.png' />"
+        image: "<img class='image-scale' src='assets/img/monsters/m32.png' />"
     },
     {
         name: "Ghul",
@@ -174,7 +174,7 @@ var monsters = [
         probability:0,
         level: 4,
         power:"",
-        image: "<img src='assets/img/m4.png' />"
+        image: "<img class='image-scale' src='assets/img/monsters/m41.png' />"
     },
     {
         name: "Raxtax",
@@ -184,7 +184,7 @@ var monsters = [
         probability:0,
         level: 4,
         power:"",
-        image: "<img src='assets/img/m4.png' />"
+        image: "<img class='image-scale' src='assets/img/monsters/m42.png' />"
     },
     {
         name: "Enormo",
@@ -194,7 +194,7 @@ var monsters = [
         probability:0,
         level: 5,
         power:"",
-        image: "<img src='assets/img/m4.png' />"
+        image: "<img class='image-scale' class='image-scale' src='assets/img/monsters/m51.png' />"
     },
     {
         name: "Ghaijin",
@@ -204,7 +204,7 @@ var monsters = [
         probability:0,
         level: 5,
         power:"",
-        image: "<img src='assets/img/m4.png' />"
+        image: "<img class='image-scale' src='assets/img/monsters/m52.png' />"
     },
     {
         name: "Infernus",
@@ -214,7 +214,7 @@ var monsters = [
         probability: 0,
         level: 10,
         power:"",
-        image:"<img src='assets/img/boss.png' />"
+        image:"<img class='image-scale' src='assets/img/monsters/m101.png' />"
     }
 ]
 
