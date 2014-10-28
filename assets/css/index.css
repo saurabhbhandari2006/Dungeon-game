@@ -10,14 +10,14 @@ body {
     margin: auto;
     border: 0;
     /*border-collapse: collapse;*/
-    /*background-color: #000;*/
+    background-color: #000;
     position: relative;
 }
 
 #mainmatrix {
     width: 640px;
-    height: 480px;
-    margin: 0 0 0 0;
+    height: 442px;
+    margin: 6% 0 0 0;
     border: 0;
     border-collapse: collapse;
     /*background-color: #000;*/
@@ -188,6 +188,7 @@ body {
     height: 8%;
     position: absolute;
     /*border: 1px solid green;*/
+    background-image: url("../img/jailwall.png");
 }
 
 #player-data {
@@ -253,9 +254,12 @@ body {
 }
 
 #player-hp-hud {
-    text-align: center;
+    bottom: 47%;
     color: black;
     font-size: 11px;
+    left: 6%;
+    position: absolute;
+    text-align: center;
 
 }
 
@@ -314,4 +318,18 @@ body {
     text-shadow: black 0 0 20px;
     color: white;
     display: none;
+}
+.health-image{
+    border: 1px solid green;
+    height: 100%;
+    margin-left: -5%;
+    /*position: absolute;*/
+    width: 20%;
+}
+#health-image{
+    height: 42%;
+    left: 0.6%;
+    position: absolute;
+    top: 13%;
+    width: 2%;
 }
