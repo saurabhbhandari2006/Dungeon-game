@@ -434,8 +434,11 @@ function drawDungeon(dungeonId) {
     console.log("start drawDungeon");
     var dungeon = getDungeon(dungeonId);
     var setMatrixColor = document.getElementById("dungeons");
-    document.getElementById("gamebody").style.backgroundImage = "url(" + dungeon.backgroundImage + ");";
-    $("#gameAttack_wrapper").css({'backgroundImage': "url("+dungeon.backgroundImage+")", 'background-size': "contain"});
+//    document.body.style.backgroundImage = "url(" + dungeon.backgroundImage + ");";
+//    $("#background").css({'backgroundImage': "url("+dungeon.backgroundImage+")", 'background-size': "cover", 'height':"100%", 'width': "100%"});
+    $("#background").attr("src", dungeon.backgroundImage);
+    $("#background").css({'z-index': "-1", 'background-size': "cover", 'height':"100%", 'width': "100%", 'position': "fixed"});
+//    $("#background").css({'background-size': "cover"})
 //    setMatrixColor = document.getElementById("mainmatrix");
 //    setMatrixColor.style.backgroundColor = dungeon.name;
     console.log(dungeon);

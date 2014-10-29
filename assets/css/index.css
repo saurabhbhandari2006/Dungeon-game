@@ -9,7 +9,7 @@ body
     height: 480px;
     margin: auto;
     border: 0;
-    background-color: #000;
+    background: rgba(0, 0, 0, 0.5);
     position: relative;
 }
 
@@ -395,7 +395,11 @@ body
     max-height: 70px;
 }
 
-
+body {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
 
 
 

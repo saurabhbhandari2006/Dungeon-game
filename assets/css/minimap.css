@@ -1,0 +1,42 @@
+
+#minimap {
+    height: 100%;
+    width: 100%;
+}
+
+#miniportal {
+    overflow: auto;
+    width: 95%;
+    height: 35%;
+    margin: auto;
+    margin-top: 5%;
+}
+
+#miniportal td {
+    /*text-align: center;*/
+    /*width: 14%;*/
+    padding: 3px;
+}
+
+#miniportal tr {
+
+}
+
+#minimapmatrix {
+    width: 60%;
+    height: 60%;
+    position: relative;
+    top: -7%;
+    left: 20%;
+    border: 1;
+    z-index: 2;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.mini {
+    height: 100%;
+    width: 100%;
+
+}
+

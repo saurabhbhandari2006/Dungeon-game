@@ -12,6 +12,8 @@
 </head>
 <body>
 
+    <!--<img id="background" src="" />-->
+
     <div id="gameAttack_wrapper">
         <div id="player-hud">
             <div id="playerHud">
@@ -112,27 +114,35 @@
             </div>
 
             <div id="minimap">
-                <img class="mini" id="Purple" src="" />
-                <img class="mini" id="Blue" src="" />
-                <img class="mini" id="Green" src="" />
-                <img class="mini" id="Yellow" src="" />
-                <img class="mini" id="Orange" src="" />
-                <img class="mini" id="Red" src="" />
-                <table id="minimapmatrix">
+
+                <table id="miniportal">
+
                     <tr>
-                        <td id="m1"><div id="m11" class="minimatrix"></div> </td>
-                        <td id="m2"><div id="m12" class="minimatrix"></div> </td>
-                        <td id="m3"><div id="m13" class="minimatrix"></div> </td>
+                        <td style="vertical-align: bottom"><img class="mini" id="Purple" src="assets/img/minimap/purple.png" /></td>
+                        <td style="text-align: center;padding-left: 0"><img class="mini" id="Blue" src="assets/img/minimap/blue.png" /></td>
+                        <td style="vertical-align: top; padding-right: 0"><img class="mini" id="Green" src="assets/img/minimap/green.png" /></td>
+                        <td></td>
+                        <td style="vertical-align: top;padding-left: 0"><img class="mini" id="Yellow" src="assets/img/minimap/yellow.png" /></td>
+                        <td style="text-align: center; padding-right: 0"><img class="mini" id="Orange" src="assets/img/minimap/orange.png" /></td>
+                        <td style="vertical-align: bottom"><img class="mini" id="Red" src="assets/img/minimap/red.png" /></td>
+                    </tr>
+                </table>
+
+                <table id="minimapmatrix" border="1">
+                    <tr>
+                        <td id="m1"><div id="m11" class="minimatrix"> 1 </div> </td>
+                        <td id="m2"><div id="m12" class="minimatrix"> 2 </div> </td>
+                        <td id="m3"><div id="m13" class="minimatrix"> 3 </div> </td>
                     </tr>
                     <tr>
-                        <td id="m4"><div id="m21" class="minimatrix"></div> </td>
-                        <td id="m5"><div id="m22" class="minimatrix"></div> </td>
-                        <td id="m6"><div id="m23" class="minimatrix"></div> </td>
+                        <td id="m4"><div id="m21" class="minimatrix"> 4 </div> </td>
+                        <td id="m5"><div id="m22" class="minimatrix"> 5 </div> </td>
+                        <td id="m6"><div id="m23" class="minimatrix"> 6 </div> </td>
                     </tr>
                     <tr>
-                        <td id="m7"><div id="m31" class="minimatrix"></div> </td>
-                        <td id="m8"><div id="m32" class="minimatrix"></div> </td>
-                        <td id="m9"><div id="m33" class="minimatrix"></div> </td>
+                        <td id="m7"><div id="m31" class="minimatrix"> 7 </div> </td>
+                        <td id="m8"><div id="m32" class="minimatrix"> 8 </div> </td>
+                        <td id="m9"><div id="m33" class="minimatrix"> 9 </div> </td>
                     </tr>
                 </table>
             </div>
