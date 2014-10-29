@@ -12,7 +12,7 @@
     right:              0;
     /*display:            inline-block;*/
     position:           relative;
-    /*display:          none;*/
+    display:          none;
 
 }
 
@@ -80,16 +80,18 @@
 #monster-card-Health-border {
     border: 1px solid #ffffff;
     border-radius: 10px;
-    height: 3%;
+    height: 100%;
     width: 24%;
     display: block;
-    position: fixed;
+    /*position: fixed;*/
 
 }
 
 #monster-card-hp {
     font-size: 10px;
     text-align: center;
+    display: block;
+    overflow: auto;
 }
 
 #monster-card-Health-val {
