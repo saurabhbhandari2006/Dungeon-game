@@ -1,3 +1,15 @@
+@font-face{
+    font-family: header;
+    src: url(../fonts/Heading.otf);
+}
+@font-face{
+    font-family: sub-header;
+    src: url(../fonts/SubHeading.ttf);
+}
+@font-face{
+    font-family: text;
+    src: url(../fonts/Text.ttf);
+}
 body
 {
     margin:0%;
@@ -255,7 +267,16 @@ body
     /*display: none;*/
 }
 
-
+#heading{
+    bottom: 98%;
+    color: whitesmoke;
+    font-family: header;
+    font-size: 25px;
+    left: 15%;
+    position: absolute;
+    width: 100%;
+    font-stretch: extra-expanded;
+}
 
 #monster-card{
     border: 1px solid white;
@@ -279,9 +300,11 @@ body
 
 #monster-card-img{
     border: 1px solid whitesmoke;
-    height: 90%;
-    width: 29%;
+    height: 48%;
     margin: 4%;
+    position: absolute;
+    top: -1%;
+    width: 29%;
 }
 #monster-details{
     /*border: 1px solid green;*/
@@ -290,7 +313,7 @@ body
     left: 34%;
     margin: 4%;
     position: absolute;
-    top: 0;
+    top: 15px;
     width: 57%;
 }
 #monster-card-desc{
@@ -319,11 +342,14 @@ body
 }
 #monster-detail-table {
     color: whitesmoke;
+    height: 17%;
+    position: absolute;
     width: 100%;
 }
 
 .monster-card-scale{
     width: 30%;
+    font-family: sub-header;
 }
 
 #monster-card-Health-border{

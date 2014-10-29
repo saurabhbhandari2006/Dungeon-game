@@ -633,14 +633,17 @@ function showDice(tp,dice1,dice2){
             for(var i=1;i<=dice2;i++){
                 $("#die"+i).append("<img src='assets/img/dice/face1.png' style='height: 100%'/>");
             }
-
+    }else if (tp==4){
+        for(var i=1;i<=5;i++){
+            $("#die"+i).empty();
+        }
             for(var i=1;i<=dice1;i++){
                 $("#die"+i).append("<img src='assets/img/dice/face1.png' style='height: 100%'/>");
             }
-
-
-
     }
+
+
+
 
 }
 //------------------------------------------------------------dice roll end-------------------------------------
@@ -722,7 +725,7 @@ function switchAnim(from, callback) {
 
         $("#monster-dice").css({'opacity': '1'});
         var dice = $("#monster-dice-num").text();
-        showDice(3,dice,0);
+        showDice(4,dice,0);
 
 
     } else {
