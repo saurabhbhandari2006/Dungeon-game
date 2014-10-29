@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44c33337-d199-4678-950d-a8e0e37a8ac0" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/player.png" afterPath="$PROJECT_DIR$/assets/img/player.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/attack.css" afterPath="$PROJECT_DIR$/assets/css/attack.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/custom.js" afterPath="$PROJECT_DIR$/assets/js/custom.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/dungeon-data.js" afterPath="$PROJECT_DIR$/assets/js/dungeon-data.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/index.css" afterPath="$PROJECT_DIR$/assets/css/index.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -28,10 +31,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="attack.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/attack.js">
+      <file leaf-file-name="index.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="257" column="1" selection-start="7500" selection-end="7500" vertical-scroll-proportion="0.0" vertical-offset="3196" max-vertical-offset="3945">
+            <state line="429" column="1" selection-start="7169" selection-end="7169" vertical-scroll-proportion="0.0" vertical-offset="5716" max-vertical-offset="6525">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="custom.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/js/custom.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1127" column="1" selection-start="35600" selection-end="35600" vertical-scroll-proportion="0.9599466" vertical-offset="12586" max-vertical-offset="13410">
+              <folding>
+                <element signature="n#!!block;n#createRewards#0" expanded="false" />
+                <element signature="n#!!block;n#getRandom#0" expanded="false" />
+                <element signature="n#!!block;n#getDungeonId#0" expanded="false" />
+                <element signature="n#!!block;n#getDefinition#0" expanded="false" />
+                <element signature="n#!!block;n#getContent#0" expanded="false" />
+                <element signature="n#!!block;n#getEntity#0" expanded="false" />
+                <element signature="n#!!block;n#getEntityByClass#0" expanded="false" />
+                <element signature="n#!!block;n#checkReaction#0" expanded="false" />
+                <element signature="n#!!block;n#teleport#0" expanded="false" />
+                <element signature="n#!!block;n#playerTurn#0" expanded="false" />
+                <element signature="n#!!block;n#monster#0" expanded="false" />
+                <element signature="n#!!block;n#switchTurn#0" expanded="false" />
+                <element signature="n#!!block;n#doDamage#0" expanded="false" />
+                <element signature="n#!!block;n#checkDefendPowers#0" expanded="false" />
+                <element signature="n#!!block;n#checkIfDead#0" expanded="false" />
+                <element signature="n#!!block;n#checkRecoveryPowers#0" expanded="false" />
+                <element signature="n#!!block;n#checkAttackPowers#0" expanded="false" />
+                <element signature="n#!!block;n#checkSurvival#0" expanded="false" />
+                <marker date="1414564145168" expanded="false" signature="3821:3874" placeholder="..." />
+                <marker date="1414564145168" expanded="true" signature="23563:23612" placeholder="..." />
+                <marker date="1414564145168" expanded="true" signature="23881:23892" placeholder="..." />
+                <marker date="1414564145168" expanded="true" signature="24030:24041" placeholder="..." />
+                <marker date="1414564145168" expanded="true" signature="24374:24386" placeholder="..." />
+                <marker date="1414564145168" expanded="true" signature="24515:24527" placeholder="..." />
+                <marker date="1414564145168" expanded="false" signature="32372:32390" placeholder="..." />
+                <marker date="1414564145168" expanded="false" signature="32452:32487" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dungeon-data.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/dungeon-data.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="219" column="0" selection-start="6407" selection-end="6407" vertical-scroll-proportion="0.0" vertical-offset="1036" max-vertical-offset="4770">
               <folding />
             </state>
           </provider>
@@ -40,34 +88,20 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="120" column="8" selection-start="4413" selection-end="4413" vertical-scroll-proportion="-73.75" vertical-offset="30" max-vertical-offset="2115">
+            <state line="187" column="10" selection-start="8214" selection-end="8214" vertical-scroll-proportion="-5.8333335" vertical-offset="1915" max-vertical-offset="2640">
               <folding>
+                <element signature="n#style#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#td#1;n#tr#4;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#1;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="tag#div#1;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#2;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="custom.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/assets/js/custom.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="203" column="76" selection-start="6397" selection-end="6397" vertical-scroll-proportion="0.48290598" vertical-offset="2706" max-vertical-offset="13950">
-              <folding>
-                <marker date="1413272276876" expanded="true" signature="2975:3028" placeholder="..." />
-                <marker date="1413272276876" expanded="true" signature="18267:18279" placeholder="..." />
-                <marker date="1413272276876" expanded="true" signature="18405:18417" placeholder="..." />
-                <marker date="1413272276876" expanded="true" signature="25658:25676" placeholder="..." />
-                <marker date="1413272276876" expanded="true" signature="25738:25773" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/css/index.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="174" column="1" selection-start="2989" selection-end="2989" vertical-scroll-proportion="0.0" vertical-offset="1891" max-vertical-offset="2715">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -75,25 +109,7 @@
       <file leaf-file-name="attack.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/attack.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="332" column="0" selection-start="5710" selection-end="5710" vertical-scroll-proportion="0.0" vertical-offset="4326" max-vertical-offset="5070">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dungeon-data.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/dungeon-data.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="0" selection-start="3092" selection-end="3092" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="4365">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="attack.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/attack.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="22" selection-start="387" selection-end="387" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="930">
+            <state line="423" column="0" selection-start="7871" selection-end="7871" vertical-scroll-proportion="0.0" vertical-offset="5626" max-vertical-offset="6435">
               <folding />
             </state>
           </provider>
@@ -121,10 +137,10 @@
         <option value="$PROJECT_DIR$/js/custom.js" />
         <option value="$PROJECT_DIR$/assets/js/attack.js" />
         <option value="$PROJECT_DIR$/attack.html" />
-        <option value="$PROJECT_DIR$/assets/css/index.css" />
-        <option value="$PROJECT_DIR$/assets/css/attack.css" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/assets/css/attack.css" />
         <option value="$PROJECT_DIR$/assets/js/dungeon-data.js" />
+        <option value="$PROJECT_DIR$/assets/css/index.css" />
         <option value="$PROJECT_DIR$/assets/js/custom.js" />
       </list>
     </option>
@@ -161,7 +177,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -177,24 +192,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Dungeon-game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dungeon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Dungeon-game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -232,6 +229,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -327,7 +325,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16988418" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1936937" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32904884" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -361,19 +359,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/js/custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="897" column="7" selection-start="27461" selection-end="27461" vertical-scroll-proportion="0.0" vertical-offset="13455" max-vertical-offset="13665">
-          <folding>
-            <marker date="1413272276876" expanded="true" signature="2975:3028" placeholder="..." />
-            <marker date="1413272276876" expanded="true" signature="18267:18279" placeholder="..." />
-            <marker date="1413272276876" expanded="true" signature="18405:18417" placeholder="..." />
-            <marker date="1413272276876" expanded="true" signature="25658:25676" placeholder="..." />
-            <marker date="1413272276876" expanded="true" signature="25738:25773" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="174" column="1" selection-start="2989" selection-end="2989" vertical-scroll-proportion="0.0" vertical-offset="1891" max-vertical-offset="2715">
@@ -413,7 +398,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="23" selection-start="1102" selection-end="1112" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1275">
           <folding>
+            <element signature="n#style#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#td#1;n#tr#4;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#1;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="tag#div#1;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#2;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -422,11 +417,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="518" column="1" selection-start="14141" selection-end="14141" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8145">
           <folding>
-            <marker date="1413272276876" expanded="true" signature="2975:3028" placeholder="..." />
-            <marker date="1413272276876" expanded="true" signature="18267:18279" placeholder="..." />
-            <marker date="1413272276876" expanded="true" signature="18405:18417" placeholder="..." />
-            <marker date="1413272276876" expanded="true" signature="25658:25676" placeholder="..." />
-            <marker date="1413272276876" expanded="true" signature="25738:25773" placeholder="..." />
+            <element signature="n#!!block;n#createRewards#0" expanded="false" />
+            <element signature="n#!!block;n#getRandom#0" expanded="false" />
+            <element signature="n#!!block;n#getDungeonId#0" expanded="false" />
+            <element signature="n#!!block;n#getDefinition#0" expanded="false" />
+            <element signature="n#!!block;n#getContent#0" expanded="false" />
+            <element signature="n#!!block;n#getEntity#0" expanded="false" />
+            <element signature="n#!!block;n#getEntityByClass#0" expanded="false" />
+            <element signature="n#!!block;n#checkReaction#0" expanded="false" />
+            <element signature="n#!!block;n#teleport#0" expanded="false" />
+            <element signature="n#!!block;n#playerTurn#0" expanded="false" />
+            <element signature="n#!!block;n#monster#0" expanded="false" />
+            <element signature="n#!!block;n#switchTurn#0" expanded="false" />
+            <element signature="n#!!block;n#doDamage#0" expanded="false" />
+            <element signature="n#!!block;n#checkDefendPowers#0" expanded="false" />
+            <element signature="n#!!block;n#checkIfDead#0" expanded="false" />
+            <element signature="n#!!block;n#checkRecoveryPowers#0" expanded="false" />
+            <element signature="n#!!block;n#checkAttackPowers#0" expanded="false" />
+            <element signature="n#!!block;n#checkSurvival#0" expanded="false" />
+            <marker date="1414564145168" expanded="false" signature="3821:3874" placeholder="..." />
+            <marker date="1414564145168" expanded="true" signature="23563:23612" placeholder="..." />
+            <marker date="1414564145168" expanded="true" signature="23881:23892" placeholder="..." />
+            <marker date="1414564145168" expanded="true" signature="24030:24041" placeholder="..." />
+            <marker date="1414564145168" expanded="true" signature="24374:24386" placeholder="..." />
+            <marker date="1414564145168" expanded="true" signature="24515:24527" placeholder="..." />
+            <marker date="1414564145168" expanded="false" signature="32372:32390" placeholder="..." />
+            <marker date="1414564145168" expanded="false" signature="32452:32487" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -475,11 +491,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="55" column="28" selection-start="801" selection-end="801" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="4785">
           <folding>
-            <marker date="1413272276876" expanded="true" signature="2975:3028" placeholder="..." />
-            <marker date="1413272276876" expanded="true" signature="18267:18279" placeholder="..." />
-            <marker date="1413272276876" expanded="true" signature="18405:18417" placeholder="..." />
-            <marker date="1413272276876" expanded="true" signature="25658:25676" placeholder="..." />
-            <marker date="1413272276876" expanded="true" signature="25738:25773" placeholder="..." />
+            <element signature="n#!!block;n#createRewards#0" expanded="false" />
+            <element signature="n#!!block;n#getRandom#0" expanded="false" />
+            <element signature="n#!!block;n#getDungeonId#0" expanded="false" />
+            <element signature="n#!!block;n#getDefinition#0" expanded="false" />
+            <element signature="n#!!block;n#getContent#0" expanded="false" />
+            <element signature="n#!!block;n#getEntity#0" expanded="false" />
+            <element signature="n#!!block;n#getEntityByClass#0" expanded="false" />
+            <element signature="n#!!block;n#checkReaction#0" expanded="false" />
+            <element signature="n#!!block;n#teleport#0" expanded="false" />
+            <element signature="n#!!block;n#playerTurn#0" expanded="false" />
+            <element signature="n#!!block;n#monster#0" expanded="false" />
+            <element signature="n#!!block;n#switchTurn#0" expanded="false" />
+            <element signature="n#!!block;n#doDamage#0" expanded="false" />
+            <element signature="n#!!block;n#checkDefendPowers#0" expanded="false" />
+            <element signature="n#!!block;n#checkIfDead#0" expanded="false" />
+            <element signature="n#!!block;n#checkRecoveryPowers#0" expanded="false" />
+            <element signature="n#!!block;n#checkAttackPowers#0" expanded="false" />
+            <element signature="n#!!block;n#checkSurvival#0" expanded="false" />
+            <marker date="1414564145168" expanded="false" signature="3821:3874" placeholder="..." />
+            <marker date="1414564145168" expanded="true" signature="23563:23612" placeholder="..." />
+            <marker date="1414564145168" expanded="true" signature="23881:23892" placeholder="..." />
+            <marker date="1414564145168" expanded="true" signature="24030:24041" placeholder="..." />
+            <marker date="1414564145168" expanded="true" signature="24374:24386" placeholder="..." />
+            <marker date="1414564145168" expanded="true" signature="24515:24527" placeholder="..." />
+            <marker date="1414564145168" expanded="false" signature="32372:32390" placeholder="..." />
+            <marker date="1414564145168" expanded="false" signature="32452:32487" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -509,11 +546,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="1" selection-start="341" selection-end="422" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="3525">
           <folding>
-            <marker date="1413272276876" expanded="true" signature="2975:3028" placeholder="..." />
-            <marker date="1413272276876" expanded="true" signature="18267:18279" placeholder="..." />
-            <marker date="1413272276876" expanded="true" signature="18405:18417" placeholder="..." />
-            <marker date="1413272276876" expanded="true" signature="25658:25676" placeholder="..." />
-            <marker date="1413272276876" expanded="true" signature="25738:25773" placeholder="..." />
+            <element signature="n#!!block;n#createRewards#0" expanded="false" />
+            <element signature="n#!!block;n#getRandom#0" expanded="false" />
+            <element signature="n#!!block;n#getDungeonId#0" expanded="false" />
+            <element signature="n#!!block;n#getDefinition#0" expanded="false" />
+            <element signature="n#!!block;n#getContent#0" expanded="false" />
+            <element signature="n#!!block;n#getEntity#0" expanded="false" />
+            <element signature="n#!!block;n#getEntityByClass#0" expanded="false" />
+            <element signature="n#!!block;n#checkReaction#0" expanded="false" />
+            <element signature="n#!!block;n#teleport#0" expanded="false" />
+            <element signature="n#!!block;n#playerTurn#0" expanded="false" />
+            <element signature="n#!!block;n#monster#0" expanded="false" />
+            <element signature="n#!!block;n#switchTurn#0" expanded="false" />
+            <element signature="n#!!block;n#doDamage#0" expanded="false" />
+            <element signature="n#!!block;n#checkDefendPowers#0" expanded="false" />
+            <element signature="n#!!block;n#checkIfDead#0" expanded="false" />
+            <element signature="n#!!block;n#checkRecoveryPowers#0" expanded="false" />
+            <element signature="n#!!block;n#checkAttackPowers#0" expanded="false" />
+            <element signature="n#!!block;n#checkSurvival#0" expanded="false" />
+            <marker date="1414564145168" expanded="false" signature="3821:3874" placeholder="..." />
+            <marker date="1414564145168" expanded="true" signature="23563:23612" placeholder="..." />
+            <marker date="1414564145168" expanded="true" signature="23881:23892" placeholder="..." />
+            <marker date="1414564145168" expanded="true" signature="24030:24041" placeholder="..." />
+            <marker date="1414564145168" expanded="true" signature="24374:24386" placeholder="..." />
+            <marker date="1414564145168" expanded="true" signature="24515:24527" placeholder="..." />
+            <marker date="1414564145168" expanded="false" signature="32372:32390" placeholder="..." />
+            <marker date="1414564145168" expanded="false" signature="32452:32487" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -550,7 +608,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="29" selection-start="59" selection-end="59" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="690">
           <folding>
+            <element signature="n#style#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#td#1;n#tr#4;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#1;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="tag#div#1;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#2;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -559,11 +627,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="0" selection-start="342" selection-end="342" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="2220">
           <folding>
-            <marker date="1413272276876" expanded="true" signature="2975:3028" placeholder="..." />
-            <marker date="1413272276876" expanded="true" signature="18267:18279" placeholder="..." />
-            <marker date="1413272276876" expanded="true" signature="18405:18417" placeholder="..." />
-            <marker date="1413272276876" expanded="true" signature="25658:25676" placeholder="..." />
-            <marker date="1413272276876" expanded="true" signature="25738:25773" placeholder="..." />
+            <element signature="n#!!block;n#createRewards#0" expanded="false" />
+            <element signature="n#!!block;n#getRandom#0" expanded="false" />
+            <element signature="n#!!block;n#getDungeonId#0" expanded="false" />
+            <element signature="n#!!block;n#getDefinition#0" expanded="false" />
+            <element signature="n#!!block;n#getContent#0" expanded="false" />
+            <element signature="n#!!block;n#getEntity#0" expanded="false" />
+            <element signature="n#!!block;n#getEntityByClass#0" expanded="false" />
+            <element signature="n#!!block;n#checkReaction#0" expanded="false" />
+            <element signature="n#!!block;n#teleport#0" expanded="false" />
+            <element signature="n#!!block;n#playerTurn#0" expanded="false" />
+            <element signature="n#!!block;n#monster#0" expanded="false" />
+            <element signature="n#!!block;n#switchTurn#0" expanded="false" />
+            <element signature="n#!!block;n#doDamage#0" expanded="false" />
+            <element signature="n#!!block;n#checkDefendPowers#0" expanded="false" />
+            <element signature="n#!!block;n#checkIfDead#0" expanded="false" />
+            <element signature="n#!!block;n#checkRecoveryPowers#0" expanded="false" />
+            <element signature="n#!!block;n#checkAttackPowers#0" expanded="false" />
+            <element signature="n#!!block;n#checkSurvival#0" expanded="false" />
+            <marker date="1414564145168" expanded="false" signature="3821:3874" placeholder="..." />
+            <marker date="1414564145168" expanded="true" signature="23563:23612" placeholder="..." />
+            <marker date="1414564145168" expanded="true" signature="23881:23892" placeholder="..." />
+            <marker date="1414564145168" expanded="true" signature="24030:24041" placeholder="..." />
+            <marker date="1414564145168" expanded="true" signature="24374:24386" placeholder="..." />
+            <marker date="1414564145168" expanded="true" signature="24515:24527" placeholder="..." />
+            <marker date="1414564145168" expanded="false" signature="32372:32390" placeholder="..." />
+            <marker date="1414564145168" expanded="false" signature="32452:32487" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -586,7 +675,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="33" selection-start="236" selection-end="236" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
+            <element signature="n#style#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#td#1;n#tr#4;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#1;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="tag#div#1;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#2;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -595,11 +694,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="81" column="0" selection-start="1746" selection-end="1746" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
-            <marker date="1413272276876" expanded="true" signature="2975:3028" placeholder="..." />
-            <marker date="1413272276876" expanded="true" signature="18267:18279" placeholder="..." />
-            <marker date="1413272276876" expanded="true" signature="18405:18417" placeholder="..." />
-            <marker date="1413272276876" expanded="true" signature="25658:25676" placeholder="..." />
-            <marker date="1413272276876" expanded="true" signature="25738:25773" placeholder="..." />
+            <element signature="n#!!block;n#createRewards#0" expanded="false" />
+            <element signature="n#!!block;n#getRandom#0" expanded="false" />
+            <element signature="n#!!block;n#getDungeonId#0" expanded="false" />
+            <element signature="n#!!block;n#getDefinition#0" expanded="false" />
+            <element signature="n#!!block;n#getContent#0" expanded="false" />
+            <element signature="n#!!block;n#getEntity#0" expanded="false" />
+            <element signature="n#!!block;n#getEntityByClass#0" expanded="false" />
+            <element signature="n#!!block;n#checkReaction#0" expanded="false" />
+            <element signature="n#!!block;n#teleport#0" expanded="false" />
+            <element signature="n#!!block;n#playerTurn#0" expanded="false" />
+            <element signature="n#!!block;n#monster#0" expanded="false" />
+            <element signature="n#!!block;n#switchTurn#0" expanded="false" />
+            <element signature="n#!!block;n#doDamage#0" expanded="false" />
+            <element signature="n#!!block;n#checkDefendPowers#0" expanded="false" />
+            <element signature="n#!!block;n#checkIfDead#0" expanded="false" />
+            <element signature="n#!!block;n#checkRecoveryPowers#0" expanded="false" />
+            <element signature="n#!!block;n#checkAttackPowers#0" expanded="false" />
+            <element signature="n#!!block;n#checkSurvival#0" expanded="false" />
+            <marker date="1414564145168" expanded="false" signature="3821:3874" placeholder="..." />
+            <marker date="1414564145168" expanded="true" signature="23563:23612" placeholder="..." />
+            <marker date="1414564145168" expanded="true" signature="23881:23892" placeholder="..." />
+            <marker date="1414564145168" expanded="true" signature="24030:24041" placeholder="..." />
+            <marker date="1414564145168" expanded="true" signature="24374:24386" placeholder="..." />
+            <marker date="1414564145168" expanded="true" signature="24515:24527" placeholder="..." />
+            <marker date="1414564145168" expanded="false" signature="32372:32390" placeholder="..." />
+            <marker date="1414564145168" expanded="false" signature="32452:32487" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -622,7 +742,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
+            <element signature="n#style#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#td#1;n#tr#4;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#1;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="tag#div#1;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#2;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -631,11 +761,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
-            <marker date="1413272276876" expanded="true" signature="2975:3028" placeholder="..." />
-            <marker date="1413272276876" expanded="true" signature="18267:18279" placeholder="..." />
-            <marker date="1413272276876" expanded="true" signature="18405:18417" placeholder="..." />
-            <marker date="1413272276876" expanded="true" signature="25658:25676" placeholder="..." />
-            <marker date="1413272276876" expanded="true" signature="25738:25773" placeholder="..." />
+            <element signature="n#!!block;n#createRewards#0" expanded="false" />
+            <element signature="n#!!block;n#getRandom#0" expanded="false" />
+            <element signature="n#!!block;n#getDungeonId#0" expanded="false" />
+            <element signature="n#!!block;n#getDefinition#0" expanded="false" />
+            <element signature="n#!!block;n#getContent#0" expanded="false" />
+            <element signature="n#!!block;n#getEntity#0" expanded="false" />
+            <element signature="n#!!block;n#getEntityByClass#0" expanded="false" />
+            <element signature="n#!!block;n#checkReaction#0" expanded="false" />
+            <element signature="n#!!block;n#teleport#0" expanded="false" />
+            <element signature="n#!!block;n#playerTurn#0" expanded="false" />
+            <element signature="n#!!block;n#monster#0" expanded="false" />
+            <element signature="n#!!block;n#switchTurn#0" expanded="false" />
+            <element signature="n#!!block;n#doDamage#0" expanded="false" />
+            <element signature="n#!!block;n#checkDefendPowers#0" expanded="false" />
+            <element signature="n#!!block;n#checkIfDead#0" expanded="false" />
+            <element signature="n#!!block;n#checkRecoveryPowers#0" expanded="false" />
+            <element signature="n#!!block;n#checkAttackPowers#0" expanded="false" />
+            <element signature="n#!!block;n#checkSurvival#0" expanded="false" />
+            <marker date="1414564145168" expanded="false" signature="3821:3874" placeholder="..." />
+            <marker date="1414564145168" expanded="true" signature="23563:23612" placeholder="..." />
+            <marker date="1414564145168" expanded="true" signature="23881:23892" placeholder="..." />
+            <marker date="1414564145168" expanded="true" signature="24030:24041" placeholder="..." />
+            <marker date="1414564145168" expanded="true" signature="24374:24386" placeholder="..." />
+            <marker date="1414564145168" expanded="true" signature="24515:24527" placeholder="..." />
+            <marker date="1414564145168" expanded="false" signature="32372:32390" placeholder="..." />
+            <marker date="1414564145168" expanded="false" signature="32452:32487" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -701,57 +852,91 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/questionbank.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="174" column="1" selection-start="2989" selection-end="2989" vertical-scroll-proportion="0.0" vertical-offset="1891" max-vertical-offset="2715">
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/assets/img/m1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/attack.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="257" column="1" selection-start="7500" selection-end="7500" vertical-scroll-proportion="0.0" vertical-offset="3196" max-vertical-offset="3945">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/attack.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="332" column="0" selection-start="5710" selection-end="5710" vertical-scroll-proportion="0.0" vertical-offset="4326" max-vertical-offset="5070">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/dungeon-data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="0" selection-start="3092" selection-end="3092" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="4365">
+        <state line="236" column="0" selection-start="7097" selection-end="7097" vertical-scroll-proportion="0.45927903" vertical-offset="3196" max-vertical-offset="3945">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="8" selection-start="4413" selection-end="4413" vertical-scroll-proportion="-73.75" vertical-offset="30" max-vertical-offset="2115">
+        <state line="187" column="10" selection-start="8214" selection-end="8214" vertical-scroll-proportion="-5.8333335" vertical-offset="1915" max-vertical-offset="2640">
           <folding>
+            <element signature="n#style#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#td#1;n#tr#4;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#1;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="tag#div#1;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#2;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/attack.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="423" column="0" selection-start="7871" selection-end="7871" vertical-scroll-proportion="0.0" vertical-offset="5626" max-vertical-offset="6435">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/dungeon-data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="219" column="0" selection-start="6407" selection-end="6407" vertical-scroll-proportion="0.0" vertical-offset="1036" max-vertical-offset="4770">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="429" column="1" selection-start="7169" selection-end="7169" vertical-scroll-proportion="0.0" vertical-offset="5716" max-vertical-offset="6525">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/custom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="203" column="76" selection-start="6397" selection-end="6397" vertical-scroll-proportion="0.48290598" vertical-offset="2706" max-vertical-offset="13950">
+        <state line="1127" column="1" selection-start="35600" selection-end="35600" vertical-scroll-proportion="0.9599466" vertical-offset="12586" max-vertical-offset="13410">
           <folding>
-            <marker date="1413272276876" expanded="true" signature="2975:3028" placeholder="..." />
-            <marker date="1413272276876" expanded="true" signature="18267:18279" placeholder="..." />
-            <marker date="1413272276876" expanded="true" signature="18405:18417" placeholder="..." />
-            <marker date="1413272276876" expanded="true" signature="25658:25676" placeholder="..." />
-            <marker date="1413272276876" expanded="true" signature="25738:25773" placeholder="..." />
+            <element signature="n#!!block;n#createRewards#0" expanded="false" />
+            <element signature="n#!!block;n#getRandom#0" expanded="false" />
+            <element signature="n#!!block;n#getDungeonId#0" expanded="false" />
+            <element signature="n#!!block;n#getDefinition#0" expanded="false" />
+            <element signature="n#!!block;n#getContent#0" expanded="false" />
+            <element signature="n#!!block;n#getEntity#0" expanded="false" />
+            <element signature="n#!!block;n#getEntityByClass#0" expanded="false" />
+            <element signature="n#!!block;n#checkReaction#0" expanded="false" />
+            <element signature="n#!!block;n#teleport#0" expanded="false" />
+            <element signature="n#!!block;n#playerTurn#0" expanded="false" />
+            <element signature="n#!!block;n#monster#0" expanded="false" />
+            <element signature="n#!!block;n#switchTurn#0" expanded="false" />
+            <element signature="n#!!block;n#doDamage#0" expanded="false" />
+            <element signature="n#!!block;n#checkDefendPowers#0" expanded="false" />
+            <element signature="n#!!block;n#checkIfDead#0" expanded="false" />
+            <element signature="n#!!block;n#checkRecoveryPowers#0" expanded="false" />
+            <element signature="n#!!block;n#checkAttackPowers#0" expanded="false" />
+            <element signature="n#!!block;n#checkSurvival#0" expanded="false" />
+            <marker date="1414564145168" expanded="false" signature="3821:3874" placeholder="..." />
+            <marker date="1414564145168" expanded="true" signature="23563:23612" placeholder="..." />
+            <marker date="1414564145168" expanded="true" signature="23881:23892" placeholder="..." />
+            <marker date="1414564145168" expanded="true" signature="24030:24041" placeholder="..." />
+            <marker date="1414564145168" expanded="true" signature="24374:24386" placeholder="..." />
+            <marker date="1414564145168" expanded="true" signature="24515:24527" placeholder="..." />
+            <marker date="1414564145168" expanded="false" signature="32372:32390" placeholder="..." />
+            <marker date="1414564145168" expanded="false" signature="32452:32487" placeholder="..." />
           </folding>
         </state>
       </provider>

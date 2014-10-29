@@ -17,7 +17,7 @@ var map = [
             {lx: 2, ly: 1, choiceSet: ["Portal Blue"]},
             {lx: 2, ly: 2, choiceSet: ["Player"]},
             {lx: 2, ly: 3, choiceSet: []},
-            {lx: 3, ly: 1, choiceSet: ["Seer"]},
+            {lx: 3, ly: 1, choiceSet: []},
             {lx: 3, ly: 2, choiceSet: ["Monster"]},
             {lx: 3, ly: 3, choiceSet: ["Portal Green"]}
         ],
@@ -86,7 +86,7 @@ var map = [
 
     {name: "Red",  type: "definition", generation: {},
         definition: [
-            {lx: 1, ly: 1, choiceSet: ["Seer"]},
+            {lx: 1, ly: 1, choiceSet: []},
             {lx: 1, ly: 2, choiceSet: ["Boss"]},
             {lx: 1, ly: 3, choiceSet: []},
             {lx: 2, ly: 1, choiceSet: ["Portal Orange"]},
@@ -114,7 +114,7 @@ var monsters = [
         probability:0,
         level: 1,
         power:"",
-        image: "<img src='assets/img/m1.png' />"
+        image: "<img class='image-scale' src='assets/img/monsters/m11.png' />"
     },
     {
         name: "Phinos",
@@ -124,7 +124,7 @@ var monsters = [
         probability:0,
         level: 1,
         power:"",
-        image: "<img src='assets/img/m1.png' />"
+        image: "<img class='image-scale' src='assets/img/monsters/m12.png' />"
     },
     {
         name: "Magina",
@@ -134,7 +134,7 @@ var monsters = [
         probability:0,
         level: 2,
         power:"",
-        image: "<img src='assets/img/m2.png' />"
+        image: "<img class='image-scale' src='assets/img/monsters/m21.png' />"
     },
     {
         name: "Karo",
@@ -144,7 +144,7 @@ var monsters = [
         probability:0,
         level: 2,
         power:"",
-        image: "<img src='assets/img/m2.png' />"
+        image: "<img class='image-scale' src='assets/img/monsters/m22.png' />"
     },
     {
         name: "Echenist",
@@ -154,7 +154,7 @@ var monsters = [
         probability:0,
         level: 3,
         power:"",
-        image: "<img src='assets/img/m3.png' />"
+        image: "<img class='image-scale' src='assets/img/monsters/m31.png' />"
     },
     {
         name: "Krobelus",
@@ -164,7 +164,7 @@ var monsters = [
         probability:0,
         level: 3,
         power:"",
-        image: "<img src='assets/img/m3.png' />"
+        image: "<img class='image-scale' src='assets/img/monsters/m32.png' />"
     },
     {
         name: "Ghul",
@@ -174,7 +174,7 @@ var monsters = [
         probability:0,
         level: 4,
         power:"",
-        image: "<img src='assets/img/m4.png' />"
+        image: "<img class='image-scale' src='assets/img/monsters/m41.png' />"
     },
     {
         name: "Raxtax",
@@ -184,7 +184,7 @@ var monsters = [
         probability:0,
         level: 4,
         power:"",
-        image: "<img src='assets/img/m4.png' />"
+        image: "<img class='image-scale' src='assets/img/monsters/m42.png' />"
     },
     {
         name: "Enormo",
@@ -194,7 +194,7 @@ var monsters = [
         probability:0,
         level: 5,
         power:"",
-        image: "<img src='assets/img/m4.png' />"
+        image: "<img class='image-scale' class='image-scale' src='assets/img/monsters/m51.png' />"
     },
     {
         name: "Ghaijin",
@@ -204,7 +204,7 @@ var monsters = [
         probability:0,
         level: 5,
         power:"",
-        image: "<img src='assets/img/m4.png' />"
+        image: "<img class='image-scale' src='assets/img/monsters/m52.png' />"
     },
     {
         name: "Infernus",
@@ -214,9 +214,10 @@ var monsters = [
         probability: 0,
         level: 10,
         power:"",
-        image:"<img src='assets/img/boss.png' />"
+        image:"<img class='image-scale' src='assets/img/monsters/m101.png' />"
     }
 ]
+
 
 var rewards = [
     {
@@ -234,40 +235,42 @@ var rewards = [
         type: "Health",
         value: 10
     },
+
+
     {
         name: "Super Healing Potion",
         type: "Health",
         value: 25
-    },
-
-    {
-        name: "Super Healing Potion",
-        type: "Health",
-        value: 20
-    },
-    {
-        name: "Master Healing Potion",
-        type: "Health",
-        value: 40
-    },
-
-
-
-    {
-        name: "Master Healing Potion",
-        type: "Health",
-        value: 40
-    },
-    {
-        name: "Master Healing Potion",
-        type: "Health",
-        value: 40
     },
     {
         name: "Super Healing Potion",
         type: "Health",
         value: 25
     },
+    {
+        name: "Super Healing Potion",
+        type: "Health",
+        value: 25
+    },
+
+
+    {
+        name: "Master Healing Potion",
+        type: "Health",
+        value: 40
+    },
+    {
+        name: "Master Healing Potion",
+        type: "Health",
+        value: 40
+    },
+    {
+        name: "Master Healing Potion",
+        type: "Health",
+        value: 40
+    },
+
+
     {
         name: "Dice",
         type: "Dice",
@@ -284,3 +287,26 @@ function shuffle(o) {
     for (var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
     return o;
 }
+
+/*
+PURPLE      PRISON CELL
+BLUE        PRISON CELL HALLWAY
+GREEN       CAFETERIA
+YELLOW      BASKETBALL COURT
+ORANGE      PRISON COURTYARD
+RED         WARDEN ROOM
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
