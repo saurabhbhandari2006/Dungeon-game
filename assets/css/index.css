@@ -9,7 +9,6 @@ body
     height: 480px;
     margin: auto;
     border: 0;
-    /*border-collapse: collapse;*/
     background-color: #000;
     position: relative;
 }
@@ -153,32 +152,23 @@ body
 #player-hud {
     width: 100%;
     height: 15%;
-    /*display:inline-flex;*/
     position:absolute;
     overflow: auto;
-    /*align-self:center;*/
-    /*border: 1px solid green;*/
 }
 #player-data {
     width: 30%;
     height: 100%;
     border: 1px solid #ffffff;
-    /*position: absolute;*/
     float: left;
 }
 #player-img-hud {
     height: 100%;
     width: 23%;
-    /*border: 1px solid blue;*/
-    /*position: absolute;*/
     float: left;
 }
 #player-name-hud {
     width: 75%;
-    /*height: 100%;*/
-    /*position: absolute;*/
     float: left;
-    /*border: 1px solid yellow;*/
     text-align: center;
     color: #ffffff;
     padding-top: 5%;
@@ -192,15 +182,12 @@ body
 #player-health-box-hud {
     width: 32%;
     height: 100%;
-    /*border: 1px solid pink;*/
     float: left;
 }
 #player-Health-border-hud {
     width: 99%;
     height: 40%;
     background-color: #ffffff;
-    /*border: 1px solid yellow;*/
-    /*position: absolute;*/
     border-radius: 10px;
 }
 #player-Health-hud {
@@ -215,7 +202,6 @@ body
     text-align: center;
 }
 #meter-box-health-hud {
-    /*border: 1px solid sandybrown;*/
     float: right;
     height: 50%;
     width: 100%;
@@ -226,7 +212,6 @@ body
     margin-top: 1%;
 }
 #splasher {
-    /*border: 1px solid red;*/
     font-size: 2em;
     text-align: center;
     font-family: "Impact", sans-serif;

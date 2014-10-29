@@ -1,5 +1,7 @@
+@import url("monstercard.css");
 
-#mainwrapper {
+
+#gameAttack_wrapper {
 
     width:              640px;
     height:             480px;
@@ -13,44 +15,61 @@
     right:              0;
 }
 
-#Hud {
+#player-hud {
 
-    width:              100%;
-    height:             10%;
+    width:              25%;
+    height:             100%;
     background-color:   #8b9f20;
     overflow:           auto;
+    float:              left;
+}
+
+#container {
+    width:              75%;
+    height:             100%;
+    overflow:           auto;
+    background-color:   #7255ff;
+    float:              left;
 }
 
 #playerHud {
 
-    width:              70%;
-    float:              left;
+    width:              100%;
     overflow:           auto;
-    height:             100%;
+    height:             40%;
     background-color:   #ffcf57;
+    display:            block;
 
+}
+
+#filler {
+
+    width:              100%;
+    overflow:           auto;
+    height:             20%;
+    background-color:   #ffffaa;
+    display:            block;
 }
 
 #buttonHud {
-    width:              30%;
-    float:              left;
+    width:              100%;
     overflow:           auto;
-    height:             100%;
+    height:             40%;
     background-color:   #af67fd;
+    display:            block;
 }
+
+
 
 #mainmatrix {
-
-    width:              80%;
-    height:             80%;
-    margin:             auto;
     overflow:           auto;
-    top:                0;
-    bottom:             0;
-    left:               0;
-    right:              0;
-    margin-top:         1%;
-    background-color:   #7255ff;
+    width:              100%;
+    height:             100%;
+    margin:             0;
+    padding:            0;
+    border:             0 none;
+    border-collapse:    collapse;
+    display:            none;
 }
 
-#
+
