@@ -4,6 +4,7 @@
     position: absolute;
     width: 100%;
     display: none;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 #name-div {
@@ -163,7 +164,7 @@
     height: 50%;
     position: absolute;
     top: 18%;
-    width: 100%;
+    width: 97%;
 }
 
 .image-box {

@@ -151,11 +151,11 @@ function createEntity() {
         {
             id:entityHash.length+1,
             class: "Player",
-            image: "<div id='player-div' style='padding-left: 6%; margin-top: -7%; position: absolute'> <img src='assets/img/player.png' /> </div>"
+            image: "<div id='player-div' > <img style='position: relative' src='assets/img/player.png' /> </div>"
         }
     );
     console.log("   player created");
-    console.log("entities created");
+    console.log("all entities created");
 }
 
 function addEntities() {
@@ -296,9 +296,9 @@ function addEntities() {
         }
     }
     console.log("entities added");
-    console.log("***************************************************************************");
-    console.log(mapHash);
-    console.log("***************************************************************************");
+//    console.log("***************************************************************************");
+//    console.log(mapHash);
+//    console.log("***************************************************************************");
 
 }
 
@@ -434,8 +434,8 @@ function drawDungeon(dungeonId) {
     console.log("start drawDungeon");
     var dungeon = getDungeon(dungeonId);
     var setMatrixColor = document.getElementById("dungeons");
-    document.getElementById("dungeons").style.backgroundImage = "url(" + dungeon.backgroundImage + ");";
-    $("#dungeons").css({'backgroundImage': "url("+dungeon.backgroundImage+")"})
+    document.getElementById("gamebody").style.backgroundImage = "url(" + dungeon.backgroundImage + ");";
+    $("#gameAttack_wrapper").css({'backgroundImage': "url("+dungeon.backgroundImage+")", 'background-size': "contain"});
 //    setMatrixColor = document.getElementById("mainmatrix");
 //    setMatrixColor.style.backgroundColor = dungeon.name;
     console.log(dungeon);

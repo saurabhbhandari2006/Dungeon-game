@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="assets/css/attack.css">
 </head>
 
-<body onload="background();">
+<body id="gamebody" onload="background();">
 
 <div class="gameTitle">
     <span id="gamename">Qortals</span>
@@ -21,25 +21,25 @@
 </div>
 
 <div id="gameAttack_wrapper">
-
-    <div id="dungeons">
-        <div id="player-hud">
-            <div id="player-data">
-                <div id="player-img-hud"><img style="width: 100%;height: 100%" src="assets/img/player.png"></div>
-                <div id="player-name-hud">Player</div>
-            </div>
-            <div id="player-health-box-hud">
-                <div id="player-Health-border-hud">
-                    <div id='player-Health-hud'>
-                        <div id="player-hp-hud"></div>
-                    </div>
-                </div>
-                <div id="meter-box-health-hud">
-                    <div id="player-health-val-hud">30% left</div>
-                </div>
-            </div>
-            <div id="player-dice-hud"></div>
+    <div id="player-hud">
+        <div id="player-data">
+            <div id="player-img-hud"><img style="width: 100%;height: 100%" src="assets/img/player.png"></div>
+            <div id="player-name-hud">Player</div>
         </div>
+        <div id="player-health-box-hud">
+            <div id="player-Health-border-hud">
+                <div id='player-Health-hud'>
+                    <div id="player-hp-hud"></div>
+                </div>
+            </div>
+            <div id="meter-box-health-hud">
+                <div id="player-health-val-hud">30% left</div>
+            </div>
+        </div>
+        <div id="player-dice-hud"></div>
+    </div>
+    <div id="dungeons">
+
         <table id="mainmatrix" border="1">
             <img id="dungeonBackground" />
             <tr>

@@ -14,20 +14,28 @@ body
     position: relative;
 }
 
+.matrix {
+    height: 100%;
+    width: 100%;
+}
+
 #mainmatrix {
-    width: 640px;
-    height: 429px;
-    margin: 8% 0 0 0;
-    border: 0;
+    align-self: center;
+    display:block;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 0 none;
     border-collapse: collapse;
-    background-color: #000;
+    height: 400px;
+    margin-left:10%;
+    margin-top: 10%;
+    width: 400px;
 }
 /*
     Defines styling for each individual grid on the map.
 */
 #mainmatrix td
 {
-    padding:20px;
+    padding:1%;
     width:33%;
     height:33%;
     border:1px solid darkslategray;
@@ -39,8 +47,8 @@ body
 */
 #mainmatrix td img
 {
-    width:96px;
-    height:96px;
+    width:65%;
+    height:auto;
 }
 
 #dungeons {
@@ -144,8 +152,11 @@ body
 
 #player-hud {
     width: 100%;
-    height: 10%;
-    position: absolute;
+    height: 15%;
+    /*display:inline-flex;*/
+    position:absolute;
+    overflow: auto;
+    /*align-self:center;*/
     /*border: 1px solid green;*/
 }
 #player-data {
@@ -232,12 +243,14 @@ body
 
 
 #monster-card{
-    border: 1px solid white;
+    border: 1px solid whitesmoke;
     height: 400px;
     left: 12%;
     position: absolute;
     top: 49px;
     width: 500px;
+    background-color: rgba(20, 20, 20, 0.9);
+    border-radius: 10px;
     display: none;
 }
 #monster-card-btn{
@@ -256,6 +269,7 @@ body
     height: 90%;
     width: 29%;
     margin: 4%;
+    border-radius: 5px;
 }
 #monster-details{
     /*border: 1px solid green;*/
@@ -274,6 +288,7 @@ body
     position: absolute;
     top: 56%;
     width: 91%;
+    border-radius: 5px;
 }
 
 #monster-card-hp {
@@ -294,6 +309,7 @@ body
 #monster-detail-table {
     color: whitesmoke;
     width: 100%;
+
 }
 
 .monster-card-scale{
