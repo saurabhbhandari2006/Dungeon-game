@@ -1,8 +1,14 @@
 //var diceVal = [];
 var diceNum = 2;
+<<<<<<< HEAD
 // var healthReduce;
 var playerHealth = 100;//to get this value as player health
 var monsterHealth = 100;//monster health
+=======
+var player = true;
+// var healthReduce;
+var playerHealth = 100;//to get this value as player health
+>>>>>>> 6f387bab909fa44da6e1c4909f9611caff18e0eb
 entityId = 1;
 
 ///*-------------------------------------------samrith-----------------------------------------*/
@@ -91,11 +97,18 @@ entityId = 1;
 //
 ///*-----------------------------------------------end of samrith code-------------------------------------------*/
 $(function () {
-    initBattleWindow();
+    initBattleWindow(5);
 });
 function initBattleWindow(entityId) {
     player = true;
+<<<<<<< HEAD
     playerTurn(entityId);
+=======
+//    var entity = getEntity(entityId);
+//    $("#monster-hp").text(entity.health);
+    $("#monster-hp").text(50);
+    playerTurn();
+>>>>>>> 6f387bab909fa44da6e1c4909f9611caff18e0eb
 }
 //----------------------------------dice roll -----------------------------------------
 function hideAngle(diceNum) {
@@ -128,7 +141,11 @@ function finalRoll(diceNum,diceVal) {
     setFaces(diceNum,diceVal);
     return healthReduce;
 }
+<<<<<<< HEAD
 function rollDice(entityId,diceNum,callback,callback1,callback2) {
+=======
+function rollDice(diceNum,callback,callback1,callback2) {
+>>>>>>> 6f387bab909fa44da6e1c4909f9611caff18e0eb
     emptyDiceDiv();
     var diceVal = [];
     $("#diceBox").fadeIn();
@@ -166,7 +183,11 @@ function rollDice(entityId,diceNum,callback,callback1,callback2) {
             console.log("checked whether callback is a function");
             // Call it, since we have confirmed it is callable​
             //this way we can pass local variables in callback function
+<<<<<<< HEAD
             callback(entityId,healthReduce,callback1,callback2);
+=======
+            callback(healthReduce,callback1,callback2);
+>>>>>>> 6f387bab909fa44da6e1c4909f9611caff18e0eb
         }
     }, 751)
 }
@@ -183,6 +204,7 @@ function playerTurn() {
                     case "btnAttack":
                         console.log("attack selected");
                         //simply passing the function name in string format and then the variables are passed in callbacks as and what needed
+<<<<<<< HEAD
                         rollDice(entityId,diceNum,checkDefendPowers,doDamage,checkIfDead);
 
                         // console.log("entering doDamage");
@@ -193,8 +215,23 @@ function playerTurn() {
                         //            // emptyDiceDiv();
                         //            // switchTurn("player")
                         //    });
+=======
+                        rollDice(diceNum,checkDefendPowers,doDamage,checkIfDead);
+>>>>>>> 6f387bab909fa44da6e1c4909f9611caff18e0eb
 
+                        // console.log("entering doDamage");
+                        // doDamage("player",damage);
+                        // function(){
+                        //    updateResources("monster",function()
+                        //    {
+                        //            // emptyDiceDiv();
+                        //            // switchTurn("player")
+                        //    });
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6f387bab909fa44da6e1c4909f9611caff18e0eb
                         // });
                         break;
                     case "btnRetreat":
@@ -205,6 +242,7 @@ function playerTurn() {
         })
     }, 500);
 }
+<<<<<<< HEAD
 function monster(entityId,call) {
     setTimeout(function()
     {
@@ -212,6 +250,15 @@ function monster(entityId,call) {
         if(player == false)
         {
             rollDice(entityId,2,checkAttackPowers,doDamage,checkSurvival);
+=======
+function monster(call) {
+    setTimeout(function()
+    {
+        console.log("in ai");
+        if(player == false)
+        {
+            rollDice(3,checkAttackPowers,doDamage,checkSurvival);
+>>>>>>> 6f387bab909fa44da6e1c4909f9611caff18e0eb
             // function(){
             //          updateResources("player",function(){
             //                  emptyDiceDiv();
@@ -227,11 +274,19 @@ function switchTurn(entityId,from) {
     setTimeout(function() {
         if (from == "player") {
             player = false;
+<<<<<<< HEAD
             monster(entityId);
         }
         else {
             player = true;
             playerTurn(entityId);
+=======
+            monster();
+        }
+        else {
+            player = true;
+            playerTurn();
+>>>>>>> 6f387bab909fa44da6e1c4909f9611caff18e0eb
         }
 
     }, 4000);
@@ -248,6 +303,7 @@ function doDamage(entityId,team, damage,callback){
     console.log("doDamage "+team);
     console.log("doDamage "+damage);
 
+<<<<<<< HEAD
     playerHealthDiv = document.getElementById("player-Health");
     monsterHealthDiv = document.getElementById("monster-Health");
 
@@ -299,6 +355,37 @@ function checkIfDead(entityId,health){
     else
     {
         checkRecoveryPowers(entityId,"monster",switchTurn);
+=======
+function emptyDiceDiv() {
+    // diceVal = [];
+    $("#die1").empty();
+    $("#die2").empty();
+    $("#die3").empty();
+    $("#die4").empty();
+    $("#die5").empty();
+}
+function doDamage(team, damage,callback){
+    console.log("doDamage "+team);
+    console.log("doDamage "+damage);
+
+    playerHealthDiv = document.getElementById("player-Health");
+    monsterHealthDiv = document.getElementById("monster-Health");
+    var monsterHealth = $("#monster-hp").text();
+
+    if(team == "monster")
+    {
+        playerHealth -= damage;
+        console.log("player health left" +playerHealth);
+        playerHealthDiv.style.width = playerHealth + "%";
+    }
+    else
+    {
+        monsterHealth = monsterHealth - damage;
+        console.log("monster health left" +monsterHealth);
+        $("#monster-hp").text(monsterHealth);
+        monsterHealthDiv.style.width = monsterHealth + "%";
+        // checkDefendPowers();
+>>>>>>> 6f387bab909fa44da6e1c4909f9611caff18e0eb
     }
 }
 function checkRecoveryPowers(entityId,team,callback){
@@ -334,14 +421,64 @@ function checkSurvival(entityId){
     }
     else
     {
+<<<<<<< HEAD
         checkRecoveryPowers(entityId,"player",10,switchTurn);
     }
 }
 function victory(callback){
 console.log("'In Victory function");
     callback();
+=======
+        if (typeof callback === "function")
+        {
+            callback(monsterHealth);
+        }
+    },2000);
+>>>>>>> 6f387bab909fa44da6e1c4909f9611caff18e0eb
 }
+function checkDefendPowers(damage,callback,callback1){
+    console.log("in checkDefendPowers");
+    if (typeof callback === "function")
+    {
+        callback("player",damage,callback1);
+    }
+}
+function checkIfDead(health){
+    console.log("in checkIfDead function "+health)
+    if (health<=0)
+    {
+        victory();
+    }
+    else
+    {
+        checkRecoveryPowers("monster",switchTurn);
+    }
+}
+function checkRecoveryPowers(team,callback){
+    console.log("in recovery function");
+    if (team == "player")
+    {
+        if (typeof callback === "function")
+        {
+            callback("monster");
+        }
+    }
+    else
+    {
+        if (typeof callback === "function")
+        {
+            callback("player");
+        }
+    }
+}
+function checkAttackPowers(damage,callback,callback1){
+    console.log("in checkAttackPowers");
+    if (typeof callback === "function")
+    {
+        callback("monster",damage,callback1);
+    }
 
+<<<<<<< HEAD
 function getRewards(callback){
 
     var random = getRandom(1,12);
@@ -635,3 +772,26 @@ function closeBattle(){
 //    var mHealth = monsters[id].health;
 //    return[mDice,mHealth]
 //}
+=======
+}
+
+// function checkDefendPowers(entityId, damage){
+// 	console.log("in checkDefendPowers");
+// if (typeof callback === "function")
+//        {
+//          	callback("player",damage,callback1);
+//        }
+
+// }
+function checkSurvival(){
+    console.log("in checkSurvival");
+    if (playerHealth<=0)
+    {
+        defeat();
+    }
+    else
+    {
+        checkRecoveryPowers("player",switchTurn);
+    }
+}
+>>>>>>> 6f387bab909fa44da6e1c4909f9611caff18e0eb

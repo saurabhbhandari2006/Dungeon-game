@@ -1,0 +1,257 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title>Quortals</title>
+    <script src="assets/js/jquery-1.10.2.min.js"></script>
+    <script src="assets/js/modernizr-2.6.2.min.js"></script>
+    <script src="assets/js/dungeon-data.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/questionbank.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/index2.css" />
+</head>
+<body>
+
+    <div id="gameAttack_wrapper">
+        <div id="player-hud">
+            <div id="playerHud">
+                <div id="player-data">
+                    <div id="player-img-hud"><img style="width: 100%;height: 100%" src="assets/img/player.png"></div>
+                    <div id="player-name-hud">Player</div>
+                </div>
+                <div id="player-health-box-hud">
+                    <div id="player-Health-border-hud">
+                        <div id='player-Health-hud'>
+                            <div id="player-hp-hud"></div>
+                        </div>
+                    </div>
+                    <div id="meter-box-health-hud">
+                        <div id="player-health-val-hud">30% left</div>
+                    </div>
+                </div>
+                <div id="player-dice-hud"></div>
+            </div>
+            <div id="filler"></div>
+            <div id="buttonHud">
+                buttonHud
+            </div>
+        </div>
+
+        <div id="container">
+            <table id="mainmatrix" border="1">
+                <tr>
+                    <td id="1"> <div id="11" class="matrix"></div> </td>
+                    <td id="2"> <div id="12" class="matrix"></div> </td>
+                    <td id="3"> <div id="13" class="matrix"></div> </td>
+                </tr>
+                <tr>
+                    <td id="4"> <div id="21" class="matrix"></div> </td>
+                    <td id="5"> <div id="22" class="matrix"></div> </td>
+                    <td id="6"> <div id="23" class="matrix"></div> </td>
+                </tr>
+                <tr>
+                    <td id="7"> <div id="31" class="matrix"></div> </td>
+                    <td id="8"> <div id="32" class="matrix"></div> </td>
+                    <td id="9"> <div id="33" class="matrix"></div> </td>
+                </tr>
+            </table>
+
+
+            <div id="monster-card">
+                <table id="monster-card-table">
+                    <tr>
+                        <td colspan="3" id="monster-card-header">ENEMY</td>
+                    </tr>
+                    <tr>
+                        <td id="monster-card-health">
+                            100 <img src="assets/img/hp.png">
+                        </td>
+                        <td id="monster-card-image">
+                            <img src="assets/img/m.png" />
+                        </td>
+                        <td id="monster-card-dice">
+                            <img src="assets/img/dice.png"> x3
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" id="monster-card-name">
+                            Boss
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" id="monster-card-type">
+                            Difficult
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <div id="monster-card-desc">
+                                <span>Description:</span> <br />hksdfhkabgzkbakbsckdasbdbckb
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" align="center">
+                            <button id="btn-continue" class="btn">Continue</button>
+                            <button id="btn-cancel" class="btn">Cancel</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <!--<div id="monster-card">-->
+                <!--<div id="monster-detail-box">-->
+                    <!--<div id="monster-card-img"></div>-->
+                    <!--<div id="monster-details">-->
+                        <!--<table id="monster-detail-table" cellspacing="13%" >-->
+                            <!--<tr>-->
+                                <!--<td colspan="2">MONSTER CARD</td>-->
+                            <!--</tr>-->
+                            <!--<tr>-->
+                                <!--<td class="monster-card-scale">Name:</td>-->
+                                <!--<td><div id="monster-card-name"></div></td>-->
+                            <!--</tr>-->
+                            <!--<tr>-->
+                                <!--<td class="monster-card-scale">Type:</td>-->
+                                <!--<td><div id="monster-card-type"></div></td>-->
+                            <!--</tr>-->
+                            <!--<tr>-->
+                                <!--<td class="monster-card-scale">Level:</td>-->
+                                <!--<td><div id="monster-card-level"></div></td>-->
+                            <!--</tr>-->
+                            <!--<tr>-->
+                                <!--<td class="monster-card-scale">Health:</td>-->
+                                <!--<td>-->
+                                    <!--<div id="monster-card-health-box">-->
+                                        <!--<div id="monster-card-Health-border" class="health-border">-->
+                                            <!--<div id='monster-card-Health'>-->
+                                                <!--<div id="monster-card-hp"></div>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</td>-->
+                            <!--</tr>-->
+                            <!--<tr>-->
+                                <!--<td class="monster-card-scale">Dice:</td>-->
+                                <!--<td>-->
+                                    <!--<div id="monster-card-dice-container">-->
+                                        <!--<div id="monster-card-dice-num" style="display: none"></div>-->
+                                        <!--<div id="monster-card-dice-img" class="total-dice-img"></div>-->
+                                    <!--</div>-->
+                                <!--</td>-->
+                            <!--</tr>-->
+                        <!--</table>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div id="monster-card-desc">-->
+                    <!--<span style="color: whitesmoke;margin: 1%;position: absolute;">Description:</span><br />-->
+                <!--</div>-->
+                <!--<div id="monster-card-btn">-->
+                    <!--<button id="btn-continue" class="btn">Continue</button>-->
+                    <!--<button id="btn-cancel" class="btn">Cancel</button>-->
+                <!--</div>-->
+            <!--</div>-->
+
+            <!--<div id="minimap">-->
+                <!--<img class="mini" id="Purple" src="" />-->
+                <!--<img class="mini" id="Blue" src="" />-->
+                <!--<img class="mini" id="Green" src="" />-->
+                <!--<img class="mini" id="Yellow" src="" />-->
+                <!--<img class="mini" id="Orange" src="" />-->
+                <!--<img class="mini" id="Red" src="" />-->
+                <!--<table id="minimapmatrix">-->
+                    <!--<tr>-->
+                        <!--<td id="m1"><div id="m11" class="minimatrix"></div> </td>-->
+                        <!--<td id="m2"><div id="m12" class="minimatrix"></div> </td>-->
+                        <!--<td id="m3"><div id="m13" class="minimatrix"></div> </td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td id="m4"><div id="m21" class="minimatrix"></div> </td>-->
+                        <!--<td id="m5"><div id="m22" class="minimatrix"></div> </td>-->
+                        <!--<td id="m6"><div id="m23" class="minimatrix"></div> </td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td id="m7"><div id="m31" class="minimatrix"></div> </td>-->
+                        <!--<td id="m8"><div id="m32" class="minimatrix"></div> </td>-->
+                        <!--<td id="m9"><div id="m33" class="minimatrix"></div> </td>-->
+                    <!--</tr>-->
+                <!--</table>-->
+            <!--</div>-->
+
+            <!--<div id="fightArena">-->
+                <!--<div id="name-div">-->
+                    <!--<div id="monster-name" class="names"></div>-->
+                    <!--<div id="player-name" class="names">Player</div>-->
+                <!--</div>-->
+                <!--<div id="health-bar-box">-->
+                    <!--<div class="meter-box-wrapper">-->
+                        <!--<div id="monster-Health-border" class="health-border">-->
+                            <!--<div id='monster-Health'><div id="monster-hp"></div></div>-->
+                            <!--<div id="monster-max-hp" style="display: none"></div>-->
+                        <!--</div>-->
+                        <!--<div id="player-Health-border" class="health-border">-->
+                            <!--<div id='player-Health'><div id="player-hp"></div></div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div id="meter-box-health">-->
+                        <!--<div id="monster-health-val-box" class="health-val-box">-->
+                            <!--<div id="monster-health-val" class="value-display"></div>-->
+                            <!--<div id="monster-lvl" class="lvl-display">Lvl 2</div>-->
+                        <!--</div>-->
+                        <!--<div id="player-health-val-box" class="health-val-box">-->
+                            <!--<div id="player-health-val"></div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div id="battle-box-wrapper">-->
+                    <!--<div id="monster" class="image-box scaling"></div>-->
+                    <!--<div id="player" class="image-box scaling"><div id="player-box" style="height: 100%;width: 100%"><img id="player-img" src="assets/img/player.png"></div></div>-->
+                    <!--<div id="dice-container">-->
+                        <!--<div id="monster-dice" class="total-dice">-->
+                            <!--<div id="monster-dice-num" style="display: none"></div>-->
+                            <!--<div id="monster-dice-img" class="total-dice-img"></div>-->
+                        <!--</div>-->
+                        <!--<div id="player-dice" class="total-dice">-->
+                            <!--<div id="player-dice-num" style="display: none"></div>-->
+                            <!--<div id="player-dice-img" class="total-dice-img"></div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div id='diceBox'>-->
+                    <!--<div id='die1' class='oneHidden'></div>-->
+                    <!--<div id='die2' class='oneHidden'></div>-->
+                    <!--<div id='die3' class='oneHidden'></div>-->
+                    <!--<div id='die4' class='oneHidden'></div>-->
+                    <!--<div id='die5' class='oneHidden'></div>-->
+                <!--</div>-->
+                <!--<div id="battleBtn">-->
+                    <!--<button id="btnAttack" class="btn">Attack</button>-->
+                    <!--<button id="btnRetreat" class="btn">Retreat</button>-->
+                <!--</div>-->
+            <!--</div>-->
+
+            <!--<div class="defeat">-->
+                <!--<div>Defeated</div>-->
+                <!--<br/>-->
+                <!--<a href="#" id="startAgainClicker">Click to Start Again</a>-->
+            <!--</div>-->
+
+            <!--<div id="qcard">-->
+                <!--<div id="quiz-content" class="questioned">-->
+                    <!--<div id="qquestion"></div>-->
+                    <!--<div id="qid"></div>-->
+                    <!--<ul id="answerBlock">-->
+                        <!--<li class="answer" id="optax"></li>-->
+                        <!--<li class="answer" id="optbx"></li>-->
+                        <!--<li class="answer" id="optcx"></li>-->
+                        <!--<li class="answer" id="optdx"></li>-->
+                    <!--</ul>-->
+                    <!--<div id="answerMsg"></div>-->
+                <!--</div>-->
+            <!--</div>-->
+
+        </div>
+    </div>
+
+</body>
+</html>

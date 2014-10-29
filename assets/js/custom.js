@@ -453,7 +453,8 @@ function teleport(entityId) {
 function monsterCard(entityId){
     var entity = getEntity(entityId);
     var hp= entity.health;
-    $("#monster-card-hp").text(hp);
+
+    $("#monster-health").text(hp + " " + entity.image);
 //    monsterHealthDiv = document.getElementById("monster-card-Health");
 //    monsterHealthDiv.style.width = hp + "%";
     $("#monster-card-img").html(entity.image);
@@ -490,36 +491,36 @@ function monsterCard(entityId){
 }
 
 function initBattleWindow(entityId) {
-        $("#splasher").empty();
-        $("#dungeons").fadeOut();
-        $("#fightArena").fadeIn();
+    $("#splasher").empty();
+    $("#dungeons").fadeOut();
+    $("#fightArena").fadeIn();
 
-        playerHealthDiv = document.getElementById("player-Health");
-        monsterHealthDiv = document.getElementById("monster-Health");
+    playerHealthDiv = document.getElementById("player-Health");
+    monsterHealthDiv = document.getElementById("monster-Health");
 
-        player = true;
-        playerHealthDiv.style.width = playerHealth + "%";
-        $("#player-hp").text(playerHealth);
-        $("#player-health-val").text("Health Left: "+playerHealth+"%");
+    player = true;
+    playerHealthDiv.style.width = playerHealth + "%";
+    $("#player-hp").text(playerHealth);
+    $("#player-health-val").text("Health Left: "+playerHealth+"%");
 
-        var entity = getEntity(entityId);
-        monsterHealthDiv.style.width = 100 + "%";
-        $("#monster-hp").text(entity.health);
-        $("#monster-max-hp").text(entity.health);
-        $("#monster-health-val").text("Health Left: 100%");
-        $("#monster-name").text(entity.name);
-        $("#monster").html(entity.image);
-        $("#monster-lvl").text("Lvl" + " " + entity.level);
-        $("#monster-dice-num").text(entity.dice);
-        var dice = $("#monster-dice-num").text();
-        showDice(2,dice,diceNum);
+    var entity = getEntity(entityId);
+    monsterHealthDiv.style.width = 100 + "%";
+    $("#monster-hp").text(entity.health);
+    $("#monster-max-hp").text(entity.health);
+    $("#monster-health-val").text("Health Left: 100%");
+    $("#monster-name").text(entity.name);
+    $("#monster").html(entity.image);
+    $("#monster-lvl").text("Lvl" + " " + entity.level);
+    $("#monster-dice-num").text(entity.dice);
+    var dice = $("#monster-dice-num").text();
+    showDice(2,dice,diceNum);
 
-        $("#monster").css({'opacity': '0.5'});
-        $("#monster-dice").css({'opacity': '0.5'});
-        $("#monster").removeClass("scaling");
+    $("#monster").css({'opacity': '0.5'});
+    $("#monster-dice").css({'opacity': '0.5'});
+    $("#monster").removeClass("scaling");
 
-        console.log("Battle window init done....starting battle by player Turn");
-        playerTurn(entityId);
+    console.log("Battle window init done....starting battle by player Turn");
+    playerTurn(entityId);
 
 
 
@@ -630,16 +631,16 @@ function showDice(tp,dice1,dice2){
         for(var i=1;i<=5;i++){
             $("#die"+i).empty();
         }
-            for(var i=1;i<=dice2;i++){
-                $("#die"+i).append("<img src='assets/img/dice/face1.png' style='height: 100%'/>");
-            }
+        for(var i=1;i<=dice2;i++){
+            $("#die"+i).append("<img src='assets/img/dice/face1.png' style='height: 100%'/>");
+        }
     }else if (tp==4){
         for(var i=1;i<=5;i++){
             $("#die"+i).empty();
         }
-            for(var i=1;i<=dice1;i++){
-                $("#die"+i).append("<img src='assets/img/dice/face1.png' style='height: 100%'/>");
-            }
+        for(var i=1;i<=dice1;i++){
+            $("#die"+i).append("<img src='assets/img/dice/face1.png' style='height: 100%'/>");
+        }
     }
 
 

@@ -2,7 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44c33337-d199-4678-950d-a8e0e37a8ac0" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/img/backgrounds/Blue.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/img/backgrounds/Green.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/img/backgrounds/Orange.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/img/backgrounds/Purple.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/img/backgrounds/Red.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/img/backgrounds/Yellow.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/img/minimap/blue.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/img/minimap/green.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/img/monsters/m111.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/img/minimap/orange.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/img/minimap/purple.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/img/minimap/red.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/img/minimap/yellow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/counter.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/index2.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/monstercard.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/questionbank.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/fonts/Darcy Baldwin {fontography}.url" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/fonts/Heading.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/fonts/READ ME-KCFonts.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/fonts/ScorchedEarth_Flag-KCFonts.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/fonts/ScorchedEarth_Poster-KCFonts.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/fonts/SubHeading.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/fonts/Text.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/fonts/_TOU-Darcy-Baldwin-dafont.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/fonts/dbaldwin-chalkitup-preview.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/monsters/m11.png" afterPath="$PROJECT_DIR$/assets/img/monsters/m11.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/attack.css" afterPath="$PROJECT_DIR$/assets/css/attack.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/attack.html" afterPath="$PROJECT_DIR$/attack.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/attack.js" afterPath="$PROJECT_DIR$/assets/js/attack.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/custom.js" afterPath="$PROJECT_DIR$/assets/js/custom.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/dungeon-data.js" afterPath="$PROJECT_DIR$/assets/js/dungeon-data.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/index.css" afterPath="$PROJECT_DIR$/assets/css/index.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -28,107 +60,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="custom.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/custom.js">
+      <file leaf-file-name="index2.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/css/index2.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="727" column="18" selection-start="24345" selection-end="24345" vertical-scroll-proportion="0.0" vertical-offset="3350" max-vertical-offset="4875">
-              <folding>
-                <element signature="n#!!block;n#background#0" expanded="false" />
-                <element signature="n#!!block;n#blinker#0" expanded="false" />
-                <element signature="n#!!block;n#blinker2#0" expanded="false" />
-                <element signature="n#!!block;n#howTo#0" expanded="false" />
-                <element signature="n#!!block;n#initGame#0" expanded="false" />
-                <element signature="n#!!block;n#initializeTheme#0" expanded="false" />
-                <element signature="n#!!block;n#createMap#0" expanded="false" />
-                <element signature="n#!!block;n#createRewards#0" expanded="false" />
-                <element signature="n#!!block;n#createEntity#0" expanded="false" />
-                <element signature="n#!!block;n#addEntities#0" expanded="false" />
-                <element signature="n#!!block;n#getRandom#0" expanded="false" />
-                <element signature="n#!!block;n#getDungeon#0" expanded="false" />
-                <element signature="n#!!block;n#getDungeonId#0" expanded="false" />
-                <element signature="n#!!block;n#getDefinition#0" expanded="false" />
-                <element signature="n#!!block;n#getContent#0" expanded="false" />
-                <element signature="n#!!block;n#getEntity#0" expanded="false" />
-                <element signature="n#!!block;n#getEntityByClass#0" expanded="false" />
-                <element signature="n#!!block;n#startGame#0" expanded="false" />
-                <element signature="n#!!block;n#drawDungeon#0" expanded="false" />
-                <element signature="n#!!block;n#drawEntity#0" expanded="false" />
-                <element signature="n#!!block;n#movePlayer#0" expanded="false" />
-                <element signature="n#!!block;n#hideAngle#0" expanded="false" />
-                <element signature="n#!!block;n#hideFace#0" expanded="false" />
-                <element signature="n#!!block;n#showAngle#0" expanded="false" />
-                <element signature="n#!!block;n#setFaces#0" expanded="false" />
-                <element signature="n#!!block;n#finalRoll#0" expanded="false" />
-                <element signature="n#!!block;n#rollDice#0" expanded="false" />
-                <element signature="n#!!block;n#playerTurn#0" expanded="false" />
-                <element signature="n#!!block;n#monster#0" expanded="false" />
-                <element signature="n#!!block;n#switchTurn#0" expanded="false" />
-                <element signature="n#!!block;n#emptyDiceDiv#0" expanded="false" />
-                <element signature="n#!!block;n#doDamage#0" expanded="false" />
-                <element signature="n#!!block;n#checkDefendPowers#0" expanded="false" />
-                <element signature="n#!!block;n#checkIfDead#0" expanded="false" />
-                <element signature="n#!!block;n#checkRecoveryPowers#0" expanded="false" />
-                <element signature="n#!!block;n#checkAttackPowers#0" expanded="false" />
-                <element signature="n#!!block;n#checkSurvival#0" expanded="false" />
-                <element signature="n#!!block;n#seer#0" expanded="false" />
-                <element signature="n#!!block;n#getQuestion#0" expanded="false" />
-                <element signature="n#!!block;n#bindAnswers#0" expanded="false" />
-                <element signature="n#!!block;n#processAnswers#0" expanded="false" />
-                <element signature="n#!!block;n#getRewards#0" expanded="false" />
-                <element signature="n#!!block;n#closeBattle#0" expanded="false" />
-                <element signature="n#!!block;n#victory#0" expanded="false" />
-                <element signature="n#!!block;n#defeat#0" expanded="false" />
-                <element signature="n#!!block;n#blinker3#0" expanded="false" />
-                <element signature="n#!!block;n#playerHealthHud#0" expanded="false" />
-                <element signature="n#!!block;n#playerDiceHud#0" expanded="false" />
-                <element signature="n#!!block;n#showSplash#0" expanded="false" />
-                <marker date="1414501676543" expanded="false" signature="2850:2903" placeholder="..." />
-                <marker date="1414501676543" expanded="true" signature="20521:20544" placeholder="..." />
-                <marker date="1414501676543" expanded="true" signature="20521:20532" placeholder="..." />
-                <marker date="1414501676543" expanded="false" signature="20521:20570" placeholder="..." />
-                <marker date="1414501676543" expanded="false" signature="20839:20850" placeholder="..." />
-                <marker date="1414501676543" expanded="false" signature="20988:20999" placeholder="..." />
-                <marker date="1414501676543" expanded="false" signature="21340:21352" placeholder="..." />
-                <marker date="1414501676543" expanded="false" signature="21588:21600" placeholder="..." />
-                <marker date="1414501676543" expanded="false" signature="29450:29468" placeholder="..." />
-                <marker date="1414501676543" expanded="false" signature="29530:29565" placeholder="..." />
-                <marker date="1414501676543" expanded="false" signature="33194:33206" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="67" selection-start="2779" selection-end="2779" vertical-scroll-proportion="0.46972477" vertical-offset="1094" max-vertical-offset="3525">
+            <state line="18" column="20" selection-start="323" selection-end="323" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1410">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/css/index.css">
+      <file leaf-file-name="monstercard.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/css/monstercard.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="351" column="28" selection-start="6302" selection-end="6302" vertical-scroll-proportion="-154.85294" vertical-offset="0" max-vertical-offset="5625">
+            <state line="109" column="0" selection-start="2039" selection-end="2039" vertical-scroll-proportion="0.87113404" vertical-offset="1128" max-vertical-offset="1725">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dungeon-data.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/dungeon-data.js">
+      <file leaf-file-name="index2.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="212" column="16" selection-start="6270" selection-end="6270" vertical-scroll-proportion="0.0" vertical-offset="2850" max-vertical-offset="4365">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="attack.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/css/attack.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="228" column="9" selection-start="3931" selection-end="3939" vertical-scroll-proportion="-3.3214285" vertical-offset="3234" max-vertical-offset="6435">
+            <state line="60" column="37" selection-start="2366" selection-end="2366" vertical-scroll-proportion="-3.586207" vertical-offset="692" max-vertical-offset="3930">
               <folding />
             </state>
           </provider>
@@ -158,10 +111,13 @@
         <option value="$PROJECT_DIR$/attack.html" />
         <option value="$PROJECT_DIR$/assets/js/attack.js" />
         <option value="$PROJECT_DIR$/assets/js/dungeon-data.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/assets/css/index.css" />
         <option value="$PROJECT_DIR$/assets/css/attack.css" />
         <option value="$PROJECT_DIR$/assets/js/custom.js" />
-        <option value="$PROJECT_DIR$/assets/css/index.css" />
-        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/assets/css/index2.css" />
+        <option value="$PROJECT_DIR$/index2.html" />
+        <option value="$PROJECT_DIR$/assets/css/monstercard.css" />
       </list>
     </option>
   </component>
@@ -281,6 +237,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="fonts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dungeon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dungeon-game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -415,88 +389,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/css/attack.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="174" column="29" selection-start="2678" selection-end="2678" vertical-scroll-proportion="0.0" vertical-offset="2413" max-vertical-offset="4830">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="121" column="18" selection-start="1908" selection-end="1908" vertical-scroll-proportion="0.0" vertical-offset="1357" max-vertical-offset="1950">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="179" column="1" selection-start="3700" selection-end="3700" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3525">
-          <folding>
-            <element signature="n#!!block;n#background#0" expanded="false" />
-            <element signature="n#!!block;n#blinker#0" expanded="false" />
-            <element signature="n#!!block;n#blinker2#0" expanded="false" />
-            <element signature="n#!!block;n#howTo#0" expanded="false" />
-            <element signature="n#!!block;n#initGame#0" expanded="false" />
-            <element signature="n#!!block;n#initializeTheme#0" expanded="false" />
-            <element signature="n#!!block;n#createMap#0" expanded="false" />
-            <element signature="n#!!block;n#createRewards#0" expanded="false" />
-            <element signature="n#!!block;n#createEntity#0" expanded="false" />
-            <element signature="n#!!block;n#addEntities#0" expanded="false" />
-            <element signature="n#!!block;n#getRandom#0" expanded="false" />
-            <element signature="n#!!block;n#getDungeon#0" expanded="false" />
-            <element signature="n#!!block;n#getDungeonId#0" expanded="false" />
-            <element signature="n#!!block;n#getDefinition#0" expanded="false" />
-            <element signature="n#!!block;n#getContent#0" expanded="false" />
-            <element signature="n#!!block;n#getEntity#0" expanded="false" />
-            <element signature="n#!!block;n#getEntityByClass#0" expanded="false" />
-            <element signature="n#!!block;n#startGame#0" expanded="false" />
-            <element signature="n#!!block;n#drawDungeon#0" expanded="false" />
-            <element signature="n#!!block;n#drawEntity#0" expanded="false" />
-            <element signature="n#!!block;n#movePlayer#0" expanded="false" />
-            <element signature="n#!!block;n#hideAngle#0" expanded="false" />
-            <element signature="n#!!block;n#hideFace#0" expanded="false" />
-            <element signature="n#!!block;n#showAngle#0" expanded="false" />
-            <element signature="n#!!block;n#setFaces#0" expanded="false" />
-            <element signature="n#!!block;n#finalRoll#0" expanded="false" />
-            <element signature="n#!!block;n#rollDice#0" expanded="false" />
-            <element signature="n#!!block;n#playerTurn#0" expanded="false" />
-            <element signature="n#!!block;n#monster#0" expanded="false" />
-            <element signature="n#!!block;n#switchTurn#0" expanded="false" />
-            <element signature="n#!!block;n#emptyDiceDiv#0" expanded="false" />
-            <element signature="n#!!block;n#doDamage#0" expanded="false" />
-            <element signature="n#!!block;n#checkDefendPowers#0" expanded="false" />
-            <element signature="n#!!block;n#checkIfDead#0" expanded="false" />
-            <element signature="n#!!block;n#checkRecoveryPowers#0" expanded="false" />
-            <element signature="n#!!block;n#checkAttackPowers#0" expanded="false" />
-            <element signature="n#!!block;n#checkSurvival#0" expanded="false" />
-            <element signature="n#!!block;n#seer#0" expanded="false" />
-            <element signature="n#!!block;n#getQuestion#0" expanded="false" />
-            <element signature="n#!!block;n#bindAnswers#0" expanded="false" />
-            <element signature="n#!!block;n#processAnswers#0" expanded="false" />
-            <element signature="n#!!block;n#getRewards#0" expanded="false" />
-            <element signature="n#!!block;n#closeBattle#0" expanded="false" />
-            <element signature="n#!!block;n#victory#0" expanded="false" />
-            <element signature="n#!!block;n#defeat#0" expanded="false" />
-            <element signature="n#!!block;n#blinker3#0" expanded="false" />
-            <element signature="n#!!block;n#playerHealthHud#0" expanded="false" />
-            <element signature="n#!!block;n#playerDiceHud#0" expanded="false" />
-            <element signature="n#!!block;n#showSplash#0" expanded="false" />
-            <marker date="1414501676543" expanded="false" signature="2850:2903" placeholder="..." />
-            <marker date="1414501676543" expanded="true" signature="20521:20544" placeholder="..." />
-            <marker date="1414501676543" expanded="true" signature="20521:20532" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="20521:20570" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="20839:20850" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="20988:20999" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="21340:21352" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="21588:21600" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="29450:29468" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="29530:29565" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="33194:33206" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/dungeon-data.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="231" column="5" selection-start="5485" selection-end="5485" vertical-scroll-proportion="0.0" vertical-offset="3465" max-vertical-offset="4650">
@@ -527,66 +419,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="229" column="1" selection-start="4869" selection-end="4869" vertical-scroll-proportion="0.0" vertical-offset="2197" max-vertical-offset="3525">
           <folding>
-            <element signature="n#!!block;n#background#0" expanded="false" />
-            <element signature="n#!!block;n#blinker#0" expanded="false" />
-            <element signature="n#!!block;n#blinker2#0" expanded="false" />
-            <element signature="n#!!block;n#howTo#0" expanded="false" />
-            <element signature="n#!!block;n#initGame#0" expanded="false" />
-            <element signature="n#!!block;n#initializeTheme#0" expanded="false" />
-            <element signature="n#!!block;n#createMap#0" expanded="false" />
-            <element signature="n#!!block;n#createRewards#0" expanded="false" />
-            <element signature="n#!!block;n#createEntity#0" expanded="false" />
-            <element signature="n#!!block;n#addEntities#0" expanded="false" />
-            <element signature="n#!!block;n#getRandom#0" expanded="false" />
-            <element signature="n#!!block;n#getDungeon#0" expanded="false" />
-            <element signature="n#!!block;n#getDungeonId#0" expanded="false" />
-            <element signature="n#!!block;n#getDefinition#0" expanded="false" />
-            <element signature="n#!!block;n#getContent#0" expanded="false" />
-            <element signature="n#!!block;n#getEntity#0" expanded="false" />
-            <element signature="n#!!block;n#getEntityByClass#0" expanded="false" />
-            <element signature="n#!!block;n#startGame#0" expanded="false" />
-            <element signature="n#!!block;n#drawDungeon#0" expanded="false" />
-            <element signature="n#!!block;n#drawEntity#0" expanded="false" />
-            <element signature="n#!!block;n#movePlayer#0" expanded="false" />
-            <element signature="n#!!block;n#hideAngle#0" expanded="false" />
-            <element signature="n#!!block;n#hideFace#0" expanded="false" />
-            <element signature="n#!!block;n#showAngle#0" expanded="false" />
-            <element signature="n#!!block;n#setFaces#0" expanded="false" />
-            <element signature="n#!!block;n#finalRoll#0" expanded="false" />
-            <element signature="n#!!block;n#rollDice#0" expanded="false" />
-            <element signature="n#!!block;n#playerTurn#0" expanded="false" />
-            <element signature="n#!!block;n#monster#0" expanded="false" />
-            <element signature="n#!!block;n#switchTurn#0" expanded="false" />
-            <element signature="n#!!block;n#emptyDiceDiv#0" expanded="false" />
-            <element signature="n#!!block;n#doDamage#0" expanded="false" />
-            <element signature="n#!!block;n#checkDefendPowers#0" expanded="false" />
-            <element signature="n#!!block;n#checkIfDead#0" expanded="false" />
-            <element signature="n#!!block;n#checkRecoveryPowers#0" expanded="false" />
-            <element signature="n#!!block;n#checkAttackPowers#0" expanded="false" />
-            <element signature="n#!!block;n#checkSurvival#0" expanded="false" />
-            <element signature="n#!!block;n#seer#0" expanded="false" />
-            <element signature="n#!!block;n#getQuestion#0" expanded="false" />
-            <element signature="n#!!block;n#bindAnswers#0" expanded="false" />
-            <element signature="n#!!block;n#processAnswers#0" expanded="false" />
-            <element signature="n#!!block;n#getRewards#0" expanded="false" />
-            <element signature="n#!!block;n#closeBattle#0" expanded="false" />
-            <element signature="n#!!block;n#victory#0" expanded="false" />
-            <element signature="n#!!block;n#defeat#0" expanded="false" />
-            <element signature="n#!!block;n#blinker3#0" expanded="false" />
-            <element signature="n#!!block;n#playerHealthHud#0" expanded="false" />
-            <element signature="n#!!block;n#playerDiceHud#0" expanded="false" />
-            <element signature="n#!!block;n#showSplash#0" expanded="false" />
-            <marker date="1414501676543" expanded="false" signature="2850:2903" placeholder="..." />
-            <marker date="1414501676543" expanded="true" signature="20521:20544" placeholder="..." />
-            <marker date="1414501676543" expanded="true" signature="20521:20532" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="20521:20570" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="20839:20850" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="20988:20999" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="21340:21352" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="21588:21600" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="29450:29468" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="29530:29565" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="33194:33206" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -626,66 +467,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="1" selection-start="341" selection-end="422" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="2145">
           <folding>
-            <element signature="n#!!block;n#background#0" expanded="false" />
-            <element signature="n#!!block;n#blinker#0" expanded="false" />
-            <element signature="n#!!block;n#blinker2#0" expanded="false" />
-            <element signature="n#!!block;n#howTo#0" expanded="false" />
-            <element signature="n#!!block;n#initGame#0" expanded="false" />
-            <element signature="n#!!block;n#initializeTheme#0" expanded="false" />
-            <element signature="n#!!block;n#createMap#0" expanded="false" />
-            <element signature="n#!!block;n#createRewards#0" expanded="false" />
-            <element signature="n#!!block;n#createEntity#0" expanded="false" />
-            <element signature="n#!!block;n#addEntities#0" expanded="false" />
-            <element signature="n#!!block;n#getRandom#0" expanded="false" />
-            <element signature="n#!!block;n#getDungeon#0" expanded="false" />
-            <element signature="n#!!block;n#getDungeonId#0" expanded="false" />
-            <element signature="n#!!block;n#getDefinition#0" expanded="false" />
-            <element signature="n#!!block;n#getContent#0" expanded="false" />
-            <element signature="n#!!block;n#getEntity#0" expanded="false" />
-            <element signature="n#!!block;n#getEntityByClass#0" expanded="false" />
-            <element signature="n#!!block;n#startGame#0" expanded="false" />
-            <element signature="n#!!block;n#drawDungeon#0" expanded="false" />
-            <element signature="n#!!block;n#drawEntity#0" expanded="false" />
-            <element signature="n#!!block;n#movePlayer#0" expanded="false" />
-            <element signature="n#!!block;n#hideAngle#0" expanded="false" />
-            <element signature="n#!!block;n#hideFace#0" expanded="false" />
-            <element signature="n#!!block;n#showAngle#0" expanded="false" />
-            <element signature="n#!!block;n#setFaces#0" expanded="false" />
-            <element signature="n#!!block;n#finalRoll#0" expanded="false" />
-            <element signature="n#!!block;n#rollDice#0" expanded="false" />
-            <element signature="n#!!block;n#playerTurn#0" expanded="false" />
-            <element signature="n#!!block;n#monster#0" expanded="false" />
-            <element signature="n#!!block;n#switchTurn#0" expanded="false" />
-            <element signature="n#!!block;n#emptyDiceDiv#0" expanded="false" />
-            <element signature="n#!!block;n#doDamage#0" expanded="false" />
-            <element signature="n#!!block;n#checkDefendPowers#0" expanded="false" />
-            <element signature="n#!!block;n#checkIfDead#0" expanded="false" />
-            <element signature="n#!!block;n#checkRecoveryPowers#0" expanded="false" />
-            <element signature="n#!!block;n#checkAttackPowers#0" expanded="false" />
-            <element signature="n#!!block;n#checkSurvival#0" expanded="false" />
-            <element signature="n#!!block;n#seer#0" expanded="false" />
-            <element signature="n#!!block;n#getQuestion#0" expanded="false" />
-            <element signature="n#!!block;n#bindAnswers#0" expanded="false" />
-            <element signature="n#!!block;n#processAnswers#0" expanded="false" />
-            <element signature="n#!!block;n#getRewards#0" expanded="false" />
-            <element signature="n#!!block;n#closeBattle#0" expanded="false" />
-            <element signature="n#!!block;n#victory#0" expanded="false" />
-            <element signature="n#!!block;n#defeat#0" expanded="false" />
-            <element signature="n#!!block;n#blinker3#0" expanded="false" />
-            <element signature="n#!!block;n#playerHealthHud#0" expanded="false" />
-            <element signature="n#!!block;n#playerDiceHud#0" expanded="false" />
-            <element signature="n#!!block;n#showSplash#0" expanded="false" />
-            <marker date="1414501676543" expanded="false" signature="2850:2903" placeholder="..." />
-            <marker date="1414501676543" expanded="true" signature="20521:20544" placeholder="..." />
-            <marker date="1414501676543" expanded="true" signature="20521:20532" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="20521:20570" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="20839:20850" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="20988:20999" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="21340:21352" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="21588:21600" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="29450:29468" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="29530:29565" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="33194:33206" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -719,7 +509,17 @@
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="29" selection-start="59" selection-end="59" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="690">
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#td#1;n#tr#4;n#table#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#div#1;n#div#1;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#2;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -727,66 +527,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="0" selection-start="342" selection-end="342" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="2220">
           <folding>
-            <element signature="n#!!block;n#background#0" expanded="false" />
-            <element signature="n#!!block;n#blinker#0" expanded="false" />
-            <element signature="n#!!block;n#blinker2#0" expanded="false" />
-            <element signature="n#!!block;n#howTo#0" expanded="false" />
-            <element signature="n#!!block;n#initGame#0" expanded="false" />
-            <element signature="n#!!block;n#initializeTheme#0" expanded="false" />
-            <element signature="n#!!block;n#createMap#0" expanded="false" />
-            <element signature="n#!!block;n#createRewards#0" expanded="false" />
-            <element signature="n#!!block;n#createEntity#0" expanded="false" />
-            <element signature="n#!!block;n#addEntities#0" expanded="false" />
-            <element signature="n#!!block;n#getRandom#0" expanded="false" />
-            <element signature="n#!!block;n#getDungeon#0" expanded="false" />
-            <element signature="n#!!block;n#getDungeonId#0" expanded="false" />
-            <element signature="n#!!block;n#getDefinition#0" expanded="false" />
-            <element signature="n#!!block;n#getContent#0" expanded="false" />
-            <element signature="n#!!block;n#getEntity#0" expanded="false" />
-            <element signature="n#!!block;n#getEntityByClass#0" expanded="false" />
-            <element signature="n#!!block;n#startGame#0" expanded="false" />
-            <element signature="n#!!block;n#drawDungeon#0" expanded="false" />
-            <element signature="n#!!block;n#drawEntity#0" expanded="false" />
-            <element signature="n#!!block;n#movePlayer#0" expanded="false" />
-            <element signature="n#!!block;n#hideAngle#0" expanded="false" />
-            <element signature="n#!!block;n#hideFace#0" expanded="false" />
-            <element signature="n#!!block;n#showAngle#0" expanded="false" />
-            <element signature="n#!!block;n#setFaces#0" expanded="false" />
-            <element signature="n#!!block;n#finalRoll#0" expanded="false" />
-            <element signature="n#!!block;n#rollDice#0" expanded="false" />
-            <element signature="n#!!block;n#playerTurn#0" expanded="false" />
-            <element signature="n#!!block;n#monster#0" expanded="false" />
-            <element signature="n#!!block;n#switchTurn#0" expanded="false" />
-            <element signature="n#!!block;n#emptyDiceDiv#0" expanded="false" />
-            <element signature="n#!!block;n#doDamage#0" expanded="false" />
-            <element signature="n#!!block;n#checkDefendPowers#0" expanded="false" />
-            <element signature="n#!!block;n#checkIfDead#0" expanded="false" />
-            <element signature="n#!!block;n#checkRecoveryPowers#0" expanded="false" />
-            <element signature="n#!!block;n#checkAttackPowers#0" expanded="false" />
-            <element signature="n#!!block;n#checkSurvival#0" expanded="false" />
-            <element signature="n#!!block;n#seer#0" expanded="false" />
-            <element signature="n#!!block;n#getQuestion#0" expanded="false" />
-            <element signature="n#!!block;n#bindAnswers#0" expanded="false" />
-            <element signature="n#!!block;n#processAnswers#0" expanded="false" />
-            <element signature="n#!!block;n#getRewards#0" expanded="false" />
-            <element signature="n#!!block;n#closeBattle#0" expanded="false" />
-            <element signature="n#!!block;n#victory#0" expanded="false" />
-            <element signature="n#!!block;n#defeat#0" expanded="false" />
-            <element signature="n#!!block;n#blinker3#0" expanded="false" />
-            <element signature="n#!!block;n#playerHealthHud#0" expanded="false" />
-            <element signature="n#!!block;n#playerDiceHud#0" expanded="false" />
-            <element signature="n#!!block;n#showSplash#0" expanded="false" />
-            <marker date="1414501676543" expanded="false" signature="2850:2903" placeholder="..." />
-            <marker date="1414501676543" expanded="true" signature="20521:20544" placeholder="..." />
-            <marker date="1414501676543" expanded="true" signature="20521:20532" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="20521:20570" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="20839:20850" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="20988:20999" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="21340:21352" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="21588:21600" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="29450:29468" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="29530:29565" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="33194:33206" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -808,7 +557,17 @@
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="33" selection-start="236" selection-end="236" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#td#1;n#tr#4;n#table#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#div#1;n#div#1;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#2;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -816,66 +575,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="81" column="0" selection-start="1746" selection-end="1746" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
-            <element signature="n#!!block;n#background#0" expanded="false" />
-            <element signature="n#!!block;n#blinker#0" expanded="false" />
-            <element signature="n#!!block;n#blinker2#0" expanded="false" />
-            <element signature="n#!!block;n#howTo#0" expanded="false" />
-            <element signature="n#!!block;n#initGame#0" expanded="false" />
-            <element signature="n#!!block;n#initializeTheme#0" expanded="false" />
-            <element signature="n#!!block;n#createMap#0" expanded="false" />
-            <element signature="n#!!block;n#createRewards#0" expanded="false" />
-            <element signature="n#!!block;n#createEntity#0" expanded="false" />
-            <element signature="n#!!block;n#addEntities#0" expanded="false" />
-            <element signature="n#!!block;n#getRandom#0" expanded="false" />
-            <element signature="n#!!block;n#getDungeon#0" expanded="false" />
-            <element signature="n#!!block;n#getDungeonId#0" expanded="false" />
-            <element signature="n#!!block;n#getDefinition#0" expanded="false" />
-            <element signature="n#!!block;n#getContent#0" expanded="false" />
-            <element signature="n#!!block;n#getEntity#0" expanded="false" />
-            <element signature="n#!!block;n#getEntityByClass#0" expanded="false" />
-            <element signature="n#!!block;n#startGame#0" expanded="false" />
-            <element signature="n#!!block;n#drawDungeon#0" expanded="false" />
-            <element signature="n#!!block;n#drawEntity#0" expanded="false" />
-            <element signature="n#!!block;n#movePlayer#0" expanded="false" />
-            <element signature="n#!!block;n#hideAngle#0" expanded="false" />
-            <element signature="n#!!block;n#hideFace#0" expanded="false" />
-            <element signature="n#!!block;n#showAngle#0" expanded="false" />
-            <element signature="n#!!block;n#setFaces#0" expanded="false" />
-            <element signature="n#!!block;n#finalRoll#0" expanded="false" />
-            <element signature="n#!!block;n#rollDice#0" expanded="false" />
-            <element signature="n#!!block;n#playerTurn#0" expanded="false" />
-            <element signature="n#!!block;n#monster#0" expanded="false" />
-            <element signature="n#!!block;n#switchTurn#0" expanded="false" />
-            <element signature="n#!!block;n#emptyDiceDiv#0" expanded="false" />
-            <element signature="n#!!block;n#doDamage#0" expanded="false" />
-            <element signature="n#!!block;n#checkDefendPowers#0" expanded="false" />
-            <element signature="n#!!block;n#checkIfDead#0" expanded="false" />
-            <element signature="n#!!block;n#checkRecoveryPowers#0" expanded="false" />
-            <element signature="n#!!block;n#checkAttackPowers#0" expanded="false" />
-            <element signature="n#!!block;n#checkSurvival#0" expanded="false" />
-            <element signature="n#!!block;n#seer#0" expanded="false" />
-            <element signature="n#!!block;n#getQuestion#0" expanded="false" />
-            <element signature="n#!!block;n#bindAnswers#0" expanded="false" />
-            <element signature="n#!!block;n#processAnswers#0" expanded="false" />
-            <element signature="n#!!block;n#getRewards#0" expanded="false" />
-            <element signature="n#!!block;n#closeBattle#0" expanded="false" />
-            <element signature="n#!!block;n#victory#0" expanded="false" />
-            <element signature="n#!!block;n#defeat#0" expanded="false" />
-            <element signature="n#!!block;n#blinker3#0" expanded="false" />
-            <element signature="n#!!block;n#playerHealthHud#0" expanded="false" />
-            <element signature="n#!!block;n#playerDiceHud#0" expanded="false" />
-            <element signature="n#!!block;n#showSplash#0" expanded="false" />
-            <marker date="1414501676543" expanded="false" signature="2850:2903" placeholder="..." />
-            <marker date="1414501676543" expanded="true" signature="20521:20544" placeholder="..." />
-            <marker date="1414501676543" expanded="true" signature="20521:20532" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="20521:20570" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="20839:20850" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="20988:20999" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="21340:21352" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="21588:21600" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="29450:29468" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="29530:29565" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="33194:33206" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -897,7 +605,17 @@
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#td#1;n#tr#4;n#table#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#div#1;n#div#1;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#2;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -905,66 +623,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
-            <element signature="n#!!block;n#background#0" expanded="false" />
-            <element signature="n#!!block;n#blinker#0" expanded="false" />
-            <element signature="n#!!block;n#blinker2#0" expanded="false" />
-            <element signature="n#!!block;n#howTo#0" expanded="false" />
-            <element signature="n#!!block;n#initGame#0" expanded="false" />
-            <element signature="n#!!block;n#initializeTheme#0" expanded="false" />
-            <element signature="n#!!block;n#createMap#0" expanded="false" />
-            <element signature="n#!!block;n#createRewards#0" expanded="false" />
-            <element signature="n#!!block;n#createEntity#0" expanded="false" />
-            <element signature="n#!!block;n#addEntities#0" expanded="false" />
-            <element signature="n#!!block;n#getRandom#0" expanded="false" />
-            <element signature="n#!!block;n#getDungeon#0" expanded="false" />
-            <element signature="n#!!block;n#getDungeonId#0" expanded="false" />
-            <element signature="n#!!block;n#getDefinition#0" expanded="false" />
-            <element signature="n#!!block;n#getContent#0" expanded="false" />
-            <element signature="n#!!block;n#getEntity#0" expanded="false" />
-            <element signature="n#!!block;n#getEntityByClass#0" expanded="false" />
-            <element signature="n#!!block;n#startGame#0" expanded="false" />
-            <element signature="n#!!block;n#drawDungeon#0" expanded="false" />
-            <element signature="n#!!block;n#drawEntity#0" expanded="false" />
-            <element signature="n#!!block;n#movePlayer#0" expanded="false" />
-            <element signature="n#!!block;n#hideAngle#0" expanded="false" />
-            <element signature="n#!!block;n#hideFace#0" expanded="false" />
-            <element signature="n#!!block;n#showAngle#0" expanded="false" />
-            <element signature="n#!!block;n#setFaces#0" expanded="false" />
-            <element signature="n#!!block;n#finalRoll#0" expanded="false" />
-            <element signature="n#!!block;n#rollDice#0" expanded="false" />
-            <element signature="n#!!block;n#playerTurn#0" expanded="false" />
-            <element signature="n#!!block;n#monster#0" expanded="false" />
-            <element signature="n#!!block;n#switchTurn#0" expanded="false" />
-            <element signature="n#!!block;n#emptyDiceDiv#0" expanded="false" />
-            <element signature="n#!!block;n#doDamage#0" expanded="false" />
-            <element signature="n#!!block;n#checkDefendPowers#0" expanded="false" />
-            <element signature="n#!!block;n#checkIfDead#0" expanded="false" />
-            <element signature="n#!!block;n#checkRecoveryPowers#0" expanded="false" />
-            <element signature="n#!!block;n#checkAttackPowers#0" expanded="false" />
-            <element signature="n#!!block;n#checkSurvival#0" expanded="false" />
-            <element signature="n#!!block;n#seer#0" expanded="false" />
-            <element signature="n#!!block;n#getQuestion#0" expanded="false" />
-            <element signature="n#!!block;n#bindAnswers#0" expanded="false" />
-            <element signature="n#!!block;n#processAnswers#0" expanded="false" />
-            <element signature="n#!!block;n#getRewards#0" expanded="false" />
-            <element signature="n#!!block;n#closeBattle#0" expanded="false" />
-            <element signature="n#!!block;n#victory#0" expanded="false" />
-            <element signature="n#!!block;n#defeat#0" expanded="false" />
-            <element signature="n#!!block;n#blinker3#0" expanded="false" />
-            <element signature="n#!!block;n#playerHealthHud#0" expanded="false" />
-            <element signature="n#!!block;n#playerDiceHud#0" expanded="false" />
-            <element signature="n#!!block;n#showSplash#0" expanded="false" />
-            <marker date="1414501676543" expanded="false" signature="2850:2903" placeholder="..." />
-            <marker date="1414501676543" expanded="true" signature="20521:20544" placeholder="..." />
-            <marker date="1414501676543" expanded="true" signature="20521:20532" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="20521:20570" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="20839:20850" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="20988:20999" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="21340:21352" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="21588:21600" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="29450:29468" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="29530:29565" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="33194:33206" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1026,13 +693,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/attack.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="43" selection-start="324" selection-end="324" vertical-scroll-proportion="0.28822497" vertical-offset="46" max-vertical-offset="1020">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/attack.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="339" column="0" selection-start="9607" selection-end="9689" vertical-scroll-proportion="0.33273703" vertical-offset="4899" max-vertical-offset="9630" />
@@ -1048,115 +708,90 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/dungeon-data.js">
+    <entry file="file://$PROJECT_DIR$/attack.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="212" column="16" selection-start="6270" selection-end="6270" vertical-scroll-proportion="0.0" vertical-offset="2850" max-vertical-offset="4365">
+        <state line="14" column="31" selection-start="293" selection-end="293" vertical-scroll-proportion="-7.4166665" vertical-offset="32" max-vertical-offset="1290">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/dungeon-data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="285" column="1" selection-start="7574" selection-end="7574" vertical-scroll-proportion="0.847973" vertical-offset="3773" max-vertical-offset="4365">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/img/hp.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/attack.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="228" column="9" selection-start="3931" selection-end="3939" vertical-scroll-proportion="-3.3214285" vertical-offset="3234" max-vertical-offset="6435">
+        <state line="12" column="12" selection-start="217" selection-end="217" vertical-scroll-proportion="0.32258064" vertical-offset="0" max-vertical-offset="6435">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="727" column="18" selection-start="24345" selection-end="24345" vertical-scroll-proportion="0.0" vertical-offset="3350" max-vertical-offset="4875">
-          <folding>
-            <element signature="n#!!block;n#background#0" expanded="false" />
-            <element signature="n#!!block;n#blinker#0" expanded="false" />
-            <element signature="n#!!block;n#blinker2#0" expanded="false" />
-            <element signature="n#!!block;n#howTo#0" expanded="false" />
-            <element signature="n#!!block;n#initGame#0" expanded="false" />
-            <element signature="n#!!block;n#initializeTheme#0" expanded="false" />
-            <element signature="n#!!block;n#createMap#0" expanded="false" />
-            <element signature="n#!!block;n#createRewards#0" expanded="false" />
-            <element signature="n#!!block;n#createEntity#0" expanded="false" />
-            <element signature="n#!!block;n#addEntities#0" expanded="false" />
-            <element signature="n#!!block;n#getRandom#0" expanded="false" />
-            <element signature="n#!!block;n#getDungeon#0" expanded="false" />
-            <element signature="n#!!block;n#getDungeonId#0" expanded="false" />
-            <element signature="n#!!block;n#getDefinition#0" expanded="false" />
-            <element signature="n#!!block;n#getContent#0" expanded="false" />
-            <element signature="n#!!block;n#getEntity#0" expanded="false" />
-            <element signature="n#!!block;n#getEntityByClass#0" expanded="false" />
-            <element signature="n#!!block;n#startGame#0" expanded="false" />
-            <element signature="n#!!block;n#drawDungeon#0" expanded="false" />
-            <element signature="n#!!block;n#drawEntity#0" expanded="false" />
-            <element signature="n#!!block;n#movePlayer#0" expanded="false" />
-            <element signature="n#!!block;n#hideAngle#0" expanded="false" />
-            <element signature="n#!!block;n#hideFace#0" expanded="false" />
-            <element signature="n#!!block;n#showAngle#0" expanded="false" />
-            <element signature="n#!!block;n#setFaces#0" expanded="false" />
-            <element signature="n#!!block;n#finalRoll#0" expanded="false" />
-            <element signature="n#!!block;n#rollDice#0" expanded="false" />
-            <element signature="n#!!block;n#playerTurn#0" expanded="false" />
-            <element signature="n#!!block;n#monster#0" expanded="false" />
-            <element signature="n#!!block;n#switchTurn#0" expanded="false" />
-            <element signature="n#!!block;n#emptyDiceDiv#0" expanded="false" />
-            <element signature="n#!!block;n#doDamage#0" expanded="false" />
-            <element signature="n#!!block;n#checkDefendPowers#0" expanded="false" />
-            <element signature="n#!!block;n#checkIfDead#0" expanded="false" />
-            <element signature="n#!!block;n#checkRecoveryPowers#0" expanded="false" />
-            <element signature="n#!!block;n#checkAttackPowers#0" expanded="false" />
-            <element signature="n#!!block;n#checkSurvival#0" expanded="false" />
-            <element signature="n#!!block;n#seer#0" expanded="false" />
-            <element signature="n#!!block;n#getQuestion#0" expanded="false" />
-            <element signature="n#!!block;n#bindAnswers#0" expanded="false" />
-            <element signature="n#!!block;n#processAnswers#0" expanded="false" />
-            <element signature="n#!!block;n#getRewards#0" expanded="false" />
-            <element signature="n#!!block;n#closeBattle#0" expanded="false" />
-            <element signature="n#!!block;n#victory#0" expanded="false" />
-            <element signature="n#!!block;n#defeat#0" expanded="false" />
-            <element signature="n#!!block;n#blinker3#0" expanded="false" />
-            <element signature="n#!!block;n#playerHealthHud#0" expanded="false" />
-            <element signature="n#!!block;n#playerDiceHud#0" expanded="false" />
-            <element signature="n#!!block;n#showSplash#0" expanded="false" />
-            <marker date="1414501676543" expanded="false" signature="2850:2903" placeholder="..." />
-            <marker date="1414501676543" expanded="true" signature="20521:20544" placeholder="..." />
-            <marker date="1414501676543" expanded="true" signature="20521:20532" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="20521:20570" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="20839:20850" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="20988:20999" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="21340:21352" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="21588:21600" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="29450:29468" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="29530:29565" placeholder="..." />
-            <marker date="1414501676543" expanded="false" signature="33194:33206" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/fonts/SubHeading.ttf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="21015">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/fonts/_TOU-Darcy-Baldwin-dafont.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/fonts/dbaldwin-chalkitup-preview.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="351" column="28" selection-start="6302" selection-end="6302" vertical-scroll-proportion="-154.85294" vertical-offset="0" max-vertical-offset="5625">
+        <state line="289" column="17" selection-start="5240" selection-end="5243" vertical-scroll-proportion="0.31958762" vertical-offset="4149" max-vertical-offset="5625">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="67" selection-start="2779" selection-end="2779" vertical-scroll-proportion="0.46972477" vertical-offset="1094" max-vertical-offset="3525">
+        <state line="84" column="33" selection-start="2423" selection-end="2423" vertical-scroll-proportion="1.5284404" vertical-offset="427" max-vertical-offset="3525">
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#td#1;n#tr#4;n#table#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#div#1;n#div#1;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#2;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="460" column="0" selection-start="14958" selection-end="14958" vertical-scroll-proportion="0.29173988" vertical-offset="6734" max-vertical-offset="15855">
+          <folding>
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414589876712" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/index2.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="20" selection-start="323" selection-end="323" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1410">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="37" selection-start="2366" selection-end="2366" vertical-scroll-proportion="-3.586207" vertical-offset="692" max-vertical-offset="3930">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/monstercard.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="109" column="0" selection-start="2039" selection-end="2039" vertical-scroll-proportion="0.87113404" vertical-offset="1128" max-vertical-offset="1725">
           <folding />
         </state>
       </provider>
