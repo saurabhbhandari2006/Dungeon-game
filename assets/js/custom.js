@@ -15,7 +15,7 @@ function background() {
         $('.How').fadeIn();
         clearInterval(blinkit);
         howTo();
-//        initGame();
+        initGame();
     });
 };
 
@@ -457,7 +457,7 @@ function monsterCard(entityId){
     $("#monster-health").text(hp + " " + entity.image);
 //    monsterHealthDiv = document.getElementById("monster-card-Health");
 //    monsterHealthDiv.style.width = hp + "%";
-    $("#monster-card-img").html(entity.image);
+    $("#monster-card-img").html(entity.image+"<br><br>");
 
     $("#monster-card-name").text(entity.name);
     $("#monster-card-type").text(entity.type);

@@ -1,9 +1,12 @@
 @import url("monstercard.css");
 
 
+
 @font-face {
     font-family: stencil;
     src: url(../fonts/stencil.ttf);
+    font-weight: bolder;
+    font-style: oblique;
 }
 @font-face {
     font-family: gobold;
@@ -26,6 +29,7 @@
     bottom:             0;
     left:               0;
     right:              0;
+
 }
 
 #player-hud {
@@ -82,7 +86,7 @@
     padding:            0;
     border:             0 none;
     border-collapse:    collapse;
-    display:            none;
+    /*display:            none;*/
 }
 
 

@@ -10,7 +10,7 @@
     <script src="assets/js/questionbank.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/index2.css" />
 </head>
-<body>
+<body onload="initGame()">
 
     <div id="gameAttack_wrapper">
         <div id="player-hud">
@@ -74,13 +74,13 @@
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="3" id="monster-card-name">
-                            Boss
+                        <td colspan="3" id="monster-card-name td">
+                            <div id="monster-card-name"></div>
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="3" id="monster-card-type">
-                            Difficult
+                        <td colspan="3" id="monster-card-type-td">
+                        <div id="monster-card-type"></div>
                         </td>
                     </tr>
                     <tr>
