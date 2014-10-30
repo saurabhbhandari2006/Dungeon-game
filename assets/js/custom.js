@@ -366,7 +366,6 @@ function getEntityByClass(cls) {
 
 
 function getMinimap(dungeonId) {
-    minimap = true;
     var dungeon = getDungeon(dungeonId);
     drawMinimap(dungeon.name);
     $(".mini").on('click', function() {
@@ -384,7 +383,7 @@ function drawMinimap(dungeonName) {
             var content = getContent(dungeonId, i, j);
             if(content.choiceSet.length != 0) {
                 console.log(content);
-                drawMiniEntity(content.lx, content.ly, content.mini);
+                drawMiniEntity(content.lx, content.ly, content.content);
             }
         }
     }
@@ -398,21 +397,23 @@ function drawMiniEntity(lx, ly, content) {
 function startGame(dungeonId) {
     console.log("starting Game...");
     gridSelected == false;
-    $("#toMap").on('click', function(){
-        if(minimap == false) {
-//            $("#mainmatrix").css({opacity: 0.3});
-            $("#mainmatrix").hide();
-            $("#minimap").show();
-            getMinimap(dungeonId);
-            console.log(minimap);
-        } else {
-            minimap = false;
-            $("#mainmatrix").show();
-            $("#minimap").hide();
+    minimap = false;
+    $("#toMap").on('click', function() {
+        var display = $("#minimap").css('display');
+        alert(display);
+        switch (display) {
+            case "none":
+                $("#mainmatrix").hide();
+                $("#minimap").show();
+                getMinimap(dungeonId);
+                break;
+
+            case "block":
+                $("#mainmatrix").show();
+                $("#minimap").hide();
+                break;
         }
     });
-
-
 
     $(".matrix").unbind('click').click(function() {
         if(gridSelected == false) {
@@ -443,13 +444,7 @@ function drawDungeon(dungeonId) {
     console.log("start drawDungeon");
     var dungeon = getDungeon(dungeonId);
     var setMatrixColor = document.getElementById("dungeons");
-//    document.body.style.backgroundImage = "url(" + dungeon.backgroundImage + ");";
-//    $("#background").css({'backgroundImage': "url("+dungeon.backgroundImage+")", 'background-size': "cover", 'height':"100%", 'width': "100%"});
     $("#background").attr("src", dungeon.backgroundImage);
-    $("#background").css({'z-index': "-1", 'background-size': "cover", 'height':"100%", 'width': "100%", 'position': "fixed"});
-//    $("#background").css({'background-size': "cover"})
-//    setMatrixColor = document.getElementById("mainmatrix");
-//    setMatrixColor.style.backgroundColor = dungeon.name;
     console.log(dungeon);
 
     for (var i = 1; i <= 3; i++) {
@@ -1123,8 +1118,6 @@ function blinker3() {
 function playerHealthHud(){
     playerHealthDivHud = document.getElementById("player-Health-hud");
     $("#player-hp-hud").text(playerHealth);
-    $("#player-health-val-hud").text("Health Left: " + playerHealth + "%");
-    playerHealthDivHud.style.width = playerHealth + "%";
 }
 
 function playerDiceHud(dicep){

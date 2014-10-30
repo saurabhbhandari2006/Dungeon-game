@@ -18,17 +18,12 @@
     padding: 3px;
 }
 
-#miniportal tr {
-
-}
-
 #minimapmatrix {
     width: 60%;
     height: 60%;
     position: relative;
     top: -7%;
     left: 20%;
-    border: 1;
     z-index: 2;
     text-align: center;
     border-collapse: collapse;
@@ -36,11 +31,26 @@
     max-height: 60%;
     min-width: 60%;
     max-width: 60%;
+    background: rgba(0,0,0,0.6);
+    color: #ffffff;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 0 2px #ccc;
+    -moz-box-shadow: 0 0 0 2px #ccc;
+    box-shadow: 0 0 0 2px #ccc;
 }
 
 #minimapmatrix td {
     height: 33%;
     width: 33%;
+    -webkit-box-shadow: 0 0 0 1px #ccc;
+    -moz-box-shadow: 0 0 0 1px #ccc;
+    box-shadow: 0 0 0 1px #ccc;
+}
+
+#minimapmatrix img {
+    width: 90%;
 }
 
 .mini {

@@ -15,12 +15,22 @@
     src: url(../fonts/Gravity-Book-Italic.ttf);
 }
 
+#background {
+    z-index: -1;
+    background-size: cover;
+    height:100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 
 #gameAttack_wrapper {
 
     width:              640px;
     height:             480px;
-    background-color:   #000;
+    /*background-color:   #000;*/
     margin:             auto;
     display:            inline-block;
     position:           fixed;
@@ -31,15 +41,19 @@
 }
 
 #player-hud {
+    color: white;
     width:              25%;
     height:             100%;
-    background-color:   #8b9f20;
+    /*background-color:   #8b9f20;*/
     overflow:           auto;
     float:              left;
+    font-family:        gobold;
+    font-size:          19px;
 }
 
 #player-data {
     text-align: center;
+    margin-top: 4%;
 }
 
 #player-data table {
@@ -56,7 +70,7 @@
     width:              75%;
     height:             100%;
     overflow:           auto;
-    background-color:   #7255ff;
+    /*background-color:   #7255ff;*/
     float:              left;
 }
 
@@ -65,7 +79,7 @@
     width:              100%;
     overflow:           auto;
     height:             50%;
-    background-color:   #ffcf57;
+    /*background-color:   #ffcf57;*/
     display:            block;
 
 }
@@ -74,7 +88,7 @@
     width:              100%;
     overflow:           auto;
     height:             50%;
-    background-color:   #af67fd;
+    /*background-color:   #af67fd;*/
     display:            block;
     vertical-align:     bottom;
 }
@@ -82,7 +96,7 @@
 #buttonHud table {
     margin: 1%;
     bottom: 0;
-    position: fixed;
+    position: absolute;
 
     /*display: block;*/
 }
@@ -99,22 +113,36 @@
 
 
 #mainmatrix {
-    overflow:           auto;
+    overflow:           hidden;
     width:              97%;
     height:             97%;
     margin:             auto;
+    margin-top:         1.5%;
     padding:            0;
-    border:             0 none;
+    /*border:             1px solid white;*/
     border-collapse:    collapse;
     /*display:            none;*/
+    background: rgba(0,0,0,0.7);
+    /*border-radius: 15px;*/
+    text-align: center;
+
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 0 2px #ccc;
+    -moz-box-shadow: 0 0 0 2px #ccc;
+    box-shadow: 0 0 0 2px #ccc;
 }
 
 #mainmatrix td {
     height: 33%;
     width: 33%;
+    -webkit-box-shadow: 0 0 0 1px #ccc;
+    -moz-box-shadow: 0 0 0 1px #ccc;
+    box-shadow: 0 0 0 1px #ccc;
 }
 
 #mainmatrix img {
-    width: 100%;
+    width: 90%;
 }
 

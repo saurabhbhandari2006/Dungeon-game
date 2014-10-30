@@ -12,9 +12,12 @@
 </head>
 <body onload="initGame()">
 
-    <!--<img id="background" src="" />-->
+    <img id="background" src="" />
 
     <div id="gameAttack_wrapper">
+
+
+
         <div id="player-hud">
             <div id="playerHud">
                 <div id="player-data">
@@ -36,7 +39,7 @@
             <div id="buttonHud">
                 <table>
                 <tr>
-                    <td><img id="help" src="assets/img/help.png"></td>
+                    <td><img id="help" src="assets/img/help.png" style="width: 95%"></td>
                     <td><img id="toMap" src="assets/img/minimap/minimap-icon.png"></td>
                 </tr>
                 </table>
@@ -44,7 +47,7 @@
         </div>
 
         <div id="container">
-            <table id="mainmatrix" border="1">
+            <table id="mainmatrix">
                 <tr>
                     <td id="1"> <div id="11" class="matrix"></div> </td>
                     <td id="2"> <div id="12" class="matrix"></div> </td>
@@ -119,7 +122,7 @@
                     </tr>
                 </table>
 
-                <table id="minimapmatrix" border="1">
+                <table id="minimapmatrix">
                     <tr>
                         <td id="m1"><div id="m11" class="minimatrix"> 1 </div> </td>
                         <td id="m2"><div id="m12" class="minimatrix"> 2 </div> </td>
