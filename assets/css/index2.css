@@ -76,19 +76,45 @@
     height:             50%;
     background-color:   #af67fd;
     display:            block;
+    vertical-align:     bottom;
+}
+
+#buttonHud table {
+    margin: 1%;
+    bottom: 0;
+    position: fixed;
+
+    /*display: block;*/
+}
+
+#buttonHud img:hover {
+    -webkit-transform:scale(1.20); /* Safari and Chrome */
+    -moz-transform:scale(1.20); /* Firefox */
+    -ms-transform:scale(1.20); /* IE 9 */
+    -o-transform:scale(1.20); /* Opera */
+    transform:scale(1.20);
+    cursor: pointer;
 }
 
 
 
 #mainmatrix {
     overflow:           auto;
-    width:              100%;
-    height:             100%;
-    margin:             0;
+    width:              97%;
+    height:             97%;
+    margin:             auto;
     padding:            0;
     border:             0 none;
     border-collapse:    collapse;
-    display:            none;
+    /*display:            none;*/
 }
 
+#mainmatrix td {
+    height: 33%;
+    width: 33%;
+}
+
+#mainmatrix img {
+    width: 100%;
+}
 

@@ -9,7 +9,7 @@
 
 #monster-hud {
     background: black;
-    float: right;
+    /*float: right;*/
     margin-right: 10%;
     margin-top: 10%;
     color: white;

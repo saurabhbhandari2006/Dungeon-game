@@ -77,10 +77,10 @@ function initGame() {
     createEntity();
     addEntities();
     createRewards();
-//    drawDungeon(1);
-//    startGame(1);
+    drawDungeon(1);
+    startGame(1);
 
-    initBattleWindow(1);
+//    initBattleWindow(1);
 
     console.log("initGame ends");
 }
@@ -366,6 +366,7 @@ function getEntityByClass(cls) {
 
 
 function getMinimap(dungeonId) {
+    minimap = true;
     var dungeon = getDungeon(dungeonId);
     drawMinimap(dungeon.name);
     $(".mini").on('click', function() {
@@ -397,12 +398,17 @@ function drawMiniEntity(lx, ly, content) {
 function startGame(dungeonId) {
     console.log("starting Game...");
     gridSelected == false;
-    $("#toMap").unbind('click').click(function(){
+    $("#toMap").on('click', function(){
         if(minimap == false) {
 //            $("#mainmatrix").css({opacity: 0.3});
             $("#mainmatrix").hide();
             $("#minimap").show();
             getMinimap(dungeonId);
+            console.log(minimap);
+        } else {
+            minimap = false;
+            $("#mainmatrix").show();
+            $("#minimap").hide();
         }
     });
 
@@ -749,6 +755,7 @@ function showDice(tp,dice1,dice2){
 }
 //------------------------------------------------------------dice roll end-------------------------------------
 function playerTurn() {
+    $("#toMap").hide();
     console.log("In Player Turn");
     setTimeout(function(){
         showSplash("Player Turn",2000);
@@ -1084,6 +1091,7 @@ function closeBattle(){
     console.log("close battle");
     $("#player-dice-img").empty();
     $("#monster-dice-img").empty();
+    $("#toMap").show();
 }
 
 function victory(){
