@@ -1,5 +1,20 @@
 @import url("monstercard.css");
 @import url("minimap.css");
+@import url("attack.css");
+
+@font-face {
+    font-family: stencil;
+    src: url(../fonts/stencil.ttf);
+}
+@font-face {
+    font-family: gobold;
+    src: url(../fonts/GoboldBold.ttf);
+}
+@font-face {
+    font-family: gravity;
+    src: url(../fonts/Gravity-Book-Italic.ttf);
+}
+
 
 #gameAttack_wrapper {
 
@@ -16,12 +31,25 @@
 }
 
 #player-hud {
-
     width:              25%;
     height:             100%;
     background-color:   #8b9f20;
     overflow:           auto;
     float:              left;
+}
+
+#player-data {
+    text-align: center;
+}
+
+#player-data table {
+    margin: auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.hud-scale {
+    width: 40px;
 }
 
 #container {
@@ -36,25 +64,16 @@
 
     width:              100%;
     overflow:           auto;
-    height:             40%;
+    height:             50%;
     background-color:   #ffcf57;
     display:            block;
 
 }
 
-#filler {
-
-    width:              100%;
-    overflow:           auto;
-    height:             20%;
-    background-color:   #ffffaa;
-    display:            block;
-}
-
 #buttonHud {
     width:              100%;
     overflow:           auto;
-    height:             40%;
+    height:             50%;
     background-color:   #af67fd;
     display:            block;
 }

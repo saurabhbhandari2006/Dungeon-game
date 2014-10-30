@@ -32,6 +32,15 @@
     z-index: 2;
     text-align: center;
     border-collapse: collapse;
+    min-height: 60%;
+    max-height: 60%;
+    min-width: 60%;
+    max-width: 60%;
+}
+
+#minimapmatrix td {
+    height: 33%;
+    width: 33%;
 }
 
 .mini {

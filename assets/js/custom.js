@@ -18,7 +18,7 @@ function background() {
         $('.How').fadeIn();
         clearInterval(blinkit);
         howTo();
-//        initGame();
+         initGame();
     });
 }
 
@@ -58,6 +58,7 @@ function initTheme() {
     document.getElementById("Red").src = "assets/img/minimap/red.png";
 
     initGame();
+
 }
 
 
@@ -76,8 +77,10 @@ function initGame() {
     createEntity();
     addEntities();
     createRewards();
-    drawDungeon(1);
-    startGame(1);
+//    drawDungeon(1);
+//    startGame(1);
+
+    initBattleWindow(1);
 
     console.log("initGame ends");
 }

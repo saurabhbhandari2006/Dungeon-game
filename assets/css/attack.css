@@ -1,423 +1,457 @@
 #fightArena {
     /*border: 1px solid red;*/
     height: 100%;
-    position: absolute;
     width: 100%;
-    display: none;
+    /*display: none;*/
     background-color: rgba(0, 0, 0, 0.7);
+    display: inline-block;
 }
 
-#name-div {
-    width: 100%;
-    height: 5%;
+#monster-hud {
+    background: black;
+    float: right;
+    margin-right: 10%;
+    margin-top: 10%;
+    color: white;
+    display: inline;
+    width: auto;
+
+}
+
+#monster {
+    width: 65%;
+}
+
+#monster-hp-img {
+    /*float: left;*/
+    display: inline-block;
+}
+
+#monster-dice-img {
+    /*float: left;*/
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*#name-div {*/
+    /*width: 100%;*/
+    /*height: 5%;*/
     /*border: 1px solid yellow;*/
-    top: 2%;
-    position: absolute;
-}
-
-.names {
-    height: 100%;
-    width: 35%;
-    text-align: center;
-    /*border: 1px solid green;*/
-
-}
-
-#monster-name {
-    color: red;
-    float: right;
-    position: absolute;
-    right: 1%;
-}
-
-#player-name {
-    float: left;
-    color: blue;
-    position: absolute;
-}
-
-#health-bar-box {
-    width: 100%;
-    height: 8%;
-    /*border: 1px solid green;*/
-    top: 8%;
-    position: absolute;
-}
-
-.meter-box-wrapper {
-    /*border: 1px solid red;*/
-    height: 50%;
-    width: 100%;
-    position: absolute;
-}
-
-.health-border {
-    border: 1px solid #ffffff; /*border column*/
-    height: 100%;
-    width: 35%;
-    border-radius: 10px;
-}
-
-#monster-Health-border {
-    float: right;
-    margin-right: 1%;
-    position: absolute;
-    left:62% ;
-}
-
-#monster-hp {
-    /*border: 1px solid green;*/
-    text-align: center;
-}
-
-
-
-#player-Health-border {
-    float: left;
-    margin-left: 1%;
-    position: absolute
-}
-#player-hp {
-    /*border: 1px solid green;*/
-    text-align: center;
-}
-
-#monster-Health {
-    background: none repeat scroll 0 0 red;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    float: right;
-}
-
-#player-Health {
-    background: none repeat scroll 0 0 blue;
-    border-radius: 10px;
-    width: 100%;
-    height: 100%;
-    right: 0;
-    float: left;
-}
-
-#meter-box-health {
-    /*border: 1px solid blue;*/
-    height: 50%;
-    position: absolute;
-    top: 50%;
-    width: 100%;
-}
-
-.health-val-box {
-    height: 100%;
-    width: 35%;
-    /*border: 1px solid deeppink;*/
-}
-
-#monster-health-val-box {
-    float: right;
-    left: 62%;
-    position: absolute;
-}
-
-#player-health-val-box {
-    float: left;
-    left: -5%;
-    position: absolute;
-}
-
-.value-display {
-    height: 100%;
-    width: 70%;
-    /*border: 1px solid #ffffff;*/
-    float: left;
-    color: #ffffff;
-    font-size: 12px;
-    text-align: center;
-    margin-top: 2%;
-
-}
-
-#player-health-val {
-    height: 100%;
-    width: 100%;
-    /*border: 1px solid #ffffff;*/
-    float: left;
-    color: #ffffff;
-    font-size: 12px;
-    text-align: center;
-    margin-top: 2%;
-}
-
-.lvl-display {
-    color: red;
-    float: right;
-    height: 100%;
+    /*top: 2%;*/
     /*position: absolute;*/
-    text-align: center;
-    width: 26%;
-    font-size: 12px;
-    margin-top: 2%;
-}
+/*}*/
 
-#battle-box-wrapper {
+/*.names {*/
+    /*height: 100%;*/
+    /*width: 35%;*/
+    /*text-align: center;*/
     /*border: 1px solid green;*/
-    height: 50%;
-    position: absolute;
-    top: 18%;
-    width: 97%;
-}
 
-.image-box {
+/*}*/
+
+/*#monster-name {*/
+    /*color: red;*/
+    /*float: right;*/
+    /*position: absolute;*/
+    /*right: 1%;*/
+/*}*/
+
+/*#player-name {*/
+    /*float: left;*/
+    /*color: blue;*/
+    /*position: absolute;*/
+/*}*/
+
+/*#health-bar-box {*/
+    /*width: 100%;*/
+    /*height: 8%;*/
+    /*border: 1px solid green;*/
+    /*top: 8%;*/
+    /*position: absolute;*/
+/*}*/
+
+/*.meter-box-wrapper {*/
+    /*border: 1px solid red;*/
+    /*height: 50%;*/
+    /*width: 100%;*/
+    /*position: absolute;*/
+/*}*/
+
+/*.health-border {*/
+    /*border: 1px solid #ffffff; *//*border column*/
+    /*height: 100%;*/
+    /*width: 35%;*/
+    /*border-radius: 10px;*/
+/*}*/
+
+/*#monster-Health-border {*/
+    /*float: right;*/
+    /*margin-right: 1%;*/
+    /*position: absolute;*/
+    /*left:62% ;*/
+/*}*/
+
+/*#monster-hp {*/
+    /*border: 1px solid green;*/
+    /*text-align: center;*/
+/*}*/
+
+
+
+/*#player-Health-border {*/
+    /*float: left;*/
+    /*margin-left: 1%;*/
+    /*position: absolute*/
+/*}*/
+/*#player-hp {*/
+    /*border: 1px solid green;*/
+    /*text-align: center;*/
+/*}*/
+
+/*#monster-Health {*/
+    /*background: none repeat scroll 0 0 red;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*border-radius: 10px;*/
+    /*float: right;*/
+/*}*/
+
+/*#player-Health {*/
+    /*background: none repeat scroll 0 0 blue;*/
+    /*border-radius: 10px;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*right: 0;*/
+    /*float: left;*/
+/*}*/
+
+/*#meter-box-health {*/
+    /*border: 1px solid blue;*/
+    /*height: 50%;*/
+    /*position: absolute;*/
+    /*top: 50%;*/
+    /*width: 100%;*/
+/*}*/
+
+/*.health-val-box {*/
+    /*height: 100%;*/
+    /*width: 35%;*/
+    /*border: 1px solid deeppink;*/
+/*}*/
+
+/*#monster-health-val-box {*/
+    /*float: right;*/
+    /*left: 62%;*/
+    /*position: absolute;*/
+/*}*/
+
+/*#player-health-val-box {*/
+    /*float: left;*/
+    /*left: -5%;*/
+    /*position: absolute;*/
+/*}*/
+
+/*.value-display {*/
+    /*height: 100%;*/
+    /*width: 70%;*/
+    /*border: 1px solid #ffffff;*/
+    /*float: left;*/
+    /*color: #ffffff;*/
+    /*font-size: 12px;*/
+    /*text-align: center;*/
+    /*margin-top: 2%;*/
+
+/*}*/
+
+/*#player-health-val {*/
+    /*height: 100%;*/
+    /*width: 100%;*/
+    /*float: left;*/
+    /*color: #ffffff;*/
+    /*font-size: 12px;*/
+    /*text-align: center;*/
+    /*margin-top: 2%;*/
+/*}*/
+
+/*.lvl-display {*/
+    /*color: red;*/
+    /*float: right;*/
+    /*height: 100%;*/
+    /*position: absolute;*/
+    /*text-align: center;*/
+    /*width: 26%;*/
+    /*font-size: 12px;*/
+    /*margin-top: 2%;*/
+/*}*/
+
+/*#battle-box-wrapper {*/
+    /*border: 1px solid green;*/
+    /*height: 50%;*/
+    /*position: absolute;*/
+    /*top: 18%;*/
+    /*width: 97%;*/
+/*}*/
+
+/*.image-box {*/
     /*box-shadow: 0 0 0 0 rgba(255, 0, 0, 1);*/
-    height: 50%;
-    margin: 5%;
-    position: absolute;
-    top: 12%;
-    width: 20%;
+    /*height: 50%;*/
+    /*margin: 5%;*/
+    /*position: absolute;*/
+    /*top: 12%;*/
+    /*width: 20%;*/
     /*border: 1px solid green;*/
     /*-webkit-box-shadow: 0px 0px 0px 0px rgba(255,0,0,1);*/
     /*-moz-box-shadow: 0px 0px 0px 0px rgba(255,0,0,1);*/
     /*box-shadow: 0px 0px 0px 0px rgba(255,0,0,1);*/
-}
+/*}*/
 
-#monster {
+/*#monster {*/
     /*background-image: url('../img/m3.png');*/
     /*background-repeat: no-repeat;*/
     /*color: #ffffff;*/
-    float: right;
-    height: 90%;
-    opacity: 0.5;
-    position: absolute;
-    right: 1%;
-    top: -1%;
-    width: auto;
-}
+    /*float: right;*/
+    /*height: 90%;*/
+    /*opacity: 0.5;*/
+    /*position: absolute;*/
+    /*right: 1%;*/
+    /*top: -1%;*/
+    /*width: auto;*/
+/*}*/
 
-#monster-img {
-    -webkit-box-shadow: 0px 0px 0px 0px rgba(255,0,0,1);
-    -moz-box-shadow: 0px 0px 0px 0px rgba(255,0,0,1);
-    box-shadow: 0px 0px 0px 0px rgba(255,0,0,1);
-}
+/*#monster-img {*/
+    /*-webkit-box-shadow: 0px 0px 0px 0px rgba(255,0,0,1);*/
+    /*-moz-box-shadow: 0px 0px 0px 0px rgba(255,0,0,1);*/
+    /*box-shadow: 0px 0px 0px 0px rgba(255,0,0,1);*/
+/*}*/
 
-#player {
-    float: left;
-    height: 90%;
-    position: absolute;
-    top: 1%;
-    width: auto;
+/*#player {*/
+    /*float: left;*/
+    /*height: 90%;*/
+    /*position: absolute;*/
+    /*top: 1%;*/
+    /*width: auto;*/
     /*-webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,255,1);*/
     /*-moz-box-shadow: 0px 0px 0px 0px rgba(0,0,255,1);*/
     /*box-shadow: 0px 0px 0px 0px rgba(0,0,255,1);*/
-}
-#player-img{
-    width: 100%;
-    height: 100%;
-}
-#dice-container{
-    width: 100%;
-    height: 40px;
-    bottom: 85%;
-    position: absolute;
-    left: 3%;
-}
-.total-dice{
+/*}*/
+/*#player-img{*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+/*}*/
+/*#dice-container{*/
+    /*width: 100%;*/
+    /*height: 40px;*/
+    /*bottom: 85%;*/
+    /*position: absolute;*/
+    /*left: 3%;*/
+/*}*/
+/*.total-dice{*/
     /*border: 1px solid #0066FF;*/
-    height: 100%;
-    width: 35%;
-    position: absolute;
+    /*height: 100%;*/
+    /*width: 35%;*/
+    /*position: absolute;*/
 
-}
-#monster-dice{
-    float: right;
-    right: 1%;
-}
+/*}*/
+/*#monster-dice{*/
+    /*float: right;*/
+    /*right: 1%;*/
+/*}*/
 
-#player-dice{
-    float: left;
-    left: 1%;
-    position: absolute;
-}
-.total-dice-img{
-    width: 100%;
-    height: 100%;
+/*#player-dice{*/
+    /*float: left;*/
+    /*left: 1%;*/
+    /*position: absolute;*/
+/*}*/
+/*.total-dice-img{*/
+    /*width: 100%;*/
+    /*height: 100%;*/
     /*background-color: yellow;*/
-}
-#diceBox {
-    border: 5px solid whitesmoke;
-    border-radius: 5px;
-    bottom: 14%;
-    left: 25%;
-    position: absolute;
-    z-index: 0;
+/*}*/
+/*#diceBox {*/
+    /*border: 5px solid whitesmoke;*/
+    /*border-radius: 5px;*/
+    /*bottom: 14%;*/
+    /*left: 25%;*/
+    /*position: absolute;*/
+    /*z-index: 0;*/
     /*width: 20%;*/
     /*display: none;*/
-}
+/*}*/
 
-.shown1, .shown3, .shown5 {
-    background-image: url('../img/diceroll.png');
+/*.shown1, .shown3, .shown5 {*/
+    /*background-image: url('../img/diceroll.png');*/
 
-    -webkit-animation: play 1s steps(17) infinite;
-    -moz-animation: play 1s steps(17) infinite;
-    -ms-animation: play 1s steps(17) infinite;
-    -o-animation: play 1s steps(17) infinite;
-    animation: play 1s steps(17) infinite;
-}
+    /*-webkit-animation: play 1s steps(17) infinite;*/
+    /*-moz-animation: play 1s steps(17) infinite;*/
+    /*-ms-animation: play 1s steps(17) infinite;*/
+    /*-o-animation: play 1s steps(17) infinite;*/
+    /*animation: play 1s steps(17) infinite;*/
+/*}*/
 
-.shown2, .shown4 {
-    background-image: url('../img/dicerollrev.png');
+/*.shown2, .shown4 {*/
+    /*background-image: url('../img/dicerollrev.png');*/
 
-    -webkit-animation: play 1s steps(17) infinite;
-    -moz-animation: play 1s steps(17) infinite;
-    -ms-animation: play 1s steps(17) infinite;
-    -o-animation: play 1s steps(17) infinite;
-    animation: play 1s steps(17) infinite;
-}
+    /*-webkit-animation: play 1s steps(17) infinite;*/
+    /*-moz-animation: play 1s steps(17) infinite;*/
+    /*-ms-animation: play 1s steps(17) infinite;*/
+    /*-o-animation: play 1s steps(17) infinite;*/
+    /*animation: play 1s steps(17) infinite;*/
+/*}*/
 
-#die1, #die2, #die3, #die4, #die5 {
-    width: 64px;
-    height: 65px;
-    display: inline-block;
+/*#die1, #die2, #die3, #die4, #die5 {*/
+    /*width: 64px;*/
+    /*height: 65px;*/
+    /*display: inline-block;*/
 
-}
+/*}*/
 
-#roll {
-    padding: 5px;
-    display: inline-block;
-    background-color: #FFF;
-    border-radius: 5px;
-    margin: 5px 5px 0px 5px;
-}
+/*#roll {*/
+    /*padding: 5px;*/
+    /*display: inline-block;*/
+    /*background-color: #FFF;*/
+    /*border-radius: 5px;*/
+    /*margin: 5px 5px 0px 5px;*/
+/*}*/
 
-@-webkit-keyframes play {
-    from {
-        background-position: 0px;
-    }
-    to {
-        background-position: -1100px;
-    }
-}
+/*@-webkit-keyframes play {*/
+    /*from {*/
+        /*background-position: 0px;*/
+    /*}*/
+    /*to {*/
+        /*background-position: -1100px;*/
+    /*}*/
+/*}*/
 
-@-moz-keyframes play {
-    from {
-        background-position: 0px;
-    }
-    to {
-        background-position: -1100px;
-    }
-}
+/*@-moz-keyframes play {*/
+    /*from {*/
+        /*background-position: 0px;*/
+    /*}*/
+    /*to {*/
+        /*background-position: -1100px;*/
+    /*}*/
+/*}*/
 
-@-ms-keyframes play {
-    from {
-        background-position: 0px;
-    }
-    to {
-        background-position: -1100px;
-    }
-}
+/*@-ms-keyframes play {*/
+    /*from {*/
+        /*background-position: 0px;*/
+    /*}*/
+    /*to {*/
+        /*background-position: -1100px;*/
+    /*}*/
+/*}*/
 
-@-o-keyframes play {
-    from {
-        background-position: 0px;
-    }
-    to {
-        background-position: -1100px;
-    }
-}
+/*@-o-keyframes play {*/
+    /*from {*/
+        /*background-position: 0px;*/
+    /*}*/
+    /*to {*/
+        /*background-position: -1100px;*/
+    /*}*/
+/*}*/
 
-@keyframes play {
-    from {
-        background-position: 0px;
-    }
-    to {
-        background-position: -1100px;
-    }
-}
+/*@keyframes play {*/
+    /*from {*/
+        /*background-position: 0px;*/
+    /*}*/
+    /*to {*/
+        /*background-position: -1100px;*/
+    /*}*/
+/*}*/
 
-.btn {
-    width: 80px;
-    height: 40px;
-}
+/*.btn {*/
+    /*width: 80px;*/
+    /*height: 40px;*/
+/*}*/
 
-#battleBtn {
-    bottom: 4%;
-    left: 38%;
-    position: absolute;
-}
-#startAgainClicker{
-    text-decoration: none;
-    font-size:48%;
-    color:cornflowerblue;
-}
-.defeat{
-    height: 480px;
+/*#battleBtn {*/
+    /*bottom: 4%;*/
+    /*left: 38%;*/
+    /*position: absolute;*/
+/*}*/
+/*#startAgainClicker{*/
+    /*text-decoration: none;*/
+    /*font-size:48%;*/
+    /*color:cornflowerblue;*/
+/*}*/
+/*.defeat{*/
+    /*height: 480px;*/
     /*margin-top: 18%;*/
     /*position: absolute;*/
-    width: 640px;
-    display: none;
-    text-align: center;
-    font-size: 30px;
-    margin-top: 25%;
-}
+    /*width: 640px;*/
+    /*display: none;*/
+    /*text-align: center;*/
+    /*font-size: 30px;*/
+    /*margin-top: 25%;*/
+/*}*/
 
-.image-scale{
-    height: 100%;
-    width: 100%;
-}
+/*.image-scale{*/
+    /*height: 100%;*/
+    /*width: 100%;*/
+/*}*/
 
 
 
 
 /*----------------------------------floating----------------------------------------------*/
-.floating{
-    float: left;
-    -webkit-animation-name: Floatingx;
-    -webkit-animation-duration: 3s;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: ease-in-out;
-    -moz-animation-name: Floating;
-    -moz-animation-duration: 3s;
-    -moz-animation-iteration-count: infinite;
-    -moz-animation-timing-function: ease-in-out;
-    margin-left: 30px;
-    margin-top: 5px;
+/*.floating{*/
+    /*float: left;*/
+    /*-webkit-animation-name: Floatingx;*/
+    /*-webkit-animation-duration: 3s;*/
+    /*-webkit-animation-iteration-count: infinite;*/
+    /*-webkit-animation-timing-function: ease-in-out;*/
+    /*-moz-animation-name: Floating;*/
+    /*-moz-animation-duration: 3s;*/
+    /*-moz-animation-iteration-count: infinite;*/
+    /*-moz-animation-timing-function: ease-in-out;*/
+    /*margin-left: 30px;*/
+    /*margin-top: 5px;*/
 
-}
+/*}*/
 
-@-webkit-keyframes Floatingx{
-    from {-webkit-transform:translate(0, 0px);}
-    65% {-webkit-transform:translate(0, 15px);}
-    to {-webkit-transform: translate(0, -0px);    }
-}
+/*@-webkit-keyframes Floatingx{*/
+    /*from {-webkit-transform:translate(0, 0px);}*/
+    /*65% {-webkit-transform:translate(0, 15px);}*/
+    /*to {-webkit-transform: translate(0, -0px);    }*/
+/*}*/
 
-@-moz-keyframes Floating{
-    from {-moz-transform:translate(0, 0px);}
-    65% {-moz-transform:translate(0, 15px);}
-    to {-moz-transform: translate(0, -0px);}
-}
+/*@-moz-keyframes Floating{*/
+    /*from {-moz-transform:translate(0, 0px);}*/
+    /*65% {-moz-transform:translate(0, 15px);}*/
+    /*to {-moz-transform: translate(0, -0px);}*/
+/*}*/
 
-.scaling{
-    float: left;
-    -webkit-animation-name: scalex;
-    -webkit-animation-duration:3s;
-    -webkit-animation-iteration-count:infinite;
-    -webkit-animation-timing-function:ease-in-out;
-    -moz-animation-name: scale;
-    -moz-animation-duration:3s;
-    -moz-animation-iteration-count:infinite;
-    -moz-animation-timing-function:ease-in-out;
-}
+/*.scaling{*/
+    /*float: left;*/
+    /*-webkit-animation-name: scalex;*/
+    /*-webkit-animation-duration:3s;*/
+    /*-webkit-animation-iteration-count:infinite;*/
+    /*-webkit-animation-timing-function:ease-in-out;*/
+    /*-moz-animation-name: scale;*/
+    /*-moz-animation-duration:3s;*/
+    /*-moz-animation-iteration-count:infinite;*/
+    /*-moz-animation-timing-function:ease-in-out;*/
+/*}*/
 
-@-webkit-keyframes scalex{
-    from {-webkit-transform: scale(0.9);}
-    65% {-webkit-transform: scale(1.0);}
-    to {-webkit-transform: scale(0.9);}
-}
+/*@-webkit-keyframes scalex{*/
+    /*from {-webkit-transform: scale(0.9);}*/
+    /*65% {-webkit-transform: scale(1.0);}*/
+    /*to {-webkit-transform: scale(0.9);}*/
+/*}*/
 
-@-moz-keyframes scale{
-    from {-moz-transform: scale(0.9);}
-    65% {-moz-transform: scale(1.0);}
-    to {-moz-transform: scale(0.9);}
-}
+/*@-moz-keyframes scale{*/
+    /*from {-moz-transform: scale(0.9);}*/
+    /*65% {-moz-transform: scale(1.0);}*/
+    /*to {-moz-transform: scale(0.9);}*/
+/*}*/
 /*------------------------------end--------------------------------------*/
 
 

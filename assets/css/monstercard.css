@@ -1,109 +1,98 @@
 #monster-card{
-    border:             1px solid whitesmoke;
-    background-color:   rgba(20, 20, 20, 0.9);
-    border-radius:      10px;
-    overflow:           auto;
-    height:             90%;
-    width:              90%;
-    margin:             4%;
-    top:                0;
-    bottom:             0;
-    left:               0;
-    right:              0;
-    /*display:            inline-block;*/
-    position:           relative;
-    display:          none;
-
+    /*border:               1px solid whitesmoke;*/
+    /*background-color:     rgba(20, 20, 20, 0.9);*/
+    /*border-radius:        10px;*/
+    overflow:               auto;
+    height:                 90%;
+    width:                  90%;
+    margin:                 4%;
+    top:                    0;
+    bottom:                 0;
+    left:                   0;
+    right:                  0;
+    /*display:                inline-block;*/
+    position:               relative;
+    display:                none;
 }
-
-#monster-detail-box{
-    overflow:           auto;
-    width:              100%;
-    height:             53%;
-    /*border:           1px solid red;*/
+#monster-card-table{
+    margin:                 auto;
+    overflow:               auto;
+    top:                    0;
+    bottom:                 0;
+    left:                   0;
+    right:                  0;
+    width:                  90%;
+    margin-top:             20%;
 }
-
-#monster-card-img {
-    overflow:           auto;
-    border:             1px solid whitesmoke;
-    height:             85%;
-    width:              30%;
-    margin:             4%;
-    border-radius:      5px;
-    display:            inline-block;
-    float:              left;
-    margin-bottom:      0;
+#monster-card-table td{
+    padding:                0;
+    width:                  auto;
+    /*text-align:           center;*/
+    vertical-align:         middle;
 }
-
-#monster-details{
-    overflow:           auto;
-    float:              left;
-    height:             100%;
-    width:              61%;
-    display:            inline-block;
+#monster-card-header{
+    font-size:              25px;
+    text-align:             center;
+    font-family:            stencil;
+    color:                  whitesmoke;
 }
-
-#monster-detail-table {
-    overflow: auto;
-    color: whitesmoke;
-    width: 100%;
-
+#monster-card-health {
+    text-align:             right;
+    font-size:              20px;
+    vertical-align:         middle;
+    min-width:              30%;
+    max-width:              30%;
+    font-family:            gobold;
 }
-
+#monster-card-health img{
+    vertical-align:         middle;
+}
+#monster-card-image {
+    text-align:             center;
+    min-width:              40%;
+    max-width:              40%;
+}
+#monster-card-image img{
+    border:                 13px solid gold;
+    border-radius:          100%;
+    vertical-align:         middle;
+    width:                  75%;
+}
+#monster-card-dice{
+    text-align:             left;
+    font-size:              20px;
+    vertical-align:         middle;
+    min-width:              30%;
+    max-width:              30%;
+    font-family:            gobold;
+}
+#monster-card-dice img{
+    vertical-align:         middle;
+}
+#monster-card-name{
+    /*background:           saddlebrown;*/
+    text-align:             center;
+    font-family:            gravity;
+}
+#monster-card-type{
+    /*background:           saddlebrown;*/
+    text-align:             center;
+    font-family:            gravity;
+}
 #monster-card-desc{
-    border:             1px solid white;
-    height:             25%;
-    width:              91%;
-    border-radius:      5px;
-    margin:             auto;
-    margin-top:         5%;
+    font-family:            gravity;
 }
-
-#monster-card-btn{
-    overflow: auto;
-    width: 100%;
-    margin-top: 5%;
-    text-align: center;
+#monster-card-desc{
+    border:                 1px solid white;
+    border-radius:          5px;
+    margin:                 auto;
+    margin-top:             1%;
+    color:                  whitesmoke;
+    /*margin:               0.1%;*/
 }
-
-.monster-card-scale{
-    overflow: auto;
-    width: 30%;
+#monster-card-desc span{
+    margin:                 1%;
+    font-weight:            bold;
 }
-
-#monster-card-health-box {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-}
-
-#monster-card-Health-border {
-    border: 1px solid #ffffff;
-    border-radius: 10px;
-    height: 100%;
-    width: 24%;
-    display: block;
-    /*position: fixed;*/
-
-}
-
-#monster-card-hp {
-    font-size: 10px;
-    text-align: center;
-    display: block;
-    overflow: auto;
-}
-
-#monster-card-Health-val {
-    background: none repeat scroll 0 0 red;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-}
-
-#monster-card-Health {
-    background: none repeat scroll 0 0 red;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
+#btn-continue{
 }
