@@ -79,12 +79,12 @@
 }
 
 #monster-card-name{
-    background: saddlebrown;
+    /*background: saddlebrown;*/
     text-align: center;
     font-family: gravity;
 }
 #monster-card-type{
-    background: saddlebrown;
+    /*background: saddlebrown;*/
     text-align: center;
     font-family: gravity;
 }
