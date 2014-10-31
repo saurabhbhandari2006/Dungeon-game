@@ -1,7 +1,7 @@
 #monster-card{
     /*border:             1px solid whitesmoke;*/
     /*background-color:   rgba(20, 20, 20, 0.9);*/
-    background: rgba(0,0,0,0.9);
+    background: rgba(1,1,1,0.9);
     overflow:           auto;
     height:             90%;
     width:              90%;
@@ -78,7 +78,7 @@
     border-radius: 25%;
     vertical-align: middle;
     width: 75%;
-    background: rgba(0,0,0,1);
+    background: rgba(1,1,1,1);
 }
 
 #monster-card-dice{
@@ -96,34 +96,47 @@
     font-weight: bold;
     font-style: oblique;
     font-weight: bold;
-    background-color:#5C2E00;
+    /*background-color:#5C2E00;*/
     margin: auto;
     text-align: center;
     font-family: gravity;
     width: 50%;
-    padding: 1%;
-    border: 3px outset #000000;
+    padding: 1.5%;
+    border-radius: 3px;
+    background-image: url("../img/namebg.png");
+    opacity: 0.95;
+    filter: alpha(opacity=95);
 }
 #monster-card-type{
+    color: floralwhite;
     font-weight: bold;
     font-style: oblique;
     margin: auto;
     width: 50%;
-    background-color:#5C2E00;
+    /*background-color:#5C2E00;*/
     text-align: center;
     font-family: gravity;
-    padding: 1%;
-    border: 3px outset #000000;
+    padding: 1.5%;
+    /*border: 2px solid #ffffff;*/
+    border-radius: 3px;
+    background-image: url("../img/namebg.png");
+    opacity: 0.95;
+    filter: alpha(opacity=95);
+    /*box-shadow: inset 1px 1px 1px 1px grey;*/
 }
 
 #monster-card-desc{
-    background: #A35200;
+    /*background: #A35200;*/
     font-family: gravity;
     border-radius:      5px;
     margin:             auto;
     width: 65%;
-    padding: 1%;
-    border: 3px outset #000000;
+    padding: 2.5%;
+    border-radius: 3px;
+    background-image: url("../img/descbg.png");
+    opacity: 0.95;
+    filter: alpha(opacity=95);
+    line-height: 22px;
 }
 #monster-card-desc span{
     margin: 1%;

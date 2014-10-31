@@ -9,6 +9,64 @@ var rewardsHash;
 
 var bossHp;
 
+$(function(){
+
+    $.preload( 'assets/img/player.png',
+        'assets/img/seer.png',
+        'assets/img/shelf.png',
+        'assets/img/hp.png',
+        'assets/img/dice.png',
+        'assets/img/diceroll.png',
+        'assets/img/dicerollrev.png',
+        'assets/img/help.png',
+        'assets/img/descbg.png',
+        'assets/img/namebg.png',
+        'assets/img/monsters/m11.png',
+        'assets/img/monsters/m12.png',
+        'assets/img/monsters/m21.png',
+        'assets/img/monsters/m22.png',
+        'assets/img/monsters/m31.png',
+        'assets/img/monsters/m32.png',
+        'assets/img/monsters/m41.png',
+        'assets/img/monsters/m42.png',
+        'assets/img/monsters/m51.png',
+        'assets/img/monsters/m52.png',
+        'assets/img/monsters/m101.png',
+        'assets/img/backgrounds/Purple.jpg',
+        'assets/img/backgrounds/Blue.jpg',
+        'assets/img/backgrounds/Green.jpg',
+        'assets/img/backgrounds/Yellow.jpg',
+        'assets/img/backgrounds/Orange.jpg',
+        'assets/img/backgrounds/Red.jpg',
+        'assets/img/minimap/purple.png',
+        'assets/img/minimap/blue.png',
+        'assets/img/minimap/green.png',
+        'assets/img/minimap/yellow.png',
+        'assets/img/minimap/orange.png',
+        'assets/img/minimap/red.png',
+        'assets/img/minimap/minimap-icon.png',
+        'assets/img/portals/Purple.png',
+        'assets/img/portals/Purple_.png',
+        'assets/img/portals/Blue.png',
+        'assets/img/portals/Blue_.png',
+        'assets/img/portals/Green.png',
+        'assets/img/portals/Green_.png',
+        'assets/img/portals/Yellow.png',
+        'assets/img/portals/Yellow_.png',
+        'assets/img/portals/Orange.png',
+        'assets/img/portals/Orange_.png',
+        'assets/img/portals/Red.png',
+        'assets/img/portals/Red_.png',
+        'assets/img/dice/face1.png',
+        'assets/img/dice/face2.png',
+        'assets/img/dice/face3.png',
+        'assets/img/dice/face4.png',
+        'assets/img/dice/face5.png',
+        'assets/img/dice/face6.png'
+    );
+
+
+});
 
 function background() {
     $('body').css('background-image', "url(" + theme.background + ")");
@@ -149,7 +207,9 @@ function createEntity() {
             {
                 id:entityHash.length+1,
                 name:imgName,
-                image:"<img src='assets/img/portals/" + imgName + ".png' id='portal" + (i+1) + "' title='" + portalTitle[i] + "' />",
+                image:"<img class='' src='assets/img/portals/" + imgName + ".png' id='portal" + (i+1) + "' title='" + portalTitle[i] + "' " +
+                    "onmouseover='portalMouseOver(this, "+imgName+")' " +
+                    "onmouseout='portalMouseOut(this, "+imgName+")'/>",
                 class: "Portal"
             }
         );
@@ -463,6 +523,7 @@ function drawDungeon(dungeonId) {
             }
         }
     }
+    initCarousel();
     console.log("end drawDungeon");
 }
 
@@ -1103,8 +1164,8 @@ function closeBattle(){
     gridSelected = false;
     console.log("close battle");
     $("#splasher").fadeOut();
-    $("#player-hud").css("width", "25%");
-    $("#container").css({'width': "75%", 'opacity': 1});
+    $("#player-hud").css({"width": "25%", "backgroundColor": "transparent"});
+    $("#container").css({'width': "75%", 'opacity': 1, "backgroundColor": "transparent"});
     $("#player-div").show();
     $("#mainmatrix").css({'opacity': 1});
     $("#dice-div").hide();
@@ -1205,3 +1266,54 @@ function iconMouseFunct(x) {
 
 }
 
+function portalMouseOver(obj, portal) {
+    obj.attributes.class.value = portal.attributes.id.value;
+    switch(portal.attributes.id.value) {
+        case "Purple":
+            $(".Purple").attr("src", "assets/img/portals/Purple_.png");
+            break;
+        case "Blue":
+            console.log(document.getElementsByClassName("Blue").src);
+            $(".Blue").attr("src", "assets/img/portals/Blue_.png");
+            break;
+        case "Green":
+            $(".Green").attr("src", "assets/img/portals/Green_.png");
+            break;
+        case "Yellow":
+            $(".Yellow").attr("src", "assets/img/portals/Yellow_.png");
+            break;
+        case "Orange":
+            $(".Orange").attr("src",  "assets/img/portals/Orange_.png");
+            break;
+        case "Red":
+            $(".Red").attr("src", "assets/img/portals/Red_.png");
+            break;
+    }
+
+}
+
+function portalMouseOut(obj, portal) {
+
+    switch(portal.attributes.id.value) {
+        case "Purple":
+            $(".Purple").attr("src", "assets/img/portals/Purple.png");
+            break;
+        case "Blue":
+            console.log(document.getElementsByClassName("Blue").src);
+            $(".Blue").attr("src", "assets/img/portals/Blue.png");
+            break;
+        case "Green":
+            $(".Green").attr("src", "assets/img/portals/Green.png");
+            break;
+        case "Yellow":
+            $(".Yellow").attr("src", "assets/img/portals/Yellow.png");
+            break;
+        case "Orange":
+            $(".Orange").attr("src",  "assets/img/portals/Orange.png");
+            break;
+        case "Red":
+            $(".Red").attr("src", "assets/img/portals/Red.png");
+            break;
+    }
+    obj.attributes.class.value = "";
+}

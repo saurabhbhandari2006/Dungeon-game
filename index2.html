@@ -5,7 +5,9 @@
     <title>Quortals</title>
     <script src="assets/js/jquery-1.10.2.min.js"></script>
     <script src="assets/js/modernizr-2.6.2.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.preload.js"></script>
     <script src="assets/js/dungeon-data.js"></script>
+    <script src="assets/js/carousel.js"></script>
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/questionbank.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/index2.css" />
@@ -13,6 +15,23 @@
 <body onload="initTheme()">
 
     <img id="background" src="" />
+
+    <div id="carousel">
+        <table id="carousel-table">
+            <tr style="min-height:80%">
+                <td class="rt cl"><button id="left" onclick="onClick(1)"> Back </button></td>
+                <td class="rt cm" id="ppt" >
+                    <img src="assets/img/carousel/1.jpg" />
+                </td>
+                <td class="rt cr"><button id="right" onclick="onClick(2)"> Next </button></td>
+            </tr>
+            <tr style="min-height:20%">
+                <td class="rb cl"></td>
+                <td class="rb cm" style="vertical-align: top; text-align: center"><button id="exit" onclick="onClick(3)"> Continue </button></td>
+                <td class="rb cr" ></td>
+            </tr>
+        </table>
+    </div>
 
     <div id="gameAttack_wrapper">
 
@@ -185,6 +204,7 @@
                     </div>
                 </div>
             </div>
+
             <div id="dice-div">
                 <div id="showdice">
                     <div id="die1" class='oneHidden'></div>

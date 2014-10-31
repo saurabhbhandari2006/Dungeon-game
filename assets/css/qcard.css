@@ -3,13 +3,13 @@
     width: 80%;
     overflow: auto;
     margin: auto;
-    color: white;
+    color: whitesmoke;
     font-family: gravity;
 }
 #quiz-content
 { width: 41%;
     /*height: 35%;*/
-    border: 2px solid white;
+    border: 2px solid whitesmoke;
     top: 20%;
     position: absolute;
     left: 25%;
@@ -17,7 +17,7 @@
     padding: 2px 4px 3px 2px;
     display: none;
     z-index: 2;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(1,1,1,0.7);
 }
 #qquestion{
     color: #ffffff;

@@ -2,20 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44c33337-d199-4678-950d-a8e0e37a8ac0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/img/shelf.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/qcard.css" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/img/monsters/m111.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/monsters/m11.png" afterPath="$PROJECT_DIR$/assets/img/monsters/m11.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/monsters/m12.png" afterPath="$PROJECT_DIR$/assets/img/monsters/m12.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/monsters/m21.png" afterPath="$PROJECT_DIR$/assets/img/monsters/m21.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/monsters/m22.png" afterPath="$PROJECT_DIR$/assets/img/monsters/m22.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/carousel.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/carousel.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/attack.css" afterPath="$PROJECT_DIR$/assets/css/attack.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/custom.js" afterPath="$PROJECT_DIR$/assets/js/custom.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/dungeon-data.js" afterPath="$PROJECT_DIR$/assets/js/dungeon-data.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/index2.css" afterPath="$PROJECT_DIR$/assets/css/index2.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index2.html" afterPath="$PROJECT_DIR$/index2.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/minimap.css" afterPath="$PROJECT_DIR$/assets/css/minimap.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/monstercard.css" afterPath="$PROJECT_DIR$/assets/css/monstercard.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/qcard.css" afterPath="$PROJECT_DIR$/assets/css/qcard.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dungeon.iws" />
@@ -42,16 +37,16 @@
       <file leaf-file-name="dungeon-data.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/dungeon-data.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="16" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5235">
+            <state line="1" column="16" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="5235">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="qcard.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="qcard.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/qcard.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="26" selection-start="904" selection-end="904" vertical-scroll-proportion="0.58077437" vertical-offset="360" max-vertical-offset="1110">
+            <state line="13" column="23" selection-start="258" selection-end="258" vertical-scroll-proportion="0.0" vertical-offset="361" max-vertical-offset="1110">
               <folding />
             </state>
           </provider>
@@ -60,19 +55,8 @@
       <file leaf-file-name="monstercard.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/monstercard.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="120" column="20" selection-start="2394" selection-end="2394" vertical-scroll-proportion="0.0" vertical-offset="1081" max-vertical-offset="2055">
+            <state line="138" column="19" selection-start="2938" selection-end="2938" vertical-scroll-proportion="0.0" vertical-offset="1501" max-vertical-offset="2250">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="22" selection-start="82" selection-end="84" vertical-scroll-proportion="-1.0344827" vertical-offset="0" max-vertical-offset="3435">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#td#1;n#tr#4;n#table#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -80,7 +64,7 @@
       <file leaf-file-name="minimap.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/minimap.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="18" selection-start="224" selection-end="224" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1110">
+            <state line="11" column="21" selection-start="296" selection-end="296" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1125">
               <folding />
             </state>
           </provider>
@@ -89,7 +73,7 @@
       <file leaf-file-name="index2.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/index2.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="194" column="19" selection-start="3716" selection-end="3716" vertical-scroll-proportion="0.0" vertical-offset="2406" max-vertical-offset="3750">
+            <state line="43" column="4" selection-start="907" selection-end="990" vertical-scroll-proportion="-8.538462" vertical-offset="90" max-vertical-offset="3825">
               <folding />
             </state>
           </provider>
@@ -98,7 +82,7 @@
       <file leaf-file-name="attack.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/attack.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="12" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2115">
+            <state line="42" column="24" selection-start="652" selection-end="652" vertical-scroll-proportion="0.0" vertical-offset="337" max-vertical-offset="2325">
               <folding />
             </state>
           </provider>
@@ -107,47 +91,49 @@
       <file leaf-file-name="custom.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/custom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1080" column="53" selection-start="33924" selection-end="33924" vertical-scroll-proportion="-12.176471" vertical-offset="15606" max-vertical-offset="18015">
+            <state line="525" column="19" selection-start="17618" selection-end="17618" vertical-scroll-proportion="0.0" vertical-offset="7484" max-vertical-offset="19875">
               <folding>
-                <element signature="n#!!block;n#hideFace#0" expanded="false" />
-                <element signature="n#!!block;n#showAngle#0" expanded="false" />
-                <element signature="n#!!block;n#setFaces#0" expanded="false" />
-                <marker date="1414686941828" expanded="false" signature="23608:23657" placeholder="..." />
-                <marker date="1414686941828" expanded="false" signature="23926:23937" placeholder="..." />
-                <marker date="1414686941828" expanded="false" signature="24075:24086" placeholder="..." />
-                <marker date="1414686941828" expanded="false" signature="24419:24431" placeholder="..." />
-                <marker date="1414686941828" expanded="false" signature="24560:24572" placeholder="..." />
-                <marker date="1414686941828" expanded="true" signature="32078:32096" placeholder="..." />
-                <marker date="1414686941828" expanded="false" signature="32158:32193" placeholder="..." />
-                <marker date="1414686941828" expanded="true" signature="34150:34185" placeholder="..." />
-                <marker date="1414686941828" expanded="true" signature="34889:34924" placeholder="..." />
+                <marker date="1414746802651" expanded="false" signature="25831:25880" placeholder="..." />
+                <marker date="1414746802651" expanded="false" signature="26149:26160" placeholder="..." />
+                <marker date="1414746802651" expanded="false" signature="26298:26309" placeholder="..." />
+                <marker date="1414746802651" expanded="false" signature="26642:26654" placeholder="..." />
+                <marker date="1414746802651" expanded="false" signature="26783:26795" placeholder="..." />
+                <marker date="1414746802651" expanded="false" signature="34301:34319" placeholder="..." />
+                <marker date="1414746802651" expanded="false" signature="34381:34416" placeholder="..." />
+                <marker date="1414746802651" expanded="false" signature="36373:36408" placeholder="..." />
+                <marker date="1414746802651" expanded="false" signature="37182:37217" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index2.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index2.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="178" column="90" selection-start="8433" selection-end="8433" vertical-scroll-proportion="-18.458334" vertical-offset="1552" max-vertical-offset="2535">
+            <state line="29" column="80" selection-start="1206" selection-end="1206" vertical-scroll-proportion="0.4935806" vertical-offset="89" max-vertical-offset="3645">
               <folding>
-                <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="tag#div#1;tag#div#1;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="n#style#0;n#p#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#td#0;n#tr#0;n#table#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="tag#table#0;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#2;n#tr#0;n#table#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#4;n#tr#0;n#table#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#5;n#tr#0;n#table#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#6;n#tr#0;n#table#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="tag#div#3;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#3;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="n#style#0;n#tr#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#1;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="carousel.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/carousel.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="28" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="carousel.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/css/carousel.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="41" selection-start="357" selection-end="445" vertical-scroll-proportion="0.0" vertical-offset="370" max-vertical-offset="1095">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -176,14 +162,16 @@
         <option value="$PROJECT_DIR$/attack.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/assets/css/index.css" />
+        <option value="$PROJECT_DIR$/assets/js/dungeon-data.js" />
+        <option value="$PROJECT_DIR$/assets/css/attack.css" />
+        <option value="$PROJECT_DIR$/assets/css/qcard.css" />
         <option value="$PROJECT_DIR$/assets/css/minimap.css" />
         <option value="$PROJECT_DIR$/assets/css/monstercard.css" />
-        <option value="$PROJECT_DIR$/assets/css/qcard.css" />
-        <option value="$PROJECT_DIR$/assets/css/attack.css" />
-        <option value="$PROJECT_DIR$/index2.html" />
-        <option value="$PROJECT_DIR$/assets/js/custom.js" />
         <option value="$PROJECT_DIR$/assets/css/index2.css" />
-        <option value="$PROJECT_DIR$/assets/js/dungeon-data.js" />
+        <option value="$PROJECT_DIR$/assets/js/custom.js" />
+        <option value="$PROJECT_DIR$/assets/js/carousel.js" />
+        <option value="$PROJECT_DIR$/assets/css/carousel.css" />
+        <option value="$PROJECT_DIR$/index2.html" />
       </list>
     </option>
   </component>
@@ -251,6 +239,10 @@
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -267,6 +259,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dungeon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dungeon-game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="carousel" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -402,14 +416,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-4" width="1602" height="905" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32904884" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1962677" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2039897" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32904884" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -418,10 +433,9 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -443,20 +457,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="23" selection-start="615" selection-end="615" vertical-scroll-proportion="0.0" vertical-offset="675" max-vertical-offset="795">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/attack.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="23" selection-start="308" selection-end="327" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="3165">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../TowerDefense-game-/js/towerdefense/towerdefense.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="75" column="34" selection-start="1565" selection-end="1595" vertical-scroll-proportion="0.0" vertical-offset="5850" max-vertical-offset="13800" />
@@ -471,34 +471,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/attack.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="192" selection-end="1443" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="930">
-          <folding />
-        </state>
+        <state line="10" column="0" selection-start="192" selection-end="1443" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="930" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/attack.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="15" selection-start="88" selection-end="88" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3495">
-          <folding />
-        </state>
+        <state line="5" column="15" selection-start="88" selection-end="88" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3495" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/custom.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="55" column="28" selection-start="801" selection-end="801" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="4785">
           <folding>
-            <element signature="n#!!block;n#hideFace#0" expanded="false" />
-            <element signature="n#!!block;n#showAngle#0" expanded="false" />
-            <element signature="n#!!block;n#setFaces#0" expanded="false" />
-            <marker date="1414686941828" expanded="false" signature="23608:23657" placeholder="..." />
-            <marker date="1414686941828" expanded="false" signature="23926:23937" placeholder="..." />
-            <marker date="1414686941828" expanded="false" signature="24075:24086" placeholder="..." />
-            <marker date="1414686941828" expanded="false" signature="24419:24431" placeholder="..." />
-            <marker date="1414686941828" expanded="false" signature="24560:24572" placeholder="..." />
-            <marker date="1414686941828" expanded="true" signature="32078:32096" placeholder="..." />
-            <marker date="1414686941828" expanded="false" signature="32158:32193" placeholder="..." />
-            <marker date="1414686941828" expanded="true" signature="34150:34185" placeholder="..." />
-            <marker date="1414686941828" expanded="true" signature="34889:34924" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="25831:25880" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="26149:26160" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="26298:26309" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="26642:26654" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="26783:26795" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="34301:34319" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="34381:34416" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="36373:36408" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="37182:37217" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -512,9 +505,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/attack.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="20" selection-start="324" selection-end="331" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1005">
-          <folding />
-        </state>
+        <state line="15" column="20" selection-start="324" selection-end="331" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1005" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/attack.css">
@@ -528,34 +519,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="1" selection-start="341" selection-end="422" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="3525">
           <folding>
-            <element signature="n#!!block;n#hideFace#0" expanded="false" />
-            <element signature="n#!!block;n#showAngle#0" expanded="false" />
-            <element signature="n#!!block;n#setFaces#0" expanded="false" />
-            <marker date="1414686941828" expanded="false" signature="23608:23657" placeholder="..." />
-            <marker date="1414686941828" expanded="false" signature="23926:23937" placeholder="..." />
-            <marker date="1414686941828" expanded="false" signature="24075:24086" placeholder="..." />
-            <marker date="1414686941828" expanded="false" signature="24419:24431" placeholder="..." />
-            <marker date="1414686941828" expanded="false" signature="24560:24572" placeholder="..." />
-            <marker date="1414686941828" expanded="true" signature="32078:32096" placeholder="..." />
-            <marker date="1414686941828" expanded="false" signature="32158:32193" placeholder="..." />
-            <marker date="1414686941828" expanded="true" signature="34150:34185" placeholder="..." />
-            <marker date="1414686941828" expanded="true" signature="34889:34924" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="25831:25880" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="26149:26160" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="26298:26309" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="26642:26654" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="26783:26795" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="34301:34319" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="34381:34416" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="36373:36408" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="37182:37217" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/attack.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="15" selection-start="88" selection-end="88" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="2610">
-          <folding />
-        </state>
+        <state line="5" column="15" selection-start="88" selection-end="88" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="2610" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/attack.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="20" selection-start="324" selection-end="331" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1005">
-          <folding />
-        </state>
+        <state line="15" column="20" selection-start="324" selection-end="331" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1005" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/attack.css">
@@ -575,7 +559,9 @@
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="29" selection-start="59" selection-end="59" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="690">
-          <folding />
+          <folding>
+            <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -583,27 +569,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="0" selection-start="342" selection-end="342" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="2220">
           <folding>
-            <element signature="n#!!block;n#hideFace#0" expanded="false" />
-            <element signature="n#!!block;n#showAngle#0" expanded="false" />
-            <element signature="n#!!block;n#setFaces#0" expanded="false" />
-            <marker date="1414686941828" expanded="false" signature="23608:23657" placeholder="..." />
-            <marker date="1414686941828" expanded="false" signature="23926:23937" placeholder="..." />
-            <marker date="1414686941828" expanded="false" signature="24075:24086" placeholder="..." />
-            <marker date="1414686941828" expanded="false" signature="24419:24431" placeholder="..." />
-            <marker date="1414686941828" expanded="false" signature="24560:24572" placeholder="..." />
-            <marker date="1414686941828" expanded="true" signature="32078:32096" placeholder="..." />
-            <marker date="1414686941828" expanded="false" signature="32158:32193" placeholder="..." />
-            <marker date="1414686941828" expanded="true" signature="34150:34185" placeholder="..." />
-            <marker date="1414686941828" expanded="true" signature="34889:34924" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="25831:25880" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="26149:26160" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="26298:26309" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="26642:26654" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="26783:26795" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="34301:34319" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="34381:34416" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="36373:36408" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="37182:37217" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="735">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="735" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/dungeon-data.js">
@@ -616,7 +597,9 @@
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="33" selection-start="236" selection-end="236" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
+          <folding>
+            <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -624,27 +607,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="81" column="0" selection-start="1746" selection-end="1746" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
-            <element signature="n#!!block;n#hideFace#0" expanded="false" />
-            <element signature="n#!!block;n#showAngle#0" expanded="false" />
-            <element signature="n#!!block;n#setFaces#0" expanded="false" />
-            <marker date="1414686941828" expanded="false" signature="23608:23657" placeholder="..." />
-            <marker date="1414686941828" expanded="false" signature="23926:23937" placeholder="..." />
-            <marker date="1414686941828" expanded="false" signature="24075:24086" placeholder="..." />
-            <marker date="1414686941828" expanded="false" signature="24419:24431" placeholder="..." />
-            <marker date="1414686941828" expanded="false" signature="24560:24572" placeholder="..." />
-            <marker date="1414686941828" expanded="true" signature="32078:32096" placeholder="..." />
-            <marker date="1414686941828" expanded="false" signature="32158:32193" placeholder="..." />
-            <marker date="1414686941828" expanded="true" signature="34150:34185" placeholder="..." />
-            <marker date="1414686941828" expanded="true" signature="34889:34924" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="25831:25880" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="26149:26160" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="26298:26309" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="26642:26654" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="26783:26795" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="34301:34319" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="34381:34416" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="36373:36408" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="37182:37217" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
+        <state line="2" column="13" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/dungeon-data.js">
@@ -657,7 +635,9 @@
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
+          <folding>
+            <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -665,18 +645,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
-            <element signature="n#!!block;n#hideFace#0" expanded="false" />
-            <element signature="n#!!block;n#showAngle#0" expanded="false" />
-            <element signature="n#!!block;n#setFaces#0" expanded="false" />
-            <marker date="1414686941828" expanded="false" signature="23608:23657" placeholder="..." />
-            <marker date="1414686941828" expanded="false" signature="23926:23937" placeholder="..." />
-            <marker date="1414686941828" expanded="false" signature="24075:24086" placeholder="..." />
-            <marker date="1414686941828" expanded="false" signature="24419:24431" placeholder="..." />
-            <marker date="1414686941828" expanded="false" signature="24560:24572" placeholder="..." />
-            <marker date="1414686941828" expanded="true" signature="32078:32096" placeholder="..." />
-            <marker date="1414686941828" expanded="false" signature="32158:32193" placeholder="..." />
-            <marker date="1414686941828" expanded="true" signature="34150:34185" placeholder="..." />
-            <marker date="1414686941828" expanded="true" signature="34889:34924" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="25831:25880" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="26149:26160" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="26298:26309" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="26642:26654" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="26783:26795" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="34301:34319" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="34381:34416" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="36373:36408" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="37182:37217" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -730,9 +707,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/attack.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="22" selection-start="387" selection-end="387" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="930">
-          <folding />
-        </state>
+        <state line="15" column="22" selection-start="387" selection-end="387" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="930" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../TowerDefense-game-/js/towerdefense/towerdefense.js">
@@ -752,9 +727,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/attack.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="236" column="0" selection-start="7097" selection-end="7097" vertical-scroll-proportion="0.45927903" vertical-offset="3196" max-vertical-offset="3945">
-          <folding />
-        </state>
+        <state line="236" column="0" selection-start="7097" selection-end="7097" vertical-scroll-proportion="0.45927903" vertical-offset="3196" max-vertical-offset="3945" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/img/hp.png">
@@ -769,90 +742,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="1" selection-start="862" selection-end="1993" vertical-scroll-proportion="0.0" vertical-offset="1498" max-vertical-offset="6600">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/minimap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="18" selection-start="224" selection-end="224" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1110">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/attack.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="12" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2115">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/monstercard.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="20" selection-start="2394" selection-end="2394" vertical-scroll-proportion="0.0" vertical-offset="1306" max-vertical-offset="2055">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="22" selection-start="82" selection-end="84" vertical-scroll-proportion="-1.0344827" vertical-offset="0" max-vertical-offset="3435">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#td#1;n#tr#4;n#table#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="178" column="90" selection-start="8433" selection-end="8433" vertical-scroll-proportion="-18.458334" vertical-offset="1552" max-vertical-offset="2535">
-          <folding>
-            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="tag#div#1;tag#div#1;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="n#style#0;n#p#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#td#0;n#tr#0;n#table#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="tag#table#0;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#2;n#tr#0;n#table#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#4;n#tr#0;n#table#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#5;n#tr#0;n#table#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#6;n#tr#0;n#table#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="tag#div#3;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#3;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1080" column="53" selection-start="33924" selection-end="33924" vertical-scroll-proportion="-12.176471" vertical-offset="15606" max-vertical-offset="18015">
-          <folding>
-            <element signature="n#!!block;n#hideFace#0" expanded="false" />
-            <element signature="n#!!block;n#showAngle#0" expanded="false" />
-            <element signature="n#!!block;n#setFaces#0" expanded="false" />
-            <marker date="1414686941828" expanded="false" signature="23608:23657" placeholder="..." />
-            <marker date="1414686941828" expanded="false" signature="23926:23937" placeholder="..." />
-            <marker date="1414686941828" expanded="false" signature="24075:24086" placeholder="..." />
-            <marker date="1414686941828" expanded="false" signature="24419:24431" placeholder="..." />
-            <marker date="1414686941828" expanded="false" signature="24560:24572" placeholder="..." />
-            <marker date="1414686941828" expanded="true" signature="32078:32096" placeholder="..." />
-            <marker date="1414686941828" expanded="false" signature="32158:32193" placeholder="..." />
-            <marker date="1414686941828" expanded="true" signature="34150:34185" placeholder="..." />
-            <marker date="1414686941828" expanded="true" signature="34889:34924" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/index2.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="194" column="19" selection-start="3716" selection-end="3716" vertical-scroll-proportion="0.0" vertical-offset="2406" max-vertical-offset="3750">
-          <folding />
-        </state>
+        <state line="122" column="1" selection-start="862" selection-end="1993" vertical-scroll-proportion="0.0" vertical-offset="1498" max-vertical-offset="6600" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/dungeon-data.js">
@@ -864,8 +754,87 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/qcard.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="26" selection-start="904" selection-end="904" vertical-scroll-proportion="0.58077437" vertical-offset="360" max-vertical-offset="1110">
+        <state line="13" column="23" selection-start="258" selection-end="258" vertical-scroll-proportion="0.0" vertical-offset="361" max-vertical-offset="1110">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/minimap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="21" selection-start="296" selection-end="296" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/attack.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="24" selection-start="652" selection-end="652" vertical-scroll-proportion="0.0" vertical-offset="337" max-vertical-offset="2325">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="22" selection-start="82" selection-end="84" vertical-scroll-proportion="0.0027586208" vertical-offset="58" max-vertical-offset="3375">
+          <folding>
+            <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/monstercard.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="138" column="19" selection-start="2938" selection-end="2938" vertical-scroll-proportion="0.0" vertical-offset="1501" max-vertical-offset="2250">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="525" column="19" selection-start="17618" selection-end="17618" vertical-scroll-proportion="0.0" vertical-offset="7484" max-vertical-offset="19875">
+          <folding>
+            <marker date="1414746802651" expanded="false" signature="25831:25880" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="26149:26160" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="26298:26309" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="26642:26654" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="26783:26795" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="34301:34319" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="34381:34416" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="36373:36408" placeholder="..." />
+            <marker date="1414746802651" expanded="false" signature="37182:37217" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/index2.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="4" selection-start="907" selection-end="990" vertical-scroll-proportion="-8.538462" vertical-offset="90" max-vertical-offset="3825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/carousel.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="41" selection-start="357" selection-end="445" vertical-scroll-proportion="0.0" vertical-offset="370" max-vertical-offset="1095">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/carousel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="28" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="80" selection-start="1206" selection-end="1206" vertical-scroll-proportion="0.4935806" vertical-offset="89" max-vertical-offset="3645">
+          <folding>
+            <element signature="n#style#0;n#tr#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#1;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

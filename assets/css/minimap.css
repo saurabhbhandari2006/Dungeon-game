@@ -6,9 +6,10 @@
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    -webkit-box-shadow: 0 0 0 2px #ccc;
-    -moz-box-shadow: 0 0 0 2px #ccc;
-    box-shadow: 0 0 0 2px #ccc;
+    -webkit-box-shadow: 0 0 0 2px #666;
+    -moz-box-shadow: 0 0 0 2px #666;
+    box-shadow: 0 0 0 2px #666;
+    margin-left: 0.5%;
 }
 
 #miniportal {
@@ -43,17 +44,17 @@
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    -webkit-box-shadow: 0 0 0 2px #ccc;
-    -moz-box-shadow: 0 0 0 2px #ccc;
-    box-shadow: 0 0 0 2px #ccc;
+    -webkit-box-shadow: 0 0 0 2px #666;
+    -moz-box-shadow: 0 0 0 2px #666;
+    box-shadow: 0 0 0 2px #666;
 }
 
 #minimapmatrix td {
     height: 33%;
     width: 33%;
-    -webkit-box-shadow: 0 0 0 1px #ccc;
-    -moz-box-shadow: 0 0 0 1px #ccc;
-    box-shadow: 0 0 0 1px #ccc;
+    -webkit-box-shadow: 0 0 0 1px #333;
+    -moz-box-shadow: 0 0 0 1px #333;
+    box-shadow: 0 0 0 1px #333;
 }
 
 #minimapmatrix img {
