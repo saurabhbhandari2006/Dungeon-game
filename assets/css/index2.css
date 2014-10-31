@@ -1,6 +1,7 @@
 @import url("monstercard.css");
 @import url("minimap.css");
 @import url("attack.css");
+@import url("qcard.css");
 
 @font-face {
     font-family: stencil;
@@ -78,7 +79,7 @@
 
     width:              100%;
     overflow:           auto;
-    height:             50%;
+    height:             75%;
     /*background-color:   #ffcf57;*/
     display:            block;
 
@@ -87,7 +88,7 @@
 #buttonHud {
     width:              100%;
     overflow:           auto;
-    height:             50%;
+    height:             25%;
     /*background-color:   #af67fd;*/
     display:            block;
     vertical-align:     bottom;
@@ -113,7 +114,7 @@
 
 
 #mainmatrix {
-    overflow:           hidden;
+    overflow:           auto;
     width:              97%;
     height:             97%;
     margin:             auto;
@@ -145,4 +146,99 @@
 #mainmatrix img {
     width: 90%;
 }
+
+#player-div {
+    position: relative;
+}
+
+#player-img {
+    width: 62%;
+}
+
+.img-radius {
+    border-radius: 25%;
+}
+
+#info {
+    align-self:center;
+    padding:5px;
+    position: relative;
+    bottom:2%;
+    border-radius:10px;
+}
+
+#splasher {
+    display: none;
+    position: absolute;
+    z-index: 3;
+    background: rgba(0,0,0,0.9);
+    font-family: gravity;
+    color: white;
+
+    padding: 3%;
+    max-width: 20%;
+
+    text-align: center;
+
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 0 2px #ccc;
+    -moz-box-shadow: 0 0 0 2px #ccc;
+    box-shadow: 0 0 0 2px #ccc;
+
+    margin: 0 auto;
+    top: 40%;
+    left: 40%;
+
+    font-size: 18px;
+    line-height: 24px;
+
+}
+
+
+
+/*------------------------------------------------------------anim heart and dice-------------------------------------------------*/
+.floating{
+    -webkit-animation-name: Floatingx;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: Floating;
+    -moz-animation-duration: 1s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+}
+@-webkit-keyframes Floatingx{
+    from {-webkit-transform:translate(0, 0px);}
+    65% {-webkit-transform:translate(0, 5px);}
+    to {-webkit-transform: translate(0, -0px); }
+}
+@-moz-keyframes Floating{
+    from {-moz-transform:translate(0, 0px);}
+    65% {-moz-transform:translate(0, 5px);}
+    to {-moz-transform: translate(0, -0px);}
+}
+.scaling{
+    /*float: left;*/
+    -webkit-animation-name: scalex;
+    -webkit-animation-duration:500ms;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-timing-function:ease-in-out;
+    -moz-animation-name: scale;
+    -moz-animation-duration:500ms;
+    -moz-animation-iteration-count:infinite;
+    -moz-animation-timing-function:ease-in-out;
+}
+@-webkit-keyframes scalex{
+    from {-webkit-transform: scale(0.9);}
+    65% {-webkit-transform: scale(1.0);}
+    to {-webkit-transform: scale(0.9);}
+}
+@-moz-keyframes scale{
+    from {-moz-transform: scale(0.9);}
+    65% {-moz-transform: scale(1.0);}
+    to {-moz-transform: scale(0.9);}
+}
+
 

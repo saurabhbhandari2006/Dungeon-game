@@ -6,7 +6,9 @@ var gridSelected;
 var mapHash;
 var entityHash = [];
 var rewardsHash;
-var minimap;
+
+var bossHp;
+
 
 function background() {
     $('body').css('background-image', "url(" + theme.background + ")");
@@ -63,16 +65,29 @@ function initTheme() {
 
 
 function initGame() {
+    $("#splasher").fadeOut(0);
+    $("#player-hud").css({"width": "25%", 'opacity': "1"})
+    $("#playerHud").css({'opacity': "1", 'background': "transparent"});
+    $("#mainmatrix").css("opacity", "1");
+    $("#container").css({"width": "75%", 'opacity': "1", 'background': "transparent"});
+    $(".matrix").empty();
+    $("#toMap").show();
+
     console.log("initGame start");
     diceNum = initDice;
     playerHealth = initHealth;
     gridSelected = false;
-    minimap = false;
+    $("#player-hp").text(playerHealth);
+    $("#player-dice-num").text(diceNum);
+
+
 //    $("#gameAttack_wrapper").fadeIn();
     $("#fightArena").hide();
     $("#qcard").hide();
-    $("#dungeons").fadeIn();
+    $("#mainmatrix").fadeIn();
     $("#minimap").hide();
+    $("#dice-div").hide();
+
     createMap();
     createEntity();
     addEntities();
@@ -87,7 +102,7 @@ function initGame() {
 
 function createMap() {
     console.log(" ");
-    console.log("createing map...");
+    console.log("creating map...");
     mapHash = map;
     for(var i=0; i<mapHash.length; i++)
     {
@@ -124,6 +139,7 @@ function createEntity() {
     }
     console.log("   monsters created");
 
+    bossHp = entityHash[i-1].health;
     entityHash[i-1].class = "Boss";
     console.log("   boss created");
 
@@ -133,7 +149,7 @@ function createEntity() {
             {
                 id:entityHash.length+1,
                 name:imgName,
-                image:"<img src='assets/img/portals/" + imgName + ".gif' />",
+                image:"<img src='assets/img/portals/" + imgName + ".png' id='portal" + (i+1) + "' title='" + portalTitle[i] + "' />",
                 class: "Portal"
             }
         );
@@ -145,7 +161,7 @@ function createEntity() {
             id:entityHash.length+1,
             class: "Seer",
             probability: 0.5,
-            image: "<img src='assets/img/seer.png' />"
+            image: "<img class='img-radius' src='assets/img/seer.png' />"
         }
     );
     console.log("   seer created");
@@ -154,7 +170,7 @@ function createEntity() {
         {
             id:entityHash.length+1,
             class: "Player",
-            image: "<div id='player-div' > <img style='position: relative' src='assets/img/player.png' /> </div>"
+            image: "<div id='player-div'> <img class='img-radius' src='assets/img/player.png' /> </div>"
         }
     );
     console.log("   player created");
@@ -215,7 +231,6 @@ function addEntities() {
                             var entity = selMonsters[random];
                             mapHash[i].definition[n].content = entity.image;
                             mapHash[i].definition[n].entity = entity.id;
-                            mapHash[i].definition[n].mini = "Level " + entity.level+ " " +"Monster";
                             console.log("   "+dungeonSelect.name+"["+a+" "+b+"]"+", Type: "+type+", Content: "+mapHash[i].definition[n].content);
                         }
                     }
@@ -227,7 +242,6 @@ function addEntities() {
                             if(probability>selSeer[0].probability) {
                                 mapHash[i].definition[n].content = selSeer[0].image;
                                 mapHash[i].definition[n].entity = selSeer[0].id;
-                                mapHash[i].definition[n].mini = "Seer";
                                     console.log("   "+dungeonSelect.name+"["+a+" "+b+"]"+", Type: "+type+", Content: "+mapHash[i].definition[n].content);
 
                             } else {
@@ -243,7 +257,6 @@ function addEntities() {
                             selPlayer = getEntityByClass(type);
                             mapHash[i].definition[n].content = selPlayer[0].image;
                             mapHash[i].definition[n].entity = selPlayer[0].id;
-                            mapHash[i].definition[n].mini = "Player";
                                 console.log("   "+dungeonSelect.name+"["+a+" "+b+"]"+", Type: "+type+", Content: "+mapHash[i].definition[n].content);
                         }
                     }
@@ -253,7 +266,6 @@ function addEntities() {
                             selBoss = getEntityByClass(type);
                             mapHash[i].definition[n].content = selBoss[0].image;
                             mapHash[i].definition[n].entity = selBoss[0].id;
-                            mapHash[i].definition[n].mini = "Boss";
                                 console.log("   "+dungeonSelect.name+"["+a+" "+b+"]"+", Type: "+type+", Content: "+mapHash[i].definition[n].content);
                         }
                     }
@@ -287,7 +299,6 @@ function addEntities() {
                             }
                             mapHash[i].definition[n].content = name;
                             mapHash[i].definition[n].entity = id;
-                            mapHash[i].definition[n].mini = "Portal " + to;
                                 console.log("   "+dungeonSelect.name+"["+a+" "+b+"]"+", Type: "+type+", Content: "+mapHash[i].definition[n].content);
                         }
                     }
@@ -397,22 +408,19 @@ function drawMiniEntity(lx, ly, content) {
 function startGame(dungeonId) {
     console.log("starting Game...");
     gridSelected == false;
-    minimap = false;
+    $("#toGrid").hide();
     $("#toMap").on('click', function() {
-        var display = $("#minimap").css('display');
-        alert(display);
-        switch (display) {
-            case "none":
-                $("#mainmatrix").hide();
-                $("#minimap").show();
-                getMinimap(dungeonId);
-                break;
-
-            case "block":
-                $("#mainmatrix").show();
-                $("#minimap").hide();
-                break;
-        }
+        $("#mainmatrix").hide();
+        $("#minimap").show();
+        getMinimap(dungeonId);
+        $("#toGrid").show();
+        $("#toMap").hide();
+    });
+    $("#toGrid").on('click', function() {
+        $("#mainmatrix").show();
+        $("#minimap").hide();
+        $("#toGrid").hide();
+        $("#toMap").show();
     });
 
     $(".matrix").unbind('click').click(function() {
@@ -470,42 +478,41 @@ function movePlayer(lx, ly, entityId, callback) {
     var pos = lx+""+ly;
     var case1 = $("#player-div").clone();
     $("#22").append(case1);
-    $("#player-div").css({opacity:0});
+//    $("#player-div").css({opacity:0});
+    $("#player-div").hide();
     console.log(pos);
     switch(pos){
         case "11":
-//            console.log("in case");
-            case1.animate({left:"-=33%",top:"-=34%"},1000);
-//            $("#player-div").animate({left:"+=10.47%",top:"-=51.2%"},0);
+            case1.animate({left:"-=101%",top:"-=108%"},1000);
             break;
         case "12":
-            case1.animate({top:"-=34%"},1000);
+            case1.animate({top:"-=115%"},1000);
             break;
         case "13":
-            case1.animate({left:"+=33%",top:"-=34%"},1000);
+            case1.animate({left:"+=101%",top:"-=108%"},1000);
             break;
         case "21":
-            case1.animate({left:"-=33%"},1000);
+            case1.animate({left:"-=100%"},1000);
             break;
         case "22":
 //            case1.animate({left:"+=33%",top:"-=34%"},1000);
             break;
         case "23":
-            case1.animate({left:"+=33%"},1000);
+            case1.animate({left:"+=100%"},1000);
             break;
         case "31":
-            case1.animate({left:"-=33%",top:"+=34%"},1000);
+            case1.animate({left:"-=100%",top:"+=110%"},1000);
             break;
         case "32":
-            case1.animate({top:"+=34%"},1000);
+            case1.animate({top:"+=110%"},1000);
             break;
         case "33":
-            case1.animate({left:"+=33%",top:"+=34%"},1000);
+            case1.animate({left:"+=100%",top:"+=110%"},1000);
             break;
 
 
     }
-    case1.fadeOut(2000);
+    case1.fadeOut(600);
     setTimeout(function(){case1.remove();},2500);
     console.log("player moved");
     setTimeout(function(){callback(entityId);},1200);
@@ -551,9 +558,8 @@ function teleport(entityId) {
     var dungeonId = getDungeonId(entity.name);
     console.log(dungeonId);
     playerHealth -= teleportCost;
+    $("#player-hp").text(playerHealth);
     gridSelected = false;
-
-    playerHealthHud();
 
     checkSurvival(function() {
         $(".matrix").empty();
@@ -565,15 +571,18 @@ function teleport(entityId) {
 function monsterCard(entityId){
     var entity = getEntity(entityId);
     var hp= entity.health;
+    if(entity.class == "Boss") {
+        hp = bossHp;
+    }
     $("#monster-card-hp").text(hp);
 //    monsterHealthDiv = document.getElementById("monster-card-Health");
 //    monsterHealthDiv.style.width = hp + "%";
-    $("#monster-card-img").html(entity.image);
+    $("#monster-card-image").html(entity.image);
 
     $("#monster-card-name").text(entity.name);
     $("#monster-card-type").text(entity.type);
-    $("#monster-card-level").text(entity.level);
     $("#monster-card-dice-num").text(entity.dice);
+    $("#desc").text(entity.description)
     var dice = $("#monster-card-dice-num").text();
     showDice(1,dice,0);
 
@@ -583,9 +592,7 @@ function monsterCard(entityId){
     $("#monster-card").css({'opacity':'1'});
     $("#monster-card").fadeIn();
     $("#btn-continue").on('click',function(){
-        $("#player-hud").css("opacity", "1");
-        $("#mainmatrix").css({'opacity':'1'});
-        $("#monster-card").css({'opacity':'0'});
+        $("#mainmatrix").hide();
         $("#monster-card").fadeOut();
         initBattleWindow(entityId);
     });
@@ -595,43 +602,54 @@ function monsterCard(entityId){
         $("#mainmatrix").css({'opacity':'1'});
         $("#monster-card").css({'opacity':'0'});
         $("#monster-card").fadeOut();
-        $("#player-div").css({opacity:1});
+//        $("#player-div").css({opacity:1});
+        $("#player-div").show();
         gridSelected = false;
 
     });
 }
 
 function initBattleWindow(entityId) {
+
+    $("#player-hud").css("background", "rgba(0,0,0,0.8)");
+    $("#container").css("background", "rgba(0,0,0,0.8)");
+
+    $("#dice-div").show();
+    $("#toMap").hide();
     $("#splasher").empty();
-    $("#dungeons").fadeOut();
     $("#fightArena").fadeIn();
 
-    playerHealthDiv = document.getElementById("player-Health");
-    monsterHealthDiv = document.getElementById("monster-Health");
+    $("#monster-hud").show();
+
+    $("#player-hud").css("width", "50%");
+    $("#container").css("width", "50%");
+    $("#player-hud").css("opacity", "1");
 
     player = true;
-    playerHealthDiv.style.width = playerHealth + "%";
     $("#player-hp").text(playerHealth);
     $("#player-health-val").text("Health Left: "+playerHealth+"%");
 
     var entity = getEntity(entityId);
-    monsterHealthDiv.style.width = 100 + "%";
-    $("#monster-hp").text(entity.health);
+    if(entity.class == "Monster") {
+        $("#monster-hp").text(entity.health);
+    } else {
+        $("#monster-hp").text(bossHp);
+    }
+
     $("#monster-max-hp").text(entity.health);
-    $("#monster-health-val").text("Health Left: 100%");
     $("#monster-name").text(entity.name);
     $("#monster").html(entity.image);
-    $("#monster-lvl").text("Lvl" + " " + entity.level);
     $("#monster-dice-num").text(entity.dice);
     var dice = $("#monster-dice-num").text();
-    showDice(2,dice,diceNum);
-
-    $("#monster").css({'opacity': '0.5'});
-    $("#monster-dice").css({'opacity': '0.5'});
-    $("#monster").removeClass("scaling");
 
     console.log("Battle window init done....starting battle by player Turn");
     showDice(3,0,diceNum);
+    $("#monster").css("opacity", "0.5");
+    $("#monster-hud").css("opacity", "0.5");
+    $("#monster-health").removeClass("scaling");
+    $("#monster-dice").removeClass("floating");
+
+
     playerTurn(entityId);
 
 
@@ -743,8 +761,6 @@ function showDice(tp,dice1,dice2){
             $("#die"+i).append("<img src='assets/img/dice/face1.png' style='height: 100%'/>");
         }
 
-
-
     }
 
 }
@@ -752,34 +768,30 @@ function showDice(tp,dice1,dice2){
 function playerTurn() {
     $("#toMap").hide();
     console.log("In Player Turn");
-    setTimeout(function(){
-        showSplash("Player Turn",2000);
-    },400);
-    setTimeout(function () {
-        console.log("Player: Click to Roll The Dice OR Retreat");
-        $(".btn").unbind('click').click(function () {
-            if (player) {
-                player = false;
-                btnId = $(this).attr("id");
-                switch (btnId) {
-                    case "btnAttack":
-                        console.log("attack selected");
-                        //simply passing the function name in string format and then the variables are passed in callbacks as and what needed
-                        rollDice(diceNum,checkDefendPowers,doDamage,checkIfDead);
-                        break;
-                    case "btnRetreat":
-                        console.log("Retreat selected");
-                        closeBattle();
-                        break;
-                }
+    showSplash("Player Turn",500);
+    console.log("Player: Click to Roll The Dice OR Retreat");
+    $(".btn").unbind('click').click(function () {
+        if (player) {
+            player = false;
+            btnId = $(this).attr("id");
+            switch (btnId) {
+                case "btnAttack":
+                    console.log("attack selected");
+                    //simply passing the function name in string format and then the variables are passed in callbacks as and what needed
+                    rollDice(diceNum,checkDefendPowers,doDamage,checkIfDead);
+                    break;
+                case "btnRetreat":
+                    console.log("Retreat selected");
+                    closeBattle();
+                    break;
             }
-        })
-    }, 500);
+        }
+    });
 }
 
 function monster() {
     console.log("In Monster Turn");
-    showSplash("Monster Turn",2000);
+    showSplash("Opponent's Turn",500);
     setTimeout(function()
     {
 //        console.log("in ai");
@@ -788,7 +800,7 @@ function monster() {
             var dice = $("#monster-dice-num").text();
             rollDice(dice,checkAttackPowers,doDamage,checkSurvival);
         }
-    },1500);
+    },1000);
 }
 
 function switchTurn(from) {
@@ -804,52 +816,31 @@ function switchTurn(from) {
             switchAnim(from, playerTurn);
         }
 
-    }, 2000);
+    }, 500);
 }
 
 function switchAnim(from, callback) {
     if(from == "player") {
-        $("#player").css({
-            'opacity': '0.5'
-//            '-webkit-box-shadow': '0px 0px 0px 0px rgba(0,0,255,1)',
-//            '-moz-box-shadow': '0px 0px 0px 0px rgba(0,0,255,1)',
-//            'box-shadow': '0px 0px 0px 0x rgba(0,0,255,1)'
-        });
-        $("#player-dice").css({'opacity': '0.5'});
-        $("#player").removeClass("scaling");
-        $("#monster").addClass("scaling");
-
-        $("#monster").css({
-            'opacity': '1'
-//            '-webkit-box-shadow': '0px 0px 20px 5px rgba(255,0,0,1)',
-//            '-moz-box-shadow': '0px 0px 20px 5px rgba(255,0,0,1)',
-//            'box-shadow': '0px 0px 20px 5px rgba(255,0,0,1)'
-        });
-
-        $("#monster-dice").css({'opacity': '1'});
+        $("#playerHud").css("opacity", "0.5");
+        $("#monster").css("opacity", "1");
+        $("#monster-hud").css("opacity", "1");
         var dice = $("#monster-dice-num").text();
+        $("#player-health").removeClass("scaling");
+        $("#monster-health").addClass("scaling");
+
+        $("#player-dice").removeClass("floating");
+        $("#monster-dice").addClass("floating");
+
         showDice(3,dice,0);
-
-
     } else {
-        $("#player").css({
-            'opacity': '1'
-//            '-webkit-box-shadow': '0px 0px 20px 5px rgba(0,0,255,1)',
-//            '-moz-box-shadow': '0px 0px 20px 5px rgba(0,0,255,1)',
-//            'box-shadow': '0px 0px 20px 5px rgba(0,0,255,1)'
-        });
-        $("#player-dice").css({'opacity': '1'});
-        $("#monster").removeClass("scaling");
-        $("#player").addClass("scaling");
+        $("#playerHud").css("opacity", "1");
+        $("#monster").css("opacity", "0.5");
+        $("#monster-hud").css("opacity", "0.5");
+        $("#player-health").addClass("scaling");
+        $("#monster-health").removeClass("scaling");
 
-
-        $("#monster").css({
-            'opacity': '0.5'
-//            '-webkit-box-shadow': '0px 0px 0px 0px rgba(255,0,0,1)',
-//            '-moz-box-shadow': '0px 0px 0px 0px rgba(255,0,0,1)',
-//            'box-shadow': '0px 0px 0px 0x rgba(255,0,0,1)'
-        });
-        $("#monster-dice").css({'opacity': '0.5'});
+        $("#player-dice").addClass("floating");
+        $("#monster-dice").removeClass("floating");
         showDice(3,0,diceNum);
 
     }
@@ -870,8 +861,8 @@ function doDamage(team, damage,callback){
     console.log("Team Making Damage= "+team);
     console.log("Damage Amount "+damage);
 
-    playerHealthDiv = document.getElementById("player-Health");
-    monsterHealthDiv = document.getElementById("monster-Health");
+//    playerHealthDiv = document.getElementById("player-Health");
+//    monsterHealthDiv = document.getElementById("monster-Health");
     var monsterHealth = $("#monster-hp").text();
 
     if(team == "monster")
@@ -879,9 +870,11 @@ function doDamage(team, damage,callback){
         playerHealth -= damage;
         if(playerHealth < 0)
             playerHealth = 0;
-        $("#player-health-val").text("Health Left: "+playerHealth+"%");
+//        $("#player-health-val").text("Health Left: "+playerHealth+"%");
         $("#player-hp").text(playerHealth);
-        playerHealthDiv.style.width = playerHealth + "%";
+        var msg = "You took " + damage + " damage";
+        showSplash(msg, 500);
+//        playerHealthDiv.style.width = playerHealth + "%";
     }
     else
     {
@@ -889,10 +882,15 @@ function doDamage(team, damage,callback){
         if(monsterHealth < 0)
             monsterHealth = 0;
         $("#monster-hp").text(monsterHealth);
-        var max = $("#monster-max-hp").text();
-        var hp = Math.floor((monsterHealth*100)/max);
-        $("#monster-health-val").text("Health Left: "+hp+"%");
-        monsterHealthDiv.style.width = hp + "%";
+        if(parseInt($("#monster-dice-num").text()) == 5) {
+            bossHp -= damage;
+        }
+        var msg = "You dealt " + damage + " damage";
+        showSplash(msg, 500)
+//        var max = $("#monster-max-hp").text();
+//        var hp = Math.floor((monsterHealth*100)/max);
+//        $("#monster-health-val").text("Health Left: "+hp+"%");
+//        monsterHealthDiv.style.width = hp + "%";
         // checkDefendPowers();
     }
     setTimeout(function()
@@ -901,7 +899,7 @@ function doDamage(team, damage,callback){
         {
             callback(monsterHealth);
         }
-    },2000);
+    },1000);
 }
 
 function checkDefendPowers(damage,callback,callback1){
@@ -955,8 +953,14 @@ function checkSurvival(callback){
     console.log("in checkSurvival");
 //    console.log(callback.toString().length);
     console.log("playerhealth: "+playerHealth);
-    if (playerHealth<=0)
+    if (playerHealth<=0) {
+        $("#container").css("opacity", "1");
+        $("#container").css("opacity", "0.5");
+        $("#player-hud").css("opacity", "1");
+        $("#player-hud").css("opacity", "0.5");
         defeat();
+    }
+
     else {
         console.log("in else");
         if (typeof callback === "function")
@@ -975,8 +979,10 @@ function checkSurvival(callback){
 }
 
 function seer(){
-    $("#dungeons").fadeOut();
+    $("#mainmatrix").css({'opacity': 0.5});
     $("#qcard").fadeIn();
+    $("#toMap").hide();
+    setTimeout(function() {$("#player-div").fadeIn();}, 600);
     getQuestion();
 
 }
@@ -1033,18 +1039,19 @@ function processAnswers(answer) {
             console.log("wrong ans");
         }
         gridSelected = false;
-        $("#player-div").css({opacity:1});
         $("#qcard").fadeOut();
-        $("#dungeons").fadeIn();
+        $("#mainmatrix").css({'opacity': "1"});
     }, 2000);
 
 }
 
 function getRewards(callback){
     console.log("In getRewards")
-    var random = getRandom(1,12);
+    var random = getRandom(0,rewardsHash.length);
+    console.log(random);
     var reward = rewardsHash[random];
     console.log(reward);
+    var msg;
     switch (reward.type){
         case "Health":
             if(playerHealth<100)
@@ -1058,35 +1065,53 @@ function getRewards(callback){
             {
                 playerHealth += maxHealthGain;
             }
+            msg = "You gained a " + reward.name + " (" +reward.value + " " + reward.type +")";
+            $("#player-hp").text(playerHealth);
             break;
         case "Dice":
             if(diceNum<5)
             {
+                msg = "You gained a " + reward.name + " (" +reward.value + " " + reward.type +")";
                 diceNum += reward.value;
                 console.log("dice gained");
+                $("#player-dice-num").text(diceNum);
             }
             else
             {
+                msg = "You have reached the maximum Dice limit";
                 console.log("dice limit reached");
             }
             break;
 
     }
 
-    if(typeof callback === "function")
-        callback();
+    showSplash(msg, 0, callback);
+
+    if(parseInt($("#monster-dice-num").text()) == 5) {
+        var msg = '<span style="text-decoration: none; color: white" onclick="initGame()">You WIN! <br /><br />Click Continue to Start Again</span>'
+        showSplash(msg, 0, callback);
+    }
+
+
+
+
 
 }
 
 function closeBattle(){
+
     gridSelected = false;
-    $("#player-div").css({opacity:1});
-    $("#fightArena").fadeOut();
-    $("#dungeons").fadeIn();
     console.log("close battle");
-    $("#player-dice-img").empty();
-    $("#monster-dice-img").empty();
+    $("#splasher").fadeOut();
+    $("#player-hud").css("width", "25%");
+    $("#container").css({'width': "75%", 'opacity': 1});
+    $("#player-div").show();
+    $("#mainmatrix").css({'opacity': 1});
+    $("#dice-div").hide();
+    $("#monster-hud").hide();
+    $("#mainmatrix").fadeIn();
     $("#toMap").show();
+
 }
 
 function victory(){
@@ -1096,22 +1121,28 @@ function victory(){
 
 function defeat(){
     console.log("in defeat");
-    $('#gameAttack_wrapper').fadeOut();
-    $("#fightArena").fadeOut();
-    $('.How').fadeOut();
-    $(".defeat").fadeIn();
-    var blinkit = setInterval(blinker3, 2000);
-    $('#startAgainClicker').on('click', function () {
-        clearInterval(blinkit);
-        $(".defeat").fadeOut();
-        $(".gameTitle").fadeIn();
-        background();
-    });
+    var msg = '<span style="text-decoration: none; color: white">Defeated! <br /><br />Click Continue to Start Again</span>'
+    showSplash(msg,0);
+//    $('#gameAttack_wrapper').fadeOut();
+//
+//    $("#player-hud").fadeOut();
+//    $("#container").fadeOut();
+//    $("#fightArena").fadeOut();
+//    $('.How').fadeOut();
+//    $(".defeat").fadeIn();
+//    var blinkit = setInterval(blinker3, 2000);
+//    $('#startAgainClicker').on('click', function () {
+//        clearInterval(blinkit);
+//        $(".defeat").fadeOut();
+//        $(".gameTitle").fadeIn();
+//        background();
+//    });
 }
 
 function blinker3() {
     $('#startAgainClicker').fadeOut(500, function () {
         $('#startAgainClicker').fadeIn(500);
+        background();
     });
 }
 
@@ -1120,16 +1151,57 @@ function playerHealthHud(){
     $("#player-hp-hud").text(playerHealth);
 }
 
-function playerDiceHud(dicep){
-    $("#player-dice-hud").empty();
-    for (var i = 1; i <= dicep; i++) {
-        $("#player-dice-hud").append("<img src='assets/img/dice/face1.png' style='height: 100%'/>");
+
+function showSplash(msg,delay, callback) {
+    console.log("In display messages");
+    if(delay == 0) {
+        var func;
+        if(parseInt($("#monster-dice-num").text()) == 5) {
+            msg += " <br /> <br /> <input value='Continue' type='button' onclick='initGame()' /> "
+        } else {
+            msg += " <br /> <br /> <input value='Continue' type='button' onclick='closeBattle()' /> "
+        }
+
+        $('#splasher').html(msg).fadeIn(500);
+    } else {
+        $('#splasher').html(msg).fadeIn(500).delay(delay).fadeOut(500);
+        setTimeout(function() {
+            if(typeof callback === "function") {
+                callback();
+            }
+        }, 3000);
     }
 }
 
-function showSplash(msg,delay) {
-    console.log("In display messages");
-    $('#splasher').html(msg).show().delay(500).fadeIn(1000);
-    $('#splasher').hide().fadeOut(delay);
-//    $('#splasher').append(msg+"<br/>");
+function portalMouseFunct()
+{
+    var getId = $('.matrix').mouseover(function() {
+        return this.id;
+    });
+
+    var getPort = $('#' + getId + '#')
+    $("#" + getId + " img").attr("src", "assets/img/portals/")
+
+
 }
+
+function iconMouseFunct(x) {
+
+    if(x==1)
+    {
+        $('#info').show();
+        $('#info').text("Help");
+        $('#info').css({"backgroundColor": "navy", "color": "white", "float": "left"});
+    }
+    if(x==2)
+    {
+        $('#info').show();
+        $('#info').text("Mini-map");
+        $('#info').css({"backgroundColor": "maroon", "color": "white", "float": "right"});
+    }
+    if(x==3)
+        $('#info').hide();
+
+
+}
+

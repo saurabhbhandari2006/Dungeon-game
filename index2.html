@@ -10,41 +10,64 @@
     <script src="assets/js/questionbank.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/index2.css" />
 </head>
-<body onload="initGame()">
+<body onload="initTheme()">
 
     <img id="background" src="" />
 
     <div id="gameAttack_wrapper">
 
-
+        <div id="splasher"></div>
 
         <div id="player-hud">
             <div id="playerHud">
                 <div id="player-data">
-                    <img style="width: 65%;" src="assets/img/player.png">
+                    <img id="player-img" class="img-radius" src="assets/img/player.png">
                     <table>
                         <tr>
-                            <td style="vertical-align: bottom;"><img src="assets/img/hp.png" class="hud-scale"/></td>
-                            <td><span id="player-hp-hud">100</span> </td>
+                            <td style="vertical-align: bottom;"><img id="player-health" src="assets/img/hp.png" class="hud-scale scaling"/></td>
+                            <td><span id="player-hp"></span> </td>
                         </tr>
                         <tr>
-                            <td style="vertical-align: top;"><img src="assets/img/dice.png" class="hud-scale"/></td>
-                            <td>x <span id="player-dice-hud">2</span> </td>
+                            <td style="vertical-align: top;"><img id="player-dice" src="assets/img/dice.png" class="hud-scale floating"/></td>
+                            <td>x <span id="player-dice-num"></span> </td>
                         </tr>
                     </table>
 
                 </div>
             </div>
 
-            <div id="buttonHud">
-                <table>
-                <tr>
-                    <td><img id="help" src="assets/img/help.png" style="width: 95%"></td>
-                    <td><img id="toMap" src="assets/img/minimap/minimap-icon.png"></td>
-                </tr>
+            <div id="buttonHud" align="center">
+                <p id="info" style="display:none;"></p>
+                <table align="center">
+                    <tr>
+                        <td align="right">
+                            <img
+                                    onmouseover="iconMouseFunct(1)"
+                                    onmouseout="iconMouseFunct(3)"
+                                    id="help"
+                                    src="assets/img/help.png"
+                                    style="width: 95%"
+                                    title="Help">
+                        </td>
+
+                        <td align="left">
+                            <img
+                                    onmouseover="iconMouseFunct(2)"
+                                    onmouseout="iconMouseFunct(3)"
+                                    id="toMap"
+                                    src="assets/img/minimap/minimap-icon.png"
+                                    title="Mini-map">
+                            <img
+                                    onmouseover="iconMouseFunct(2)"
+                                    onmouseout="iconMouseFunct(3)"
+                                    id="toGrid" src="assets/img/minimap/minimap-icon.png"
+                                    title="Mini-map">
+                        </td>
+                    </tr>
                 </table>
             </div>
         </div>
+
 
         <div id="container">
             <table id="mainmatrix">
@@ -72,29 +95,30 @@
                     </tr>
                     <tr>
                         <td id="monster-card-health">
-                            100 <img src="assets/img/hp.png">
+                            <span id="monster-card-hp"></span>
+                            <img class="scaling" src="assets/img/hp.png">
                         </td>
                         <td id="monster-card-image">
-                            <img src="assets/img/m.png" />
+                            <!--<img src="assets/img/m.png" />-->
                         </td>
                         <td id="monster-card-dice">
-                            <img src="assets/img/dice.png"> x3
+                            <img class="floating" src="assets/img/dice.png"> x<span id="monster-card-dice-num"></span>
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="3" id="monster-card-name">
-                            Boss
+                        <td colspan="3" id="monster-card-name td">
+                            <div id="monster-card-name"></div>
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="3" id="monster-card-type">
-                            Difficult
+                        <td colspan="3" id="monster-card-type-td">
+                            <div id="monster-card-type"></div>
                         </td>
                     </tr>
                     <tr>
                         <td colspan="3">
                             <div id="monster-card-desc">
-                                <span>Description:</span> <br />hksdfhkabgzkbakbsckdasbdbckb
+                                <span id="desc"></span>
                             </div>
                         </td>
                     </tr>
@@ -112,13 +136,13 @@
                 <table id="miniportal">
 
                     <tr>
-                        <td style="vertical-align: bottom"><img class="mini" id="Purple" src="assets/img/minimap/purple.png" /></td>
-                        <td style="text-align: center;padding-left: 0"><img class="mini" id="Blue" src="assets/img/minimap/blue.png" /></td>
-                        <td style="vertical-align: top; padding-right: 0"><img class="mini" id="Green" src="assets/img/minimap/green.png" /></td>
+                        <td style="vertical-align: bottom"><img title="Prison Cell" class="mini" id="Purple" src="assets/img/minimap/purple.png" /></td>
+                        <td style="text-align: center;padding-left: 0"><img title="Prison Cell Hallway" class="mini" id="Blue" src="assets/img/minimap/blue.png" /></td>
+                        <td style="vertical-align: top; padding-right: 0"><img title="Cafeteria" class="mini" id="Green" src="assets/img/minimap/green.png" /></td>
                         <td></td>
-                        <td style="vertical-align: top;padding-left: 0"><img class="mini" id="Yellow" src="assets/img/minimap/yellow.png" /></td>
-                        <td style="text-align: center; padding-right: 0"><img class="mini" id="Orange" src="assets/img/minimap/orange.png" /></td>
-                        <td style="vertical-align: bottom"><img class="mini" id="Red" src="assets/img/minimap/red.png" /></td>
+                        <td style="vertical-align: top;padding-left: 0"><img title="Basketball Court" class="mini" id="Yellow" src="assets/img/minimap/yellow.png" /></td>
+                        <td style="text-align: center; padding-right: 0"><img title="Prison Courtyard" class="mini" id="Orange" src="assets/img/minimap/orange.png" /></td>
+                        <td style="vertical-align: bottom"><img title="Warden's Room" class="mini" id="Red" src="assets/img/minimap/red.png" /></td>
                     </tr>
                 </table>
 
@@ -142,82 +166,34 @@
             </div>
 
             <div id="fightArena">
-                <div id="monster-hud" style="background: black">
-                    <div id="monster-name"></div>
-                    <div id="monster"><img style="width: 65%;" src="assets/img/player.png"></div>
-                    <table>
-                        <tr>
-                            <td style="vertical-align: bottom;"><img id="monster-hp-img" src="assets/img/hp.png" class="hud-scale"/></td>
-                            <td><div id="monster-max-hp" style="display: none"></div><span id="monster-hp">100</span></td>
-                        </tr>
-                        <tr>
-                            <td style="vertical-align: top;"><img id="monster-dice-img" src="assets/img/dice.png" class="hud-scale"/></td>
-                            <td>x <span id="monster-dice-num">2</span> </td>
-                        </tr>
-                    </table>
+                <div id="monster-hud">
+                    <div id="monsterHud">
+                        <div id="monster-data">
+                            <div id="monster"></div>
+                            <table>
+                                <tr>
+                                    <td style="vertical-align: bottom;"><img id="monster-health" src="assets/img/hp.png" class="hud-scale scaling"/></td>
+                                    <td><span id="monster-hp">100</span> </td>
+                                </tr>
+                                <tr>
+                                    <td style="vertical-align: top;"><img id="monster-dice" src="assets/img/dice.png" class="hud-scale floating"/></td>
+                                    <td>x <span id="monster-dice-num"></span> </td>
+                                </tr>
+                            </table>
+
+                        </div>
+                    </div>
                 </div>
-
-
-
-
-
-
-
-                <!--<div id="name-div">-->
-                    <!--<div id="monster-name" class="names"></div>-->
-                    <!--<div id="player-name" class="names">Player</div>-->
-                <!--</div>-->
-                <!--<div id="health-bar-box">-->
-                    <!--<div class="meter-box-wrapper">-->
-                        <!--<div id="monster-Health-border" class="health-border">-->
-                            <!--<div id='monster-Health'><div id="monster-hp"></div></div>-->
-                            <!--<div id="monster-max-hp" style="display: none"></div>-->
-                        <!--</div>-->
-                        <!--<div id="player-Health-border" class="health-border">-->
-                            <!--<div id='player-Health'><div id="player-hp"></div></div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                    <!--<div id="meter-box-health">-->
-                        <!--<div id="monster-health-val-box" class="health-val-box">-->
-                            <!--<div id="monster-health-val" class="value-display"></div>-->
-                            <!--<div id="monster-lvl" class="lvl-display">Lvl 2</div>-->
-                        <!--</div>-->
-                        <!--<div id="player-health-val-box" class="health-val-box">-->
-                            <!--<div id="player-health-val"></div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div id="battle-box-wrapper">-->
-                    <!--<div id="monster" class="image-box scaling"></div>-->
-                    <!--<div id="player" class="image-box scaling"><div id="player-box" style="height: 100%;width: 100%"><img id="player-img" src="assets/img/player.png"></div></div>-->
-                    <!--<div id="dice-container">-->
-                        <!--<div id="monster-dice" class="total-dice">-->
-                            <!--<div id="monster-dice-num" style="display: none"></div>-->
-                            <!--<div id="monster-dice-img" class="total-dice-img"></div>-->
-                        <!--</div>-->
-                        <!--<div id="player-dice" class="total-dice">-->
-                            <!--<div id="player-dice-num" style="display: none"></div>-->
-                            <!--<div id="player-dice-img" class="total-dice-img"></div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div id='diceBox'>-->
-                    <!--<div id='die1' class='oneHidden'></div>-->
-                    <!--<div id='die2' class='oneHidden'></div>-->
-                    <!--<div id='die3' class='oneHidden'></div>-->
-                    <!--<div id='die4' class='oneHidden'></div>-->
-                    <!--<div id='die5' class='oneHidden'></div>-->
-                <!--</div>-->
-                <!--<div id="battleBtn">-->
-                    <!--<button id="btnAttack" class="btn">Attack</button>-->
-                    <!--<button id="btnRetreat" class="btn">Retreat</button>-->
-                <!--</div>-->
             </div>
-
-            <div class="defeat" style="display: none">
-                <div>Defeated</div>
-                <br/>
-                <a href="#" id="startAgainClicker">Click to Start Again</a>
+            <div id="dice-div">
+                <div id="showdice">
+                    <div id="die1" class='oneHidden'></div>
+                    <div id="die2" class='oneHidden'></div>
+                    <div id="die3" class='oneHidden'></div>
+                    <div id="die4" class='oneHidden'></div>
+                    <div id="die5" class='oneHidden'></div>
+                </div>
+                <button id="btnAttack" class="btn">Attack</button> <button id="btnRetreat" class="btn">Retreat</button>
             </div>
 
             <div id="qcard">
@@ -234,6 +210,7 @@
                 </div>
             </div>
 
+        </div>
         </div>
     </div>
 

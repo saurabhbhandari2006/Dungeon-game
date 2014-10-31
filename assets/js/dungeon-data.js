@@ -1,5 +1,5 @@
 var initHealth = 100;
-var initDice = 1;
+var initDice = 2;
 var teleportCost = 5;
 window.theme = {};
 theme.background = "assets/img/background.jpg";
@@ -107,114 +107,126 @@ var map = [
 var monsters = [
 
     {
-        name: "Zortran",
-        type: "Wraith",
+        name: "Screw Rick Ross ",
+        type: "Prison guard",
         health: 20,
         dice: 1,
         probability:0,
         level: 1,
         power:"",
-        image: "<img class='image-scale' src='assets/img/monsters/m11.png' />"
+        image: "<img class='image-scale img-radius' src='assets/img/monsters/m11.png' />",
+        description:"A single attack with all the power, majesty, and finesse... of a Prison"
+
     },
     {
-        name: "Phinos",
-        type: "Necromancer",
+        name: "Brian Aldiss",
+        type: "Correctional Officer ",
         health: 20,
         dice: 1,
         probability:0,
         level: 1,
         power:"",
-        image: "<img class='image-scale' src='assets/img/monsters/m12.png' />"
+        image: "<img class='image-scale img-radius' src='assets/img/monsters/m12.png' />",
+        description:"Draped with machine gun bullets and holding an artillery shell."
     },
     {
-        name: "Magina",
-        type: "Mage",
+        name: "Meg jackson",
+        type: "Correctional Sergeant",
         health: 30,
         dice: 2,
         probability:0,
         level: 2,
         power:"",
-        image: "<img class='image-scale' src='assets/img/monsters/m21.png' />"
+        image: "<img class='image-scale img-radius' src='assets/img/monsters/m21.png' />",
+        description:"You may not hire dudes to their gunfight skill for each your opponents posse has in it."
     },
     {
-        name: "Karo",
-        type: "Golem",
+        name: "Greg Miller",
+        type: "Correctional Lieutenant",
         health: 30,
         dice: 2,
         probability:0,
         level: 2,
         power:"",
-        image: "<img class='image-scale' src='assets/img/monsters/m22.png' />"
+        image: "<img class='image-scale img-radius' src='assets/img/monsters/m22.png' />",
+        description:"Each group directly controlled by the Lieutenant , Be aware. "
     },
     {
-        name: "Echenist",
-        type: "Warlock",
+        name: "Stewart Jock",
+        type: "Captain",
         health: 40,
         dice: 2,
         probability:0,
         level: 3,
         power:"",
-        image: "<img class='image-scale' src='assets/img/monsters/m31.png' />"
+        image: "<img class='image-scale img-radius' src='assets/img/monsters/m31.png' />",
+        description:"They stays on its victim until it's end. Spending an Illuminati action, at any time"
     },
     {
-        name: "Krobelus",
-        type: "Prophet",
+        name: "Terry Harison",
+        type: "Unit Supervisor",
         health: 40,
         dice: 2,
         probability:0,
         level: 3,
         power:"",
-        image: "<img class='image-scale' src='assets/img/monsters/m32.png' />"
+        image: "<img class='image-scale img-radius' src='assets/img/monsters/m32.png' />",
+        description:"Exhaust all opposing and take control of the available units."
     },
     {
-        name: "Ghul",
-        type: "Undead",
+        name: "Rolim Amaro",
+        type: "Community officer",
         health: 50,
         dice: 3,
         probability:0,
         level: 4,
         power:"",
-        image: "<img class='image-scale' src='assets/img/monsters/m41.png' />"
+        image: "<img class='image-scale img-radius' src='assets/img/monsters/m41.png' />",
+        description:"They Doesn't affected by resistance, smash, power and any other effects on the defending."
     },
     {
-        name: "Raxtax",
-        type: "Spirit" ,
+        name: "Len Murphy",
+        type: "Major" ,
         health: 50,
         dice: 3,
         probability:0,
         level: 4,
         power:"",
-        image: "<img class='image-scale' src='assets/img/monsters/m42.png' />"
+        image: "<img class='image-scale img-radius' src='assets/img/monsters/m42.png' />",
+        description:"They got an itchy trigger finger and a fondness for shooting dudes in the face."
     },
     {
-        name: "Enormo",
-        type: "Giant" ,
+        name: "Tom Lucas",
+        type: "Armed Guards" ,
         health: 60,
         dice: 4,
         probability:0,
         level: 5,
         power:"",
-        image: "<img class='image-scale' class='image-scale' src='assets/img/monsters/m51.png' />"
+        image: "<img class='image-scale img-radius' class='image-scale' src='assets/img/monsters/m51.png' />",
+        description:"Maintains proficiency in the use of all assigned protective equipment, restraint devices and weapons"
     },
     {
-        name: "Ghaijin",
-        type: "Troll" ,
+        name: "Scott Collins",
+        type: "Armed Guards" ,
         health: 60,
         dice: 4,
         probability:0,
         level: 5,
         power:"",
-        image: "<img class='image-scale' src='assets/img/monsters/m52.png' />"
+        image: "<img class='image-scale img-radius' src='assets/img/monsters/m52.png' />",
+        description:"Maintains proficiency in the use of all assigned protective equipment, restraint devices and weapons"
     },
     {
-        name: "Infernus",
-        type: "Dragon",
-        health: 100,
+        name: "David Andrews",
+        type: "warden",
+        health: 1,
         dice: 5,
         probability: 0,
         level: 10,
         power:"",
-        image:"<img class='image-scale' src='assets/img/monsters/m101.png' />"
+        image:"<img class='image-scale img-radius' src='assets/img/monsters/m101.png' />",
+        description:"Required to utilize rapid and effective judgment in responding to unusual using appropriate escalation of force level"
     }
 ]
 
@@ -275,8 +287,27 @@ var rewards = [
         name: "Dice",
         type: "Dice",
         value: 1
+    },
+    {
+        name: "Dice",
+        type: "Dice",
+        value: 1
+    },
+    {
+        name: "Dice",
+        type: "Dice",
+        value: 1
     }
 ]
+
+portalTitle = [
+    "Portal to Prison Cell",
+    "Portal to Prison Cell Hallway",
+    "Portal to Cafeteria",
+    "Portal to Basketball Court",
+    "Portal to Prison Courtyard",
+    "Portal to Warden's Room"
+ ]
 
 /*
  Function: shuffle
