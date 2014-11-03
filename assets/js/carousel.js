@@ -4,7 +4,8 @@ function initCarousel()
 {
     $('#gameAttack_wrapper').hide();
     $("#carousel").fadeIn();
-    $('#ppt img').attr("src", "assets/img/carousel/" + count + ".jpg");
+    var random = getRandom(1,4);
+    $('#ppt img').attr("src", "assets/img/carousel/" + random + ".jpg");
 }
 
 function onClick(x)
