@@ -1,5 +1,5 @@
 var initHealth = 100;
-var initDice = 2;
+var initDice = 5;
 var teleportCost = 5;
 window.theme = {};
 theme.background = "assets/img/background.jpg";

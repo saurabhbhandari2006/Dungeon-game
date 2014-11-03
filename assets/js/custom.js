@@ -619,6 +619,8 @@ function teleport(entityId) {
     var dungeonId = getDungeonId(entity.name);
     console.log(dungeonId);
     playerHealth -= teleportCost;
+    if(playerHealth < 0)
+        playerHealth = 0;
     $("#player-hp").text(playerHealth);
     gridSelected = false;
 
@@ -1146,16 +1148,12 @@ function getRewards(callback){
 
     }
 
-    showSplash(msg, 0, callback);
-
     if(parseInt($("#monster-dice-num").text()) == 5) {
-        var msg = '<span style="text-decoration: none; color: white" onclick="initGame()">You WIN! <br /><br />Click Continue to Start Again</span>'
+        var msg = '<span style="text-decoration: none; color: white" >You WIN! <br /><br />Click Continue to Start Again</span>'
+        showSplash(msg, 1, callback);
+    } else {
         showSplash(msg, 0, callback);
     }
-
-
-
-
 
 }
 
@@ -1172,6 +1170,7 @@ function closeBattle(){
     $("#monster-hud").hide();
     $("#mainmatrix").fadeIn();
     $("#toMap").show();
+    $("#monster-dice-num").text(" ");
 
 }
 
@@ -1183,7 +1182,7 @@ function victory(){
 function defeat(){
     console.log("in defeat");
     var msg = '<span style="text-decoration: none; color: white">Defeated! <br /><br />Click Continue to Start Again</span>'
-    showSplash(msg,0);
+    showSplash(msg,1);
 //    $('#gameAttack_wrapper').fadeOut();
 //
 //    $("#player-hud").fadeOut();
@@ -1215,23 +1214,29 @@ function playerHealthHud(){
 
 function showSplash(msg,delay, callback) {
     console.log("In display messages");
-    if(delay == 0) {
-        var func;
-        if(parseInt($("#monster-dice-num").text()) == 5) {
-            msg += " <br /> <br /> <input value='Continue' type='button' onclick='initGame()' /> "
-        } else {
-            msg += " <br /> <br /> <input value='Continue' type='button' onclick='closeBattle()' /> "
-        }
 
-        $('#splasher').html(msg).fadeIn(500);
-    } else {
-        $('#splasher').html(msg).fadeIn(500).delay(delay).fadeOut(500);
-        setTimeout(function() {
-            if(typeof callback === "function") {
-                callback();
-            }
-        }, 3000);
+    switch (delay.toString()) {
+        case "0":
+            msg += " <br /> <br /> <input value='Continue' type='button' onclick='closeBattle()' /> "
+            $('#splasher').html(msg).fadeIn(500);
+            break;
+
+        case "1":
+            console.log("Win/Defeated")
+            msg += " <br /> <br /> <input value='Continue' type='button' onclick='initGame()' /> ";
+            $('#splasher').html(msg).hide().fadeIn(500);
+            break;
+
+        default:
+            $('#splasher').html(msg).fadeIn(500).delay(delay).fadeOut(500);
+            setTimeout(function() {
+                if(typeof callback === "function") {
+                    callback();
+                }
+            }, 3000);
+            break;
     }
+
 }
 
 function portalMouseFunct()
