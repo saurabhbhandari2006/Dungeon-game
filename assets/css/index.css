@@ -1,435 +1,255 @@
-body
-{
-    margin:0%;
-    padding:0%;
+@import url("monstercard.css");
+@import url("minimap.css");
+@import url("attack.css");
+@import url("qcard.css");
+@import url("carousel.css");
+
+@font-face {
+    font-family: stencil;
+    src: url(../fonts/stencil.ttf);
+}
+@font-face {
+    font-family: gobold;
+    src: url(../fonts/GoboldBold.ttf);
+}
+@font-face {
+    font-family: gravity;
+    src: url(../fonts/Gravity-Book-Italic.ttf);
 }
 
+#preload {
+    height: 100%;
+    width: 100%;
+    background-image: url('');
+}
+
+#background {
+    z-index: -1;
+    background-size: cover;
+    height:100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
 #gameAttack_wrapper {
-    width: 640px;
-    height: 480px;
+
+    width:              640px;
+    height:             480px;
+    /*background-color:   #000;*/
+    margin:             auto;
+    display:            inline-block;
+    position:           fixed;
+    top:                0;
+    bottom:             0;
+    left:               0;
+    right:              0;
+    background:         rgba(1,1,1, 0.5);
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+
+}
+
+#player-hud {
+    color: whitesmoke;
+    width:              25%;
+    height:             100%;
+    /*background-color:   #8b9f20;*/
+    overflow:           auto;
+    float:              left;
+    font-family:        gobold;
+    font-size:          19px;
+}
+
+#player-data {
+    text-align: center;
+    margin-top: 4%;
+}
+
+#player-data table {
     margin: auto;
-    border: 0;
-    background: rgba(0, 0, 0, 0.5);
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.hud-scale {
+    width: 40px;
+}
+
+#container {
+    width:              75%;
+    height:             100%;
+    overflow:           auto;
+    /*background-color:   #7255ff;*/
+    float:              left;
+}
+
+#playerHud {
+
+    width:              100%;
+    overflow:           auto;
+    height:             75%;
+    /*background-color:   #ffcf57;*/
+    display:            block;
+
+}
+
+#buttonHud {
+    width:              100%;
+    overflow:           auto;
+    height:             25%;
+    /*background-color:   #af67fd;*/
+    display:            block;
+    vertical-align:     bottom;
+}
+
+#buttonHud table {
+    margin: 1%;
+    bottom: 0;
+    position: absolute;
+
+    /*display: block;*/
+}
+
+#buttonHud img:hover {
+    -webkit-transform:scale(1.20); /* Safari and Chrome */
+    -moz-transform:scale(1.20); /* Firefox */
+    -ms-transform:scale(1.20); /* IE 9 */
+    -o-transform:scale(1.20); /* Opera */
+    transform:scale(1.20);
+    cursor: pointer;
+}
+
+
+
+#mainmatrix {
+    overflow:           auto;
+    width:              97%;
+    height:             97%;
+    margin:             auto;
+    margin-top:         1.5%;
+    padding:            0;
+    /*border:             1px solid whitesmoke;*/
+    border-collapse:    collapse;
+    /*display:            none;*/
+    background: rgba(1,1,1,0.7);
+    /*border-radius: 15px;*/
+    text-align: center;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 0 2px #666;
+    -moz-box-shadow: 0 0 0 2px #666;
+    box-shadow: 0 0 0 2px #666;
+}
+
+#mainmatrix td {
+    height: 33%;
+    width: 33%;
+    -webkit-box-shadow: 0 0 0 1px #333;
+    -moz-box-shadow: 0 0 0 1px #333;
+    box-shadow: 0 0 0 1px #333;
+}
+
+#mainmatrix img {
+    width: 90%;
+}
+
+#player-div {
     position: relative;
 }
 
-.matrix {
-    height: 100%;
-    width: 100%;
+#player-img {
+    width: 62%;
 }
 
-#mainmatrix {
-    align-self: center;
-    display:block;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: 0 none;
-    border-collapse: collapse;
-    height: 400px;
-    margin-left:10%;
-    margin-top: 10%;
-    width: 400px;
-}
-/*
-    Defines styling for each individual grid on the map.
-*/
-#mainmatrix td
-{
-    padding:1%;
-    width:33%;
-    height:33%;
-    border:1px solid darkslategray;
-    text-align:center;
-    vertical-align:middle;
-}
-/*
-    Defines styling for the images on the grid map.
-*/
-#mainmatrix td img
-{
-    width:65%;
-    height:auto;
+.img-radius {
+    border-radius: 25%;
 }
 
-#dungeons {
-    display: none;
-    position: absolute;
+#info {
+    align-self:center;
+    padding:5px;
+    position: relative;
+    bottom:2%;
+    border-radius:10px;
 }
 
-#qcard, #qid{
-    display: none;
-    width: 80%;
-}
-#quiz-content
-{ width: 41%;
-    /*height: 35%;*/
-    border: 2px solid white;
-    top: 20%;
-    position: absolute;
-    left: 25%;
-    border-radius: 10px;
-    padding: 2px 4px 3px 2px;
-    display: none;
-    z-index: 2;
-    /*background-color: black;*/
-    background-color: rgba(0,0,0,0.7);
-}
-#qquestion{
-    color: #ffffff;
-    padding: 5px;
-}
-#bulletA {
-    background: #a34f32;
-}
-#bulletB {
-    background: #7255ff;
-}
-#bulletC {
-    background: #8b9f20;
-}
-#bulletD {
-    background: #ffcf57;
-}
-#answerBlock {
-    list-style: none;
-    padding-left: 12%;
-}
-#answerMsg {
-    display: none;
-    color: black;
-    font-size: 1.6em;
-    line-height: 1;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    text-align: center;
-}
-.answer-bullet {
-    width: 20px;
-    height: 20px;
-    display: inline-block;
-    vertical-align: middle;
-    padding: 5px;
-    border-radius: 50%;
-    margin-right: 10px;
-    text-align: center;
-    color: black;
-}
-#answerBlock li {
-    margin-bottom: 2px;
-    margin-left: -39px;
-    cursor: pointer;
-}
-#answerBlock li:hover {
-    font-weight: bold;
-}
-
-.gameTitle {
-    color: blue;
-    font-family: "Impact", sans-serif;
-    font-size: 85px;
-    height: 640px;
-    line-height: 64px;
-    margin: 18% auto 0;
-    text-align: center;
-    text-shadow: 0 0 20px black;
-    width: 960px;
-}
-
-#startClicker {
-    text-decoration: none;
-    font-size: 48px;
-    color: blue;
-
-}
-.How{
-    display: none;
-    position: absolute;
-    font-family: "Impact",sans-serif;
-    text-align: center;
-    text-shadow: 0 0 20px white;
-}
-
-
-#player-hud {
-    width: 100%;
-    height: 15%;
-    position:absolute;
-    overflow: auto;
-}
-#player-data {
-    width: 30%;
-    height: 100%;
-    border: 1px solid #ffffff;
-    float: left;
-}
-#player-img-hud {
-    height: 100%;
-    width: 23%;
-    float: left;
-}
-#player-name-hud {
-    width: 75%;
-    float: left;
-    text-align: center;
-    color: #ffffff;
-    padding-top: 5%;
-}
-#player-dice-hud {
-    float: left;
-    border: 1px solid #ffffff;
-    height: 100%;
-    width: 37%;
-}
-#player-health-box-hud {
-    width: 32%;
-    height: 100%;
-    float: left;
-}
-#player-Health-border-hud {
-    width: 99%;
-    height: 40%;
-    background-color: #ffffff;
-    border-radius: 10px;
-}
-#player-Health-hud {
-    background: none repeat scroll 0 0 blue;
-    border-radius: 10px;
-    width: 99%;
-    height: 100%;
-    right: 0;
-    float: right;
-}
-#player-hp-hud {
-    text-align: center;
-}
-#meter-box-health-hud {
-    float: right;
-    height: 50%;
-    width: 100%;
-}
-#player-health-val-hud {
-    text-align: center;
-    color: #ffffff;
-    margin-top: 1%;
-}
 #splasher {
-    font-size: 2em;
-    text-align: center;
-    font-family: "Impact", sans-serif;
-    position: absolute;
-    z-index: 99;
-    top: 25%;
-    left: 25%;
-    width: 50%;
-    text-shadow: black 0 0 20px;
-    color: white;
-    /*display: none;*/
-}
-
-
-
-#monster-card{
-    border: 1px solid whitesmoke;
-    height: 400px;
-    left: 12%;
-    position: absolute;
-    top: 49px;
-    width: 500px;
-    background-color: rgba(20, 20, 20, 0.9);
-    border-radius: 10px;
     display: none;
-}
-#monster-card-btn{
-    left: 34%;
     position: absolute;
-    top: 86%;
-}
-#monster-detail-box{
-    width: 100%;
-    height: 50%;
-    /*border: 1px solid red;*/
-}
-
-#monster-card-img{
-    border: 1px solid whitesmoke;
-    height: 90%;
-    width: 29%;
-    margin: 4%;
-    border-radius: 5px;
-}
-#monster-details{
-    /*border: 1px solid green;*/
-    float: right;
-    height: 45%;
-    left: 34%;
-    margin: 4%;
-    position: absolute;
-    top: 0;
-    width: 57%;
-}
-#monster-card-desc{
-    border: 1px solid white;
-    height: 25%;
-    left: 4%;
-    position: absolute;
-    top: 56%;
-    width: 91%;
-    border-radius: 5px;
-}
-
-#monster-card-hp {
-    font-size: 10px;
-    height: 50%;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    text-align: center;
-}
-#monster-card-Health-val {
-    background: none repeat scroll 0 0 red;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    float: right;
-}
-#monster-detail-table {
+    z-index: 4;
+    background: rgba(1,1,1,0.9);
+    font-family: gravity;
     color: whitesmoke;
-    width: 100%;
 
-}
+    padding: 3%;
+    max-width: 20%;
 
-.monster-card-scale{
-    width: 30%;
-}
-
-#monster-card-Health-border{
-    border: 1px solid #ffffff;
-    border-radius: 10px;
-    height: 6%;
-    position: absolute;
-    top: 66%;
-    width: 55%;
-}
-#monster-card-Health {
-    background: none repeat scroll 0 0 red;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    float: left;
-}
-
-
-#minimap {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-}
-
-#Purple {
-    position: absolute;
-    height: 500%;
-    left: 400%;
-    top: 0%;
-}
-
-#Blue {
-    position: absolute;
-    height: 500%;
-    left: 700%;
-    top: 500%;
-}
-
-#Green {
-    position: absolute;
-    height: 500%;
-    left: 700%;
-    top: 1300%;
-}
-
-#Yellow {
-    position: absolute;
-    height: 500%;
-    left: 400%;
-    top: 1800%;
-}
-
-#Orange {
-    position: absolute;
-    height: 500%;
-    left: 100%;
-    top: 1300%;
-}
-
-#Red {
-    position: absolute;
-    height: 500%;
-    left: 100%;
-    top: 500%;
-}
-
-#minimapmatrix {
-    width:50%;
-    height: 50%;
-    /*margin:auto;*/
-    /*border: 1px solid whitesmoke;*/
-    border-collapse:collapse;
-    background-color: #000;
-    position: absolute;
-    left: 280%;
-    top: 560%;
-    color: white;
-}
-
-#minimapmatrix td {
     text-align: center;
-    padding: 3px;
-    align: center;
-    vertical-align: middle;
-    border: 1px solid whitesmoke;
-}
 
-.minimatrix {
-    min-width: 80px;
-    max-width: 80px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 0 2px #666;
+    -moz-box-shadow: 0 0 0 2px #666;
+    box-shadow: 0 0 0 2px #666;
 
-    min-height: 70px;
-    max-height: 70px;
-}
+    margin: 0 auto;
+    top: 40%;
+    left: 40%;
 
-body {
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+    font-size: 18px;
+    line-height: 24px;
+
 }
 
 
 
-
-
-
-@media screen and (max-width: 650px)and (max-height: 500px) {
-    .gameTitle {
-        color: blue;
-        font-family: "Impact", sans-serif;
-        font-size: 50px;
-        height: 480px;
-        line-height: 62px;
-        margin: 24% auto 0;
-        text-align: center;
-        text-shadow: 0 0 20px white;
-        width: 640px;
-    }
-
-    #startClicker {
-        text-decoration: none;
-        font-size: 30px !important;
-        color: #ffffff;
-
-    }
-    .How{
-        display: none;
-        position: absolute;
-        font-family: "Impact",sans-serif;
-        text-align: center;
-        text-shadow: 0 0 20px white;
-    }
+/*------------------------------------------------------------anim heart and dice-------------------------------------------------*/
+.floating{
+    -webkit-animation-name: Floatingx;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: Floating;
+    -moz-animation-duration: 1s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
 }
+@-webkit-keyframes Floatingx{
+    from {-webkit-transform:translate(0, 0px);}
+    65% {-webkit-transform:translate(0, 5px);}
+    to {-webkit-transform: translate(0, -0px); }
+}
+@-moz-keyframes Floating{
+    from {-moz-transform:translate(0, 0px);}
+    65% {-moz-transform:translate(0, 5px);}
+    to {-moz-transform: translate(0, -0px);}
+}
+.scaling{
+    /*float: left;*/
+    -webkit-animation-name: scalex;
+    -webkit-animation-duration:500ms;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-timing-function:ease-in-out;
+    -moz-animation-name: scale;
+    -moz-animation-duration:500ms;
+    -moz-animation-iteration-count:infinite;
+    -moz-animation-timing-function:ease-in-out;
+}
+@-webkit-keyframes scalex{
+    from {-webkit-transform: scale(0.9);}
+    65% {-webkit-transform: scale(1.0);}
+    to {-webkit-transform: scale(0.9);}
+}
+@-moz-keyframes scale{
+    from {-moz-transform: scale(0.9);}
+    65% {-moz-transform: scale(1.0);}
+    to {-moz-transform: scale(0.9);}
+}
+
+

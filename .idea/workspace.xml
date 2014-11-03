@@ -39,10 +39,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="custom.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="custom.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/custom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="113" column="25" selection-start="3227" selection-end="3227" vertical-scroll-proportion="0.35326087" vertical-offset="1435" max-vertical-offset="20070">
+            <state line="113" column="25" selection-start="3227" selection-end="3227" vertical-scroll-proportion="0.0" vertical-offset="1435" max-vertical-offset="20070">
               <folding>
                 <marker date="1415021575188" expanded="true" signature="26055:26104" placeholder="..." />
                 <marker date="1415021575188" expanded="true" signature="26373:26384" placeholder="..." />
@@ -67,10 +67,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index2.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index2.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="47" selection-start="409" selection-end="409" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="525">
+            <state line="12" column="65" selection-start="529" selection-end="529" vertical-scroll-proportion="0.24827586" vertical-offset="0" max-vertical-offset="725">
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="tag#div#1;tag#body#0;tag#html#0" expanded="false" />
@@ -115,9 +115,9 @@
         <option value="$PROJECT_DIR$/assets/js/temp.js" />
         <option value="$PROJECT_DIR$/assets/js/dungeon-data.js" />
         <option value="$PROJECT_DIR$/assets/css/index2.css" />
-        <option value="$PROJECT_DIR$/index2.html" />
         <option value="$PROJECT_DIR$/assets/js/jquery.preload.js" />
         <option value="$PROJECT_DIR$/assets/js/custom.js" />
+        <option value="$PROJECT_DIR$/index2.html" />
       </list>
     </option>
   </component>
@@ -739,13 +739,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index2.html">
+    <entry file="file://$PROJECT_DIR$/assets/js/custom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="47" selection-start="409" selection-end="409" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="525">
+        <state line="113" column="25" selection-start="3227" selection-end="3227" vertical-scroll-proportion="0.0" vertical-offset="1435" max-vertical-offset="20070">
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="tag#div#1;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <marker date="1415021575188" expanded="true" signature="26055:26104" placeholder="..." />
+            <marker date="1415021575188" expanded="true" signature="26373:26384" placeholder="..." />
+            <marker date="1415021575188" expanded="true" signature="26522:26533" placeholder="..." />
+            <marker date="1415021575188" expanded="true" signature="26866:26878" placeholder="..." />
+            <marker date="1415021575188" expanded="true" signature="27007:27019" placeholder="..." />
+            <marker date="1415021575188" expanded="true" signature="34525:34543" placeholder="..." />
+            <marker date="1415021575188" expanded="true" signature="34605:34640" placeholder="..." />
+            <marker date="1415021575188" expanded="true" signature="36562:36597" placeholder="..." />
+            <marker date="1415021575188" expanded="true" signature="37436:37471" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -757,19 +763,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/custom.js">
+    <entry file="file://$PROJECT_DIR$/index2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="25" selection-start="3227" selection-end="3227" vertical-scroll-proportion="0.35326087" vertical-offset="1435" max-vertical-offset="20070">
+        <state line="12" column="65" selection-start="529" selection-end="529" vertical-scroll-proportion="0.24827586" vertical-offset="0" max-vertical-offset="725">
           <folding>
-            <marker date="1415021575188" expanded="true" signature="26055:26104" placeholder="..." />
-            <marker date="1415021575188" expanded="true" signature="26373:26384" placeholder="..." />
-            <marker date="1415021575188" expanded="true" signature="26522:26533" placeholder="..." />
-            <marker date="1415021575188" expanded="true" signature="26866:26878" placeholder="..." />
-            <marker date="1415021575188" expanded="true" signature="27007:27019" placeholder="..." />
-            <marker date="1415021575188" expanded="true" signature="34525:34543" placeholder="..." />
-            <marker date="1415021575188" expanded="true" signature="34605:34640" placeholder="..." />
-            <marker date="1415021575188" expanded="true" signature="36562:36597" placeholder="..." />
-            <marker date="1415021575188" expanded="true" signature="37436:37471" placeholder="..." />
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#2;tag#body#0;tag#html#0" expanded="false" />
           </folding>
         </state>
       </provider>
