@@ -18,9 +18,43 @@
 }
 
 #preload {
-    height: 100%;
-    width: 100%;
-    background-image: url('');
+    /*width:              640px;*/
+    /*height:             480px;*/
+    text-align:         center;
+    vertical-align:     middle;
+    /*padding-top:        20%;*/
+    /*margin:             auto;*/
+    /*display:            inline-block;*/
+    /*position:           fixed;*/
+    /*top:                0;*/
+    /*bottom:             0;*/
+    /*left:               0;*/
+    /*right:              0;*/
+    /*-moz-border-radius: 10px;*/
+    /*-webkit-border-radius: 10px;*/
+    /*border-radius: 10px;*/
+    /*background:         rgba(1,1,1, 0.5);*/
+
+    width:              640px;
+    height:             480px;
+    /*background-color:   #000;*/
+    margin:             auto;
+    display:            inline-block;
+    position:           fixed;
+    top:                0;
+    bottom:             0;
+    left:               0;
+    right:              0;
+    background:         rgba(1,1,1, 0.5);
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+#preload span, img {
+    overflow: auto;
+    top: 40%;
+    position: relative;
 }
 
 #background {

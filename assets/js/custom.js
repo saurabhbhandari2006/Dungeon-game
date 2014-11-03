@@ -13,6 +13,7 @@ $(function(){
 
     $("#carousel").hide();
     $("#gameAttack_wrapper").hide();
+    document.getElementById("background").src = 'assets/img/backgrounds/Purple.jpg'
     $("#preload").show();
 
     var done = $.preload( 'assets/img/player.png',
@@ -69,7 +70,6 @@ $(function(){
         'assets/img/dice/face6.png'
     );
 
-
     if(done == "done")
         initTheme();
 
@@ -112,6 +112,7 @@ function howTo() {
 
 function initTheme() {
     $("#preload").hide();
+    $("#background").show();
 
 //    for(var i=0; i<mapHash.length; i++) {
 //
