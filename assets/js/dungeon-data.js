@@ -21,7 +21,7 @@ var map = [
             {lx: 3, ly: 2, choiceSet: ["Monster"]},
             {lx: 3, ly: 3, choiceSet: ["Portal Green"]}
         ],
-        backgroundImage:""
+        backgroundImage:"assets/img/minimap/purple.png"
     },
 
     {name: "Blue",  type: "definition", generation: {},
@@ -36,7 +36,7 @@ var map = [
             {lx: 3, ly: 2, choiceSet: ["Portal Any", "Monster"]},
             {lx: 3, ly: 3, choiceSet: []}
         ],
-        backgroundImage:""
+        backgroundImage:"assets/img/minimap/blue.png"
     },
 
     {name: "Green",  type: "definition", generation: {},
@@ -51,7 +51,7 @@ var map = [
             {lx: 3, ly: 2, choiceSet: []},
             {lx: 3, ly: 3, choiceSet: ["Monster"]}
         ],
-        backgroundImage:""
+        backgroundImage:"assets/img/minimap/green.png"
     },
 
     {name: "Yellow",  type: "definition", generation: {},
@@ -66,7 +66,7 @@ var map = [
             {lx: 3, ly: 2, choiceSet: []},
             {lx: 3, ly: 3, choiceSet: ["Portal Green"]}
         ],
-        backgroundImage:""
+        backgroundImage:"assets/img/minimap/yellow.png"
     },
 
     {name: "Orange",  type: "definition", generation: {},
@@ -81,7 +81,7 @@ var map = [
             {lx: 3, ly: 2, choiceSet: []},
             {lx: 3, ly: 3, choiceSet: ["Portal Yellow"]}
         ],
-        backgroundImage:""
+        backgroundImage:"assets/img/minimap/orange.png"
     },
 
     {name: "Red",  type: "definition", generation: {},
@@ -96,7 +96,7 @@ var map = [
             {lx: 3, ly: 2, choiceSet: []},
             {lx: 3, ly: 3, choiceSet: ["Seer"]}
         ],
-        backgroundImage:""
+        backgroundImage:"assets/img/minimap/red.png"
     }
 ]
 /*

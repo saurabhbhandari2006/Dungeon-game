@@ -5,8 +5,10 @@
 *
 * Requires: jQuery 1.2.3+
 */
+
 ;( function( $ ){
   $.preload = function(){
+      var ct = 0;
     var imgs = Object.prototype.toString.call( arguments[ 0 ]) === '[object Array]'
       ? arguments[ 0 ] : arguments;
 
@@ -16,7 +18,13 @@
     // reverse loop run faster
     for( ; i-- ; ) {
         tmp.push( $( '<img />' ).attr( 'src', imgs[ i ]));
+        ct++;
     }
+      if(ct == imgs.length) {
+          console.log("Preloading done!");
+          return "done";
+      }
+
   };
 
 })( jQuery );

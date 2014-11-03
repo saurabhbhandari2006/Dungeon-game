@@ -11,7 +11,11 @@ var bossHp;
 
 $(function(){
 
-    $.preload( 'assets/img/player.png',
+    $("#carousel").hide();
+    $("#gameAttack_wrapper").hide();
+    $("#preload").show();
+
+    var done = $.preload( 'assets/img/player.png',
         'assets/img/seer.png',
         'assets/img/shelf.png',
         'assets/img/hp.png',
@@ -66,6 +70,9 @@ $(function(){
     );
 
 
+    if(done == "done")
+        initTheme();
+
 });
 
 function background() {
@@ -104,6 +111,7 @@ function howTo() {
 
 
 function initTheme() {
+    $("#preload").hide();
 
 //    for(var i=0; i<mapHash.length; i++) {
 //

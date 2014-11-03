@@ -17,6 +17,12 @@
     src: url(../fonts/Gravity-Book-Italic.ttf);
 }
 
+#preload {
+    height: 100%;
+    width: 100%;
+    background-image: url('');
+}
+
 #background {
     z-index: -1;
     background-size: cover;
