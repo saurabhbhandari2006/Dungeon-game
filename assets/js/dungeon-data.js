@@ -1,5 +1,5 @@
 var initHealth = 100;
-var initDice = 5;
+var initDice = 2;
 var teleportCost = 5;
 window.theme = {};
 theme.background = "assets/img/background.jpg";
@@ -220,7 +220,7 @@ var monsters = [
     {
         name: "David Andrews",
         type: "warden",
-        health: 1,
+        health: 100,
         dice: 5,
         probability: 0,
         level: 10,
