@@ -104,7 +104,6 @@ function howTo() {
 
 
 function initTheme() {
-
 //    for(var i=0; i<mapHash.length; i++) {
 //
 //        mapHash[i].backgroundImage = "assets/img/backgrounds/" + mapHash[i].name + ".png";
@@ -117,12 +116,31 @@ function initTheme() {
     document.getElementById("Orange").src = "assets/img/minimap/orange.png";
     document.getElementById("Red").src = "assets/img/minimap/red.png";
 
-    initGame();
+//    initGame();
+    how();
 
+}
+
+function how(){
+    $("#gameAttack_wrapper").hide();
+    $("#carousel").hide();
+    $("#how").fadeIn(0);
+
+    var msg = '<span style="text-decoration: none; color: white" ><br /><br /><br /><br /><br /><br />Main Objective Is To Defeat Boss..<br /><br />Go Through Different Portals.Each Teleport Cost You 5 Of Your Health..<br /><br />fight the guards to get health and dice as rewards..<br /><br />visit seer and answer question correctly to get rewards</span>'
+    msg += " <br /> <br /> <input value='Start' type='button' onclick='initGame()' /> "
+    $('#how').html(msg).fadeIn(500);
 }
 
 
 function initGame() {
+    $("#how").hide();
+    $("#carousel").hide();
+    $("#gameAttack_wrapper").show();
+
+
+
+
+
     $("#splasher").fadeOut(0);
     $("#player-hud").css({"width": "25%", 'opacity': "1"})
     $("#playerHud").css({'opacity': "1", 'background': "transparent"});
@@ -1212,7 +1230,8 @@ function playerHealthHud(){
 }
 
 
-function showSplash(msg,delay, callback) {
+function
+    showSplash(msg,delay, callback) {
     console.log("In display messages");
 
     switch (delay.toString()) {
